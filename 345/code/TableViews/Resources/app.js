@@ -11,10 +11,10 @@ var tv = {};
 		var win = Ti.UI.createWindow({
 			backgroundImage:'images/gradientBackground.png'
 		});
-		// define the page heading
+		// define the custom page heading here
 		var pageHeading = Ti.UI.createLabel({
 			text: 'Custom Table',
-			color:'blue',
+			color:'#3E3F87',
 			font:{
 				fontSize:18,
 				fontWeight:'bold'
@@ -25,11 +25,15 @@ var tv = {};
 		});
 		win.add(pageHeading);
 		
-		// define your table rows here		
 		/**
-		  * Creates a table row
-		  * @param {Object} _params   Map of row parameters: rownum, primarylabel, secondarylabel
-		  * @return {Object}    Returns the row.
+		  * Write a function named makeRow() that will create and return a table row.
+		  * Each row should have two image and two labels per the lab instructions
+		  * Your images will need custom properties so that you can distinguish which received
+		  * the click event and swap images accordingly
+		  * 
+		  * makeRow()
+		  * 	@param {Object} _params   Map of row parameters: rownum, primarylabel, secondarylabel, myImage
+		  * 	@return {Object}    Returns the row.
 		  */		
 		var makeRow = function(/*Object*/ _params) {
 			var row = Ti.UI.createTableViewRow({
@@ -43,7 +47,8 @@ var tv = {};
 				height:64,
 				width:64,
 				top:8,
-				left:8
+				left:8,
+				myImage:_params.myImage
 			});
 			row.add(rowImage);
 			if(_params.rownum == 0) {
@@ -60,6 +65,7 @@ var tv = {};
 					fontSize:16,
 					fontWeight:'bold'
 				},
+				color:'black',
 				top:20,
 				left:75,
 				height:'auto'
@@ -71,6 +77,7 @@ var tv = {};
 					fontSize:13,
 					fontWeight:'bold'
 				},
+				color:'black',
 				top:42,
 				left:75,
 				height:'auto'
@@ -81,25 +88,29 @@ var tv = {};
 				height:22,
 				width:25,
 				top:32,
-				right:10
+				right:10,
+				myImage:'blue'
 			});
 			row.add(notificationImage);
 			return row;
 		};
 		
-		
+		// declare an array to hold your table rows
 		var tbldata = [];
+		// use a loop to create at least 8 rows
 		for(i=0;i<8;i++) {
 			tbldata.push(makeRow({
 				rownum: i,
 				primarylabel: 'This is row '+i,
-				secondarylabel: 'Subtitle '+i
+				secondarylabel: 'Subtitle '+i,
+				myImage:(i % 2 == 0) ? 'a' : 'b'
 			}));
 		};
 		tbldata.push(makeRow({
 			rownum: 'last',
 			primarylabel: 'This is the last row',
-			secondarylabel: 'The last subtitle'
+			secondarylabel: 'The last subtitle',
+			myImage:'c'
 		}));
 
 		// define the tableview and assign its data/rows here
@@ -114,13 +125,31 @@ var tv = {};
 		table.setData(tbldata);
 		win.add(table);
 
-		// set the event listeners
+		// set the click event listener
+		// if the source is the A/B/C letter, step to the next letter in sequence
+		// if the source is the notification badge, swap the red/blue version
 		table.addEventListener('click', function(e){
-			alert(e.row.children[3].image);
-			if(e.row.children[3].image == 'images/notificationBadge.png') {
-				e.row.children[3].image = 'images/notificationUnreadBadge.png'
-			} else {
-				e.row.children[3].image = 'images/notificationBadge.png'
+			switch(e.source.myImage) {
+				case 'a':
+					e.source.image = 'images/imageB.png';
+					e.source.myImage = 'b';
+				break;
+				case 'b':
+					e.source.image = 'images/imageC.png';
+					e.source.myImage = 'c';
+				break;
+				case 'c':
+					e.source.image = 'images/imageA.png';
+					e.source.myImage = 'a';
+				break;
+				case 'blue':
+					e.source.image = 'images/notificationUnreadBadge.png';
+					e.source.myImage = 'red';
+				break;
+				case 'red':
+					e.source.image = 'images/notificationBadge.png';
+					e.source.myImage = 'blue';
+				break;
 			}
 		});
 		
