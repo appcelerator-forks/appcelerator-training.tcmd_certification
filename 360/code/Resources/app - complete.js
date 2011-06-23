@@ -41,6 +41,58 @@ var ot = {};
 		bottom: 10,
 		font: {fontSize: 10, fontFamily: 'AmericanTypewriter'}
 	});
+	
+	ot.ui.additionalCopy.addEventListener('swipe', function(e) {
+		num = Math.floor(Math.random()*3);
+		ot.ui.additionalCopy.text = ot.model.desc[num];
+	})
+	
+	
+	ot.controller.isLandscape = function(o) {
+		o = o || Ti.UI.orientation;
+		return o == Ti.UI.LANDSCAPE_LEFT || o == Ti.UI.LANDSCAPE_RIGHT;
+	}
+	
+	ot.controller.isPortrait = function(o) {
+		o = o || Ti.UI.orientation;
+		return o == Ti.UI.PORTRAIT || o == Ti.UI.UPSIDE_PORTRAIT;
+	}
+	
+	Ti.Gesture.addEventListener('shake', function(e) {
+		num = Math.floor(Math.random()*3);
+		ot.ui.audioContols.backgroundImage = ot.model.img[num];
+	});
+	
+	
+	Ti.Gesture.addEventListener('orientationchange', function(e) {
+		if (ot.controller.isLandscape(e.orientation)) {
+			Ti.API.info('landscape');
+			
+			ot.ui.lblArtist.left= 250;
+			ot.ui.lblArtist.top = 240;
+			
+			ot.ui.audioContols.left = 10;
+			ot.ui.audioContols.top = null;
+			
+			ot.ui.additionalCopy.left = 260;
+			ot.ui.additionalCopy.bottom = 20;
+			ot.ui.additionalCopy.width = 200;
+		} else {
+			Ti.API.info('portrait');
+			
+			ot.ui.lblArtist.left= null;
+			ot.ui.lblArtist.top = 260;
+			
+			ot.ui.audioContols.left = null;
+			ot.ui.audioContols.top = 10;
+			
+			ot.ui.additionalCopy.left = null;
+			ot.ui.additionalCopy.bottom = 10;
+			ot.ui.additionalCopy.width = 240;
+			
+		}
+		Ti.API.info('changed');
+	});
 
 	
 	ot.ui.createWindow = function() {
