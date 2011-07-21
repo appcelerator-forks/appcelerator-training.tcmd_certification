@@ -1,0 +1,44 @@
+function HeaderView(title) {
+	// HeaderView is our custom UI component
+	var v = Ti.UI.createView({
+		backgroundColor:'red',
+		height:40,
+		top:0
+	});
+	var titleLabel = Ti.UI.createLabel({
+		text: title,
+		color: 'white',
+		textAlign: 'center',
+		font: {
+			fontWeight:'bold'
+		}
+	});
+	v.add(titleLabel);
+	// We can add methods to our component
+	v.updateTitle = function(title){
+		titleLabel.text = title;
+		v.fireEvent('titleUpdated', {message:'Title updated'});
+	};
+	return v;
+}
+
+var win = Ti.UI.createWindow();
+// instantiate the custom component
+var header = new HeaderView('My Great App');
+header.addEventListener('titleUpdated', function(e){
+	alert(e.message);
+});
+win.add(header);
+
+var btn = Ti.UI.createButton({
+	height:40,
+	width:200,
+	title:'Click me'
+});
+btn.addEventListener('click', function(){
+	// call our component's custom method
+	header.updateTitle('New Header Title');
+});
+win.add(btn);
+
+win.open();
