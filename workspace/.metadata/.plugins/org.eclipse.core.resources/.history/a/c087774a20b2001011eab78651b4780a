@@ -1,0 +1,5 @@
+exports.create = function(args) {
+	var ui = require_once('js/ui');
+	
+	return ui.win('Home Window');
+};

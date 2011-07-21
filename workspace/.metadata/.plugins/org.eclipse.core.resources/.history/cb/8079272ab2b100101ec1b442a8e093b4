@@ -1,0 +1,12 @@
+var ui = require('js/ui');
+	
+win.add(ui.label('busted_at'));
+
+
+
+Ti.UI.setBackgroundColor('#ffffff');
+
+Ti.UI.createWindow({
+	url:'windows/main.js',
+	backgroundColor:'#fff'
+}).open();

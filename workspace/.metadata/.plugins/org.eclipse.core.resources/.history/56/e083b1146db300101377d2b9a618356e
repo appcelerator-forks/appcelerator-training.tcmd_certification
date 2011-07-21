@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	</head>
+	<script>
+		
+	</script>
+	<body style="background:url(../images/grain.png);height:100%;width:100%;">
+		<h1>testing 123</h1>
+		<div>
+			<input type="text"/>
+		</div>
+	</body>
+</html>

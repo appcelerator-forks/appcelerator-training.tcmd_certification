@@ -1,0 +1,13 @@
+function createTableViewRow(fugitive) {
+	
+}
+
+exports.create = function(fugitives,args) {
+	var tv = Ti.UI.createTableView({
+		minRowHeight:60
+	});
+	
+	
+	
+	return tv;
+};

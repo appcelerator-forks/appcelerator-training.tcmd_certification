@@ -1,0 +1,82 @@
+Logger started at: Wednesday, July 20, 2011 11:37:49 PM PDT
+Component: com.appcelerator.titanium.mobile
+Version: 1.0.0.1310505598
+[37:49.647] Sent: >21*1311230269645*version<
+[37:49.648] Recv: >1311230269645*2*1.7.2.v20110715135838<
+[37:49.700] Sent: >20*1311230269646*update<
+[37:49.701] Recv: >1311230269646*1.7.2.v20110715135838<
+[37:49.702] Sent: >36*1311230269647*option*monitorXHR*true<
+[37:49.703] Recv: >1311230269647<
+[37:49.703] Sent: >45*1311230269648*option*suspendOnFirstLine*false<
+[37:49.703] Recv: >1311230269648<
+[37:49.704] Sent: >46*1311230269649*option*suspendOnExceptions*false<
+[37:49.704] Recv: >1311230269649<
+[37:49.705] Sent: >41*1311230269650*option*suspendOnErrors*true<
+[37:49.705] Recv: >1311230269650<
+[37:49.705] Sent: >43*1311230269651*option*suspendOnKeywords*true<
+[37:49.705] Recv: >1311230269651<
+[37:49.705] Sent: >45*1311230269652*option*bypassConstructors*false<
+[37:49.706] Recv: >1311230269652<
+[37:49.706] Sent: >45*1311230269653*option*stepFiltersEnabled*false<
+[37:49.706] Recv: >1311230269653<
+[37:49.706] Sent: >30*1311230269654*detailFormatters<
+[37:49.707] Recv: >1311230269654<
+[37:49.708] Sent: >74*1311230269655*breakpoint*create*app:/js/app/FugitiveTableView.js*29*1*0**1<
+[37:49.708] Recv: >1311230269655*created<
+[37:49.709] Sent: >20*1311230269656*enable<
+[37:49.709] Recv: >1311230269656<
+[37:49.713] Recv: >threads*created*0*kroll$1<
+[37:49.716] Recv: >log*out*[DEBUG] loading: /Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/app.js, resource: Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/app_js<
+[37:49.729] Recv: >scripts*created*116647568|app:/app.js||1|8<
+[37:49.730] Recv: >resumed*0*started<
+[37:49.731] Recv: >log*out*[DEBUG] include url: file://localhost/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/lib/require_once.js<
+[37:49.731] Recv: >log*out*[DEBUG] loading: /Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/lib/require_once.js, resource: Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/lib/require_once_js<
+[37:49.731] Recv: >scripts*created*116648936|app:/js/lib/require_once.js||1|13<
+[37:49.731] Recv: >log*out*[DEBUG] loading: /Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/HomeWindow.js, resource: Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/HomeWindow_js<
+[37:49.731] Recv: >log*out*[DEBUG] loading: /Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/ui.js, resource: Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/ui_js<
+[37:49.732] Recv: >log*out*[DEBUG] loading: /Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/FugitiveTableView.js, resource: Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/FugitiveTableView_js<
+[37:49.742] Recv: >log*out*[DEBUG] loading: /Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/db.js, resource: Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/db_js<
+[37:49.742] Recv: >log*out*[DEBUG] loading: /Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/model/Fugitive.js, resource: Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/model/Fugitive_js<
+[37:49.742] Recv: >log*out*[DEBUG] loading: /Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/network.js, resource: Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/network_js<
+[37:49.745] Recv: >log*out*[ERROR] Script Error = {
+    expressionBeginOffset = 733;
+    expressionCaretOffset = 740;
+    expressionEndOffset = 760;
+    line = 29;
+    message = "Result of expression 'db.list' [undefined] is not a function.";
+    name = TypeError;
+    sourceId = 116648336;
+}.<
+[37:49.745] Recv: >log*out*[DEBUG] application booted in 273.178995 ms<
+[37:49.752] Recv: >log*out*[ERROR] The application has crashed with an unhandled exception. Stack trace:
+
+0   CoreFoundation                      0x0238358c __exceptionPreprocess + 156
+1   libobjc.A.dylib                     0x024d7313 objc_exception_throw + 44
+2   CoreFoundation                      0x023850bb -[NSObject(NSObject) doesNotRecognizeSelector:] + 187
+3   CoreFoundation                      0x022f4966 ___forwarding___ + 966
+4   CoreFoundation                      0x022f4522 _CF_forwarding_prep_0 + 50
+5   BountyHunter                        0x0019a741 -[TiErrorController dynamicLabel:width:height:fontSize:bottom:] + 209
+6   BountyHunter                        0x0019b196 -[TiErrorController loadView] + 1798
+7   UIKit                               0x009b800e -[UIViewController view] + 56
+8   UIKit                               0x009b9a3d -[UIViewController viewControllerForRotation] + 63
+9   UIKit                               0x009b5988 -[UIViewController _visibleView] + 90
+10  UIKit                               0x00c5793c -[UIClientRotationContext initWithClient:toOrientation:duration:andWindow:] + 354
+11  UIKit                               0x0092f81e -[UIWindow _setRotatableClient:toOrientation:updateStatusBar:duration:force:] + 954
+12  UIKit                               0x00bb7619 -[UIWindowController transition:fromViewController:toViewController:target:didEndSelector:] + 1381
+13  UIKit                               0x009bc65d -[UIViewController presentModalViewController:withTransition:] + 3478
+14  BountyHunter                        0x001976b7 -[TiApp showModalError:] + 391
+15  Foundation                          0x0068794e __NSThreadPerformPerform + 251
+16  CoreFoundation                      0x023648ff __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+17  CoreFoundation                      0x022c288b __CFRunLoopDoSources0 + 571
+18  CoreFoundation                      0x022c1d86 __CFRunLoopRun + 470
+19  CoreFoundation                      0x022c1840 CFRunLoopRunSpecific + 208
+20  CoreFoundation                      0x022c1761 CFRunLoopRunInMode + 97
+21  GraphicsServices                    0x041891c4 GSEventRunModal + 217
+22  GraphicsServices                    0x04189289 GSEventRun + 115
+23  UIKit                               0x00916c93 UIApplicationMain + 1160
+24  BountyHunter                        0x00003b2a main + 410
+25  BountyHunter                        0x000023f5 start + 53
+26  ???                                 0x00000001 0x0 + 1
+
+<
+----------End of file----------

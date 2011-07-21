@@ -1,0 +1,963 @@
+!SESSION 2011-07-18 11:06:39.424 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_24
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/kevin/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/kevin/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-07-18 11:07:33.691
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.664
+!MESSAGE Invalid property type 'Link[]' for property 'links'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.719
+!MESSAGE Invalid property type 'Anchor[]' for property 'anchors'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.727
+!MESSAGE Invalid property type 'Form[]' for property 'forms'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.728
+!MESSAGE Invalid property type 'Image[]' for property 'images'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.729
+!MESSAGE Invalid property type 'Plugin[]' for property 'plugins'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.734
+!MESSAGE Invalid property type 'HTMLElement[]' for property 'elements'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.739
+!MESSAGE Invalid property type 'HTMLElement[]' for property 'all'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.739
+!MESSAGE Invalid property type 'HTMLElement[]' for property 'children'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.754
+!MESSAGE Invalid property type 'Layer[]' for property 'layers'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.764
+!MESSAGE Invalid property type 'Plugin[]' for property 'plugins'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.782
+!MESSAGE Invalid property type 'Frame[]' for property 'frames'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.807
+!MESSAGE Invalid property type 'Anchor[]' for property 'anchors'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.810
+!MESSAGE Invalid property type 'Form[]' for property 'forms'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.948
+!MESSAGE Invalid parameter type 'String, Document' for parameter 'data'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.949
+!MESSAGE Invalid parameter type 'String, Document' for parameter 'header'
+
+!ENTRY com.aptana.parsing 4 0 2011-07-18 11:16:44.949
+!MESSAGE Invalid parameter type 'String, Document' for parameter 'value'
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:14:27.670
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_right_sqs_gen2.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_right_sqs_gen2.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:14:27.671
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_right_sqs_gen2.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_right_sqs_gen2.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:15:20.422
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_gen2_interface.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_gen2_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:15:20.422
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_gen2_interface.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_gen2_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:16:47.660
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/ec2/test_helper.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/ec2/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:16:47.661
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/ec2/test_helper.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/ec2/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:16:54.070
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sdb/right_sdb_interface.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sdb/right_sdb_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:16:54.070
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sdb/right_sdb_interface.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sdb/right_sdb_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:17:05.767
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_gen2.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_gen2.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:17:05.767
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_gen2.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_gen2.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:18:03.218
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/s3/right_s3_interface.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/s3/right_s3_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:18:03.218
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/s3/right_s3_interface.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/s3/right_s3_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:18:14.060
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/support.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/support.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:18:14.060
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/support.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/support.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:18:37.438
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/benchmark_fix.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/benchmark_fix.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:18:37.438
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/benchmark_fix.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/benchmark_fix.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:18:40.143
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_helper.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:18:40.144
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_helper.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:19:22.211
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_interface.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:19:22.212
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_interface.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:19:31.621
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_right_sqs.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_right_sqs.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:19:31.621
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_right_sqs.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_right_sqs.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:19:41.584
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/acf/test_right_acf.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/acf/test_right_acf.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:19:41.585
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/acf/test_right_acf.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/acf/test_right_acf.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:20:04.923
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_right_sdb.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_right_sdb.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:20:04.924
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_right_sdb.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_right_sdb.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:20:40.816
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:20:40.818
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sqs/right_sqs.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:20:45.044
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/right_awsbase.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/right_awsbase.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:20:45.045
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/right_awsbase.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/awsbase/right_awsbase.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:20:51.103
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/ec2/test_right_ec2.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/ec2/test_right_ec2.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:20:51.104
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/ec2/test_right_ec2.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/ec2/test_right_ec2.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:21:31.711
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_helper.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:21:31.711
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_helper.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sqs/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:22:41.385
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/test_credentials.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/test_credentials.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:22:41.385
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/test_credentials.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/test_credentials.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:23:23.256
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_right_s3.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_right_s3.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:23:23.256
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_right_s3.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_right_s3.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:23:33.694
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/Rakefile.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/Rakefile (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:23:33.695
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/Rakefile.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/Rakefile (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:24:12.488
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/right_aws.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/right_aws.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:24:12.489
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/right_aws.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/right_aws.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:24:41.847
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/acf/right_acf_interface.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/acf/right_acf_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:24:41.847
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/acf/right_acf_interface.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/acf/right_acf_interface.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:25:12.930
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_active_sdb.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_active_sdb.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:25:12.930
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_active_sdb.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/sdb/test_active_sdb.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:25:21.231
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/acf/test_helper.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/acf/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:25:21.232
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/acf/test_helper.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/acf/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:25:22.113
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/s3/right_s3.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/s3/right_s3.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:25:22.113
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/s3/right_s3.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/s3/right_s3.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:25:32.809
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_helper.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:25:32.810
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_helper.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_helper.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:25:35.810
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_right_s3_stubbed.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_right_s3_stubbed.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:25:35.811
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_right_s3_stubbed.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/test/s3/test_right_s3_stubbed.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:25:56.725
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sdb/active_sdb.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sdb/active_sdb.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:25:56.726
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sdb/active_sdb.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/sdb/active_sdb.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.ruby.core 4 0 2011-07-18 12:26:02.014
+!MESSAGE 
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/ec2/right_ec2.rb.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/ec2/right_ec2.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 5 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2011-07-18 12:26:02.014
+!MESSAGE Could not read file: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/ec2/right_ec2.rb.
+!STACK 0
+java.io.FileNotFoundException: /Library/Ruby/Gems/1.8/gems/aws-1.11.9/lib/ec2/right_ec2.rb (Permission denied)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.indexFileStore(RubyFileIndexingParticipant.java:69)
+	at com.aptana.ruby.internal.core.index.RubyFileIndexingParticipant.index(RubyFileIndexingParticipant.java:50)
+	at com.aptana.index.core.IndexRequestJob.indexFileStores(IndexRequestJob.java:325)
+	at com.aptana.index.core.IndexContainerJob.run(IndexContainerJob.java:96)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.js.debug.core 1 0 2011-07-18 14:00:33.132
+!MESSAGE Extension version: 1.7.1; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2011-07-18 14:00:33.155
+!MESSAGE Extension update available: 1.7.1
+!SESSION 2011-07-19 08:24:46.821 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_24
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/kevin/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/kevin/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-07-19 08:24:53.653
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2011-07-19 08:25:18.760
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2011-07-19 08:26:24.019 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_24
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/kevin/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/kevin/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-07-19 08:26:40.447
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2011-07-19 15:50:19.517 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_24
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/kevin/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/kevin/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-07-19 15:50:48.725
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.aptana.js.debug.core 1 0 2011-07-20 10:29:31.056
+!MESSAGE Extension version: 0.0.1; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2011-07-20 10:29:31.185
+!MESSAGE Extension update available: 0.0.1
+
+!ENTRY com.aptana.js.debug.core 1 0 2011-07-20 10:31:47.122
+!MESSAGE Extension version: 0.0.1; protocol v2
+!SESSION 2011-07-20 16:46:56.745 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_24
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/kevin/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/kevin/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2011-07-20 16:47:22.100
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.aptana.js.debug.core 1 0 2011-07-20 23:37:49.650
+!MESSAGE Extension version: 1.7.2.v20110715135838; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2011-07-20 23:37:49.701
+!MESSAGE Extension update available: 1.7.2.v20110715135838

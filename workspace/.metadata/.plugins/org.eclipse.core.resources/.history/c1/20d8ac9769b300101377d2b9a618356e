@@ -1,0 +1,8 @@
+var ui = require_once('js/app/common/ui');
+
+exports.AddWindow = function(args) {	
+	var win = ui.window('new_fugitive');
+	ui.addBackButtonView(win);
+
+	return win;
+};

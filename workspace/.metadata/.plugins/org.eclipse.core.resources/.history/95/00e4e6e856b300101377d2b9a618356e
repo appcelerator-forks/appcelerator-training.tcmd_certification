@@ -1,0 +1,25 @@
+var ui = require_once('js/app/common/ui');
+
+exports.DetailWindow = function(args) {	
+	var win = ui.window('Jeff Haynie');
+	var backBtn = ui.view({
+		width:70,
+		height:30,
+		backgroundImage:'images/back.png',
+		left:5
+	});
+	backBtn.add(ui.label('Back',{
+		textAlign:'center',
+		color:'#fff',
+		font:{
+			fontWeight:'bold'
+		}
+	}));
+	win.addHeaderChild(backBtn);
+	
+	backBtn.addEventListener('click', function() {
+		win.close();
+	});
+
+	return win;
+};

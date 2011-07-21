@@ -1,0 +1,32 @@
+var ui = require_once('js/app/common/ui');
+
+function createTableViewRow(fugitive) {
+	var tvrow = Ti.UI.createTableViewRow({
+		leftImage:'images/placeholder_small.png',
+		rightImage:'images/arrow.png',
+		backgroundImage:'images/row_up.png',
+		backgroundSelectedImage: 'images/row_down.png'
+	});
+	tvrow.add(ui.label(fugitive.name, {
+		left:70
+	}));
+	return tvrow;
+}
+
+exports.FugitiveTableView = function(fugitives,args) {
+	var tvData = [];
+	
+	//create table view rows for 
+	for (var i = 0, l = fugitives.length; i<l; i++) {
+		tvData.push(createTableViewRow(fugitives[i]));
+	}
+	
+	var tv = Ti.UI.createTableView(ui.extend({
+		data:tvData,
+		minRowHeight:60,
+		backgroundImage:'images/grain.png',
+		
+	},args||{}));
+	
+	return tv;
+};

@@ -1,0 +1,4 @@
+var win = Ti.UI.currentWindow,
+	ui = require('bh/ui');
+	
+win.add(ui.label('busted_at'));

@@ -1,0 +1,33 @@
+var ui = require_once('js/app/common/ui');
+
+exports.DetailWindow = function(args) {
+	var win = ui.window('Jeff Haynie',{
+		orientationModes: [
+			Ti.UI.PORTRAIT,
+			Ti.UI.UPSIDE_PORTRAIT
+		]
+	});
+	ui.addBackButtonView(win);
+	
+	var topSection = Ti.UI.createView({
+		backgroundImage:'images/detail_bg.png',
+		height:122
+	});
+	win.addChild(topSection);
+
+	var detailsView = Ti.UI.createView({
+		backgroundColor:'#ff0000'
+	});
+	var actionView = Ti.UI.createView({
+		backgroundColor:'#123'
+	});
+	var scrollView = Ti.UI.createScrollableView({
+		views:[detailsView,actionView],
+		showPagingControl:true,
+		top:122,
+		bottom:3
+	});
+	win.addChild(scrollView);
+
+	return win;
+};

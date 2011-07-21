@@ -1,0 +1,84 @@
+class FugitivesController < ApplicationController
+  # GET /fugitives
+  # GET /fugitives.xml
+  def index
+    @fugitives = Fugitive.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @fugitives }
+      format.xml  { render :json => @fugitives }
+    end
+  end
+
+  # GET /fugitives/1
+  # GET /fugitives/1.xml
+  def show
+    @fugitive = Fugitive.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @fugitive }
+    end
+  end
+
+  # GET /fugitives/new
+  # GET /fugitives/new.xml
+  def new
+    @fugitive = Fugitive.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @fugitive }
+    end
+  end
+
+  # GET /fugitives/1/edit
+  def edit
+    @fugitive = Fugitive.find(params[:id])
+  end
+
+  # POST /fugitives
+  # POST /fugitives.xml
+  def create
+    @fugitive = Fugitive.new(params[:fugitive])
+
+    respond_to do |format|
+      if @fugitive.save
+        format.html { redirect_to(@fugitive, :notice => 'Fugitive was successfully created.') }
+        format.xml  { render :xml => @fugitive, :status => :created, :location => @fugitive }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @fugitive.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /fugitives/1
+  # PUT /fugitives/1.xml
+  def update
+    @fugitive = Fugitive.find(params[:id])
+
+    respond_to do |format|
+      if @fugitive.update_attributes(params[:fugitive])
+        format.html { redirect_to(@fugitive, :notice => 'Fugitive was successfully updated.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @fugitive.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /fugitives/1
+  # DELETE /fugitives/1.xml
+  def destroy
+    @fugitive = Fugitive.find(params[:id])
+    @fugitive.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(fugitives_url) }
+      format.xml  { head :ok }
+    end
+  end
+end

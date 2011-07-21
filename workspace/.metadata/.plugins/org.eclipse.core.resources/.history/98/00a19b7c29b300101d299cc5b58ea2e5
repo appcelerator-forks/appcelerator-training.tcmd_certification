@@ -1,0 +1,19 @@
+function createTableViewRow(fugitive) {
+	
+}
+
+exports.FugitiveTableView = function(fugitives,args) {
+	var tvData = [];
+	
+	//create table view rows for 
+	for (var i = 0, l = fugitives.length; i<l; i++) {
+		tvData.push({title:fugitives[i].name});
+	}
+	
+	var tv = Ti.UI.createTableView({
+		data:tvData,
+		minRowHeight:60
+	});
+	
+	return tv;
+};

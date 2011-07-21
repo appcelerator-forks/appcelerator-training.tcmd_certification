@@ -1,0 +1,37 @@
+var ui = require_once('js/app/common/ui');
+
+exports.DetailWindow = function(fugitive) {
+	var win = ui.window(fugitive.name||'aynie',{
+		orientationModes: [
+			Ti.UI.PORTRAIT
+		]
+	});
+	ui.addBackButtonView(win);
+	
+	var topSection = Ti.UI.createView({
+		backgroundImage:'images/detail_bg.png',
+		height:122,
+		top:0
+	});
+	win.addChild(topSection);
+
+	var detailsView = Ti.UI.createView({
+		backgroundColor:'#ff0000'
+	});
+	var actionView = Ti.UI.createView({
+		backgroundColor:'#123'
+	});
+	var scrollView = Ti.UI.createScrollableView({
+		views:[detailsView,actionView],
+		showPagingControl:true,
+		top:122,
+		bottom:0,
+		pagingControlColor:'#232323',
+		pagingControlHeight:30
+	});
+	win.addChild(scrollView);
+	
+	
+
+	return win;
+};

@@ -1,0 +1,34 @@
+//extend on object with the properties of one or more others (thanks, Dojo!)
+function extend(obj,props) {
+	var empty = {};
+	function mixin(target,source) {
+		var name, s, i;
+		for(name in source) {
+			if (source.hasOwnProperty(name)) {
+				s = source[name];
+				if(!(name in target) || (target[name] !== s && (!(name in empty) || empty[name] !== s))) {
+					target[name] = s;
+				}
+			}
+		}
+		return target; // Object
+	}
+
+	if(!obj) {
+		obj = {};
+	}
+	for(var i=1, l=arguments.length; i<l; i++) {
+		mixin(obj, arguments[i]);
+	}
+	Ti.API.info(JSON.stringify(obj));
+	return obj; // Object
+}
+exports.extend = extend;
+
+//simple helper to branch values based on OS
+var osname = Ti.Platform.osname;
+function os(androidValue,iosValue) {
+	return (osname === 'android') ? androidValue : iosValue;
+}
+
+exports.os = os;

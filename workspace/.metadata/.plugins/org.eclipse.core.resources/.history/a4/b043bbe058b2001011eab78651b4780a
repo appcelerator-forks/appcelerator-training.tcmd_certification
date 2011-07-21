@@ -1,0 +1,4 @@
+
+Ti.Gesture.addEventListener('orientationchange', function(e) {
+	alert('hello');
+});

@@ -1,0 +1,7 @@
+var extend = require_once('js/app/common/ui').extend;
+
+function Fugitive(args) {
+	this.captured = false;
+	extend(this,args||{});
+}
+exports.Fugitive;

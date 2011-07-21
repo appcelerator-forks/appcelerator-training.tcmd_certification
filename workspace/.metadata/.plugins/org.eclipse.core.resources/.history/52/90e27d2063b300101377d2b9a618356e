@@ -1,0 +1,227 @@
+//bootstrap database
+var db = Ti.Database.open('TiBountyHunter');
+var fugitiveFields = [
+	'id INTEGER PRIMARY KEY',
+	'name TEXT',
+	'captured INTEGER',
+	'url TEXT',
+	'capturedLat REAL',
+	'capturedLong REAL',
+	'heightInches INTEGER',
+	'heightFeet INTEGER',
+	'description TEXT'
+];
+db.execute('CREATE TABLE IF NOT EXISTS fugitives('+fugitiveFields.join(',')+');');
+db.close();
+
+var Fugitive = require('js/app/model/Fugitive').Fugitive;
+
+function list(_captured) {
+	var fugitiveList = [];
+	var db = Ti.Database.open('TiBountyHunter');
+	var result = db.execute('SELECT * FROM fugitives WHERE captured = ? ORDER BY name ASC', (_captured) ? 1 : 0);
+	while (result.isValidRow()) {
+		fugitiveList.push(new Fugitive({
+			//add these attributes for the benefit of a table view
+			id: result.fieldByName('id'),
+			name: result.fieldByName('name'),
+			captured: (Number(result.fieldByName('captured')) === 1),
+			url: result.fieldByName('url'),
+			capturedLat: Number(result.fieldByName('capturedLat')),
+			capturedLong: Number(result.fieldByName('capturedLong')),
+			heightInches: Number(result.fieldByName('heightInches')),
+			heightFeet: Number(result.fieldByName('heightFeet')),
+			description: result.fieldByName('description')
+		}));
+		
+		result.next();
+	}
+	result.close(); //make sure to close the result set
+	db.close();
+
+	return fugitiveList;
+};
+exports.list;
+
+function add(fugitive) {
+	var db = Ti.Database.open('TiBountyHunter');
+	db.execute(
+		'INSERT INTO fugitives(name,captured,capturedLat,capturedLong,url,heightFeet,heightInches,description) VALUES(?,?,?,?,?,?,?,?)',
+		fugitive.name,
+		(fugitive.captured) ? 1:0,
+		fugitive.capturedLat,
+		fugitive.capturedLong,
+		fugitive.url,
+		fugitive.heightFeet,
+		fugitive.heightInches,
+		fugitive.description
+	);
+	db.close();
+
+	//Dispatch a message to let others know the database has been updated
+	Ti.App.fireEvent("databaseUpdated");
+}
+exports.add = add;
+
+function update(fugitive) {
+	var db = Ti.Database.open('TiBountyHunter');
+	db.execute(
+		'UPDATE fugitives SET name = ?, captured = ?, capturedLat = ?, capturedLong = ?, url = ?, heightFeet = ?, heightInches = ?, description = ? WHERE id = ?',
+		fugitive.name,
+		(fugitive.captured) ? 1:0,
+		fugitive.capturedLat,
+		fugitive.capturedLong,
+		fugitive.url,
+		fugitive.heightFeet,
+		fugitive.heightInches,
+		fugitive.description,
+		fugitive.id
+	);
+	db.close();
+
+	//Dispatch a message to let others know the database has been updated
+	Ti.App.fireEvent("databaseUpdated");
+}
+exports.update = update;
+
+function remove(fugitive) {
+	
+}
+exports.remove = remove;
+
+
+
+
+
+
+function save(fugitive) {
+	var db = Ti.Database.open('TiBountyHunter');
+	
+	//Build sql string
+	var sql, sqlTokens = [];
+	if (fugitive.id) {
+		//update existing
+		sql = 'UPDATE fugitives SET ';
+		for(key in fugitive) {
+			var val;
+			if (typeof fugitive[key] === 'boolean') {
+				(fugitive[key]) ? val=1:val=0;
+			}
+			else {
+				val = fugitives[key]+'';
+			}
+			
+			//dynamically build SQL string based on properties
+			sqlTokens.push(key+' = \''+val+'\'');
+		}
+		sql = sql+sqlTokens.join(',')+' WHERE id = '+fugitive.id+';';
+	}
+	else {
+		//add new
+		sql = 'INSERT INTO fugitives';
+		for(key in fugitive) {
+			var val;
+			if (typeof fugitive[key] === 'boolean') {
+				(fugitive[key]) ? val=1:val=0;
+			}
+			else {
+				val = fugitives[key]+'';
+			}
+			
+			//dynamically build SQL string based on properties
+			sqlTokens.push(key+' = \''+val+'\'');
+		}
+		sql = sql+sqlTokens.join(',')+' WHERE id = '+fugitive.id+';';
+	}
+	
+	//Dynamically build SQL string to persist JS object
+	if (fugitive.id) {
+		//update existing record
+		var setFragments = [
+			'captured = ?',
+			'capturedLat = ?',
+			'capturedLong = ?',
+			'url = ?',
+			'heightFeet = ?'
+		];
+		sql = 'UPDATE fugitives SET captured = ?'
+	}
+	else {
+		//fresh insert
+		
+	}
+	db.execute("INSERT INTO fugitives() VALUES(?,?)",
+		fugitive.name,
+		(fugitive.captured) ? 1:0,
+		
+	);
+	db.close();
+
+	//Dispatch a message to let others know the database has been updated
+	Ti.App.fireEvent("databaseUpdated");
+};
+exports.save;
+
+function remove(fugitive) {
+	
+};
+exports.remove;
+
+//determine if the database needs to be seeded
+var net = require_once('js/app/common/network');
+if (!Ti.App.Properties.hasProperty('seeded')) {
+	net.getFugitives(function(data) {
+		for (var i = 0;i<data.length;i++) {
+			save(new Fugitive({
+				name:data[i].name
+			}));
+		}
+	});
+	Ti.App.Properties.setString('seeded','yuppers');
+}
+
+/*
+exports.add = function(_name) {
+	var db = Ti.Database.open('TiBountyHunter');
+	db.execute("INSERT INTO fugitives(name,captured) VALUES(?,?)",_name,0);
+	db.close();
+
+	//Dispatch a message to let others know the database has been updated
+	Ti.App.fireEvent("databaseUpdated");
+};
+
+bh.db.del = function(_id) {
+	var db = Ti.Database.open('TiBountyHunter');
+	db.execute("DELETE FROM fugitives WHERE id = ?",_id);
+	db.close();
+
+	//Dispatch a message to let others know the database has been updated
+	Ti.App.fireEvent("databaseUpdated");
+};
+
+bh.db.bust = function(_id,_lat,_lng) {
+	var db = Ti.Database.open('TiBountyHunter');
+	db.execute("UPDATE fugitives SET captured = 1, capturedLat = ?, capturedLong = ? WHERE id = ?",_lat,_lng,_id);
+	db.close();
+
+	//Dispatch a message to let others know the database has been updated
+	Ti.App.fireEvent("databaseUpdated");
+};
+bh.db.addPhoto = function(_id,_url) {
+	var db = Ti.Database.open('TiBountyHunter');
+	db.execute("UPDATE fugitives SET url = ? WHERE id = ?",_url,_id);
+	db.close();
+
+	//Dispatch a message to let others know the database has been updated
+	Ti.App.fireEvent("databaseUpdated");
+};
+//determine if the database needs to be seeded
+if (!Ti.App.Properties.hasProperty('seeded')) {
+	bh.net.getFugitives( function(data) {
+		for (var i = 0;i<data.length;i++) {
+			bh.db.add(data[i].name);
+		}
+	});
+	Ti.App.Properties.setString('seeded','yuppers');
+}
+*/

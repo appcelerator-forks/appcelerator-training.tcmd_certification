@@ -1,0 +1,8 @@
+var ui = require_once('js/app/common/ui');
+
+exports.DetailWindow = function(args) {	
+	var win = ui.window('Jeff Haynie');
+	ui.addBackButtonView(win);
+
+	return win;
+};
