@@ -1,62 +1,39 @@
-Logger started at: Wednesday, July 20, 2011 10:31:47 AM PDT
+Logger started at: Tuesday, July 26, 2011 6:24:16 AM CDT
 Component: com.appcelerator.titanium.mobile
 Version: 1.0.0.1310505598
-[31:47.86] Sent: >21*1311183107085*version<
-[31:47.117] Recv: >1311183107085*2*0.0.1<
-[31:47.122] Sent: >45*1311183107086*option*stepFiltersEnabled*false<
-[31:47.130] Recv: >1311183107086<
-[31:47.131] Sent: >36*1311183107087*option*monitorXHR*true<
-[31:47.139] Recv: >1311183107087<
-[31:47.144] Sent: >45*1311183107088*option*suspendOnFirstLine*false<
-[31:47.155] Recv: >1311183107088<
-[31:47.155] Sent: >46*1311183107089*option*suspendOnExceptions*false<
-[31:47.168] Recv: >1311183107089<
-[31:47.168] Sent: >41*1311183107090*option*suspendOnErrors*true<
-[31:47.173] Recv: >1311183107090<
-[31:47.174] Sent: >43*1311183107091*option*suspendOnKeywords*true<
-[31:47.178] Recv: >1311183107091<
-[31:47.178] Sent: >45*1311183107092*option*bypassConstructors*false<
-[31:47.197] Recv: >1311183107092<
-[31:47.198] Sent: >45*1311183107093*option*stepFiltersEnabled*false<
-[31:47.212] Recv: >1311183107093<
-[31:47.213] Sent: >30*1311183107094*detailFormatters<
-[31:47.217] Recv: >1311183107094<
-[31:47.218] Sent: >68*1311183107095*breakpoint*create*app:/js/app/common/util.js*19*1*0**1<
-[31:47.370] Recv: >1311183107095*created<
-[31:47.370] Sent: >68*1311183107096*breakpoint*create*app:/js/lib/require_once.js*7*1*0**1<
-[31:47.403] Recv: >1311183107096*created<
-[31:47.403] Sent: >20*1311183107097*enable<
-[31:47.421] Recv: >1311183107097<
-[31:47.464] Recv: >threads*created*12*kroll$1: [app:/app.js]<
-[31:47.499] Recv: >scripts*created*12|app:/app.js|app:/app.js|1|8<
-[31:47.527] Recv: >scripts*created*12|app:/js/lib/require_once.js|app:/js/lib/require_once.js|1|13<
-[31:47.545] Recv: >suspended*12*breakpoint*app:/js/lib/require_once.js*7<
-[31:47.546] Sent: >23*1311183107098*frames*12<
-[31:47.557] Recv: >1311183107098*0||moduleName|app:/js/lib/require_once.js|7|false|1311183106699|674003522*1|||app:/app.js|6|false|1311183106700|333894860<
-[31:52.417] Sent: >35*1311183107099*variables*12*frame[0]<
-[31:52.446] Recv: >1311183107099*HomeWindow|Object|vwpn|undefined*arguments|Arguments|volpn|[object Arguments]*moduleName|String|vwlpn|"js/app/HomeWindow"*require_once|Function|vopn|[object Function]*scriptRegistry|Object|vopn|[object Object]<
-[31:56.459] Sent: >35*1311183107100*variables*12*frame[1]<
-[31:56.493] Recv: >1311183107100*HomeWindow|Object|vwlpn|undefined*require_once|Function|volpn|[object Function]<
-[32:4.333] Sent: >12**stepOver*12<
-[32:4.342] Recv: >resumed*stepOver<
-[32:4.343] Recv: ><
-[32:4.348] Recv: >suspended*12*stepOver*app:/js/lib/require_once.js*8<
-[32:4.349] Sent: >23*1311183107101*frames*12<
-[32:4.349] Sent: >23*1311183107102*frames*12<
-[32:4.361] Recv: >1311183107101*0||moduleName|app:/js/lib/require_once.js|8|false|1311183123499|674003522*1|||app:/app.js|6|false|1311183123501|333894860<
-[32:4.374] Recv: >1311183107102*0||moduleName|app:/js/lib/require_once.js|8|false|1311183123512|674003522*1|||app:/app.js|6|false|1311183123518|333894860<
-[32:15.412] Sent: >10**resume*12<
-[32:15.432] Recv: >resumed*12*resume<
-[32:15.636] Recv: >log*err*[ERROR] Wrapped java.lang.IllegalArgumentException: size < 0 (file:///android_asset/Resources/js/lib/require_once.js#08)<
-[32:15.638] Recv: >suspended*12*exception*app:/js/lib/require_once.js*8<
-[32:15.639] Sent: >23*1311183107103*frames*12<
-[32:15.640] Sent: >23*1311183107104*frames*12<
-[32:15.657] Recv: >1311183107103*0||moduleName|app:/js/lib/require_once.js|8|false|1311183134790|674003522*1|||app:/app.js|6|false|1311183134796|333894860<
-[32:15.677] Recv: >1311183107104*0||moduleName|app:/js/lib/require_once.js|8|false|1311183134808|674003522*1|||app:/app.js|6|false|1311183134815|333894860<
-[32:15.797] Sent: >35*1311183107105*variables*12*frame[0]<
-[32:15.826] Recv: >1311183107105*HomeWindow|Object|vwpn|undefined*arguments|Arguments|volpn|[object Arguments]*moduleName|String|vwlpn|"js/app/HomeWindow"*require_once|Function|vopn|[object Function]*scriptRegistry|Object|vopn|[object Object]<
-[32:35.744] Sent: >10**resume*12<
-[32:35.761] Recv: >resumed*12*resume<
-[33:5.718] Sent: >10**terminate<
-[33:5.727] Recv: ><
+[24:16.393] Sent: >21*1311679456394*version<
+[24:16.412] Recv: >1311679456394*2*0.0.1<
+[24:16.414] Sent: >36*1311679456395*option*monitorXHR*true<
+[24:16.420] Recv: >1311679456395<
+[24:16.421] Sent: >45*1311679456396*option*stepFiltersEnabled*false<
+[24:16.454] Recv: >1311679456396<
+[24:16.455] Sent: >45*1311679456397*option*suspendOnFirstLine*false<
+[24:16.471] Recv: >1311679456397<
+[24:16.471] Sent: >46*1311679456398*option*suspendOnExceptions*false<
+[24:16.487] Recv: >1311679456398<
+[24:16.487] Sent: >41*1311679456399*option*suspendOnErrors*true<
+[24:16.491] Recv: >1311679456399<
+[24:16.494] Sent: >43*1311679456400*option*suspendOnKeywords*true<
+[24:16.500] Recv: >1311679456400<
+[24:16.500] Sent: >45*1311679456401*option*bypassConstructors*false<
+[24:16.504] Recv: >1311679456401<
+[24:16.509] Sent: >45*1311679456402*option*stepFiltersEnabled*false<
+[24:16.516] Recv: >1311679456402<
+[24:16.516] Sent: >30*1311679456403*detailFormatters<
+[24:16.520] Recv: >1311679456403<
+[24:16.522] Sent: >20*1311679456404*enable<
+[24:16.534] Recv: >1311679456404<
+[24:16.639] Recv: >threads*created*12*kroll$1: [app:/app.js]<
+[24:16.738] Recv: >scripts*created*12|app:/app.js|app:/app.js|1|10<
+[24:16.807] Recv: >scripts*created*12|app:/js/lib/require_once.js|app:/js/lib/require_once.js|1|13<
+[24:16.907] Recv: >log*err*[ERROR] Wrapped java.lang.IllegalArgumentException: size < 0 (file:///android_asset/Resources/js/lib/require_once.js#08)<
+[24:16.908] Recv: >suspended*12*exception*app:/js/lib/require_once.js*8<
+[24:16.908] Sent: >23*1311679456405*frames*12<
+[24:16.945] Recv: >1311679456405*0||moduleName|app:/js/lib/require_once.js|8|false|1311679456658|674003522*1|||app:/app.js|6|false|1311679456686|333894860<
+[24:22.936] Sent: >68*1311679456406*breakpoint*create*app:/js/lib/require_once.js*8*1*0**1<
+[24:22.941] Recv: >1311679456406*created<
+[24:25.633] Sent: >61*1311679456407*breakpoint*remove*app:/js/lib/require_once.js*8<
+[24:25.639] Recv: >1311679456407*removed<
+[24:28.664] Sent: >10**resume*12<
+[24:28.673] Recv: >resumed*12*resume<
 ----------End of file----------

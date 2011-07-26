@@ -33,63 +33,15 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="2"/>
-<part id="0"/>
-<part id="1"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="com.aptana.editor.js" name="app.js" partName="app.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/app.js" title="app.js" tooltip="BountyHunter/Resources/app.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/app.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="333" selectionTopPixel="0"/>
-</editor>
-<editor id="com.aptana.editor.js" name="ui.js" partName="ui.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/ui.js" title="ui.js" tooltip="BountyHunter/Resources/js/app/common/ui.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/js/app/common/ui.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="588" selectionTopPixel="0"/>
-</editor>
-<editor id="com.aptana.editor.xml" name="strings.xml" partName="strings.xml" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/i18n/en/strings.xml" title="strings.xml" tooltip="BountyHunter/i18n/en/strings.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/i18n/en/strings.xml"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="994" selectionTopPixel="0"/>
-</editor>
-<editor id="com.aptana.editor.js" name="HomeWindow.js" partName="HomeWindow.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/HomeWindow.js" title="HomeWindow.js" tooltip="BountyHunter/Resources/js/app/HomeWindow.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/js/app/HomeWindow.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1231" selectionTopPixel="333"/>
-</editor>
-<editor id="com.aptana.editor.js" name="DetailWindow.js" partName="DetailWindow.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/DetailWindow.js" title="DetailWindow.js" tooltip="BountyHunter/Resources/js/app/DetailWindow.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/js/app/DetailWindow.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="134" selectionTopPixel="0"/>
-</editor>
-<editor id="com.aptana.editor.js" name="db.js" partName="db.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/db.js" title="db.js" tooltip="BountyHunter/Resources/js/app/common/db.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/js/app/common/db.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="com.aptana.editor.js" name="network.js" partName="network.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/common/network.js" title="network.js" tooltip="BountyHunter/Resources/js/app/common/network.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/js/app/common/network.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="com.aptana.editor.js" name="FugitiveTableView.js" partName="FugitiveTableView.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/FugitiveTableView.js" title="FugitiveTableView.js" tooltip="BountyHunter/Resources/js/app/FugitiveTableView.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/js/app/FugitiveTableView.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="361" selectionTopPixel="0"/>
-</editor>
-<editor id="com.aptana.editor.js" name="require_once.js" partName="require_once.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/lib/require_once.js" title="require_once.js" tooltip="BountyHunter/Resources/js/lib/require_once.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/js/lib/require_once.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="381" selectionTopPixel="0"/>
-</editor>
-<editor id="com.aptana.editor.js" name="Fugitive.js" partName="Fugitive.js" path="/Users/kevin/Desktop/tcmd/workspace/BountyHunter/Resources/js/app/model/Fugitive.js" title="Fugitive.js" tooltip="BountyHunter/Resources/js/app/model/Fugitive.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BountyHunter/Resources/js/app/model/Fugitive.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="128" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
 <view id="com.aptana.terminal.views.terminal" partName="Terminal">
 <viewState>
 <title>Terminal</title>
@@ -100,12 +52,15 @@
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
 <view id="com.aptana.explorer.view" partName="App Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="BountyHunter">
 <project name="BountyHunter">
 <expanded>
 <element path="/BountyHunter/Resources"/>
-<element path="/BountyHunter/Resources/images"/>
 <element path="/BountyHunter/Resources/js"/>
 <element path="/BountyHunter/Resources/js/app"/>
 <element path="/BountyHunter/Resources/js/app/common"/>
@@ -113,53 +68,26 @@
 <element path="/BountyHunter/Resources/js/lib"/>
 </expanded>
 <selection>
-<element path="/BountyHunter/Resources/js/app/model/Fugitive.js"/>
-</selection>
-</project>
-<project name="TIBH">
-<expanded>
-<element path="/TIBH/db"/>
-<element path="/TIBH/db/migrate"/>
-</expanded>
-<selection>
-<element path="/TIBH/db/migrate/20110718201813_create_fugitives.rb"/>
-</selection>
-</project>
-<project name="TiBountyHunter">
-<expanded>
-<element path="/TiBountyHunter/i18n"/>
-<element path="/TiBountyHunter/i18n/en"/>
-<element path="/TiBountyHunter/Resources"/>
-<element path="/TiBountyHunter/Resources/iphone"/>
-</expanded>
-<selection>
-<element path="/TiBountyHunter/Resources/ui.js"/>
+<element path="/BountyHunter/Resources"/>
 </selection>
 </project>
 </viewState>
-</view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
-</view>
-<view id="org.eclipse.ui.views.ProblemView" partName="Problems"/>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
 </view>
 <view id="com.aptana.terminal.views.terminal:TIBH" partName="TIBH">
 <viewState>
 <title>TIBH</title>
 <workingDirectory>/Users/kevin/Desktop/tcmd/workspace/TIBH</workingDirectory>
 </viewState>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
 </view>
 </views>
 <perspectives activePart="com.aptana.explorer.view" activePerspective="com.aptana.ui.WebPerspective">
@@ -302,58 +230,42 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="com.aptana.explorer.view" label="App Explorer"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7490494" ratioLeft="591" ratioRight="198" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7490494" ratioLeft="591" ratioRight="198" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="com.aptana.ruby.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="com.aptana.js.debug.ui.AJAXMonitorView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44839254" ratioLeft="265" ratioRight="326" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1074" ratioRight="358" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="716" ratioRight="716" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="716" ratioRight="716" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="com.aptana.js.debug.ui.scriptsView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -363,179 +275,12 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/BountyHunter/Resources/app.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/BountyHunter/Resources/js/app/HomeWindow.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/BountyHunter/Resources/js/app/common/ui.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/BountyHunter/Resources/js/app/FugitiveTableView.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/BountyHunter/Resources/js/app/model/Fugitive.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/BountyHunter/Resources/js/app/common/util.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/BountyHunter/Resources/js/lib/require_once.js"/>
-</editors>
-<item historyLabel="HomeWindow.js" index="1">
-<position info="not_deleted" x="1268" y="0"/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="util.js" index="5">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="util.js" index="5">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="util.js" index="5">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="util.js" index="5">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="util.js" index="5">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="require_once.js" index="6">
-<position info="not_deleted" x="277" y="0"/>
-</item>
-<item historyLabel="require_once.js" index="6">
-<position info="not_deleted" x="240" y="0"/>
-</item>
-<item historyLabel="app.js" index="0">
-<position info="not_deleted" x="246" y="0"/>
-</item>
-<item historyLabel="require_once.js" index="6">
-<position info="not_deleted" x="240" y="0"/>
-</item>
-<item historyLabel="require_once.js" index="6">
-<position info="not_deleted" x="380" y="0"/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position info="not_deleted" x="273" y="0"/>
-</item>
-<item historyLabel="app.js" index="0">
-<position info="not_deleted" x="333" y="0"/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="util.js" index="5">
-<position/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position/>
-</item>
-<item historyLabel="util.js" index="5">
-<position info="not_deleted" x="0" y="798"/>
-</item>
-<item historyLabel="ui.js" index="2">
-<position info="not_deleted" x="588" y="0"/>
-</item>
-<item historyLabel="Fugitive.js" index="4">
-<position info="not_deleted" x="130" y="0"/>
-</item>
-<item historyLabel="require_once.js" index="6">
-<position info="not_deleted" x="381" y="0"/>
-</item>
-<item historyLabel="HomeWindow.js" index="1">
-<position info="not_deleted" x="1268" y="0"/>
-</item>
-<item historyLabel="HomeWindow.js" index="1">
-<position/>
-</item>
-<item historyLabel="HomeWindow.js" index="1">
-<position info="not_deleted" x="833" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="575" y="0"/>
-</item>
-<item historyLabel="HomeWindow.js" index="1">
-<position info="not_deleted" x="833" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="649" y="0"/>
-</item>
-<item historyLabel="HomeWindow.js" index="1">
-<position info="not_deleted" x="623" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="649" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="435" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="568" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="624" y="0"/>
-</item>
-<item historyLabel="HomeWindow.js" index="1">
-<position info="not_deleted" x="1231" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="103" y="18"/>
-</item>
-<item historyLabel="Fugitive.js" index="4">
-<position info="not_deleted" x="128" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="103" y="18"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="288" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="567" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="42" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="344" y="0"/>
-</item>
-<item historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="346" y="0"/>
-</item>
-<item active="true" historyLabel="FugitiveTableView.js" index="3">
-<position info="not_deleted" x="344" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@4577f9"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
