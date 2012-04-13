@@ -1,5 +1,5 @@
 <!doctype html>  
-<html lang="en-US">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<title>Mobile UX Design</title>
@@ -9,7 +9,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/reset.css">
 		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/main.css">
-		<link rel="stylesheet" href="../../presentation-engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../css/magula.css">
 		<link rel="stylesheet" href="../css/presentation.css">
 		<script type="text/javascript" src="../../presentation-engine/js/l10n.js"></script>
 		<script type="text/javascript" src="i18n/localizations.js"></script>
@@ -23,7 +23,7 @@
 				SLIDE INSTRUCTIONS:
 					- Set the <title> tag to this lesson's US English title
 					- Set the <meta description tag to the US English course & lesson title
-					- Add one <section></section> for each slide. Slides can contain most any valid HTML
+					- Add one <section></div></section> for each slide. Slides can contain most any valid HTML
 					- Each text tag (<p> or <li> or <h1> etc.) must have a class name that begins with
 						"l_" and is unique. Each of those class names must be added to the i18n/localizations.js
 						file and their values must be set equal to the US English version of the strings. That 
@@ -49,12 +49,12 @@
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
 						document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
 					</script>
-				<div class="slidenote"><p class="l_slidenote_titleslide"><b>Module time: 90 mins</b>(60 mins teaching, 30 mins for lab)<br>User experience 'includes a person’s perceptions of the practical aspects such as utility, ease of use and efficiency of the system.'<br>UX is app flow, navigation, ease of use<br>Subjective<br>How it 'feels' to use your app</p></div>
-				</section>
+				<div class="slidenote"><div class="l_slidenote_titleslide"><b>Module time: 90 mins</b>(60 mins teaching, 30 mins for lab)<br><br/>User experience is 'how it feels to use your app'<br/>Utility, ease of use, efficiency, app flow, navigation<br>Subjective<br>Not how it looks.</div>
+				</div></section>
 				
 				<section id="agenda">
 					<h1 style="margin-top:50px;" class="l_agenda_title">Agenda</h1>
-			    	<ul>
+			    	<ul style="width:100%;margin-left:30px;">
 			    		<li class="l_agenda1">The basics of UI/UX</li>
 			    		<li class="l_agenda2">The inputs that you have available</li>
 			    		<li class="l_agenda3">Navigation for the user</li>
@@ -67,33 +67,31 @@
 						<!-- Please use a classname that relates to the associated slide content. For example, this
 							slide is the agenda, thus the class is l_slidenote_agenda
 						 -->
-						<p class="l_slidenote_agenda"></p>Why Mobile UX?  One of the things that separates good apps from great apps is understanding and delivering a mobile-optimized user experience.  This module covers the basics of what a programmer needs to know about mobile UX.<br>The agenda covers the majority of UI & UX knowledge as related to programmers. <br>- The basics of UI/UX will cover the fundamental questions that you need to always keep in mind when developing<br> - Inputs will discuss the elements that you have available to help augment the users experience and simplify your design<br> - Navigation covers the principles of good flow through an app, and when to use proper windows and types<br> - How we provide feedback is critical to a user, showing none, or too much is very easy, this will help understand when to provide feedback to a user<br> - We’ll review good tools for design, while not a module focused on actually creating art, there are a number of tools that can help reduce the cost to design convey ideas to artists that might not have the knowledge of proper mobile design<br> - Lastly, we’ll cover some basics of rapid UI/UX testing to develop an app the right way.</div>
-				</section>
+						<div class="l_slidenote_agenda">Why Mobile UX in a programmer's course?<br/>Good UX separates 'good' apps from 'great' apps<br/>Provide input and feedback to design team members<br/>Know what is possible<br/>Learn to think outside the norm &mdash; be creative</div>
+				</div></section>
 
 				<section>
 					<h2 class="l_ux_basics">Basics of UX</h2>
 					<img src="images/basics-ux.png" style="margin-top:50px;height:450px;"/>					
-					<div class="slidenote"><p class="l_slidenote_ux_basics"></p>Think about your user<br>And the way they’ll use your app<br>3 examples<br>Tweet: confusing options and actions<br>App on left: too much info, too much in app<br>Dialog: not a mobile app, but still poor UX<br>Asks users to select command-line switches<br> If user knows what they are, they’d be typing at console<br>If they don’t, then the dialog doesn’t give appropriate info</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_ux_basics">Think about your user<br>And the way they'll use your app<br>3 examples<br>Tweet: confusing options and actions<br>App on left: too much info, too much in app<br>Dialog: not a mobile app, but still poor UX<br>Asks users to select command-line switches<br> If user knows what they are, they'd be typing at console<br>If they don't, then the dialog doesn't give appropriate info</div>
+				</div></section>
 
 				<section>
-					<h2 class="l_focus_needs">Focus on Needs</h2>
+					<h2 class="l_critial_questions">Critical Questions</h2>
 					<p align="center" class="l_can_you">Can you answer the following:</p><br>
 					<p align="center" class="l_what_problem">What problem(s) am I solving?</p><br>
 					<p align="center" class="l_who">Who are my key users?</p><br>
 					<p align="center" class="l_what_needs">What are their needs?</p>
-					<div class="slidenote"><p class="l_slidenote_focus_needs"></p>When developing any application you need to as these fundamental questions about the consumer.<br>What problems are you solving,<br>Who are your key users,<br>What are their needs<br>These questions form the foundation of what you build your core application around.</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_critial_questions">When developing any application you need to as these fundamental questions about the consumer.<br>What problems are you solving,<br>Who are your key users,<br>What are their needs<br>These questions form the foundation of what you build your core application around.</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_focus_needs">Focus on Needs</h2>
 					<p align="left" class="l_segment">Segment Your Customers</p><br>
-					<p align="left" class="l_focus_on"><b>Focus on your primary consumer!</b></p><br>
-					<p align="left" class="l_the_one">(The one that makes you profitable)</p><br>
-					<p align="left" class="l_remove"><b>Remove your personal opinion!</b></p>
-					<p align="left" class="l_you_are">(You are too close to the project)</p>
-					<div class="slidenote"><p class="l_slidenote_focus_needs_2"></p>Let’s focus on your customer for a minute. This is important for everyone that touches the project to be aware of so that it drives the right experience for the user. <br> - Focus on your primary consumer. Which one makes you the money? If there are more than 5 segments to your market, pick the top two. You will not be able to please everyone with your app. That is why there is more than 90,000 of them in the app store. This is why we see massive updates to how apps work. <br> - <b>Example: </b> A good example of this is the Facebook app. If you have Facebook apps or pages, you can’t use their app to control them. This is by design, as 600 million people want to read their news feed, and only a fraction of a percentile of those people will manage their pages. <br> - Remove your personal opinion. If you are working on the project you are probably to close to the product. Always revert back to the consumer and ask “Is it what they need”. <br> - <b>Recommendation: </b> Put a picture of your key consumer on your desk when working on the project to remind you who this is for.</div>
-				</section>
+					<p align="left" class="l_focus_on"><b>Focus on your primary consumer!</b> (The one that makes you profitable)</p><br>
+					<p align="left" class="l_remove"><b>Remove your personal opinion!</b> (You're not the target consumer)</p>
+					<div class="slidenote"><div class="l_slidenote_focus_needs_2">Let's focus on your customer for a minute. This is important for everyone that touches the project to be aware of so that it drives the right experience for the user. <br> - Focus on your primary consumer. Which one makes you the money? If there are more than 5 segments to your market, pick the top two. You will not be able to please everyone with your app. That is why there is more than 90,000 of them in the app store. This is why we see massive updates to how apps work. <br> - <b>Example: </b> A good example of this is the Facebook app. If you have Facebook apps or pages, you can't use their app to control them. This is by design, as 600 million people want to read their news feed, and only a fraction of a percentile of those people will manage their pages. <br> - Remove your personal opinion. If you are working on the project you are probably to close to the product. Always revert back to the consumer and ask “Is it what they need”. <br> - <b>Recommendation: </b> Put a picture of your key consumer on your desk when working on the project to remind you who this is for.</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_hardware">Hardware</h2>
@@ -102,8 +100,8 @@
 					<p align="left" class="l_use_it">Use it to your advantage</p><br>
 					<p align="left" class="l_work_with">Work with the lowest common greatest value</p><br>
 					<p align="left" class="l_added_value">Provide added values</p>
-					<div class="slidenote"><p class="l_slidenote_hardware"></p>Hardware constraints: screen size, input options, memory limitations<br>Freedom in framework = understanding what is available to you and how to truly utilize it to your advantage.<br>Advantage = new ways to engage customers, video, audio, location, etc. Those things that mobile does well, but desktop doesn’t<br>Target lowest common hardware that provides the greatest value to your company. Drop support for older devices or OSes when they’re not big segments of your userbase<br>Provide added value = giving users reason to use your app</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_hardware">Hardware constraints: screen size, input options, memory limitations<br>Freedom in framework = understanding what is available to you and how to truly utilize it to your advantage.<br>Advantage = new ways to engage customers, video, audio, location, etc. Those things that mobile does well, but desktop doesn't<br>Target lowest common hardware that provides the greatest value to your company. Drop support for older devices or OSes when they're not big segments of your userbase<br>Provide added value = giving users reason to use your app</div>
+				</div></section>
 
 				<section>
 					<h2 class="l_device_principles">Device Principles</h2>
@@ -111,22 +109,21 @@
 					<p align="left" class="l_interfaces">Interfaces are truncated</p><br>
 					<p align="left" class="l_design_for">Design for real mobile interfaces (voice, messaging, location...)</p><br>
 					<p align="left" class="l_plan_for">'Plan for Abandon'</p>
-					<div class="slidenote"><p class="l_slidenote_device_principles"></p>Married to mobile – take it with you everywhere (bedroom, bathroom, work, play)<br>Truncated – small, limited input options, one handed operation<br>Mobile – hub for messaging, voice, location, network<br>Plan for Abandon = interruptions are constant – phone calls, people interrupting, etc. Average app use time is a few seconds. Plan your UX around that.</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_device_principles">Married to mobile &mdash; take it with you everywhere (bedroom, bathroom, work, play)<br>Truncated &mdash; small, limited input options, one handed operation<br>Mobile &mdash; hub for messaging, voice, location, network<br>Plan for Abandon = interruptions are constant &mdash; phone calls, people interrupting, etc. Average app use time is a few seconds. Plan your UX around that.</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_screens">Screens</h2>
 					<p align="left" class="l_do_not_design">Do NOT design once, place everywhere</p><br>
 					<p align="left" class="l_resolutions">Resolutions are opportunity</p><br>
 					<p align="left" class="l_target">Target your majority</p>
-					<div class="slidenote"><p class="l_slidenote_screens"></p>Take advantage of the differences in screens and sizes<br>Optimize for the difference in screen real estate and resolution<br>Target the hardware of the majority of users</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_screens">Take advantage of the differences in screens and sizes<br>Optimize for the difference in screen real estate and resolution<br>Target the hardware of the majority of users</div>
+				</div></section>
 
 				<section>
-					<h2 class="l_inputs">Inputs</h2>
-					<img src="images/inputs.png" style="margin-top:50px;height:200px;"/>					
-					<div class="slidenote"><p class="l_slidenote_inputs"></p>We are not going to cover the traditional inputs of text input and sliders here because that is easy to gain UX feedback on. The more important Inputs are that of sensory and device level interactions. We are going to talk about the unique hardware that most devices have available.</div>
-				</section>
+					<h1 class="l_inputs">Inputs</h1>
+					<div class="slidenote"><div class="l_slidenote_inputs">Let's talk about some of the mobile-specific input options you have and how you can use them within your app to create novel or exciting ways to interact.</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_accelerometer">Accelerometer</h2>
@@ -134,155 +131,154 @@
 					<p align="left" class="l_use_in">Use in conjunction with Compass</p><br>
 					<p align="left" class="l_scrolling">Directional Scrolling</p><br>
 					<p align="left" class="l_dictates">Dictates Orientation</p>
-					<div class="slidenote"><p class="l_slidenote_accelerometer"></p>How can the accelerometer drive new experience to your app?<br>The accelerometer is always active, you just have to listen for it. It can provide directional information related to how the device is being held and in what axis. This is awesome information to record or to have available at times that you want to switch experience.<br>With location based apps, the accelerometer and compass can be used in tandem to plot points and help dictate data standards to your surroundings. Accessing this information is very easy, and can provide a very simple way to augment the experience of your user.<br>Moving your device could trigger a quick page flip or augment the situation of a scrollbar. Think about how you scroll your data? If you didn’t have to flick to scroll and just tip you device a little, could that improve experience?<br>The accelerometer dictates your devices orientation or portrait or landscape. This allows for you to design a different experience for a landscape user versus a portrait user. Let’s dive into orientation a bit more.</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_accelerometer">Accelerometer tells you how the device is moving. In conjunction with the compass, you can tell where and how the user is looking<br/><br/>Novel inputs with the accelerometer:<ul><li>Tip to move to next screen/page</li><li>Roll a ball or move a 'player' in a game</li><li>'Throw' to transfer data</li></ul></div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_orientation">Orientation</h2>
 					<p align="center" class="l_you_must">You must lock your orientation, or design for both!</p><br>
-					<img src="images/apple-hig.png" style="margin-top:50px;height:350px;"/>					
-					<div class="slidenote"><p class="l_slidenote_orientation"></p>Orientation is one of the biggest reasons that apps get denied from the app store. <br>Unless you explicitly tell your app what orientation it should be, it will assume that it can just format itself any which way. 
-Based on your primary consumer, are they going to use your application in landscape? Portrait? Or both?<br>It’s a problem that you need to address upfront to ensure that the proper experience is adhered to.<br>HIG – iPad should account for all four orientations<br>iPhone should be either:<ul><li>locked to portrait</li><li>or, portrait, landscape left/right but not upside down so that folks don’t accidentally have their phone upside down when making/receiving a call</li></ul></div>
-				</section>
+					<p align="center" class="l_orientation2">User's rotate device for a variety or reasons, your app must work in both orientations</p><br>
+					<p align="center" class="l_orientation3">Better yet, design for both!</p><br>
+					<div class="slidenote"><div class="l_slidenote_orientation">We'll talk in another lesson <em>how</em> to handle. This is more the <em>why</em><br/><br>Apple's HIG says iPad should account for all four orientations<br>iPhone should be either:<ul><li>locked to portrait</li><li>or, portrait, landscape left/right but not upside down so that folks don't accidentally have their phone upside down when making/receiving a call</li></ul></div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_orientation">Orientation</h2>
-					<img src="images/jamie-recipe.png" style="margin-top:50px;height:350px;"/>					
-					<div class="slidenote"><p class="l_slidenote_orientation_2"></p>UI functionality actually changes based on the orientation, different info is exposed<br>Jamie Oliver’s app, ‘Jamie’s Recipes’ does something similar when walking you through a recipe. This orientation change allows for easier navigation of the recipe and more information to he displayed to the user at a larger font. Much easier to read for those that are cooking in the kitchen.</div>
-				</section>
+					<img src="images/jamie-recipe.png" style="margin-top:30px;height:550px;border:none;"/>					
+					<div class="slidenote"><div class="l_slidenote_orientation_2">'Jamie&rsquo;s Recipes' &mdash; not a Titanium app<br/>UI functionality actually changes based on the orientation, different info is exposed<br>Portrait shows ingredients, landscape shows cooking directions.</div>
+				</div></section>
 				
 				<section>
-					<h2 class="l_micro_audio">Microphone & Audio</h2>
-					<p align="left" class="l_io">Input & Output</p><br>
+					<h2 class="l_micro_audio">Microphone &amp; Audio</h2>
+					<p align="left" class="l_io">Input &amp; Output</p><br>
 					<p align="left" class="l_guide_user">Guide a user with instruction</p><br>
 					<p align="left" class="l_provide_feedback">Provide positive/negative feedback</p><br>
 					<p align="left" class="l_unique">Unique and interesting UX</p>
-					<div class="slidenote"><p class="l_slidenote_micro_audio"></p>You can use sound for input and output<br>Instructions<br>Beeps and more for feedback, audio output<br>Unique – Apple’s “blow” to turn the page (recent patent filing where the sound of a puff of air can be used to advance screens in an app)</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_micro_audio">You can use sound for input and output<br>Instructions<br>Beeps and more for feedback, audio output<br>Unique &mdash; Apple's recent patent &mdash; the sound of a puff of air can be used to advance screens in an app</div>
+				</div></section>
 				
 				<section>
-					<h2 class="l_camera_video">Camera & Video</h2>
-					<p align="left" class="l_rec_edit">Record & Edit</p><br>
-					<p align="left" class="l_instant_result">Instant Result & Gratification</p><br>
+					<h2 class="l_camera_video">Camera &amp; Video</h2>
+					<p class="l_camera_image"><img src="images/camera-video.png" style="margin-top:5px;height:420px;float:right;"/></p>
+					<p align="left" class="l_rec_edit">Record &amp; Edit</p><br>
+					<p align="left" class="l_instant_result">Instant Result &amp; Gratification</p><br>
 					<p align="left" class="l_mult_uses">Multiple Uses</p><br>
 					<p align="left" class="l_augment_exp">Augment Experience</p>
-					<img src="images/camera-video.png" style="margin-top:5px;height:300px;"/>					
-					<div class="slidenote"><p class="l_slidenote_camera_video"></p>Camera is input device<br>Natural action for many<br>Example app shown is Turbo Tax – snap photo, upload, OCR of tax form<br>Augmented reality</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_camera_video">Camera is input device<br>Natural action for many<br>Example app shown is Turbo Tax &mdash; snap photo, upload, OCR of tax form<br>Augmented reality</div>
+				</div></section>
 				
 				<section>
-					<h2 class="l_nav_ux">Inputs</h2>
-					<img src="images/nav-ux.png" style="margin-top:50px;height:200px;"/>					
-					<div class="slidenote"><p class="l_slidenote_nav_ux"></p>As your minds are swirling with ideas related to how to use all of these extra inputs and how they attract your user, remember to think of their needs and how you are answering them.<br>Navigation is really the core behind your UX. We address it after the other items as those are influencers in the decision of navigation. There are really only a few ways to navigate through an application, but making it simple to the user is sometimes harder than it sounds.<br>Let’s take a look at the common elements and explore which work best as a base before expanding on how to build with them.</div>
-				</section>
+					<h1 class="l_nav_ux">Navigation</h1>
+					<div class="slidenote"><div class="l_slidenote_nav_ux">Navigation is really the core behind your UX<br/>Must be simple and intuitive<br/>Test with real users<br/><br/>Let's take a look at the common elements and explore which work best as a base before expanding on how to build with them.</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_tabs">Tabs</h2>
+					<p class="l_tabs_image"><img src="images/tabs.png" style="margin-top:5px;height:400px;width:270px;float:right;"/></p>
 					<p align="left" class="l_dec_powered">Decision Powered</p>
-					<p align="left" class="l_quick_eff">Quick & Efficient</p>
+					<p align="left" class="l_quick_eff">Quick &amp; Efficient</p>
 					<p align="left" class="l_natural">Natural User Experience</p>
 					<p align="left" class="l_instant">Instant Information Use</p>
-					<img src="images/tabs.png" style="margin-top:5px;height:400px;width:250px;"/>					
-					<div class="slidenote"><p class="l_slidenote_tabs"></p>Tabs imply equal weight, not a hierarchy, related under the common purpose of the app<br>Familiar<br>Efficient<br>Tab based apps are the most popular apps that exist. The reason it that there is no more than five or so decisions that a user needs to make.</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_tabs">Tabs imply equal weight, not a hierarchy<br/>Related functionality under the common purpose of the app<br>Familiar<br>Efficient<br>Tab based apps are the most popular apps that exist. The reason it that there is no more than five or so decisions that a user needs to make.</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_modal_windows">Modal Windows</h2>
 					<p align="left" class="l_signify">Signify separate action</p><br>
 					<p align="left" class="l_path_must">Path must lead back to purpose</p><br>
-					<p align="left" class="l_easy_creation">Easy creation & close</p><br>
+					<p align="left" class="l_easy_creation">Easy creation &amp; close</p><br>
 					<p align="left" class="l_expected_inconvenience">Expected "inconvenience"</p>
-					<div class="slidenote"><p class="l_slidenote_modal_windows"></p>Modal windows stop action – login screens, alert type messages, etc.<br>Make them useful and part of the experience<br>They are an expected UX component<br>Modal windows are windows that require interaction before returning to their parent application. This is a fitting definition as that’s how they should be used. Modal windows show split actions that require an action to deliver results. The most common is login and registration.<br>Using the login and registration example, if that process was in-line or a major tab item it would be poor UX. These are actions that will happen either only once, or a handful of times so making them a prominent navigation or element on the screen can cost you precious screen real-estate. This is why actions can trigger this response or smaller UI elements.<br>Modal windows must return something always! This isn’t a requirement in programming, but a requirement from a UX perspective. By interrupting my experience for a reason, I should have a result from performing an action on a window. If I hit cancel on a window, it should explain the benefit of logging in or registering after it closes. If I login in or register, I should get a success response and be taken to where I was going.<br>Programming wise, these windows are easy to create and close, however to the user that is interrupted by them, it can impose an inconvenience. This is why they need to have an easy way out. Close buttons and cancel buttons are critical elements that are not by default put on the windows.<br>People expect inconvenience with their apps and programs. It’s what has been programmed into us for a long time. Providing these barriers to information is expected at certain areas. Just ensure you do proper testing and gather your feedback to determine where those areas are before imposing them everywhere. I should be able to do almost everything a user should be able to do so that my experience is enriched. It will lead to a happier user.</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_modal_windows">login screens, alerts, etc. &mdash; stop user action<br>They are an expected UX component<br/>But make them useful and part of the experience<br>There must be a clear path (app flow) provided by the modal windows<br>Programming wise, these windows are easy to create and close</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_window_nav">Window Navigation</h2>
-					<img src="images/window-nav.png" style="margin-top:50px;height:400px;"/>					
-					<div class="slidenote"><p class="l_slidenote_window_nav"></p>Plan for simple, intuitive navigation<br>Minimum Viable Product is just what’s needed, no feature creep<br>We’ll talk more about prototyping apps later</div>
-				</section>
+					<p class="l_windownav_image"><img src="images/window-nav.png" style="margin-top:50px;height:440px;padding:20px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_window_nav">Plan for simple, intuitive navigation<br>Minimum Viable Product is just what's needed, no feature creep<br>We'll talk more about prototyping apps later</div>
+				</div></section>
 				
 				<section>
-					<h2 class="l_indication">Indication & Status</h2>
-					<img src="images/indication.png" style="margin-top:50px;height:200px;"/>					
-					<div class="slidenote"><p class="l_slidenote_indication"></p>We have covered inputs and the basics of navigation and what I hope your getting out of this by now is that all of these items are correlated and equally as important as the other. The more that you chart the experience and ensure you are pleasing that key user, the easier it will be to grow adoption.<br>The benefit is in the details of your application, and that brings us to the last major section that discusses tools that are native to your devices.<br>Indicators and status are often overlooked as additional items to add after the fact. And more often when they are added, they don’t provide the necessary feedback that a user needs to understand what is going on. A large part of this data relies on the lead developer to be aware of. Designers are in the world of star trek when it comes to technology. What I mean by that is that only the reactor fails, the computers never fail ?<br>When we do have data fail, we need to indicate it to the user, otherwise they will leave our app in frustration.</div>
-				</section>
+					<h1 class="l_indication">Indication &amp; Status</h1>
+					<div class="slidenote"><div class="l_slidenote_indication">Loading indicators, alerts &amp; messages, etc.<br>Indicators and status are often overlooked<br/>Must provide the necessary feedback so a user knows what is going on.<br/>When actions fail or time-out, users need to know</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_loading_ind">Loading Indicators</h2>
+					<p class="l_loading_image"><img src='images/loading-indicator.png' style='width:300px;float:right;'></p>
 					<p align="left" class="l_prov_feedback">Provide feedback to user</p><br>
 					<p align="left" class="l_prov_info">Provide information</p><br>
 					<p align="left" class="l_show_prog">Show progress</p><br>
 					<p align="left" class="l_pass_fail">Pass/Fail</p><br>
-					<div class="slidenote"><p class="l_slidenote_loading_ind"></p>Feedback is crucial, especially during long duration tasks like uploading <br>Did it work? Is it done?<br>Loading indicators provide numerous levels of feedback to a user. When you are sending an email from a phone there is a visual feedback that sending is occurring and an audio indicator once it’s complete. This is important to the user as it acknowledges that their action is complete. When it doesn’t work, it informs us directly that there was an error and more importantly asks us for an action related to it… “Should I try again?”<br>Without those actions, we would assume that it either works 100% of the time or fails 100% of the time. Feedback to the user is crucial at this impasse.<br>Providing information to a user based on an action, such as “Uploading 20%” or “Submitting” or even suggesting an alternate action like “While I’m uploading why not…” are items that can provide added benefit to a user and keep retention of a user. Showing a simple message of “Loading…” is not enough most of the time and has become common practice. If your app performs multiple actions to deliver results, why not stage your indicator to say so?<br>Show the progress of your loading if you can! Having a progress bar is a key area to manage expectations of a user. Infinity Blade is one of the most popular games on the iPhone, but when loading can appear frozen sometimes. This is because there is nothing to indicate the total load sequence or time involved in loading the game. By adding even a simple one, they could manage the expectations of their game players by showing when they can expect to play the game.<br>Lastly, developers need to mange pass/fail times. How long have some of us waited for an action to be completed and it just hangs? Manage the experience of the user by having a timeout. If it takes more than 30 seconds to deliver results, either they have a horrible connection, or your data is being a pain. Foursquare is good at this area. If I cannot connect right away it tells me. I’m disappointed, but its managed. I don’t continue to wait and build frustration.</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_loading_ind">Did it work? Is it done?<br>Loading indicators provide critical feedback to a user.<br/>Without notification, users can misunderstand whether an action worked, or failed, or is complete, etc.<br/>Think uploads &amp; downloads, logging in and out, progress through a series of data entry steps</div>
+				</div></section>
 				
 				
 				<section>
 					<h2 class="l_feedback">Feedback</h2>
+					<p class="l_feedback_image"><img src='images/feedback.png' style='width:300px;float:right;'></p>
 					<p align="left" class="l_alerts">Alerts are ok</p><br>
 					<p align="left" class="l_action_screens">Action screens are good</p><br>
 					<p align="left" class="l_active_results">Active results are best</p><br>
-					<div class="slidenote"><p class="l_slidenote_feedback"></p>Alerts are in your face, but get the job done<br>Action screens – customized screen, fills entire viewport, opportunity for better UI<br>Active results – best, inline with rest of app’s actions – game results, incoming messages, users get info and can react<br>Most of you will need to treat your users like puppy dogs. Now I say this with the best intentions as I don’t mean they are dogs. Instead, you need to <b>reward good behavior</b> with positive reinforcement and <b>punish</b> errors with corrective reinforcement.<br>When a user does something positive, you can trigger an alert to show them that their action was received or rewarded. However, alerts are only ok, as it requires dismissal and branding them isn’t as cost effective as other methods.<br>Now triggering action screens are a great way as you now utilize the entire device screen, but you also remove them from the core action they were just at. This is great for rewards or following through on additional call to actions.<br>However, active results are the best. Weather inline or in the global namespace, they are results that inform the user of feedback regardless of what their actions in the application are. One of the most common actions related to this is game center notifications. Doesn’t matter where you are in the application, it still informs you of your achievement.<br>Feedback is a very positive reinforcement of action. Use it to your advantage in your application and think of it as a key element, not a secondary thought.<br>With that being said….</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_feedback">Alerts are in your face, but get the job done<br>Action screens &mdash; customized screen, fills entire viewport, opportunity for better UI<br>Active results &mdash; best, inline with rest of app's actions &mdash; game results, incoming messages, users get info and can react<br>Feedback should give positive reinforcement of desired actions in your app, and discourage actions that aren't the best way to use your app. <br/><br>With that being said...</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_dont_over">Don't Over Dialog</h2>
 					<p align="left" class="l_only_provide">Only provide it when necessary</p><br>
 					<p align="left" class="l_dont_remind">Don't remind me constantly</p><br>
 					<p align="left" class="l_avoid">Avoid repetitive loops</p>
-					<div class="slidenote"><p class="l_slidenote_dont_over"></p>While it’s important to tell the user what they are doing, it’s also important to ensure they don’t receive too much feedback.<br>Keep these items in mind when informing a user what’s going on with their interaction with the application.<br> - <b>Only provide the feedback when necessary.</b> If you provide information on a consistent basis for repetitive actions that produce expected results, then they don’t need an alert to tell them it was successful. This is also helpful for information that is local storage driven. Local storage is exceptionally quick, so why should we provide constant feedback. Actions speak louder than words here, so when you remove an items from a tableview, that visual feedback of removal is enough.<br> - <b>Don’t remind the user constantly.</b> Constant “nagging” of a user will drive them away. Think of it like asking a girl out, the more you ask the more she’ll ignore you right ? ? Only ask the user a few times for information based on their intents in the application. Remind them politely and ensure you have a action to react on.<br> - <b>Avoid loops and situations that cause extensive dialogs. </b>I shouldn’t have to be informed more than once to do something, especially if I’m wrong.</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_dont_over">Constant nagging will drive away users<br/>Provide just enough, but not too much feedback<br/>Not every action needs some sort of 'Congratulations' message<br/><b>Avoid loops and situations that cause extensive dialogs. </b>I shouldn't have to be informed more than once to do something, especially if I'm wrong.</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_dont_over_inform">Don't Over Inform</h2>
 					<p align="left" class="l_serving_neds">Are you serving the needs?</p><br>
 					<p align="left" class="l_data_fit">Does the data really fit?</p><br>
 					<p align="left" class="l_show_off">Are you just showing off?</p>
-					<div class="slidenote"><p class="l_slidenote_dont_over_inform"></p><b>Just because you have data doesn’t mean it needs to be shown. </b>Often times we get to concerned with the data that we have should be shared with everyone and their mother. You have to go back to the core three questions:<br>What problem(s) am I solving?<br>Who are my key users?<br>What are their needs?<br>This will answer if you are serving their needs properly.<br>Then ask if the data really fits. It might, but not in the proper area that you are currently showing. Determine if it’s decision based information, does that image really need to be there, what about that text. If you cannot justify why the data is there, then it probably doesn't’t belong there.<br>Lastly, pull your ego and talents of what you can do out of the project. I was once asked if Titanium could display 10,000 rows of data because “core data can do this.” First, yes it can, but more importantly, if you are displaying 10,000 rows of data, you have a horrible UX challenge to solve in front of you. Features are features, and designing for the best UX is what dictates proper development.</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_dont_over_inform"><b>Just because you have data doesn't mean it needs to be shown. </b><br/><br/>You have to go back to the core three questions:<br>What problem(s) am I solving?<br>Who are my key users?<br>What are their needs?<br>In light of the answers to these questions, ask yourself if the data really fits and needs to be shown now. If you cannot justify why the data is there, then it probably doesn't't belong there.</div>
+				</div></section>
 				
 				
 				<section>
-					<h2 class="l_tools_trade">Tools of the Trade</h2>
-					<img src="images/tools-trade.png" style="margin-top:50px;height:200px;"/>					
-					<div class="slidenote"><p class="l_slidenote_tools_trade"></p>We’ve done a whirlwind of information for this short module on UX. I say short as UX is a degree unto itself in practice and discipline and it constantly changes. I want to share with you some of the more general tools that are either established tools or ones that are rapidly becoming a great platform to build upon. I try to look for tools that have the abilty to transcend from intern to CEOwith a relatively small learning curve for ideas.</div>
-				</section>
+					<h1 class="l_tools_trade">Tools of the Trade</h1>
+					<div class="slidenote"><div class="l_slidenote_tools_trade"Let's look at some of the tools that UX designers use. Remember, we're talking about user experience, not user interface design &mdash; so, how it works not how it looks.</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_ux_tools">UX design tools</h2>
-					<p align="left" class="l_paper">Paper & pencil !</p>
+					<p class='l_uxtools_image'><img src="images/ux-tools.png" style="margin-top:5px;width:375px;float:right;"/></p>
+					<p align="left" class="l_paper">Paper &amp; pencil !</p>
 					<p align="left" class="l_balasmiq">Balsamiq</p>
 					<p align="left" class="l_mockapp">MockApp</p>
-					<p align="left" class="l_plugin">Pencil plug-in &nbsp;&nbsp;&nbsp;http://pencil.evolus.vn/</p>
+					<p align="left" class="l_plugin">Pencil plug-in<br/>&nbsp;&nbsp;&nbsp;http://pencil.evolus.vn/</p>
 					<p align="left" class="l_ipad_apps">iPad apps</p>
-					<img src="images/ux-tools.png" style="margin-top:5px;height:300px;width:250px;"/>					
-					<div class="slidenote"><p class="l_slidenote_ux_tools"></p>For UX design, low-fidelity is critical<br>You want decision makers to focus on flow and features, not the look<br>Sketching is fine: use 3x5 cards (one card per screen)<br>Low-fi graphics apps include Balsamiq<br>MockApp is a set of PowerPoint/Keynote templates (too hi-fi for UX though)<br>Pencil plug-in for Firefox<br>iPad apps include Blueprint, iMockups and others</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_ux_tools">For UX design, low-fidelity is critical<br>You want decision makers to focus on flow and features, not the look<br>Sketching is fine: use 3x5 cards (one card per screen)<br>Low-fi graphics apps include Balsamiq<br>MockApp is a set of PowerPoint/Keynote templates (too hi-fi for UX though)<br>Pencil plug-in for Firefox<br>iPad apps include Blueprint, iMockups and others</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_graphic_apps">Graphics apps</h2>
 					<p align="left" class="l_raster">Raster: Photoshop, Pixelmator, Gimp, etc.</p><br>
 					<p align="left" class="l_vector">Vector: Fireworks, Inkscape, etc.</p><br>
 					<p align="left" class="l_other">Other: Keynote/PowerPoint</p><br>
-					<div class="slidenote"><p class="l_slidenote_graphic_apps"></p>UX doesn’t generally need the power of full graphics apps<br>But traditional designers are used to working with them<br>Templates include Teehan & Lax for Photoshop<br>Watch out for making designs too realistic at UX design phase</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_graphic_apps">UX doesn't generally need the power of full graphics apps<br>But traditional designers are used to working with them<br>Templates include Teehan &amp; Lax for Photoshop<br>Watch out for making designs too realistic at UX design phase</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_live_view">Live view tools</h2>
+					<p class="l_liveview_image1"><img src="images/liveview.png" style="margin-top:5px;width:250px;float:right;"/></p>
 					<p align="left" class="l_quick_feedback">Quick device feedback</p>
 					<p align="left" class="l_check_sizes">Check sizes and layout</p>
 					<p align="left" class="l_great_demo">Great for app demos</p>
 					<p align="left" class="l_ios_live">iOS: LiveView &nbsp;&nbsp;&nbsp;http://www.zambetti.com</p>
 					<p align="left" class="l_andr_live">Android: Design Preview &nbsp;&nbsp;&nbsp;http://code.google.com/p/android-ui-utils/</p>
-					<img src="images/live-view.png" style="margin-top:5px;height:300px;width:250px;"/>					
-					<div class="slidenote"><p class="l_slidenote_live_view"></p>Screen broadcasting apps display what’s on your screen on a mobile device<br> Let you check for sizing and layout<br>Quicker than creating graphics and displaying them on your device (like a browser image)<br>On iOS: LiveView is one of the most popular – shares screen wirelessly over local network<br>On Android: Android Design Preview is free & open source, shares screen over USB connection</div>
-				</section>
+					<p class="l_liveview_image1"><img src="images/androidpreview.png" style="margin-top:5px;width:250px;float:right;"/></p>
+					<div class="slidenote"><div class="l_slidenote_live_view">Screen broadcasting apps display what's on your screen on a mobile device<br> Let you check for sizing and layout<br>Quicker than creating graphics and displaying them on your device (like a browser image)<br>On iOS: LiveView is one of the most popular &mdash; shares screen wirelessly over local network<br>On Android: Android Design Preview is free &amp; open source, shares screen over USB connection</div>
+				</div></section>
 				
 				<section>
-					<h2 class="l_dev_test">Development & Testing</h2>
-					<img src="images/dev-test.png" style="margin-top:50px;height:200px;"/>					
-					<div class="slidenote"><p class="l_slidenote_dev_test"></p>Development and Testing<br>One of the biggest benefits of Titanium is it’s ability to rapidly develop apps. If you have a good mockup for UX that is receiving stellar feedback from your test group, then start building it in Titanium and get it out there to other users. Refined design will simply enhance the core experience, but it shouldn’t limit what you can gain from doing a good “skeleton style” app.</div>
-				</section>
+					<h1 class="l_dev_test">Development &amp; Testing</h1>
+					<div class="slidenote"><div class="l_slidenote_dev_test">In this section, we'll talk about some techniques and suggestions for development and testing</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_how_test">How to Test</h2>
@@ -290,8 +286,8 @@ Based on your primary consumer, are they going to use your application in landsc
 					<p align="left" class="l_paper_mockups">Paper mockups work</p>
 					<p align="left" class="l_live_works">LiveView apps work well</p>
 					<p align="left" class="l_do_not">Do not 'own' the project</p>
-					<div class="slidenote"><p class="l_slidenote_how_test"></p>Small groups are best, 6 is enough<br>Ask specific questions rather than 'what do you think?'<br>Paper apps work fine for testing<br>Pass off project as someone else’s to remove personal concerns</div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_how_test">Small groups are best, 6 is enough<br>Ask specific questions rather than 'what do you think?'<br>Paper apps work fine for testing<br>Pass off project as someone else's to remove personal concerns</div>
+				</div></section>
 				
 				<section>
 					<h2 class="l_ti_test">Using Titanium for Rapid Testing</h2>
@@ -299,8 +295,8 @@ Based on your primary consumer, are they going to use your application in landsc
 					<p align="left" class="l_bring_imp">Bring important Design elements (Fonts, colors, positioning)</p>
 					<p align="left" class="l_place_dead">Place dead images</p>
 					<p align="left" class="l_insert">Insert 'Lorem Ipsum'</p>
-					<div class="slidenote"><p class="l_slidenote_ti_test"></p>You can use mock screens / static graphics to further test your UI<br>Can test positioning, etc.<br>Use placeholder images and text<br>Now that you have mockups, bring your programming skills to the table and start creating the technical side of the application. If you connect to webservices, fake them, if you are loading data, set a timeout on your preloader (you can refactor it later for added benefit).<br>The goal of this exercise is to get your main structure in place and in the hands of some test users. This is your real app now, the responses should be nearly the same as your UX test prior. This is just the next step.<br>Get your core elements in the app. Custom fonts, colors, and positioning of these elements are all items that should be set. These items can then be wrapped with images and other elements to enhance the UI, but the initial UX should have these elements in place as much as possible.<br>For places that use images, create dummy images of that size for placeholders. This doesn’t need to be everywhere, but in enough places to show spacing or artwork.<br>Lastly, unless you have data do NOT use real copy, use Lorem Ipsum. This is Greek copy that will not distract the user with spelling or content, but will provide you with feedback on the design of the element instead.</div>
-				</section>				
+					<div class="slidenote"><div class="l_slidenote_ti_test">You can use mock screens / static graphics to further test your UX<br>Create static images, lay transparent clickable views atop the images to provide rudimentary navigation and flow to bring a UI mockup to live. <br>Use dummy images as placeholders, especially for user-submitted images. <br>Do NOT use real copy, use Lorem Ipsum text, otherwise testers will focus on misspellings and grammar.</div>
+				</div></section>				
 				
 				<section>
 					<h2 class="l_iteration">Iteration</h2>
@@ -308,47 +304,29 @@ Based on your primary consumer, are they going to use your application in landsc
 					<p align="left" class="l_ensure_your">Ensure your changes are justified</p>
 					<p align="left" class="l_180_deg">180 degrees is not bad</p>
 					<p align="left" class="l_ask_yourself">Ask yourself the three questions...</p>
-					<div class="slidenote"><p class="l_slidenote_iteration"></p>Change early/often means to iterate, try/change/try/change<br>Always go back to your core three questions:<br>What problems are you solving,<br>Who are your key users,<br>What are their needs</div>
-				</section>		
+					<div class="slidenote"><div class="l_slidenote_iteration">Change early/often means to iterate, try/change/try/change<br>Always go back to your core three questions:<br>What problems are you solving,<br>Who are your key users,<br>What are their needs</div>
+				</div></section>		
 				
 				<section>
 					<h2 class="l_contd_testing">Continued Testing</h2>
-					<p align="left" class="l_keep_test">Keep testing hypothesizes</p>
+					<p align="left" class="l_keep_test">Keep testing hypotheses</p>
 					<p align="left" class="l_you_never">You are never complete!</p>
 					<p align="left" class="l_remember_your">Remember your MVP</p>
-					<div class="slidenote"><p class="l_slidenote_contd_testing"></p>UI/UX can become frustrating! Everyone will have an opinion in what you should do including myself. At some point you have to do something. This is where you divide and conquer the best you can. Always continue your testing, this is where A|B can really help along with user feedback on your initial app.<br>You will never be complete, no one ever is, in fact I already want to redo this presentation, but without locking something down, it becomes vaporware. Decide to act and get your responses.<br>Remember in your first, second, third, or any release what your minimum viable product is. This can be different from release to release, but always keep that in mind.<br>UI/UX is exceptionally important. If you look at the top paid apps, and featured apps, almost all of them know exactly what they are doing for their user. If nothing else, make sure what you r working on has true value to your user, and that you are satisfying their needs.</div>
-				</section>	
+					<div class="slidenote"><div class="l_slidenote_contd_testing">Many of our app developers build in analytics so they can test UX even after they publish their apps. Features that aren't used, actions that are performed incorrectly, etc. are logged and improved or removed in the next release.<br/>Remember your minimum viable product<br/>If nothing else, make sure you provide true value to your user, and that you are satisfying their needs.</div>
+				</div></section>	
 				
 				<section>
 					<h1 class="l_qa">Q&amp;A</h1>
-					<p><img src="images/qa.png" style="margin-top:60px;height:200px;align:center"></p>
-					<div class="slidenote"><p class="l_slidenote_qa"></p></div>
-				</section>
-				
-				<section>
-					<h2 class="l_lab">Lab Goals</h2>
-					<p align="left" class="l_re_examine">Re-examine TiBountyHunter in light of UX design principles</p><br>
-					<p align="left" class="l_identify">Identify biggest UX failings</p><br>
-					<p align="left" class="l_speculate">Speculate on improvements and alternatives</p><br>
-					<p align="left" class="l_group_disc">Group discussion</p><br>
-					<p align="left" class="l_wiki_url">Wiki URL</p>
-					<div class="slidenote"><div class="l_slidenote_lab_goals">Take a look at the TiBountyHunter app as it exists at the end of BNAPPs<br>Evaluate the current state of the app in light of the three UX design question: <br><ul><li>What problems am I solving?</li><li>Who are my key users?</li><li>What are there needs?</li></ul>Identify the 3 or so biggest failing of the app in light of those UX design questions.<br>Speculate on alternatives and improvements<br>You could mock up changes in a tool like Balsamiq if you have it<br>Then, we’ll discuss as a group the ideas you have</div></div>
-				</section>
-				
-				<section>
-					<h1 class="l_lab">Lab</h1>
-					<p><img src="images/lab.png" style="margin-top:60px;height:200px;align:center"></p>
-					<div class="slidenote"><p class="l_slidenote_lab"></p>Some 'answers'<ul><li>User might be a bondsman or contract bounty hunter</li><li>Interests might be who is the highest-value bounty or some other ranking of fugitives</li><li>Or, which bounties are near by and thus easier to capture (sort by proximity)</li><li>In terms of captured bounties, the amount of money I’m owed and who owes me that money is more important than who I caught</li><li>Might use a filter function (at large, captured, captured & unpaid, etc.) instead of tabs – tabs imply equal weight/importance which might not be true</li></ul></div>
-				</section>
+					<div class="slidenote"><div class="l_slidenote_qa">There is no lab for this lesson.</div>
+				</div></section>
 				
 
-			</div>
 
 			<!-- MAKE NO CHANGES BELOW THIS LINE -->
-
+</div>
 			<!-- Appc logo and presenter notes -->
 			<div id="appclogo"><a href="../index.html"><img src="../images/appu_thumb.png"/></a></div>
-			<a id="presenternotes" onClick="openPresenterNotes()"><img src="../images/presenternotes.png" title='Open Presenter Notes Window' alt='Presenter notes' width="30"/></a>
+			<a id="presenternotes" onClick="openPresenterNotes()"><img src="../images/presenternotes.png" title='Open Presenter Notes Window' alt='Presenter notes'/></a>
 
 			<!-- The navigational controls UI -->
 			<aside class="controls">
@@ -401,7 +379,7 @@ Based on your primary consumer, are they going to use your application in landsc
 		<script>
 			var presenterNotesWindow = null;
 			function openPresenterNotes() {
-				presenterNotesWindow = window.open('../presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=480,width=640");
+				presenterNotesWindow = window.open('presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=480,width=640");
 			}
 		</script>
 	</body>
