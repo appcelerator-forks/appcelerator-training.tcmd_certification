@@ -1,0 +1,241 @@
+<!doctype html>  
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>API Deep Dive: Table Views</title>
+		<meta name="description" content="API Deep Dive: Table Views, Advanced Titanium Mobile Development">
+    	<meta name="author" content="Appcelerator, Inc." />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/main.css">
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../css/presentation.css">
+		<script type="text/javascript" src="../../presentation-engine/js/l10n.js"></script>
+		<script type="text/javascript" src="i18n/localizations.js"></script>
+	</head>
+	
+	<body>
+		<div id="reveal">	
+			<!-- Any section element inside of this container is displayed as a slide -->
+
+			<!--
+				SLIDE INSTRUCTIONS:
+					- Set the <title> tag to this lesson's US English title
+					- Set the <meta description tag to the US English course & lesson title
+					- Add one <section></section> for each slide. Slides can contain most any valid HTML
+					- Each text tag (<p> or <li> or <h1> etc.) must have a class name that begins with
+						"l_" and is unique. Each of those class names must be added to the i18n/localizations.js
+						file and their values must be set equal to the US English version of the strings. That 
+						file is used for translation and its contents OVERRIDES the text in this file.
+					- Each slide must have a <div class="slidenote"></div> container, which can be empty. These
+						are used for presenter notes. They also must be given unique "l_" classnames and strings
+						provided in the localizations.js file.
+					- Please use inline CSS on the slides to size & arrange contents.
+					- Graphics should be placed in the images folder and cropped/sized appropriately.
+					- Assume a 1024 x 768 display resolution
+					- A link to the index.html for each lesson must be added in order to the coursename/index.html
+						title slide.
+			-->
+			
+			
+			<div class="slides">
+				
+				<section>
+					<h1 style="margin-top:100px;" class="l_lessontitle">API Deep Dive: Table Views</h1>
+					<h5 class="l_subtitle">Advanced Titanium Mobile Development</h5>
+					<script>
+						// DO NOT REMOVE THIS, MUST BE INCLUDED WITH THE FIRST SLIDE
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
+						document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				<div class="slidenote"><div class="l_slidenote_titleslide"><b>Module time: 60 mins</b>(30 mins teaching, 30 mins for lab)</p></div>
+				</section>
+				
+				<section id="agenda">
+					<h1 style="margin-top:50px;" class="l_agenda_title">Agenda</h1>
+			    	<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_agenda1">TableView Examples</li>
+			    		<li class="l_agenda2">TableView Basics and Beyond</li>
+			    		<li class="l_agenda3">Headers, Footers, and Sections</li>
+						<li class="l_agenda4">Events and Extras</li>
+			    	</ul>
+					
+					<div class="slidenote">
+						<!-- Please use a classname that relates to the associated slide content. For example, this
+							slide is the agenda, thus the class is l_slidenote_agenda
+						 -->
+						<div class="l_slidenote_agenda">In this module, we’ll look at some table examples<br>review tableview basics then go a bit further into what you can do with tables<br>we’ll look at headers, footers, and sections<br>we’ll wrap up with another look at events as well as some cross platform continuous scrolling solution</div></div>
+				</section>
+
+				<section>
+					<h2 class="l_examples">Examples</h2>
+					<p class="l_examples_image"><img src="images/examples.png" style="margin-top:5px;height:350px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_examples"></div>Many options for formatting tables (seven total shown)</div>
+				</section>
+				
+				<section>
+					<h2 class="l_basic_tableview">Basic TableView</h2>
+					<p class="l_basic_tableview_image"><img src="images/basic-tableview.png" style="margin-top:5px;height:350px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_basic_tableview"></div>This is probably all review from BNAPPs</div>
+				</section>
+				
+				<section>
+					<h2 class="l_table_anonymous">Table Rows with Anonymous Objects</h2>
+					<p class="l_table_anonymous_image"><img src="images/table-anonymous.png" style="margin-top:5px;height:350px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_table_anonymous"></div>One option for adding rows is to use anonymous objects<br>Useful with JSON data pulled from a web service or database</div>
+				</section>
+		
+				<section>
+					<h2 class="l_table_obj">TableViewRow Object</h2>
+					<p class="l_table_obj_image"><img src="images/tableview-obj.png" style="margin-top:5px;height:350px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_table_obj"></div>You can also create TableViewRow objects<br>Useful when you want to manipulate the row’s properties before/after adding to the table<br>Saves cumbersome means of accessing the object within the table’s data array<br>As of SDK 1.8, appendRow() accepts row object, dictionary, or array (of rows/dictionary objects)</div>
+				</section>
+				
+				<section>
+					<h2 class="l_row_ind">Row Indicators</h2>
+					<p class="l_row_ind_image"><img src="images/row-ind.png" style="margin-top:5px;height:250px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_row_ind"></div>hasChild – indicates sub-table or additional rows<br>hasDetail – indicates a detail view or alert will appear when row is tapped (not supported on Android)<br>hasCheck – on/off or yes/no indicator</div>
+				</section>
+				
+				<section>
+					<h2 class="l_basic_table">Basic Table and Row Properties</h2>
+					<p class="l_basic_table_image"><img src="images/basic-table.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_basic_table"></div>Formatting can be done with standard TableViewRow properties<br>First row has different background image than middle rows<br>Not labeled, but the row’s foreground (text) color also set<br>The “other information…” text is added as a label rather than a standard row property</div>
+				</section>
+		
+					
+				<section>
+					<h2 class="l_cust_rows">Custom Table Rows</h2>
+					<p class="l_cust_rows_image"><img src="images/cust-rows.png" style="margin-top:5px;height:350px;float:right;"/></p>
+					<p align="left" class="l_add_label">Add labels, views, images to your rows</p><br>
+					<p align="left" class="l_pos">Positioning: relative to top-left of row</p><br>
+					<p align="left" class="l_elements">Elements accessible via children[]</p><br>
+					<div class="slidenote"><div class="l_slidenote_cust_rows"></div>You can add labels, views, and images to create custom rows<br>Point out the three labels<br>Point out the image views<br>The “plus” image is set with the row’s rightImage property</div>
+					</section>
+				
+				<section>
+					<h2 class="l_header_footer">Headers and Footers</h2>
+					<p class="l_header_footer_image"><img src="images/header-footer.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_header_footer"></div></div>
+				</section>
+				
+				<section>
+					<h2 class="l_table_sections">Table Sections</h2>
+					<p class="l_table_sections_image"><img src="images/table-sections.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_table_sections"></div>Create sections, add rows to them<br>assign sections to table via an array added to the data property</div>
+				</section>
+				
+				<section>
+					<h2 class="l_table_searching">Table Searching</h2>
+					<p class="l_table_searching_image"><img src="images/table-searching.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_table_searching"></div>Same code, but different looks</div>
+				</section>
+				
+				<section>
+					<h2 class="l_ios_only_features">iOS Only Features</h2>
+					<p class="l_ios_only_image"><img src="images/ios-only.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_ios_only_features"></div>iOS only properties (table.editable = true) will be ignored on Android<br>You listen for the delete/move events and take action based on that</div>
+				</section>
+				
+				<section>
+					<h2 class="l_table_events">Table events</h2>
+					<p class="l_table_events_image"><img src="images/table-events.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_table_events"></div>Generally, you’ll handle table events on the table rather than the rows or children<br>Determine which row clicked by using the e.row property instead<br>Titanium 1.8 adds support for native long-press event,gist workaround useful for older SDKs</div>
+				</section>
+				
+				<section>
+					<h2 class="l_event_extras">Event Extras</h2>
+					<p align="left" class="l_scroll_events">Scroll Events - contentOffset (iOS only)</p><br>
+					<p align="left" class="l_scroll_events_android">Scroll Events - firstVisibleItem, visibleItemCount, totalItemCount (Android only)</p><br>
+					<p align="left" class="l_dyn_scroll">Dynamic scrolling Android workarounds<br>https://gist.github.com/903895<br>
+					https://gist.github.com/810391</p><br>
+					<div class="slidenote"><div class="l_slidenote_event_extras"></div>Use these events to create dynamic scrolling, also called continuous or infinite scrolling<br>See these gists as well as the Q&A forums for more info on creating cross-platform infinite scrolling solutions</div>
+					</section>
+					
+				<section>
+					<h1 class="l_qa">Q&amp;A</h1>
+					<div class="slidenote"><div class="l_slidenote_qa"></div></div>
+				</section>
+				
+				<section>
+					<h1 class="l_lab_goals">Lab Goals</h1>
+					<p align="left" class="l_create_custom">Create custom table</p><br>
+					<ul style="width:100%;margin-left:30px;">
+			    		<li class="l_doesnt_fill">doesn't fill entire viewport</li>
+			    		<li class="l_cust_background">custom rows with backgrounds and child elements</li>
+			    		<li class="l_table_listeners">table event listeners that react differently depending on which child element receives the event</li>
+			    	</ul><br><br>
+					<p align="left" class="l_demoURL">Demo and wiki URL</p><br>
+					<div class="slidenote"><div class="l_slidenote_lab_goals">In this lab assignment, you will create a custom table that doesn’t fill the entire viewport. The table will contain customized rows with background images that differ based on the row’s location within the table. Each row will contain two images and two labels. When you tap a row, an event listener will determine if either of the images was the object that received the tap. If so, that image will be swapped with an alternate graphic.</div></div>
+				</section>
+				
+					<section>
+					<h1 class="l_lab">Lab</h1>
+					<div class="slidenote"><div class="l_slidenote_lab"></div>For TiBountyHunter walkthrough, focus on TableView skinning, found in FugitiveTableView.js – show how we use custom background images for the row, and mix/match built-in properties like leftImage/rightImage and custom layout with adding a label</div>
+				</section>
+
+			</div>
+
+			<!-- MAKE NO CHANGES BELOW THIS LINE -->
+
+			<!-- Appc logo and presenter notes -->
+			<div id="appclogo"><a href="../index.html"><img src="../images/appu_thumb.png"/></a></div>
+			<a id="presenternotes" onClick="openPresenterNotes()"><img src="../images/presenternotes.png" title='Open Presenter Notes Window' alt='Presenter notes'/></a>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="../../presentation-engine/reveal.js/js/reveal.js"></script>
+		<script src="../../presentation-engine/reveal.js/lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+		<script src="../../presentation-engine/js/localize.js"></script>
+		<script>
+			var presenterNotesWindow = null;
+			function openPresenterNotes() {
+				presenterNotesWindow = window.open('../presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=480,width=640");
+			}
+		</script>
+	</body>
+</html>
