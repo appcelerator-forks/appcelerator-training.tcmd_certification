@@ -1,0 +1,245 @@
+<!doctype html>  
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>API Deep Dive: Scroll Views</title>
+		<meta name="description" content="API Deep Dive: Scroll Views, Advanced Titanium Mobile Development">
+    	<meta name="author" content="Appcelerator, Inc." />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/main.css">
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../css/presentation.css">
+		<script type="text/javascript" src="../../presentation-engine/js/l10n.js"></script>
+		<script type="text/javascript" src="i18n/localizations.js"></script>
+	</head>
+	
+	<body>
+		<div id="reveal">	
+			<!-- Any section element inside of this container is displayed as a slide -->
+
+			<!--
+				SLIDE INSTRUCTIONS:
+					- Set the <title> tag to this lesson's US English title
+					- Set the <meta description tag to the US English course & lesson title
+					- Add one <section></section> for each slide. Slides can contain most any valid HTML
+					- Each text tag (<p> or <li> or <h1> etc.) must have a class name that begins with
+						"l_" and is unique. Each of those class names must be added to the i18n/localizations.js
+						file and their values must be set equal to the US English version of the strings. That 
+						file is used for translation and its contents OVERRIDES the text in this file.
+					- Each slide must have a <div class="slidenote"></div> container, which can be empty. These
+						are used for presenter notes. They also must be given unique "l_" classnames and strings
+						provided in the localizations.js file.
+					- Please use inline CSS on the slides to size & arrange contents.
+					- Graphics should be placed in the images folder and cropped/sized appropriately.
+					- Assume a 1024 x 768 display resolution
+					- A link to the index.html for each lesson must be added in order to the coursename/index.html
+						title slide.
+			-->
+			
+			
+			<div class="slides">
+				
+				<section>
+					<h1 style="margin-top:100px;" class="l_lessontitle">API Deep Dive: Scroll Views</h1>
+					<h5 class="l_subtitle">Advanced Titanium Mobile Development</h5>
+					<script>
+						// DO NOT REMOVE THIS, MUST BE INCLUDED WITH THE FIRST SLIDE
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
+						document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				<div class="slidenote"><div class="l_slidenote_titleslide"><b>Module time: 60 mins</b>(30 mins teaching, 30 mins lab)</p></div>
+				</section>
+				
+				<section id="agenda">
+					<h1 style="margin-top:50px;" class="l_agenda_title">Agenda</h1>
+			    	<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_agenda1">ScrollViews and ScrollableViews</li>
+			    		<li class="l_agenda2">ScrollViews in depth</li>
+			    		<li class="l_agenda3">ScrollableViews in depth</li>
+						<li class="l_agenda4">Web views as scrollable containers</li>
+			    	</ul>
+					
+					<div class="slidenote">
+						<!-- Please use a classname that relates to the associated slide content. For example, this
+							slide is the agenda, thus the class is l_slidenote_agenda
+						 -->
+						<div class="l_slidenote_agenda">In this module, we’ll look at …</div></div>
+				</section>
+				
+				<section>
+					<h2 class="l_scroll_vs">Scroll vs. Scroll</h2>
+					<p class="l_scroll_vs_image"><img src="images/scroll-vs.png" style="margin-top:5px;height:450px;float:right;"/></p>
+					<div class="slidenote"><div class="l_slidenote_scroll_vs">ScrollView – scrollable area of content, doesn’t have to fill viewport, scroll in either direction<br>ScrollableView – screen-size content area with 'page' indicator<br>sort of like a filmstrip of views shown within a container<br>views snap into place: you can’t end up halfway between views after a swipe</div>
+				</div></section>
+
+				<section>
+					<h2 class="l_basic_scroll">Basic ScrollView</h2>
+					<p class="l_basic_scroll_image"><img src="images/basic-scroll.png" style="margin-top:5px;height:380px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_basic_scroll"></div>Height/width = what’s visible to the user<br>Content height/width are dimensions of the actual content</div>
+				</section>
+				
+				<section>
+					<h2 class="l_deeper_dive">Deeper Dive into ScrollViews</h2>
+					<p align="left" class="l_content_height">Content height & width</p>
+					<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_auto_vs">Auto vs. specified size</li>
+			    	</ul><br><br>
+					<p align="left" class="l_zoom_content">Zooming content</p>
+					<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_zoomScale">zoomScale</li>
+			    		<li class="l_minZoomScale">minZoomScale</li>
+			    		<li class="l_maxZoomScale">maxZoomScale</li>
+			    	</ul><br><br>
+					<p align="left" class="l_bounce">Bounce</p>
+					<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_horizontalBounce">horizontalBounce</li>
+			    		<li class="l_verticalBounce">verticalBounce</li>
+			    	</ul>
+					<div class="slidenote"><div class="l_slidenote_deeper_dive"></div>Set content height to auto and it will scroll just enough to show the content.<br>Set it to a specific size and that’s all you’ll get. Content could get cut off or scroll could continue well past available content<br>Users can zoom in/out, which you can control</div>
+					</section>
+				
+				<section>
+					<h2 class="l_scrollview_diff">ScrollView - Platform Differences</h2>
+					<p align="left" class="l_android_scrollview">Android - scroll horizontal <i>or</i> vertical, not both</p><br>
+					<p align="left" class="l_ios_scrollview">iOS - canCancelEvents to block subview events</p><br>
+					<div class="slidenote"><div class="l_slidenote_scrollview_diff"></div></div>
+				</section>
+
+				<section>
+					<h2 class="l_scrollview_events">ScrollView events</h2>
+					<p class="l_scrollview_events_image"><img src="images/scrollview-events.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_scrollview_events"></div>Primary difference from other views would be the scale event<br>Additional event object properties</div>
+				</section>
+
+				<section>
+					<h2 class="l_basic_scrollview">Basic ScrollableView</h2>
+					<p class="l_basic_scrollview_image"><img src="images/basic-scrollview.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_basic_scrollview"></div>views is an array of standard views that are shown within the ScrollableView<br>pagingControl – white dots on iOS, arrows on Android<br>by default set to false (don’t show) in 1.8+<br>On Android, use pagingControlTimeout to control time when arrows disappear (=0 to always show)<br>currentPage is an integer specifying which view to show when the scrollableview is rendered</div>
+				</section>
+				
+				<section>
+					<h2 class="l_deeper_dive_scrollableviews">Deeper Dive into ScrollableViews</h2>
+					<p align="left" class="l_cust_page">Customize the paging controller</p>
+					<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_pagingControlColor">pagingControlColor</li>
+						<li class="l_pagingControlHeight">pagingControlHeight</li>
+			    	</ul><br><br>
+					<p align="left" class="l_scrollToView">scrollToView()</p>
+					<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_param_int">@param = integer or object reference to view</li>
+			    	</ul><br><br>
+					<p align="left" class="l_addview">addView(), removeView()</p>
+					<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_param_obj">@param = object reference to view</li>
+			    	</ul>
+					<div class="slidenote"><div class="l_slidenote_deeper_dive_scrollableviews"></div></div>
+					</section>
+				
+				<section>
+					<h2 class="l_scrollableview_diff">ScrollableView - Platform Difference</h2>
+					<p align="left" class="l_ios_scrollableview">iOS - cacheSize (integer) is number of views to prerender</p><br>
+					<div class="slidenote"><div class="l_slidenote_scrollableview_diff"></div>This is about the only significant difference between platforms</div>
+				</section>
+				
+				<section>
+					<h2 class="l_scrollableview_events">ScrollableView events</h2>
+					<p class="l_scrollableview_events_image"><img src="images/scrollableview-events.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_scrollableview_events"></div></div>
+				</section>
+				
+				<section>
+					<h2 class="l_webviews">WebViews</h2>
+					<p align="left" class="l_content_area">Scrollable content area</p><br>
+					<p align="left" class="l_ti_js">Titanium <i>or</i> Javascript scrolling and touch events, but not both</p><br>
+					<p align="left" class="l_caveats">Caveats:</p><br>
+					<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_dont_put">Don't put WebViews into other scrollable containers</li>
+						<li class="l_res">Resource expense</li>
+			    	</ul><br><br>
+					<div class="slidenote"><div class="l_slidenote_webviews"></div>Set scalePageToFit to false so content isn’t scaled, then scrolling should be automatically supported<br>You can manage Titanium style touch related events, or handle them with Javascript within your HTML content, but not both<br>You’ll encounter problems if you put web views into other scrollable containers, such as tables, scroll views, etc. Touch related events might not be handled in the way you expect.<br>Also, remember that web views are among the most resource expensive UI components. Use them with that forethought.</div>
+				</section>							
+				
+				<section>
+					<h1 class="l_qa">Q&amp;A</h1>
+					<div class="slidenote"><div class="l_slidenote_qa"></div></div>
+				</section>
+				
+				<section>
+					<h1 class="l_lab_goals">Lab Goals</h1>
+					<p align="left" class="l_use_both">Use both ScrollView and ScrollableView in an app</p><br>
+					<p align="left" class="l_use_scroll">Use ScrollView as tab-strip style component</p><br>
+					<p align="left" class="l_will_control">It will control what is shown in the ScrollableView</p><br>
+					<div class="slidenote"><div class="l_slidenote_lab_goals">In this lab, you will create a scroll view containing a list of baseball players. That list will extend left/right beyond the width of the viewport. When the user taps a player's name, three images of that player will be displayed in a scrollable view located below the scroll view.</div></div>
+				</section>
+				
+				<section>
+					<h1 class="l_lab">Lab</h1>
+					<div class="slidenote"><div class="l_slidenote_lab"></div>In TiBountyHunter, point out the use of the scroll view in DetailWindow.js – it is used to segment detail information about the fugitive, like the fugitive description and their location on a map (unimplemented, but easily could be).</div>
+				</section>
+
+			</div>
+
+			<!-- MAKE NO CHANGES BELOW THIS LINE -->
+
+			<!-- Appc logo and presenter notes -->
+			<div id="appclogo"><a href="../index.html"><img src="../images/appu_thumb.png"/></a></div>
+			<a id="presenternotes" onClick="openPresenterNotes()"><img src="../images/presenternotes.png" title='Open Presenter Notes Window' alt='Presenter notes'/></a>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="../../presentation-engine/reveal.js/js/reveal.js"></script>
+		<script src="../../presentation-engine/reveal.js/lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+		<script src="../../presentation-engine/js/localize.js"></script>
+		<script>
+			var presenterNotesWindow = null;
+			function openPresenterNotes() {
+				presenterNotesWindow = window.open('../presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=480,width=640");
+			}
+		</script>
+	</body>
+</html>
