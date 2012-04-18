@@ -1,3 +1,0 @@
-exports.HomeWindow = function(args) {
-	var ui = require_once('js/ui');
-};

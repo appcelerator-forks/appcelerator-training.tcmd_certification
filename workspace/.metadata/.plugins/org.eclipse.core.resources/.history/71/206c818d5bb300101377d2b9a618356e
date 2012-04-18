@@ -1,4 +1,0 @@
-function Fugitive(args) {
-	this = args; //take all passed parameters as properties of the object
-}
-exports.Fugitive;

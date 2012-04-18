@@ -1,9 +1,0 @@
-var w = Ti.UI.createWindow();
-var v = Ti.UI.createWebView({
-	url:'test.html'
-});
-w.add(v);
-
-Ti.App.addEventListener('foo', function(e) {
-	
-});

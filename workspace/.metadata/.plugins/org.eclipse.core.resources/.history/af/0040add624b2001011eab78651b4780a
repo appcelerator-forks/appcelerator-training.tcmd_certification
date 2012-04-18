@@ -1,8 +1,0 @@
-exports.create = function(args) {
-	var ui = require_once('js/ui');
-	
-	var win = ui.win('Home Window');
-	win.addChild(ui.label('hello world'));
-	
-	return win;
-};

@@ -1,2 +1,0 @@
-class Fugitive < ActiveRecord::Base
-end

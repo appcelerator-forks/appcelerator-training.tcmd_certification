@@ -1,5 +1,0 @@
-Titanium.UI.setBackgroundColor('#ffffff');
-
-Ti.UI.createWindow({
-	url:'windows/main.js'
-}).open();

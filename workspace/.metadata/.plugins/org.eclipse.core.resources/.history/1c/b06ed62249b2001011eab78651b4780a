@@ -1,6 +1,0 @@
-var w = Ti.UI.createWindow({
-	title:'foo',
-	url:'foo.js'
-});
-w.open();
-

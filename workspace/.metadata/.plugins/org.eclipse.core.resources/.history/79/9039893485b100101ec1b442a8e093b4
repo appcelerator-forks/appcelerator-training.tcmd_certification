@@ -1,4 +1,0 @@
-var win = Ti.UI.currentWindow,
-	ui = require('bh/ui');
-	
-win.add(Ti.UI.createLabel({text:'hello world'}));

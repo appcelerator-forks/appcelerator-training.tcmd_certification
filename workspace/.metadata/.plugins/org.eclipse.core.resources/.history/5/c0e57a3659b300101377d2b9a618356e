@@ -1,4 +1,0 @@
-//bootstrap database
-var db = Ti.Database.open('TiBountyHunter');
-db.execute('CREATE TABLE IF NOT EXISTS fugitives(id INTEGER PRIMARY KEY, name TEXT, captured INTEGER, url TEXT, capturedLat REAL, capturedLong REAL);');
-db.close();

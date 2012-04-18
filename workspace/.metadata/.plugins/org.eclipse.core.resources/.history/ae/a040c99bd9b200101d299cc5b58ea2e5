@@ -1,7 +1,0 @@
-exports.create = function(args) {
-	var ui = require_once('js/app/common/ui');
-
-	var win = ui.window('Jeff Haynie');
-	
-	return win;
-};

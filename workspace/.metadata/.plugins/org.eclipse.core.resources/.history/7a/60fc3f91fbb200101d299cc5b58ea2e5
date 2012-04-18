@@ -1,7 +1,0 @@
-var util = require_once('js/app/common/util');
-
-function Fugitive(args) {
-	this.captured = false;
-	util.extend(this,args||{});
-}
-exports.Fugitive;
