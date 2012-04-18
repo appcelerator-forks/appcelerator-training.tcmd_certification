@@ -8,12 +8,12 @@ String.toLocaleString({
 		"%l_filetitle": "Orientation and Gestures",
 		"%l_subtitle": "Advanced Titanium Mobile Development",
 		"%l_lessontitle": "Orientation and Gestures",
-		"%l_slidenote_titleslide": "<b>Module time: 60 mins</b>(30 mins teaching, 30 mins for lab)",
+		"%l_slidenote_titleslide": "<b>Module time: 60 mins</b><br/>(30 mins teaching, 30 mins for lab)",
 
 		"%l_agenda_title": "Agenda",
 		"%l_agenda1": "Device orientation",
 		"%l_agenda2": "Gestures",
-		"%l_slidenote_agenda": "In this module, we’ll discuss how to deal with device orientation as well as how to integrate gestures other than taps into your app.",
+		"%l_slidenote_agenda": "In this module, we'll discuss how to deal with device orientation as well as how to integrate gestures other than taps into your app.",
 
 		"%l_orientation": "Device orientation",
 		"%l_orientation_image": "<img src='images/orientation.png' style='margin-top:5px;height:350px;float:right;'/>",
@@ -21,7 +21,7 @@ String.toLocaleString({
 		"%l_lock_orientation": "Locking orientation",
 		"%l_fix_orientation": "Fixing orientation per window",
 		"%l_handle_orientation": "Handling orientation events",
-		"%l_slidenote_orientation": "Three ways to deal with orientation:<br><ul><li>Lock the orientation for the entire app</li><li>Setting a fixed orientation for specific screens within your app (e.g. one screen in portrait and another in landscape, but those are locked)</li><li>Actively updating your app’s UI based on the current orientation by handling orientation events</li></ul><br>Per Apple’s HIG on iPhone, either:<ul><li>Lock orientation, or</li><li>Support portrait, landscape left & right, but not upside down (to prevent upside down phone during incoming call)</li></ul><br>On iPad, you should support all orientations",
+		"%l_slidenote_orientation": "Three ways to deal with orientation:<br><ul><li>Lock the orientation for the entire app</li><li>Setting a fixed orientation for specific screens within your app (e.g. one screen in portrait and another in landscape, but those are locked)</li><li>Actively updating your app's UI based on the current orientation by handling orientation events</li></ul><br>Per Apple's HIG on iPhone, either:<ul><li>Lock orientation, or</li><li>Support portrait, landscape left & right, but not upside down (to prevent upside down phone during incoming call)</li></ul><br>On iPad, you should support all orientations",
 
 		"%l_lock_orientation": "Locking Orientation - iOS",
 		"%in_tiapp": "In tiapp.xml:",
@@ -41,7 +41,7 @@ String.toLocaleString({
 		"%l_copy_build": "Copy build/android/AndroidManifest.xml to <b>platform/android/AndroidManifest.xml</b>",
 		"%l_remove": "remove '|orientation' from every node",
 		"%l_lock_orientation_android_image_2": "<img src='images/lock-orientation-android-2.png' style='margin-top:5px;height:350px;float:right;'/>"
-		"%l_slidenote_lock_orientation_android_2": "Option 2 is to create a custom manifest file in the Platform/android folder<br>The Platform folder doesn’t exist by default<br>Clean the project before rebuilding to clear out old AndroidManifest.xml file",
+		"%l_slidenote_lock_orientation_android_2": "Option 2 is to create a custom manifest file in the Platform/android folder<br>The Platform folder doesn't exist by default<br>Clean the project before rebuilding to clear out old AndroidManifest.xml file",
 		"%l_fixed_orientation": "Fixed Orientation per Window",
 		"%l_window_modes": "Window Orientation Modes",
 		"%l_supported_val": "Supported values include:",
@@ -58,7 +58,7 @@ String.toLocaleString({
 		"%l_ti_gesture": "Ti.Gesture.orientationchange",
 		"%l_event_props": "Event properties and methods",
 		"%l_or_events_image": "<img src='images/or-events.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_or_events": "You can react to orientation change events<br>Use the Ti.Gesture event listener<br>Test on device to be sure you’re getting/using values you expect<br>They can differ between iOS and Android",
+		"%l_slidenote_or_events": "You can react to orientation change events<br>Use the Ti.Gesture event listener<br>Test on device to be sure you're getting/using values you expect<br>They can differ between iOS and Android",
 		
 		"%l_handling_or": "Handling Orientation Changes",
 		"%l_react_to": "React to orientation change via event listener",
@@ -66,7 +66,8 @@ String.toLocaleString({
 		"%l_move_rotate": "Move, rotate, and swap UI elements",
 		"%l_take_adv": "Take advantage of the orientation",
 		"%l_dont_forget": "Don't forget the soft keyboard",
-		"%l_slidenote_handling_or": "Unless your UI dictates otherwise, best-practice is to actively react to orientation changes<br>Self-contained, self-updating is same as we use in TiBountyHunter with the tableview<br>Components listen for a global orientation event and update themselves<br>Take advantage – move components to logical location, change size & shape, show different content (as in the Jamie Oliver recipe application that shows longer how-to info in landscape and short text & ingredients in portrait)<br>Soft keyboard – might cover a lot more of your UI",
+		"%l_slidenote_handling_or": "Unless your UI dictates otherwise, best-practice is to actively react to orientation changes<br>Self-contained, self-updating is same as we use in TiBountyHunter with the tableview<br>Components listen for a global orientation event and update themselves<br>Take advantage &mdash; move components to logical location, change size & shape, show different content (as in the Jamie Oliver recipe application that shows longer how-to info in landscape and short text & ingredients in portrait)<br>Soft keyboard &mdash; might cover a lot more of your UI",
+
 		"%l_gestures": "Gestures",
 		"%l_slidenote_gestures": "",
 		"%l_shake": "Shake",
@@ -75,7 +76,7 @@ String.toLocaleString({
 		"%l_pinch": "Pinch (iOS)",
 		"%l_long": "Long press",
 		"%l_pitch": "Pitch, roll, and yaw",
-		"%l_slidenote_gestures_detail": "Other than taps, you can react to …<br>(don’t go too deep here, there are upcoming slides for that)",
+		"%l_slidenote_gestures_detail": "Other than taps, you can react to these gestures<br>(don't go too deep here, there are upcoming slides for that)",
 		
 		"%l_shake_image": "<img src='images/shake.png' style='margin-top:5px;height:300px;float:right;'/>",
 		"%l_ti_gesture": "Ti.Gesture.shake",

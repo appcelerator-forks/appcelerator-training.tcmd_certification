@@ -8,7 +8,7 @@ String.toLocaleString({
 		"%l_filetitle": "Animation",
 		"%l_subtitle": "Advanced Titanium Mobile Development",
 		"%l_lessontitle": "Animation",
-		"%l_slidenote_titleslide": "<b>Module time: 60 mins</b>(30 mins teaching, 30 mins lab)",
+		"%l_slidenote_titleslide": "<b>Module time: 60 mins</b><br/>(30 mins teaching, 30 mins lab)",
 
 		"%l_agenda_title": "Agenda",
 		"%l_agenda1": "Animation Key Concepts",
@@ -53,7 +53,7 @@ String.toLocaleString({
 		
 		"%l_2d_matrix_example": "2D Matrix Animation Example",
 		"%l_2d_matrix_example_image": "<img src='images/2d-example.png' style='margin-top:5px;height:250px;'/>",
-		"%l_slidenote_2d_matrix_example": "<ul><li>We don’t have to worry about the matrix math</li><li>We create a matrix object and use one of its methods, such as rotate or scale</li></ul>",
+		"%l_slidenote_2d_matrix_example": "<ul><li>We don't have to worry about the matrix math</li><li>We create a matrix object and use one of its methods, such as rotate or scale</li></ul>",
 		
 		"%l_3d_matrix": "3D Matrix Animations (iOS)",
 		"%l_matrix_3d_image": "<img src='images/3d.png' style='margin-top:5px;height:380px;float:right;'/>",
@@ -88,7 +88,7 @@ String.toLocaleString({
 		"%l_slide_demo": "Slide - Demo",
 		"%l_bounce_demo": "Bounce/Grow/Shrink - Demo",
 		"%l_drag": "Drag and Drop",
-		"%l_slidenote_common_anim": "<ul><li>Demo A: KitchenSink – Base UI tab, Animations > Basic</li><ul><li>file is: basic_animation.js</li></ul><li><Demo B: show the touchmove event listener</li><li>drop part would be the callback function: you’d determine the x/y and bounds of the dragged object, if it were in the right spot per your app’s UI, then you’d take the appropriate actions</li><li>Drag & drop is not an automated / built-in function. You have to manually build that functionality</li></ul>",
+		"%l_slidenote_common_anim": "<ul><li>Demo A: KitchenSink – Base UI tab, Animations > Basic</li><ul><li>file is: basic_animation.js</li></ul><li><Demo B: show the touchmove event listener</li><li>drop part would be the callback function: you'd determine the x/y and bounds of the dragged object, if it were in the right spot per your app's UI, then you'd take the appropriate actions</li><li>Drag & drop is not an automated / built-in function. You have to manually build that functionality</li></ul>",
 		
 		"%l_qa": "Q&amp;A",
 		"%l_slidenote_qa": "",
