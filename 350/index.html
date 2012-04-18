@@ -9,7 +9,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/reset.css">
 		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/main.css">
-		<link rel="stylesheet" href="../../presentation-engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../css/magula.css">
 		<link rel="stylesheet" href="../css/presentation.css">
 		<script type="text/javascript" src="../../presentation-engine/js/l10n.js"></script>
 		<script type="text/javascript" src="i18n/localizations.js"></script>
@@ -49,7 +49,7 @@
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
 						document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
 					</script>
-				<div class="slidenote"><div class="l_slidenote_titleslide"><b>Module time: 90 mins</b>(60 mins teaching, 30 mins lab)</p></div>
+				<div class="slidenote"><div class="l_slidenote_titleslide"><b>Module time: 90 mins</b>(60 mins teaching, 30 mins lab)</div></div>
 				</section>
 				
 				<section id="agenda">
@@ -77,7 +77,7 @@
 					<p align="left" class="l_low_cost">Low cost handsets on a variety of hardware</p><br>
 					<p align="left" class="l_java">Java-based environment (common skill set)</p><br>
 					<p align="left" class="l_great">Many great Google apps</p>
-					<div class="slidenote"><div class="l_slidenote_android_strengths"></div>Some carriers restrict installation of non-market apps</div>
+					<div class="slidenote"><div class="l_slidenote_android_strengths">Some carriers restrict installation of non-market apps</div></div>
 				</section>
 
 				<section>
@@ -95,7 +95,7 @@
 					<p align="left" class="l_large_dist">Large distribution of device screen types, hardware capabilities, OS versions...</p><br>
 					<p align="left" class="l_less_active">Less active app economy (fewer purchases)</p><br>
 					<p align="left" class="l_confusing">Confusing UX (Linux on a handset!)</p>
-					<div class="slidenote"><div class="l_slidenote_android_weaknesses"></div><ul><li>Carrier themes add a layer of complexity in UI design (button backgrounds or default text vary by carrier themes, for example)</li><li>UX is perhaps more confusing for novices, general public than for typical developer or tech geek</li></ul></div>
+					<div class="slidenote"><div class="l_slidenote_android_weaknesses"><ul><li>Carrier themes add a layer of complexity in UI design (button backgrounds or default text vary by carrier themes, for example)</li><li>UX is perhaps more confusing for novices, general public than for typical developer or tech geek</li></ul></div></div>
 				</section>
 				
 				<section>
@@ -103,12 +103,12 @@
 					<p align="left" class="l_parity">API Parity - Platform diversity can make adding features slower</p><br>
 					<p align="left" class="l_builtin_ui">Not as many built-in UI components (platform weakness really)</p><br>
 					<p align="left" class="l_js_engine">JavaScript engine performance - V8 is fast!(but Rhino not so much)</p>
-					<div class="slidenote"><div class="l_slidenote_ti_android_weaknesses"></div><ul><li>API parity issues is basically a growing-pains result, we’re doing our best to catch up and achieve parity</li><li>SDK 1.8 added V8 JS engine, which is much faster than Rhino</li><li>Rhino also supported for pre-Android 2.2 devices</li></ul></div>
+					<div class="slidenote"><div class="l_slidenote_ti_android_weaknesses"><ul><li>API parity issues is basically a growing-pains result, we're doing our best to catch up and achieve parity</li><li>SDK 1.8 added V8 JS engine, which is much faster than Rhino</li><li>Rhino also supported for pre-Android 2.2 devices</li></ul></div></div>
 				</section>
 				
 				<section>
-					<h1 class="l_many_dev">Many devices & form factors - test!</h1>
-					<div class="slidenote"><div class="l_slidenote_many_dev"></div>Phones, tablets, various operating system versions, vendor skins, carrier add-ons, forked versions<br>Need to test as widely as possible<br>Test on device</div>
+					<h1 class="l_many_dev">Many devices &amp; form factors - test!</h1>
+					<div class="slidenote"><div class="l_slidenote_many_dev">Phones, tablets, various operating system versions, vendor skins, carrier add-ons, forked versions<br>Need to test as widely as possible<br>Test on device</div></div>
 				</section>
 				
 				<section>
@@ -121,44 +121,44 @@
 			    	</ul>
 					<p align="left" class="l_necessary">It is necessary to understand and implement these in Ti to provide a native experience</p><br>
 					<p class="l_android_url" style="font-size:0.7em;margin-top:20px;"><a href='http://developer.android.com/guide/topics/fundamentals.html'>http://developer.android.com/guide/topics/fundamentals.html</a></p>
-					<div class="slidenote"><div class="l_slidenote_android_key"></div><ul><li>Aevery app has the three components above, and we will explore each.  They form the fundamental building blocks of an android app</li><li><b>READ THE ANDROID APP FUNDAMENTALS!!!!!!!!!!  DON’T CHEAT AND HOPE TITANIUM WILL UNDERSTAND ALL OF ANDROID FOR YOU!</b></li></ul></div>
+					<div class="slidenote"><div class="l_slidenote_android_key"><ul><li>Every app has at least one activity and might implement the other components listed here. </li><li><b>READ THE ANDROID APP FUNDAMENTALS!  Don't cheat and hope Titanium will understand all of Aandroid for you!</b></li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_android_vocab">Android Vocabulary</h2>
-					<p align="left" class="l_activity">Activity</p><br>
-					<p align="left" class="l_activity_def">'An activity is a single, focused thing that the user can do. Almost all activities interact with the user, so the Activity class takes care of creating a window for you in which you can place your UI'</p><br>
+					<h2 style="margin-top:50px;" class="l_activity">Activity</h2>
+					<p align="left" class="l_activity_def" style="font-style:italic;">'An activity is a single, focused thing that the user can do. Almost all activities interact with the user, so the Activity class takes care of creating a window for you in which you can place your UI'</p><br>
 					<p class="l_activity_url" style="font-size:0.7em;margin-top:20px;"><a href='http://developer.android.com/reference/android/app/Activity.html'>http://developer.android.com/reference/android/app/Activity.html</a></p>
-					<div class="slidenote"><div class="l_slidenote_android_vocab"></div>An app is made up from one or more activities: one to list email messages, one to compose a message, one to read a message, etc.</div>
+					<div class="slidenote"><div class="l_slidenote_android_vocab">An app is made up from one or more activities: one to list email messages, one to compose a message, one to read a message, etc.</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_android_vocab">Android Vocabulary</h2>
-					<p align="left" class="l_service">Service</p><br>
-					<p align="left" class="l_service_def">'A Service is an application component representing either an application's desire to perform a longer-running operation while not interacting with the user or to supply functionality for other applications to use.'</p><br>
+					<h2 style="margin-top:50px;" class="l_service">Service</h2>
+					<p align="left" class="l_service_def" style="font-style:italic;">'A Service is an application component representing either an application's desire to perform a longer-running operation while not interacting with the user or to supply functionality for other applications to use.'</p><br>
 					<p class="l_service_url" style="font-size:0.7em;margin-top:20px;"><a href='http://developer.android.com/reference/android/app/Service.html'>http://developer.android.com/reference/android/app/Service.html</a></p>
-					<div class="slidenote"><div class="l_slidenote_android_vocab_2"></div><ul><li>Play music in the background</li><li>Check a network source periodically</li><li>Listen for data from a local or remote resource</li></ul></div>
+					<div class="slidenote"><div class="l_slidenote_android_vocab_2"><ul><li>Play music in the background</li><li>Check a network source periodically</li><li>Listen for data from a local or remote resource</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_android_vocab">Android Vocabulary</h2>
-					<p align="left" class="l_broadcast">Broadcast Receiver</p><br>
-					<p align="left" class="l_broadcast_def">'A broadcast receiver is a component that responds to system-wide broadcast announcements'</p><br>
+					<h2 style="margin-top:50px;" class="l_broadcast">Broadcast Receiver</h2>
+					<p align="left" class="l_broadcast_def" style="font-style:italic;">'A broadcast receiver is a component that responds to system-wide broadcast announcements'</p><br>
 					<p class="l_broadcast_url" style="font-size:0.7em;margin-top:20px;"><a href='http://developer.android.com/reference/android/content/BroadcastReceiver.html'>http://developer.android.com/reference/android/content/BroadcastReceiver.html</a></p>
-					<div class="slidenote"><div class="l_slidenote_android_vocab_3"></div><ul><li>System broadcasts: screen is on/off, battery is low, picture was captured</li><li>Your app could initiate a broadcast (when data is available to be used by other apps) or react to broadcasts</li><li>Broadcasts don’t interact with the user (no UI) except via a notification in the Notification Bar</li></ul></div>
+					<div class="slidenote"><div class="l_slidenote_android_vocab_3"><ul><li>System broadcasts: screen is on/off, battery is low, picture was captured</li><li>Your app could initiate a broadcast (when data is available to be used by other apps) or react to broadcasts</li><li>Broadcasts don't interact with the user (no UI) except via a notification in the Notification Bar</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_android_vocab">Android Vocabulary</h2>
-					<p align="left" class="l_intent">Intent</p><br>
-					<p align="left" class="l_intent_def">'Three of the core components of an application - activities, services, and broadcast receivers - are activated through messages, called intents.'</p><br>
+					<h2 style="margin-top:50px;" class="l_intent">Intent</h2>
+					<p align="left" class="l_intent_def" style="font-style:italic;">'Three of the core components of an application - activities, services, and broadcast receivers - are activated through messages, called intents.'</p><br>
 					<p class="l_intent_url" style="font-size:0.7em;margin-top:20px;"><a href='http://developer.android.com/guide/topics/intents/intents-filters.html'>http://developer.android.com/guide/topics/intents/intents-filters.html</a></p>
-					<div class="slidenote"><div class="l_slidenote_android_vocab_4"></div><ul><li>Intents are basically message objects that hold data which pass from one activity to a service, or one activity to another activity, etc.</li><li>Broadcasts are communicated in the form of events</li><li>For security reasons, your app can’t directly start an activity in another app. Instead, you send an intent requesting that activity and the OS starts the activity on your app’s behalf</li><li>You can request service from another activity directly (call on it) or you can publish an intent and a “filter” describing the type of service you need and let the OS find appropriate activities for you (think of how the Share button works – your app is publishing some text and the OS is returning all the activities that could share that text: email, twitter, etc.</li></ul></div>
+					<div class="slidenote"><div class="l_slidenote_android_vocab_4"><ul><li>Intents are basically message objects that hold data which pass from one activity to a service, or one activity to another activity, etc.</li><li>Broadcasts are communicated in the form of events</li><li>For security reasons, your app can't directly start an activity in another app. Instead, you send an intent requesting that activity and the OS starts the activity on your app's behalf</li><li>You can request service from another activity directly (call on it) or you can publish an intent and a 'filter' describing the type of service you need and let the OS find appropriate activities for you (think of how the Share button works &mdash; your app is publishing some text and the OS is returning all the activities that could share that text: email, twitter, etc.</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h1 class="l_all_these">All of these work in Ti</h1>
-					<div class="slidenote"><div class="l_slidenote_all_these"></div>Much of this goes on behind the scenes without you having to worry a lot over it. But you can manage the process and take specific actions to capitalize on this application architecture</div>
+					<div class="slidenote"><div class="l_slidenote_all_these">Much of this goes on behind the scenes without you having to worry a lot over it. But you can manage the process and take specific actions to capitalize on this application architecture</div></div>
 				</section>
 				
 				<section>
@@ -167,7 +167,7 @@
 					<p align="left" class="l_tiapp">AndroidManifest.xml properties can be configured in tiapp.xml</p><br>
 					<p align="left" class="l_custom">You can also have a custom AndroidManifest.xml</p><br>
 					<p align="left" class="l_demo_tiapp">Demo: tiapp.xml config and custom AndroidManifest.xml</p>
-					<div class="slidenote"><div class="l_slidenote_android_config"></div><ul><li>Activities, services, & content providers not defined in the manifest are not visible to the OS and therefore cannot be started</li><li>Titanium adds these elements, but you could also define or configure them yourself</li><li>Also use the manifest to define hardware needs (orientation, screen size & density, platform version)</li></ul><b>Demo</b><ul><li>Show kitchen sink tiapp.xml – activity & services configurations</li><li>Via finder, open KS/build/android/AndroidManifest.xml</li><li><intent-filter> describes the capabilities of your activities so the OS knows what type of intents they could respond to</li><li>Explain how you could create a custom manifest (covered in Orientation module)</li></ul></div>
+					<div class="slidenote"><div class="l_slidenote_android_config"><ul><li>Activities, services, &amp; content providers not defined in the manifest are not visible to the OS and therefore cannot be started</li><li>Titanium adds these elements, but you could also define or configure them yourself</li><li>Also use the manifest to define hardware needs (orientation, screen size &amp; density, platform version)</li></ul><b>Demo</b><ul><li>Show kitchen sink tiapp.xml &mdash; activity &amp; services configurations</li><li>Via finder, open KS/build/android/AndroidManifest.xml</li><li><intent-filter> describes the capabilities of your activities so the OS knows what type of intents they could respond to</li><li>Explain how you could create a custom manifest (covered in Orientation module)</li></ul></div></div>
 				</section>
 				
 				<section>
@@ -181,7 +181,7 @@
 					<p align="left" class="l_window_activity">Windows are generally associated with an Android activity (though not always)</p><br>
 					<p align="left" class="l_not_quite">Not quite as nimble as iOS windows in terms of animation</p><br>
 					<p class="l_windows_url" style="font-size:0.7em;margin-top:20px;"><a href='http://wiki.appcelerator.org/display/guides/Module+Developer+Guide+for+Android#ModuleDeveloperGuideforAndroid-HeavyweightandLightweightWindows'>http://wiki.appcelerator.org/display/guides/Module+Developer+Guide+for+Android#ModuleDeveloperGuideforAndroid-HeavyweightandLightweightWindows</a></p>
-					<div class="slidenote"><div class="l_slidenote_windows"></div>A 'heavyweight' window is Ti terminology for an Activity<br>You can have a lightweight window that isn’t exactly equivalent to an Activity<br>To force a Ti window to be a heavyweight window (an activity), set navBarHidden=true or set fullscreen=true or false and see the module development guide in the wiki for a couple of extra ways</div>
+					<div class="slidenote"><div class="l_slidenote_windows">A 'heavyweight' window is Ti terminology for an Activity<br>You can have a lightweight window that isn't exactly equivalent to an Activity<br>To force a Ti window to be a heavyweight window (an activity), set navBarHidden=true or set fullscreen=true or false and see the module development guide in the wiki for a couple of extra ways</div></div>
 				</section>
 				
 				<section>
@@ -191,7 +191,7 @@
 					<p align="left" class="l_tabgroup">TabGroup has N activities, and can have N menus</p><br>
 					<p align="left" class="l_text_icons">Can configure text and icons</p><br>
 					<p align="left" class="l_demo_menu">Demo: Menu creation options</p><br>
-					<div class="slidenote"><div class="l_slidenote_hardware"></div>Demo: KitchenSink – android_menu1, 2, and 3</div>
+					<div class="slidenote"><div class="l_slidenote_hardware">Demo: KitchenSink &mdash; android_menu1, 2, and 3</div></div>
 				</section>
 				
 				<section>
@@ -201,7 +201,7 @@
 					<p align="left" class="l_android_inline">Android can display inline HTML (basic formatting tags)</p><br>
 					<p align="left" class="l_android_links">Android can display links inline (web, tel, maps)</p><br>
 					<p align="left" class="l_demo_label">Demo: Label gymnastics</p><br>
-					<div class="slidenote"><div class="l_slidenote_android_labels"></div>Demo - KitchenSink: label_linkify.js<br>iOS supports similar auto-linking on text areas</div>
+					<div class="slidenote"><div class="l_slidenote_android_labels">Demo - KitchenSink: label_linkify.js<br>iOS supports similar auto-linking on text areas</div></div>
 				</section>
 				
 				<section>
@@ -211,7 +211,7 @@
 					<p align="left" class="l_control_pos">Can control positioning on screen</p><br>
 					<p align="left" class="l_render_ios">Rendering will be different based on OS version and skin</p><br>
 					<p align="left" class="l_demo_notif">Demo: Notification</p><br>
-					<div class="slidenote"><div class="l_slidenote_toast"></div>Demo: KitchenSink Platform>Notifications<br>And see notification.js<br>The offsetX and offSetY coordinates are relative to the default location for the notification<br>and corresponds to the center point of the notification bubble</div>
+					<div class="slidenote"><div class="l_slidenote_toast">Demo: KitchenSink Platform>Notifications<br>And see notification.js<br>The offsetX and offSetY coordinates are relative to the default location for the notification<br>and corresponds to the center point of the notification bubble</div></div>
 				</section>
 				
 				<section>
@@ -220,7 +220,7 @@
 					<p align="left" class="l_wizard">Example: Wizard interface, where you want “back” to go back to a previous state in the UI</p><br>
 					<p align="left" class="l_careful">Careful about this!  Users expect back to go back to another activity (most of the time)</p><br>
 					<p align="left" class="l_demo_back">Demo: back button event</p><br>
-					<div class="slidenote"><div class="l_slidenote_hijack"></div><b>Demo</b>AndroidBackDemo project on the TCMD github repository<br>https://github.com/appcelerator-training/tcmd_certification/blob/master/workspace/AndroidBackDemo.zip<br>View hijacks the back button & closes<br>Then restores it so you can close the window<br>In the event listener, you can monitor the other hardware buttons in the form:<br>android:camera<br>android:home</div>
+					<div class="slidenote"><div class="l_slidenote_hijack"><b>Demo</b>AndroidBackDemo project on the TCMD github repository<br>https://github.com/appcelerator-training/tcmd_certification/blob/master/workspace/AndroidBackDemo.zip<br>View hijacks the back button &amp; closes<br>Then restores it so you can close the window<br>In the event listener, you can monitor the other hardware buttons in the form:<br>android:camera<br>android:home</div></div>
 				</section>
 				
 				<section>
@@ -235,7 +235,7 @@
 					<p align="left" class="l_many_built">Many built in intents to use</p><br>
 					<p align="left" class="l_forging_ti">Forging Titanium #9 - Android Intents Cookbook</p><br>
 					<p class="l_launch_act_url" style="font-size:0.7em;margin-top:20px;"><a href='http://bit.ly/ryOSW4'>http://bit.ly/ryOSW4 </a></p>
-					<div class="slidenote"><div class="l_slidenote_launch_act"></div>An app is made up from one or more activities: one to list email messages, one to compose a message, one to read a message, etc.<br>Other apps can start an activity within your app and your app can start activities in other apps<br>This gives a way to share functionality and make it appear to be part of your app</div>
+					<div class="slidenote"><div class="l_slidenote_launch_act">An app is made up from one or more activities: one to list email messages, one to compose a message, one to read a message, etc.<br>Other apps can start an activity within your app and your app can start activities in other apps<br>This gives a way to share functionality and make it appear to be part of your app</div></div>
 				</section>
 				
 				<section>
@@ -243,7 +243,7 @@
 					<p align="left" class="l_js_service">You can have JS-based services running in the background</p><br>
 					<p align="left" class="l_can_comm">Can communicate with it from your main application</p><br>
 					<p align="left" class="l_demo_bg">Demo: background service</p><br>
-					<div class="slidenote"><div class="l_slidenote_service_supp"></div>Demo KitchenSink<br>See android_services.js and Resources/android/testservice.js<br>Plus see entry in tiapp.xml</div>
+					<div class="slidenote"><div class="l_slidenote_service_supp">Demo KitchenSink<br>See android_services.js and Resources/android/testservice.js<br>Plus see entry in tiapp.xml</div></div>
 				</section>
 				
 				<section>
@@ -261,7 +261,7 @@
 					<p align="left" class="l_r_string">R.string - OS localized string for 'OK', 'Cancel', etc</p><br>
 					<p align="left" class="l_android_docs">Android docs required to see properties</p><br>
 					<p align="left" class="l_demo_resources_js">Demo: R resources in JS</p><br>
-					<div class="slidenote"><div class="l_slidenote_app_resources"></div>Resources are assets, such as images, strings, layouts, animations, etc that are maintained external from your app so that you can swap, maintain, management outside of your code<br>R is the class that represents resources in your app<br>Accessible in Ti. via Android.R class, see http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.App.Android.R-object<br>Demo: KitchenSink android_menu_2.js, line 24<br>Uses some of the built-in icons</div>
+					<div class="slidenote"><div class="l_slidenote_app_resources">Resources are assets, such as images, strings, layouts, animations, etc that are maintained external from your app so that you can swap, maintain, management outside of your code<br>R is the class that represents resources in your app<br>Accessible in Ti. via Android.R class, see http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.App.Android.R-object<br>Demo: KitchenSink android_menu_2.js, line 24<br>Uses some of the built-in icons</div></div>
 				</section>
 
 				
@@ -277,11 +277,6 @@
 					<div class="slidenote"><div class="l_slidenote_lab_goals">In this lab, you will enable an app to share text with other apps on the user's device. The app provides a simple text box. You'll plug in the code to share the text that users enter via an intent.</div></div>
 				</section>
 				
-				<section>
-					<h1 class="l_lab">Lab</h1>
-					<div class="slidenote"><div class="l_slidenote_lab"></div>There is no TiBountyHunter tie in for this lab specifically</div>
-				</section>
-
 			</div>
 
 			<!-- MAKE NO CHANGES BELOW THIS LINE -->
@@ -341,7 +336,7 @@
 		<script>
 			var presenterNotesWindow = null;
 			function openPresenterNotes() {
-				presenterNotesWindow = window.open('../presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=480,width=640");
+				presenterNotesWindow = window.open('presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=480,width=640");
 			}
 		</script>
 	</body>
