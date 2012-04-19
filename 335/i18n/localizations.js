@@ -18,11 +18,11 @@ String.toLocaleString({
 		"%l_slidenote_agenda": "In this module, we'll look at the three types of scrolling content containers",
 
 		"%l_scroll_vs": "Scroll vs. Scroll",
-		"%l_scroll_vs_image": "<img src='images/scroll-vs.png' style='margin-top:5px;height:450px;float:right;'/>",
+		"%l_scroll_vs_image": "<img src='images/scroll-vs.png' style='margin-top:5px;height:640px;;'/>",
 		"%l_slidenote_scroll_vs": "ScrollView &mdash; scrollable area of content, doesn't have to fill viewport, scroll in either direction<br>ScrollableView &mdash; screen-size content area with 'page' indicator<br>sort of like a filmstrip of views shown within a container<br>views snap into place: you can't end up halfway between views after a swipe",
 
 		"%l_basic_scroll": "Basic ScrollView",
-		"%l_basic_scroll_image": "<img src='images/basic-scroll.png' style='margin-top:5px;height:380px;'/>",
+		"%l_basic_scroll_image": "<img src='images/basic-scroll.png' style='margin-top:5px;height:640px;'/>",
 		"%l_slidenote_basic_scroll": "Height/width = what's visible to the user<br>Content height/width are dimensions of the actual content",
 		
 		"%l_deeper_dive": "Deeper Dive into ScrollViews",
@@ -43,11 +43,11 @@ String.toLocaleString({
 		"%l_slidenote_scrollview_diff": "",
 		
 		"%l_scrollview_events": "ScrollView events",
-		"%l_scrollview_events_image": "<img src='images/scrollview-events.png' style='margin-top:5px;height:450px;'/>",
+		"%l_scrollview_events_image": "<img src='images/scrollview-events.png' style='margin-top:5px;height:640px;'/>",
 		"%l_slidenote_scrollview_events": "Primary difference from other views would be the scale event<br>Additional event object properties",
 		
 		"%l_basic_scrollview": "Basic ScrollableView",
-		"%l_basic_scrollview_image": "<img src='images/basic-scrollview.png' style='margin-top:5px;height:450px;'/>",
+		"%l_basic_scrollview_image": "<img src='images/basic-scrollview.png' style='margin-top:5px;height:640px;'/>",
 		"%l_slidenote_basic_scrollview": "views is an array of standard views that are shown within the ScrollableView<br>pagingControl &mdash; white dots on iOS, arrows on Android<br>by default set to false (don't show) in 1.8+<br>On Android, use pagingControlTimeout to control time when arrows disappear (=0 to always show)<br>currentPage is an integer specifying which view to show when the scrollableview is rendered",
 		
 		"%l_deeper_dive_scrollableviews": "Deeper Dive into ScrollableViews",
@@ -64,7 +64,7 @@ String.toLocaleString({
 		"%l_slidenote_scrollableview_diff": "This is about the only significant difference between platforms",
 		
 		"%l_scrollableview_events": "ScrollableView events",
-		"%l_scrollableview_events_image": "<img src='images/scrollableview-events.png' style='margin-top:5px;height:450px;'/>",
+		"%l_scrollableview_events_image": "<img src='images/scrollableview-events.png' style='margin-top:5px;height:640px;'/>",
 		"%l_slidenote_scrollableview_events": "",
 		
 		"%l_webviews": "WebViews",

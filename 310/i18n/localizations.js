@@ -166,7 +166,7 @@ String.toLocaleString({
 		"%l_check_sizes": "Check sizes and layout",
 		"%l_great_demo": "Great for app demos",
 		"%l_ios_live": "iOS: LiveView &nbsp;&nbsp;&nbsp;http://www.zambetti.com",
-		"%l_andr_live": "Android: Design Preview &nbsp;&nbsp;&nbsp;http://code.google.com/p/android-ui-utils/",
+		"%l_andr_live": "Android: Design Preview <br/>&nbsp;&nbsp;http://code.google.com/p/android-ui-utils/",
 		"%l_slidenote_live_view": "Screen broadcasting apps display what's on your screen on a mobile device<br> Let you check for sizing and layout<br>Quicker than creating graphics and displaying them on your device (like a browser image)<br>On iOS: LiveView is one of the most popular &mdash; shares screen wirelessly over local network<br>On Android: Android Design Preview is free & open source, shares screen over USB connection",
 
 		"%l_dev_test": "Development & Testing",

@@ -5,9 +5,8 @@
 */
 String.toLocaleString({
 	"en-US": {
-		"%l_filetitle": "Performance Optimization",
+		"%l_lessontitle": "Performance and Optimization",
 		"%l_subtitle": "Advanced Titanium Mobile Development",
-		"%l_lessontitle": "Performance Optimization",
 		"%l_slidenote_titleslide": "<b>Module time: 60 minutes</b><br/>(30 mins teaching, 30 mins lab)",
 
 		"%l_agenda_title": "Agenda",

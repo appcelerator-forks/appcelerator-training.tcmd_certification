@@ -8,15 +8,18 @@ String.toLocaleString({
 		"%l_welcome": "Welcome To",
 		"%l_coursename": "This is the course name",
 		"%l_agenda_title": "AGENDA",
-		"%l_lesson1": "Lesson 1 Title",
-		"%l_lesson2": "Lesson 2 Title",
-		"%l_lesson3": "Lesson 3 Title",
-		"%l_lesson4": "Lesson 4 Title",
-		"%l_lesson5": "Lesson 5 Title",
-		"%l_lesson6": "Lesson 6 Title",
-		"%l_lesson7": "Lesson 7 Title",
-		"%l_lesson8": "Lesson 8 Title",
-		"%l_lesson9": "Lesson 9 Title",
-		"%l_lesson10": "Lesson 10 Title"
+		"%l_lesson1": "Course Introduction",
+		"%l_lesson2": "Performance &amp; Optimization",
+		"%l_lesson3": "Mobile UX Design",
+		"%l_lesson4": "Advanced UI Development",
+		"%l_lesson5": "API Deep Dive: TableViews",
+		"%l_lesson6": "Orientation &amp; Gestures",
+		"%l_lesson7": "User Input Collection",
+		"%l_lesson8": "API Deep Dive: Scroll Views",
+		"%l_lesson9": "Animation",
+		"%l_lesson10": "Android API Deep Dive"
+		"%l_lesson11": "iOS Deep Dive",
+		"%l_lesson12": "Extending Titanium",
+		"%l_lesson13": "Titanium Plus Integration",
 	}
 });

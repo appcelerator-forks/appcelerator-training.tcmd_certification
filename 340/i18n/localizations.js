@@ -26,7 +26,7 @@ String.toLocaleString({
 		
 		"%l_basic": "Basic Animation",
 		"%l_for_simple": "For simple property animations, we use obj.animate()",
-		"%l_basic_image": "<img src='images/basic.png' style='margin-top:5px;height:250px;'/>",
+		"%l_basic_image": "<img src='images/basic.png' style='margin-top:5px;height:450px;'/>",
 		"%l_slidenote_basic": "Background color animations on Android with SDK 1.8+",
 		
 		"%l_basic_obj": "Basic Animation With Object",
@@ -43,7 +43,7 @@ String.toLocaleString({
 		"%l_slidenote_matrix": "<ul><li>Matrix animations are for more complex animations</li><li>A matrix is a grid of values representing the properties of an object</li><li>You then transform starting to ending values of that matrix to animate the object</li></ul>",
 		
 		"%l_2d_matrix": "2D Matrix Animations",
-		"%l_2d_matrix_image": "<img src='images/2d-matrix.png' style='margin-top:5px;height:380px;float:right;'/>",
+		"%l_2d_matrix_image": "<img src='images/2d-matrix.png' style='margin-top:5px;height:440px;float:right;'/>",
 		"%l_transform": "Transform objects in 2D Space",
 		"%l_rotate": "Rotate",
 		"%l_scale": "Scale",
@@ -52,7 +52,7 @@ String.toLocaleString({
 		"%l_slidenote_2d_matrix": "<ul><li>You can combine these transformations</li><li>These work on iOS and (mostly) on Android</li></ul>",
 		
 		"%l_2d_matrix_example": "2D Matrix Animation Example",
-		"%l_2d_matrix_example_image": "<img src='images/2d-example.png' style='margin-top:5px;height:250px;'/>",
+		"%l_2d_matrix_example_image": "<img src='images/2d-example.png' style='margin-top:5px;height:440px;'/>",
 		"%l_slidenote_2d_matrix_example": "<ul><li>We don't have to worry about the matrix math</li><li>We create a matrix object and use one of its methods, such as rotate or scale</li></ul>",
 		
 		"%l_3d_matrix": "3D Matrix Animations (iOS)",
@@ -61,7 +61,7 @@ String.toLocaleString({
 		"%l_slidenote_3d_matrix": "<ul><li>Same sorts of transformations, but in 3D space</li><li>Not supported on Android, API docs inaccurate on this</li></ul>",
 		
 		"%l_3d_matrix_example": "3D Matrix Animation Example",
-		"%l_3d_matrix_example_image": "<img src='images/3d-example.png' style='margin-top:5px;height:250px;'/>",
+		"%l_3d_matrix_example_image": "<img src='images/3d-example.png' style='margin-top:5px;height:440px;'/>",
 		"%l_slidenote_3d_matrix_example": "<ul><li>Titanium.UI.iOS.3DMatrix as of 1.8 (was Ti.UI.3DMatrix earlier)</li><li>Set up 3D transformations in much the same way as 2D</li><li>Repeat and autoreverse properties for 2D and 3D transforms</li><li>Line 51 represents an access to an actual matrix value (e.g. row 3, column 4)</li></ul>",
 		
 		"%l_opacity": "Using Opacity",

@@ -78,7 +78,20 @@
 				<section>
 					<h2 class="l_lock_orientation">Locking Orientation - iOS</h2>
 					<p align="left" class="in_tiapp">In tiapp.xml:</p><br>
-					<p class="l_lock_orientation_image"><img src="images/lock-orientation.png" style="margin-top:5px;height:350px;"/></p>
+<pre><code contenteditable class="l_lockios_code">
+&lt;iphone>
+    &lt;orientations device="iphone">
+        &lt;orientation>Ti.UI.PORTRAIT&lt;/orientation>
+    &lt;/orientations>
+    &lt;orientations device="ipad">
+        &lt;orientation>Ti.UI.PORTRAIT&lt;/orientation>
+        &lt;orientation>Ti.UI.UPSIDE_PORTRAIT&lt;/orientation>
+        &lt;orientation>Ti.UI.LANDSCAPE_LEFT&lt;/orientation>
+        &lt;orientation>Ti.UI.LANDSCAPE_RIGHT&lt;/orientation>
+    &lt;/orientations>
+&lt;/iphone>
+
+</code></pre>
 					<div class="slidenote"><div class="l_slidenote_lock_orientation">For iOS, set supported orientations in tiapp.xml<br>To lock orientation, just remove the non-supported orientations</div></div>
 				</section>
 				
@@ -90,7 +103,20 @@
 			    		<li class="l_add_nested">Add nested &lt;manifest&gt; tags within &lt;android&gt;</li>
 						<li class="l_remove">remove '|orientation' from every node</li>
 			    	</ul>
-					<p class="l_lock_orientation_android_image"><img src="images/lock-orientation-android.png" style="margin-top:5px;height:350px;"/></p>
+<pre><code contenteditable class="l_lockandroid_code">
+&lt;android xmlns:android="http://schemas.android.com/apk/res/android">
+  &lt;manifest>
+    &lt;activity
+    android:name="org.appcelerator.titanium.TiActivity"
+    android:configChanges="keyboardHidden"
+       android:screenOrientation="portrait"
+    />
+    &lt;activity android:name="ti.modules.titanium.ui.TiTabActivity"
+      android:configChanges="keyboardHidden"
+    />
+  &lt;/manifest>
+&lt;/android>
+</code></pre>
 					<div class="slidenote"><div class="l_slidenote_lock_orientation_android">Three options for locking orientation on Android<br>Make sure to remove the bar and orientation from every node</div></div>
 				</section>
 				
@@ -101,20 +127,26 @@
 			    		<li class="l_copy_build">Copy build/android/AndroidManifest.xml to <b>platform/android/AndroidManifest.xml</b></li>
 						<li class="l_remove">remove '|orientation' from every node</li>
 			    	</ul>
-					<p class="l_lock_orientation_android_image_2"><img src="images/lock-orientation-android-2.png" style="margin-top:5px;height:250px;"/></p>
 					<div class="slidenote"><div class="l_slidenote_lock_orientation_android_2">Option 2 is to create a custom manifest file in the Platform/android folder<br>The Platform folder doesn't exist by default<br>Clean the project before rebuilding to clear out old AndroidManifest.xml file</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_fixed_orientation">Fixed Orientation per Window</h2>
-					<p align="left" class="l_window_modes">Window Orientation Modes</p><br>
-					<p align="left" class="l_supported_val">Supported values include:</p><br>
+					<p align="left" class="l_window_modes">Window Orientation Modes</p>
+					<p align="left" class="l_supported_val">Supported values include:</p>
 					<ul style="width:100%; margin-left:30px;">
 			    		<li class="l_portrait">PORTRAIT / UPSIDE_PORTRAIT</li>
 						<li class="l_landscape">LANDSCAPE_LEFT / LANDSCAPE_RIGHT</li>
 						<li class="l_face">FACE_UP / FACE_DOWN</li>
 			    	</ul>
-					<p class="l_fixed_orientation_image"><img src="images/fixed-orientation.png" style="margin-top:5px;height:250px;"/></p>
+<pre><code contenteditable class="l_fixedorient_code">
+var win = Ti.UI.createWindow({
+   /* iOS - define here */
+   orientationModes: [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT]
+});
+/* Android, define here */
+win.orientationModes = [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT];
+</code></pre>
 					<div class="slidenote"><div class="l_slidenote_fixed_orientation">You can set orientation on a per window basis within your app<br>The older Ti.UI.orientation property technique is deprecated and should not be used.</div></div>
 				</section>
 				
@@ -122,7 +154,20 @@
 					<h2 class="l_or_events">Orientation Events</h2>
 					 <p align="left" class="l_ti_gesture">Ti.Gesture.orientationchange</p><br>
 					 <p align="left" class="l_event_props">Event properties and methods:</p><br>
-					 <p class="l_or_events_image"><img src="images/or-events.png" style="margin-top:5px;height:250px;"/></p>
+
+<pre><code contenteditable class="l_fixedorient_code">
+Ti.Gesture.addEventListener('orientationchange', function(e) {
+   // current device orientation
+   // Ti.Gesture.orientation
+
+   // or, get orientation from event object
+   // e.orientation
+
+   // also, there are two helpers:
+   // e.source.isPortrait()
+   // e.source.isLandscape()
+})
+</code></pre>
 					 <div class="slidenote"><div class="l_slidenote_or_events">You can react to orientation change events<br>Use the Ti.Gesture event listener<br>Test on device to be sure you're getting/using values you expect<br>They can differ between iOS and Android</div></div>
 				</section>
 				
@@ -163,7 +208,8 @@
 				
 				<section>
 					<h2 class="l_swipes">Swipes</h2>
-					<p class="l_swipe_image"><img src="images/swipe.png" style="margin-top:5px;height:300px;float:right;"/></p>
+					<p class="l_swipe_image" style="margin-top:5px;width:300px;float:right;"><img src="images/swipe.png"/></p>
+					<div  style="float:left;width:60%;">
 					<p align="left" class="l_built_in">Built-in event on most Ti.UI elements</p><br>
 					<p align="left" class="l_ev_obj_props">Event object properties:</p><br>
 					<ul style="width:100%; margin-left:30px;">
@@ -171,6 +217,7 @@
 						<li class="l_source">source</li>
 						<li class="l_xy">x/y coords</li>
 			    	</ul>
+					</div>
 					<div class="slidenote"><div class="l_slidenote_swipes">Swipe supported on pretty much all Ti.UI components<br>Most likely to be used on views, windows, tableviews, imageviews, labels, web views<br>Key object properties are direction (left or right) and source</div>
 				</div></section>
 				
