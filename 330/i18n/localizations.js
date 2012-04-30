@@ -8,14 +8,14 @@ String.toLocaleString({
 		"%l_filetitle": "User Input Collection",
 		"%l_subtitle": "Advanced Titanium Mobile Development",
 		"%l_lessontitle": "User Input Collection",
-		"%l_slidenote_titleslide": "<b>Module time: 60 mins</b><br/>(30 mins teaching, 30 mins for lab) Data entry in a mobile application is much different than sitting at a keyboard with a desktop computer.&dagger; In this module, developers will learn how to collect data from users in a streamlined way.",
+		"%l_slidenote_titleslide": "<b>Module time: 60 mins</b><br/>(30 mins teaching, 30 mins for lab) ",
 
 		"%l_agenda_title": "Agenda",
 		"%l_agenda1": "Skin and style native components",
 		"%l_agenda2": "Handle keyboard and layout issues",
 		"%l_agenda3": "Keyboard customization",
 		"%l_agenda4": "Using Web Views and HTML forms for input collection",
-		"%l_slidenote_agenda": "",
+		"%l_slidenote_agenda": "Data entry in a mobile application is much different than sitting at a keyboard with a desktop computer.&dagger; In this module, developers will learn how to collect data from users in a streamlined way.",
 
 		"%l_styling_input": "Styling Input Components",
 		"%l_sizing_input": "Sizing input elements",
@@ -30,40 +30,38 @@ String.toLocaleString({
 		"%l_bg_graphics": "Background graphics",
 		"%l_bgcap": "backgroundLeftCap, backgroundTopCap",
 		"%l_styling_input_contdn_image": "<img src='images/styling-input.png' style='margin-top:5px;height:250px;'/>",
-		"%l_slidenote_styling_input_contd": "Set normal, selected, and disabled background colors<br>Gradients on iOS only<br>Set normal, selected, and disabled background graphics on most fields<br>backgroundLeftCap / top cap define an area that won't be stretched<br>specifies a size in pixels that is the left/right or top/bottom non-stretched area<br>middle is stretched to fill size of element<br>background right cap is calculated as width &mdash; left cap &mdash; center 1px",
+		"%l_slidenote_styling_input_contd": "<ul><li>Set normal, selected, and disabled background colors</li><li>Gradients on iOS only</li><li>Graphics stretch to fill control size, or are cropped if larger than control</li><li>On iOS, you can enable special stretching mode via backgroundLeftCap / top cap<ul><li>You define an area on the left/top that won't be stretched</li><li>one pixel in the middle is stretched to fill most of the rest</li><li>right/bottom cap is calculated as<br/>total size &ndash; left cap &ndash; center 1px</li></ul>",
 		
 		"%l_soft_kbd": "Soft Keyboard and Layout Issues",
 		"%l_hiding": "Hiding the keyboard - blur()",
 		"%l_suppress": "Suppressing the return key",
-		"%l_preventing": "Preventing the keyboard from covering an input",
-		"%l_soft_kbd_image": "<img src='images/soft-kbd.png' style='margin-top:5px;height:250px;'/>",
-		"%l_slidenote_soft_kbd": "Hide keyboard with input.blur() or show with input.focus()<br>There's a native Android-only way to hide the keyboard programmatically, see the Kitchen Sink<br>No way to tell if the keyboard is showing &mdash; native OS limitation<br>Suppressing return &mdash; to get new lines in textarea<br>Add suppressReturn:false to field<br>Prevent keyboard covering input:<br><ul><li>Put input fields into a scroll view</li><li>Android only: use the SOFT_INPUT_ADJUST_PAN constant</li></ul>",
+		"%l_preventing": "Preventing the keyboard from covering an input:<ul style='margin-left:50px;width:80%;'><li class='fragment'>Put input fields into a scroll view</li><li class='fragment'>Android only:<pre><code contenteditable>\nTi.UI.createWindow({\n   softInputMode: (Ti.UI.Platform==='android') ?\n      Ti.UI.Android.SOFT_INPUT_ADJUST_PAN : null\n});\n </code></pre></li></ul>",
+		"%l_slidenote_soft_kbd": "<ul><li>Hide keyboard with input.blur() or show with input.focus()</li><li>There's a native Android-only way to hide the keyboard programmatically, see the Kitchen Sink</li><li>No way to tell if the keyboard is showing &mdash; native OS limitation</li><li>Suppressing return &mdash; to get new lines in textarea<br>Add <code>suppressReturn:false</code> to field</li><li>Prevent keyboard covering input:<ul><li>Put input fields into a scroll view</li><li>Android only: use the SOFT_INPUT_ADJUST_PAN constant</li></ul></li></ul>",
 		
 		"%l_kbd_cust": "Keyboard Customization",
-		"%l_kbd_type": "Keyboard Type",
-		"%l_set_kbd_type": "&nbsp;&nbsp;&nbsp;Set with textfield.keyboardType",
-		"%l_ret_key": "ssigning the Return key",
-		"%l_set_ret_key": "&nbsp;&nbsp;&nbsp;Set with textfield.returnKeyType",
+		"%l_kbd_type": "Keyboard Type &mdash; <code>field.keyboardType</code>",
+		"%l_returnkey": "Assigning the Return key &mdash; <code>field.returnKeyType</code>",
 		"%l_kbd_toolbars": "Keyboard Toolbars",
 		"%l_slidenote_kbd_cust": "Agenda type slide<br>Details on upcoming slides",
 		
 		"%l_kbd_types_ios": "Keyboard Types - iOS",
-		"%l_kbd_types_ios_image": "<img src='images/kbd-types-ios.png' style='margin-top:5px;height:500px;'/>"
+		"%l_kbd_types_ios_image": "<img src='images/kbd-types-ios.png' style='margin-top:5px;height:500px;'/>",
 		"%l_slidenote_kbd_types_ios": "Keyboard types<br>Set on text field or text area with keyboardType =  Ti.UI.type_name",
 		
 		"%l_kbd_types_android": "Keyboard Types - Android",
-		"%l_kbd_types_android_image": "<img src='images/kbd-types-android.png' style='margin-top:5px;height:500px;'/>"
+		"%l_kbd_types_android_image": "<img src='images/kbd-types-android.png' style='margin-top:5px;height:500px;'/>",
 		"%l_slidenote_kbd_types_android": "Differences are subtle<br>Numbers_Punctuation and Namephone_Pad are the same<br>Decimal_Pad not supported<br>Carrier themes will likely change the appearance of these",
 
 		
 		"%l_ret_key": "Return Key Options",
-		"%l_ret_ke_image": "<img src='images/ret-key.png' style='margin-top:5px;height:500px;'/>"
+		"%l_ret_ke_image": "<img src='images/ret-key.png' style='margin-top:5px;height:500px;'/>",
 		"%l_slidenote_ret_key": "field.returnKeyType = Ti.UI.RETURNKEY_type<br>Return key options<br>Changes label and user expectation<br>When button is tapped, the return event of the input field is fired<br>Hint: you could capture return event and move focus to next field in a long form",
 
 		
 		"%l_kdb_toolbars": "Keyboard Toolbars",
 		"%l_ios_only": "iOS only feature",
-		"%l_kdb_toolbars_image": "<img src='images/kbd-toolbars.png' style='margin-top:5px;height:380px;'/>",
+		"%l_kdb_toolbars_image": "<img src='images/kbd-toolbars.png' style='margin-top:5px;width:240px;'/>",
+		"%l_kbd_toolbarcode": "\n// flexSpace, camera, & other buttons created here\nvar textfield = Ti.UI.createTextField({\n   value: 'Focus to see keyboard w/ toolbar',\n   keyboardToolbar: [flexSpace, camera, flexSpace,\n      tf, flexSpace, send, flexSpace],\n   keyboardToolbarColor: '#999',\n   keyboardToolbarHeight: 40\n});\n ", 
 		"%l_slidenote_kdb_toolbars": "Define buttons separately prior<br>Assign object references to keyboardToolbar property<br>Add event listeners to those individual buttons",
 		
 		"%l_using_webviews": "Using Web Views and HTML Forms",
@@ -84,10 +82,7 @@ String.toLocaleString({
 		"%l_use_an": "Use an HTML form and a WebView for data entry",
 		"%l_set_app": "Set appropriate keyboard types for each field",
 		"%l_transmit_collected": "Transmit collected data back to native land so data can be saved to a database",
-		"%l_demoURL": "Demo and wiki URL",
-		"%l_slidenote_lab_goals": ">We want to add additional fields to the TiBountyHunter fugitive object.  Let's use a web view to create a nicer input form.<br>Demo: finished BountyHunter, new bounty form is built with HTML<br><ul><li>Fields auto-scroll to remain visible</li><li>Next/previous buttons</li></ul>",
-				
-		"%l_lab": "Lab",
-		"%l_slidenote_lab": "In TiBountyHunter, the add window is implemented as a web view.  The lone HTML file in resources is used for the web view, and we use custom messages to pass data between the web view and the “native wrapper'.  Show how we create the web view with the HTML page, and then how data is transferred back and forth from the web view.  Also point out that fields are automatically scrolled about in the web view."
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/330+-+User+Input+Collection'>wiki.appcelerator.org/display/td/330+-+User+Input+Collection</a>",
+		"%l_slidenote_lab_goals": "In this lab, we'll use a web view to create a user-friendly input form.<br>Demo: form is built with HTML<br><ul><li>Fields auto-scroll to remain visible</li><li>Next/previous buttons</li></ul>"
 	}
 });

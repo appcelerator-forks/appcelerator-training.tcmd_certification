@@ -13,6 +13,25 @@
 		<link rel="stylesheet" href="../css/presentation.css">
 		<script type="text/javascript" src="../../presentation-engine/js/l10n.js"></script>
 		<script type="text/javascript" src="i18n/localizations.js"></script>
+		<script>
+		function loadStyleSheet(url){
+		    if(document.createStyleSheet) {
+		        try {document.createStyleSheet(url);} catch (e) { }
+		    }
+		    else{
+		        var css;
+		        css         = document.createElement('link');
+		        css.rel     = 'stylesheet';
+		        css.type    = 'text/css';
+		        css.media   = "all";
+		        css.href    = url;
+		        document.getElementsByTagName("head")[0].appendChild(css);
+		    }
+		}
+		var browserlang = document.documentElement.lang || String.locale || 'en-US';
+		loadStyleSheet('../css/'+browserlang+'.css');
+		</script>
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/print.css" media="print">
 	</head>
 	
 	<body>
@@ -130,7 +149,7 @@
 
 				<section>
 					<h2 class="l_func_fab">Functional to Fabulous</h2>
-					<p><img src="images/func-fab.png" style="margin-top:60px;height:350px;align:center"></p>
+					<p class="l_funcfab_images"><img src='images/func-fab1.png' style='margin-top:60px;height:320px;align:center'><img src='images/func-fab2.jpg'  style='margin-top:60px;height:320px;align:center'></p>
 					<div class="slidenote"><div class="l_slidenote_func_fab">We won't be working with TiBountyHunter is this course. But these screens still illustrate our goal to help you take your apps from functional to fabulous. Learning how to create 'Best of Breed' apps is our goal.</div></div>
 				</section>
 				
@@ -199,6 +218,22 @@
 			var presenterNotesWindow = null;
 			function openPresenterNotes() {
 				presenterNotesWindow = window.open('presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=600,width=800");
+			}
+			var s = (function load(){
+				var s = {};
+				if(window.outerHeight){
+					s = { w: window.outerWidth, h: window.outerHeight};
+				}
+				else {
+					s = { w: document.body.clientWidth, h: document.body.clientHeight};
+				}
+				return s;
+			})();
+			if(s.w < 1000 || s.h < 800) {
+				var slides = document.querySelectorAll( '#reveal .slides' );
+				for( var i = 0, len = slides.length; i < len; i++ ) {
+					slides[i].classList.add( 'smallscreen' );
+			    }
 			}
 		</script>
 	</body>

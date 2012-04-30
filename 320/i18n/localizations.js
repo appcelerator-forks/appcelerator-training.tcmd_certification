@@ -18,8 +18,8 @@ String.toLocaleString({
 		"%l_slidenote_agenda": "In this module, we'll look at some table examples<br>review tableview basics then go a bit further into what you can do with tables<br>we'll look at headers, footers, and sections<br>we'll wrap up with another look at events as well as some cross platform continuous scrolling solution",
 
 		"%l_examples": "Examples",
-		"%l_examples_image": "<img src='images/examples.png' style='margin-top:5px;height:350px;'/>",
-		"%l_slidenote_examples": "Many options for formatting tables (seven total shown)",
+		"%l_examples_image": "<img src='images/table1.png' style='height:320px;' class='fragment'/><img src='images/table2.png' style='height:320px;' class='fragment'/><img src='images/table3.png' style='height:320px;' class='fragment'/><br/><img src='images/table4.png' style='height:320px;' class='fragment'/><img src='images/table5.png' style='height:320px;' class='fragment'/>",
+		"%l_slidenote_examples": "Many options for formatting tables (five total shown)",
 
 		"%l_basic_tableview": "Basic TableView",
 		"%l_basic_tableview_code": "\nvar table = Ti.UI.createTableView({\n   properties\n}); \n",
@@ -38,7 +38,7 @@ String.toLocaleString({
 		"%l_slidenote_table_anonymous": "One option for adding rows is to use anonymous objects<br>Useful with JSON data pulled from a web service or database",
 
 		"%l_table_obj": "TableViewRow Object",
-		"%l_table_row_code": "\nvar row = Ti.UI.createTableViewRow({\n   properties\n});\ntable.appendRow(row);",
+		"%l_table_row_code": "\nvar row = Ti.UI.createTableViewRow({\n   properties\n});\ntable.data = [row];\n//or\ntable.appendRow(row);",
 		"%l_tableLH": "Key TableViewRow Properties:",
 		"%l_table1": "title",
 		"%l_table2": "height / width / top / left",
@@ -52,11 +52,11 @@ String.toLocaleString({
 		"%l_row_ind_image": "<img src='images/row-ind.png' style='margin-top:5px;height:250px;'/>",
 		"%l_rowindicators": "hasChild<br/><br/>hasDetail<br/><br/>hasCheck",
 
-		"%l_slidenote_row_ind": "hasChild &mdash; indicates sub-table or additional rows<br>hasDetail &mdash; indicates a detail view or alert will appear when row is tapped (not supported on Android)<br>hasCheck &mdash; on/off or yes/no indicator",
+		"%l_slidenote_row_ind": "Per Apple's HIG, these icons imply the following meaning:<ul><li>hasChild &mdash; indicates sub-table or additional rows</li><li>hasDetail &mdash; indicates a detail view or alert will appear when row is tapped (not supported on Android)</li><li>hasCheck &mdash; on/off or yes/no indicator</li></ul>",
 		
 		"%l_basic_table": "Basic Table and Row Properties",
 		"%l_basic_table_image": "<img src='images/basic-table.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_basic_table": "Formatting can be done with standard TableViewRow properties<br>First row has different background image than middle rows<br>Not labeled, but the row's foreground (text) color also set<br>The &ldquo;other information…&rdquo; text is added as a label rather than a standard row property",
+		"%l_slidenote_basic_table": "Formatting can be done with standard TableViewRow properties<br>First row has different background image than middle rows<br>Not labeled, but the row's foreground (text) color also set<br>The &ldquo;other information&rdquo; text is added as a label rather than a standard row property",
 		
 		"%l_cust_rows": "Custom Table Rows",
 		"%l_cust_rows_image": "<img src='images/cust-rows.png' style='margin-top:5px;height:350px;float:right;'/>",
@@ -97,9 +97,9 @@ String.toLocaleString({
 		"%l_slidenote_table_searching": "Same code, but different looks",
 		
 		"%l_ios_only_features": "iOS Only Features",
-		"%l_l_iosonly1": "Edit/Delete mode<pre><code contenteditable>\nvar tableView = Titanium.UI.createTableView({\n   editable:true\n});\ntableview.addEventListener('delete',function(e) {\n   ...\n});\n </code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/editmode.png'/>",
-		"%l_iosonly2": "Move mode<pre><code contenteditable>\neditBtn.addEventListener('click', function() {\n   tableview.moving = true;\n});\ntableview.addEventListener('move',function(e) {\n   ...\n});\n </code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/movemode.png'/>",
-		"%l_iosonly3": "Filters<pre><code contenteditable>\nvar index = [\n   {title:'A',index:0},\n   ...\n   {title:'P',index:(data.length -1)}\n];\ntableview.index = index;\n </code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/filters.png'/>",
+		"%l_iosonly1": "Edit/Delete mode<pre><code contenteditable>var tableView = Titanium.UI.createTableView({\n   editable:true\n});\ntableview.addEventListener('delete',function(e) {\n   ...\n});</code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/editmode.png'/>",
+		"%l_iosonly2": "Move mode<pre><code contenteditable>editBtn.addEventListener('click', function() {\n   tableview.moving = true;\n});\ntableview.addEventListener('move',function(e) {\n   ...\n});</code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/movemode.png'/>",
+		"%l_iosonly3": "Filters<pre><code contenteditable>var index = [\n   {title:'A',index:0},\n   ...\n   {title:'P',index:(data.length -1)}\n];\ntableview.index = index;</code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/filters.png'/>",
 		"%l_slidenote_ios_only_features": "iOS only properties (table.editable = true) will be ignored on Android<br>You listen for the delete/move events and take action based on that<br/>They're called filters, but you implement them with the <code>index</code> property.",
 	
 		"%l_table_events": "Table Events",
@@ -135,12 +135,9 @@ String.toLocaleString({
 		"%l_doesnt_fill": "doesn't fill entire viewport",
 		"%l_cust_background": "custom rows with backgrounds and child elements",
 		"%l_table_listeners": "table event listeners that react differently depending on which child element receives the event",
-		"%l_demoURL": "Demo and wiki URL",
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/320+-+API+Deep+Dive+-+TableView'>wiki.appcelerator.org/display/td/320+-+API+Deep+Dive+-+TableView</a>",
 		"%l_slidenote_lab_goals": "In this lab assignment, you will create a custom table that doesn't fill the entire viewport. The table will contain customized rows with background images that differ based on the row's location within the table. Each row will contain two images and two labels. When you tap a row, an event listener will determine if either of the images was the object that received the tap. If so, that image will be swapped with an alternate graphic.",
 		
 		
-		"%l_lab": "Lab",
-		"%l_slidenote_lab": "For TiBountyHunter walkthrough, focus on TableView skinning, found in FugitiveTableView.js &mdash; show how we use custom background images for the row, and mix/match built-in properties like leftImage/rightImage and custom layout with adding a label"
-
 	}
 });

@@ -20,7 +20,8 @@ String.toLocaleString({
 		"%l_slidenote_agenda": "Why Mobile UX in a programmer's course?<br/>Good UX separates 'good' apps from 'great' apps<br/>Provide input and feedback to design team members<br/>Know what is possible<br/>Learn to think outside the norm &mdash; be creative",
 
 		"%l_ux_basics": "Basics of UX",
-		"%l_slidenote_ux_basics": "Think about your user<br>And the way they'll use your app<br>3 examples<br>Tweet: confusing options and actions<br>App on left: too much info, too much in app<br>Dialog: not a mobile app, but still poor UX<br>Asks users to select command-line switches<br> If user knows what they are, they'd be typing at console<br>If they don't, then the dialog doesn't give appropriate info",
+		"%l_ux_image": "<img src='images/basics-ux.png' style='margin-top:40px;height:550px;'/>",
+		"%l_slidenote_ux_basics": "Think about your user<br>And the way they'll use your app<br>3 examples<br><ul><li>Tweet: confusing options and actions</li><li>App on left: too much info, too much in app, controls poorly laid out -- there's no flow or logical indication of what comes first</li><li>Dialog: not a mobile app, but still poor UX<br>Asks users to select command-line switches<br> If user knows what those switches would be used for, they'd be typing at console<br>If they don't, then the dialog doesn't give appropriate info</li></ul>",
 
 		"%l_critial_questions": "Critical Questions",
 		"%l_can_you": "Can you answer the following:",
@@ -40,7 +41,7 @@ String.toLocaleString({
 		"%l_use_it": "Use it to your advantage",
 		"%l_work_with": "Work with the lowest common greatest value",
 		"%l_added_value": "Provide added values",
-		"%l_slidenote_hardware": "Hardware constraints: screen size, input options, memory limitations<br>Freedom in framework = understanding what is available to you and how to truly utilize it to your advantage.<br>Advantage = new ways to engage customers, video, audio, location, etc. Those things that mobile does well, but desktop doesn't<br>Target lowest common hardware that provides the greatest value to your company. Drop support for older devices or OSes when they're not big segments of your userbase<br>Provide added value = giving users reason to use your app",
+		"%l_slidenote_hardware": "<ul><li>Hardware constraints: screen size, input options, memory limitations</li><li>Freedom in framework = understanding what is available to you and how to truly utilize it to your advantage.</li><li>Advantage = new ways to engage customers, video, audio, location, etc. Those things that mobile does well, but desktop doesn't</li><li>Target lowest common hardware that provides the greatest value to your company. Drop support for older devices or OSes when they're not big segments of your userbase</li><li>Provide added value = giving users reason to use your app</li></ul>",
 
 		"%l_device_principles": "Device Principles",
 		"%l_married": "You are married to your mobile",
@@ -57,7 +58,7 @@ String.toLocaleString({
 		"%l_slidenote_screens": "Take advantage of the differences in screens and sizes<br>Optimize for the difference in screen real estate and resolution<br>Target the hardware of the majority of users",
 
 		"%l_inputs": "Inputs",
-		"%l_slidenote_inputs": "Let's talk about some of the mobile-specific input options you have and how you can use them within your app to create novel or exciting ways to interact.",
+		"%l_slidenote_inputs": "Let's talk about some of the mobile-specific input options you have and how you can use them within your app to create novel or exciting ways to interact.<br/></br>Feel free to demonstrate, share experiences, and add your own suggestions about how each of the following input types could be used to make a more compelling app experience.",
 
 		"%l_accelerometer": "Accelerometer",
 		"%l_directional_info": "Directional Information",
@@ -80,7 +81,7 @@ String.toLocaleString({
 		"%l_guide_user": "Guide a user with instruction",
 		"%l_provide_feedback": "Provide positive/negative feedback",
 		"%l_unique": "Unique and interesting UX",
-		"%l_slidenote_micro_audio": "You can use sound for input and output<br>Instructions<br>Beeps and more for feedback, audio output<br>Unique &mdash; Apple's recent patent &mdash; the sound of a puff of air can be used to advance screens in an app<",
+		"%l_slidenote_micro_audio": "You can use sound for input and output<ul><li>Instructions</li><li>Beeps and more for feedback, audio output</li><li>Unique &mdash; Apple's recent patent &mdash; the sound of a puff of air can be used to advance screens in an e-reader app</li></ul>",
 
 		"%l_camera_video": "Camera &amp; Video",
 		"%l_camera_image": "<img src='images/camera-video.png' style='margin-top:5px;height:420px;float:right;'/>",
@@ -88,7 +89,7 @@ String.toLocaleString({
 		"%l_instant_result": "Instant Result &amp; Gratification",
 		"%l_mult_uses": "Multiple Uses",
 		"%l_augment_exp": "Augment Experience",
-		"%l_slidenote_camera_video": "Camera is input device<br>Natural action for many<br>Example app shown is Turbo Tax &mdash; snap photo, upload, OCR of tax form<br>Augmented reality",
+		"%l_slidenote_camera_video": "Think of camera as an input device rather than just a means to capture photos.<br><br>Taking photos is a natural action for many<br><br>The example app shown is Turbo Tax &mdash; users snap photo of their W-2 form, upload it, and the server OCRs the form as a means of data entry into a tax filing process<br><br>Augmented reality is another use for the camera",
 
 		"%l_nav_ux": "Navigation",
 		"%l_slidenote_nav_ux": "Navigation is really the core behind your UX<br/>Must be simple and intuitive<br/>Test with real users<br/><br/>Let's take a look at the common elements and explore which work best as a base before expanding on how to build with them.",
@@ -98,7 +99,7 @@ String.toLocaleString({
 		"%l_quick_eff": "Quick &amp; Efficient",
 		"%l_natural": "Natural User Experience",
 		"%l_instant": "Instant Information Use",
-		"%l_slidenote_tabs": "Tabs imply equal weight, not a hierarchy<br/>Related functionality under the common purpose of the app<br>Familiar<br>Efficient<br>Tab based apps are the most popular apps that exist. The reason it that there is no more than five or so decisions that a user needs to make.",
+		"%l_slidenote_tabs": "Tabs imply equal weight, not a hierarchy<br/>Related functionality under the common purpose of the app<br>Tabs are very familiar to users<br>They are quick and efficient to use<br>Tab based apps are the most popular apps that exist. The reason it that there is no more than five or so decisions that a user needs to make.",
 
 		"%l_modal_windows": "Modal Windows",
 		"%l_signify": "Signify separate action",
@@ -109,7 +110,7 @@ String.toLocaleString({
 
 		"%l_window_nav": "Window Navigation",
 		"%l_windownav_images": "<img src='images/window-nav.png' style='margin-top:50px;height:440px;padding:20px;'/>",
-		"%l_slidenote_window_nav": "Plan for simple, intuitive navigation<br>Minimum Viable Product is just what's needed, no feature creep<br>We'll talk more about prototyping apps later",
+		"%l_slidenote_window_nav": "Plan for simple, intuitive navigation<br><br>Use storyboarding tools, like those in Xcode<br/><br/>But remember your Minimum Viable Product &mdash; just what's needed, no feature creep<br><br/>We'll talk more about prototyping apps later",
 
 		"%l_indication": "Indication & Status",
 		"%l_slidenote_indication": "Loading indicators, alerts &amp; messages, etc.<br>Indicators and status are often overlooked<br/>Must provide the necessary feedback so a user knows what is going on.<br/>When actions fail or time-out, users need to know",
@@ -127,7 +128,7 @@ String.toLocaleString({
 		"%l_alerts": "Alerts are ok",
 		"%l_action_screens": "Action screens are good",
 		"%l_active_results": "Active results are best",
-		"%l_slidenote_feedback": "Alerts are in your face, but get the job done<br>Action screens &mdash; customized screen, fills entire viewport, opportunity for better UI<br>Active results &mdash; best, inline with rest of app's actions &mdash; game results, incoming messages, users get info and can react<br>Feedback should give positive reinforcement of desired actions in your app, and discourage actions that aren't the best way to use your app. <br/><br>With that being said...",
+		"%l_slidenote_feedback": "<ul><li>Alerts are in your face, but get the job done</li><li>Action screens &mdash; customized screen, fills entire viewport, opportunity for better UI</li><li>Active results &mdash; best, inline with rest of app's actions &mdash; game results, incoming messages, users get info and can react</li></ul><br>Feedback should give positive reinforcement of desired actions in your app, and discourage actions that aren't the best way to use your app. <br/><br>With that being said... (go to next slide)",
 
 		"%l_dont_over": "Don't Over Dialog",
 		"%l_only_provide": "Only provide it when necessary",
@@ -177,7 +178,7 @@ String.toLocaleString({
 		"%l_paper_mockups": "Paper mockups work",
 		"%l_live_works": "LiveView apps work well",
 		"%l_do_not": "Do not 'own' the project",
-		"%l_slidenote_how_test": "Small groups are best, 6 is enough<br>Ask specific questions rather than 'what do you think?'<br>Paper apps work fine for testing<br>Pass off project as someone else's to remove personal concerns",
+		"%l_slidenote_how_test": "In our opinion, Small groups are best, 6 is enough &mdash; more than that and you get too many divergent opinions and you're probably not targeting your primary audience with that larger group.<br/><br>Ask specific questions rather than 'what do you think?'<br/><br>Paper apps work fine for testing<br><br/>Pass off project as someone else's to remove personal concerns",
 
 		"%l_ti_test": "Using Titanium for Rapid Testing",
 		"%l_bring_ui": "Bring your UI to life",
@@ -189,11 +190,11 @@ String.toLocaleString({
 		"%l_iteration": "Iteration",
 		"%l_change_early": "Change early and often",
 		"%l_ensure_your": "Ensure your changes are justified",
-		"%l_180_deg": "180 degrees is not bad",
+		"%l_180_deg": "Pivoting 180 degrees is not bad",
 		"%l_ask_yourself": "Ask yourself the three questions...",
 		"%l_slidenote_iteration": "Change early/often means to iterate, try/change/try/change<br>Always go back to your core three questions:<br>What problems are you solving,<br>Who are your key users,<br>What are their needs",
 
-		"%l_contd_testing": "Continued Testing",
+		"%l_contd_testing": "Continual Testing",
 		"%l_keep_test": "Keep testing hypotheses",
 		"%l_you_never": "You are never complete!",
 		"%l_remember_your": "Remember your MVP",

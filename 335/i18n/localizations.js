@@ -82,6 +82,8 @@ String.toLocaleString({
 		"%l_use_both": "Use both ScrollView and ScrollableView in an app",
 		"%l_use_scroll": "Use ScrollView as tab-strip style component",
 		"%l_will_control": "It will control what is shown in the ScrollableView",
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/335+-+ScrollView+API+Deep+Dive'>wiki.appcelerator.org/display/td/335+-+ScrollView+API+Deep+Dive</a>",
+
 		"%l_slidenote_lab_goals": "In this lab, you will create a scroll view containing a list of baseball players. That list will extend left/right beyond the width of the viewport. When the user taps a player's name, three images of that player will be displayed in a scrollable view located below the scroll view.",
 		
 		"%l_lab": "Lab",

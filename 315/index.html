@@ -13,6 +13,25 @@
 		<link rel="stylesheet" href="../css/presentation.css">
 		<script type="text/javascript" src="../../presentation-engine/js/l10n.js"></script>
 		<script type="text/javascript" src="i18n/localizations.js"></script>
+		<script>
+		function loadStyleSheet(url){
+		    if(document.createStyleSheet) {
+		        try {document.createStyleSheet(url);} catch (e) { }
+		    }
+		    else{
+		        var css;
+		        css         = document.createElement('link');
+		        css.rel     = 'stylesheet';
+		        css.type    = 'text/css';
+		        css.media   = "all";
+		        css.href    = url;
+		        document.getElementsByTagName("head")[0].appendChild(css);
+		    }
+		}
+		var browserlang = document.documentElement.lang || String.locale || 'en-US';
+		loadStyleSheet('../css/'+browserlang+'.css');
+		</script>
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/print.css" media="print">
 	</head>
 	
 	<body>
@@ -86,7 +105,7 @@
 					<p align="left" class="l_app_icons">App Icons &amp; Default Screens</p><br>
 					<p align="left" class="l_colors_ux">Colors &amp; UX</p><br>
 					<p align="left" class="l_ui_comps">UI Components</p><br>
-					<div class="slidenote"><div class="l_slidenote_inc_brand">How can you incorporate your brand?<ul><li>Obviously logos, icons, images</li><li>Colors should flow through UI</li><li>Custom components</li></ul>Brand incorporation needs to start at some of the most fundamental levels. The app icon and default screens are the easiest ones to attack. Once you understand the brand, focus the UI on the core message to the consumer. Your app icon is the very first piece of art that people will judge your app on. Design it wisely and make sure that it flows with your app appropriately.<br>As mentioned in the last module, make sure that your brand colors flow in the appropriate areas through your application. If you determine all headers are to be white, make sure that you are consistent. This is deciding brand rules for your application design. Designers often don't think of apps as interactive pieces all the time so if you see variances in the artwork make sure to ask “why”. It is very important for the designer to describe every pixel on the screen.<br>UI components are also very easy to modify if you have the assets available. Make you that you use consistent colors and designs throughout your application that accurately represent what they are.</div></div>
+					<div class="slidenote"><div class="l_slidenote_inc_brand">How can you incorporate your brand?<ul><li>Obviously logos, icons, images</li><li>Colors should flow through UI</li><li>Custom components</li></ul>Brand incorporation needs to start at some of the most fundamental levels. The app icon and default screens are the easiest ones to attack. Once you understand the brand, focus the UI on the core message to the consumer. Your app icon is the very first piece of art that people will judge your app on. Design it wisely and make sure that it flows with your app appropriately.<br>As mentioned in the last module, make sure that your brand colors flow in the appropriate areas through your application. If you determine all headers are to be white, make sure that you are consistent. This is deciding brand rules for your application design. Designers often don't think of apps as interactive pieces all the time so if you see variances in the artwork make sure to ask 'why'. It is very important for the designer to describe every pixel on the screen.<br>UI components are also very easy to modify if you have the assets available. Make you that you use consistent colors and designs throughout your application that accurately represent what they are.</div></div>
 				</section>
 				
 				<section>
@@ -206,6 +225,22 @@
 			var presenterNotesWindow = null;
 			function openPresenterNotes() {
 				presenterNotesWindow = window.open('presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=480,width=640");
+			}
+			var s = (function load(){
+				var s = {};
+				if(window.outerHeight){
+					s = { w: window.outerWidth, h: window.outerHeight};
+				}
+				else {
+					s = { w: document.body.clientWidth, h: document.body.clientHeight};
+				}
+				return s;
+			})();
+			if(s.w < 1000 || s.h < 800) {
+				var slides = document.querySelectorAll( '#reveal .slides' );
+				for( var i = 0, len = slides.length; i < len; i++ ) {
+					slides[i].classList.add( 'smallscreen' );
+			    }
 			}
 		</script>
 	</body>

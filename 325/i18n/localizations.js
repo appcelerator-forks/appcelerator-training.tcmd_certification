@@ -18,55 +18,53 @@ String.toLocaleString({
 		"%l_orientation": "Device orientation",
 		"%l_orientation_image": "<img src='images/orientation.png' style='margin-top:5px;height:350px;float:right;'/>",
 		"%l_slidenote_examples": "Many options for formatting tables (seven total shown)",
-		"%l_lock_orientation": "Locking orientation",
+		"%l_appsupport": "App-level orientation support",
 		"%l_fix_orientation": "Fixing orientation per window",
 		"%l_handle_orientation": "Handling orientation events",
-		"%l_slidenote_orientation": "Three ways to deal with orientation:<br><ul><li>Lock the orientation for the entire app</li><li>Setting a fixed orientation for specific screens within your app (e.g. one screen in portrait and another in landscape, but those are locked)</li><li>Actively updating your app's UI based on the current orientation by handling orientation events</li></ul><br>Per Apple's HIG on iPhone, either:<ul><li>Lock orientation, or</li><li>Support portrait, landscape left & right, but not upside down (to prevent upside down phone during incoming call)</li></ul><br>On iPad, you should support all orientations",
+		"%l_slidenote_orientation": "Multiple levels of orientation support:<br><ul><li>Set app-level options to control splash screen and whole-app orienation support</li><li>Setting a fixed orientation for specific screens within your app (e.g. one screen in portrait and another in landscape, but those are locked)</li><li>Actively updating your app's UI based on the current orientation by handling orientation events</li></ul><br>Per Apple's HIG on iPhone, either:<ul><li>Lock orientation, or</li><li>Support portrait, landscape left & right, but not upside down (to prevent upside down phone during incoming call)</li></ul><br>On iPad, you should support all orientations",
 
-		"%l_lock_orientation": "Locking Orientation - iOS",
+		"%l_lock_orientation": "App-level Orientation Support - iOS",
 		"%in_tiapp": "In tiapp.xml:",
 		"%l_lock_orientation_image": "<img src='images/lock-orientation.png' style='margin-top:5px;height:350px;'/>",
-		"%l_slidenote_lock_orientation": "For iOS, set supported orientations in tiapp.xml<br>To lock orientation, just remove the non-supported orientations",
+		"%l_slidenote_lock_orientation": "For iOS, set supported orientations in tiapp.xml<br><br/>To lock orientation, just remove the non-supported orientations.<br/><br/>Those listed here are also the orientations in which the splash screens could be displayed.",
 		
 		
-		"%l_lock_orientation_android": "Locking Orientation - Android",
+		"%l_lock_orientation_android": "App-level Orientation Support - Android",
 		"%l_option_1": "Option 1 - modify tiapp.xml:",
 		"%l_copy_code": "Copy code from build/android/AndroidManifest.xml",
 		"%l_add_nested": "Add nested < manifest > tags within < android >",
 		"%l_remove": "remove '|orientation' from every node",
 		"%l_lock_orientation_android_image": "<img src='images/lock-orientation-android.png' style='margin-top:5px;height:350px;float:right;'/>",
-		"%l_slidenote_lock_orientation_android": "Three options for locking orientation on Android<br>Make sure to remove the bar and orientation from every node",
+		"%l_slidenote_lock_orientation_android": "Again, this option specifies the orientations your app could support and controls the splash screen orientations. ",
 		
 		"%l_option_2": "Option 2 - Custom Android manifest file",
 		"%l_copy_build": "Copy build/android/AndroidManifest.xml to <b>platform/android/AndroidManifest.xml</b>",
 		"%l_remove": "remove '|orientation' from every node",
-		"%l_lock_orientation_android_image_2": "<img src='images/lock-orientation-android-2.png' style='margin-top:5px;height:350px;float:right;'/>"
+		"%l_lock_orientation_android_image_2": "<img src='images/lock-orientation-android-2.png' style='margin-top:5px;height:350px;float:right;'/>",
 		"%l_slidenote_lock_orientation_android_2": "Option 2 is to create a custom manifest file in the Platform/android folder<br>The Platform folder doesn't exist by default<br>Clean the project before rebuilding to clear out old AndroidManifest.xml file",
-		"%l_fixed_orientation": "Fixed Orientation per Window",
+
+		"%l_fixed_orientation": "Fixing Orientation per Window",
 		"%l_window_modes": "Window Orientation Modes",
 		"%l_supported_val": "Supported values include:",
-		
+		"%l_fixedorient_code": "\nvar win = Ti.UI.createWindow({\n   /* iOS - define here */\n   orientationModes: [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT]\n});\n\n/* Android, define here */\nwin.orientationModes = [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT];\n ",
 		"%l_portrait": "PORTRAIT / UPSIDE_PORTRAIT",
 		"%l_landscape": "LANDSCAPE_LEFT / LANDSCAPE_RIGHT",
 		"%l_face": "FACE_UP / FACE_DOWN",
-		"%l_fixed_orientation_image": "<img src='images/fixed-orientation.png' style='margin-top:5px;height:250px;'/>",
-		
-		
-		"%l_slidenote_fixed_orientation": "You can set orientation on a per window basis within your app<br>The older Ti.UI.orientation property technique is deprecated and should not be used.",
+		"%l_slidenote_fixed_orientation": "You can set orientation on a per window basis within your app<br><br/>The older Ti.UI.orientation property technique is deprecated and should not be used.",
 		
 		"%l_or_events": "Orientation Events",
-		"%l_ti_gesture": "Ti.Gesture.orientationchange",
+		"%l_ti_gestureorientation": "Ti.Gesture.orientationchange",
 		"%l_event_props": "Event properties and methods",
-		"%l_or_events_image": "<img src='images/or-events.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_or_events": "You can react to orientation change events<br>Use the Ti.Gesture event listener<br>Test on device to be sure you're getting/using values you expect<br>They can differ between iOS and Android",
+		"%l_orientation_code": "\nTi.Gesture.addEventListener('orientationchange', function(e) {\n   // current device orientation\n   // Ti.Gesture.orientation\n   \n   // or, get orientation from event object\n   // e.orientation\n   \n   // also, there are two helpers:\n   // e.source.isPortrait()\n   // e.source.isLandscape()\n});\n ",
+		"%l_slidenote_or_events": "You can react to orientation change events<br>Use the Ti.Gesture event listener<br>Test on device<br/><br/>Keep in mind the difference expections of what a handset considers the top of the device (ear-piece up/mic down) versus a tablet (what most of us would call landscape orientation)",
 		
 		"%l_handling_or": "Handling Orientation Changes",
 		"%l_react_to": "React to orientation change via event listener",
-		"%l_use_self": ">Use self-contained, self-updating UI components",
+		"%l_use_self": "Use self-contained, self-updating UI components",
 		"%l_move_rotate": "Move, rotate, and swap UI elements",
 		"%l_take_adv": "Take advantage of the orientation",
 		"%l_dont_forget": "Don't forget the soft keyboard",
-		"%l_slidenote_handling_or": "Unless your UI dictates otherwise, best-practice is to actively react to orientation changes<br>Self-contained, self-updating is same as we use in TiBountyHunter with the tableview<br>Components listen for a global orientation event and update themselves<br>Take advantage &mdash; move components to logical location, change size & shape, show different content (as in the Jamie Oliver recipe application that shows longer how-to info in landscape and short text & ingredients in portrait)<br>Soft keyboard &mdash; might cover a lot more of your UI",
+		"%l_slidenote_handling_or": "<ul><li>Unless your UI dictates otherwise, best-practice is to actively react to orientation changes</li><li>Self-contained, self-updating is same as we use in TiBountyHunter with the tableview where it 'knows' how to update itself &mdash; Components listen for a global orientation event and update themselves</li><li>You might move, rotate, swap elements as orientation changes</li><li>Take advantage &mdash; move components to logical location, change size & shape, show different content (as in the Jamie Oliver recipe application that shows longer how-to info in landscape and short text & ingredients in portrait)</li><li>Soft keyboard &mdash; might cover a lot more of your UI</li></ul>",
 
 		"%l_gestures": "Gestures",
 		"%l_slidenote_gestures": "",
@@ -85,7 +83,7 @@ String.toLocaleString({
 		"%l_slidenote_shake": "timestamp is useful to track the time since last shake<br>Useful for not over reacting to shakes (delay before counting as a new shake event)",
 		
 		"%l_swipes": "Swipes",
-		"%l_swipe_image": "<img src='images/swipe.png' style='margin-top:5px;height:300px;float:right;'/>",
+		"%l_swipe_image": "<img src='images/swipe.png' style='margin-top:5px;height:400px;'/>",
 		"%l_built_in": "Built-in event on most Ti.UI elements",
 		"%l_direction": "direction",
 		"%l_source": "source",
@@ -102,20 +100,19 @@ String.toLocaleString({
 		"%l_ios_pinch": "iOS only (for now)",
 		"%l_zoom": "Zoom only (no rotation)",
 		"%l_pinch_code_image": "<img src='images/pinch-code.png' style='margin-top:5px;height:200px;'/>",
-		"%l_slidenote_pinch": "Pinch support added in 1.8.0.1, Android support planned<br>Only zoom supported now, rotation might be added",
+		"%l_slidenote_pinch": "Pinch support added in 1.8.0.1, Pull request for Android accepted, probably available in Ti 2.1<br>Only zoom supported now, rotation might be added",
 		
 		
 		"%l_long_press": "Long press",
 		"%l_natively": "Natively supported in 1.8+",
-		"%l_sim_by": "Simulate by tracking touchstart and touchend",
+		"%l_sim_by": "For older SDKs, simulate by tracking touchstart and touchend",
 		"%l_fak_android": "<a href='https://gist.github.com/1019105'>https://gist.github.com/1019105</a>",
-		"%l_fak_long_android": "Faking long press in Android",		
-		"%l_fak_ios": "<a href='https://gist.github.com/1018107'>https://gist.github.com/1018107</a>",
+		"%l_longpressdeleterow": "<a href='https://gist.github.com/1018107'>https://gist.github.com/1018107</a>",
 		"%l_fak_long_delete": "Long press to delete table row",
 		"%l_keep_mind": "Keep in mind native UI conventions for long presses",
 		"%l_slidenote_long_press": "ative support for long press added in 1.8.0.1<br>Simulate in older SDKs by tracking touchstart and touchend<br>A couple of gists show how you could use this<br>Keep in mind native conventions: e.g. on iOS, magnifies view in some contexts<br>Long press will be natively supported soon, maybe 1.8",
 	
-		"%l_acc": "Accelerometer",
+		"%l_acc": "Gyroscope (via Accelerometer)",
 		"%l_ios_android": "iOS and Android natively support gyroscope",
 		"%l_ti_apis": "Titanium APIs don't support it currently",
 		"%l_not_all": "Not all devices include necessary gyro hardware",
@@ -129,11 +126,7 @@ String.toLocaleString({
 		"%l_lab_goals": "Lab Goals",
 		"%l_update_simple": "Update simple app to add orientation support",
 		"%l_update_data": "Update data based on swipe and shake events",
-		"%l_demoURL": "Demo and wiki URL",
-		"%l_slidenote_lab_goals": "In this lab you will create modify a simple UI based on orientation changes and then alter than data based on swipe and shake gesture events. When the phone registers the shake event, it will choose a random photo to display as the album image. When you swipe over the copy, it will choose a random one for display as well. Rotation of device will reorient the content of the window to be more effectively located.",
-		
-		
-		"%l_lab": "Lab",
-		"%l_slidenote_lab": "Lab for TiBountyHunter we will redraw and create nice orientation specific layouts for our application windows. This happens here:<pre>Ti.Gesture.addEventListener('orientationchange', function(e) {container.width =Ti.Platform.displayCaps.platformWidth/2;}); </pre>basically, we listen for orientation change and update our UI to match.  You should add orientation change handlers for every component in your UI that needs to be updated based on orientation"
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/325+-+Handling+Gestures+and+Orientation+Changes'>wiki.appcelerator.org/display/td/325+-+Handling+Gestures+and+Orientation+Changes</a>",
+		"%l_slidenote_lab_goals": "In this lab you will create modify a simple UI based on orientation changes and then alter than data based on swipe and shake gesture events. When the phone registers the shake event, it will choose a random photo to display as the album image. When you swipe over the copy, it will choose a random one for display as well. Rotation of device will reorient the content of the window to be more effectively located."
 	}
 });

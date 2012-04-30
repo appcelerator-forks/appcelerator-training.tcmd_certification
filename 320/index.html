@@ -13,6 +13,25 @@
 		<link rel="stylesheet" href="../css/presentation.css">
 		<script type="text/javascript" src="../../presentation-engine/js/l10n.js"></script>
 		<script type="text/javascript" src="i18n/localizations.js"></script>
+		<script>
+		function loadStyleSheet(url){
+		    if(document.createStyleSheet) {
+		        try {document.createStyleSheet(url);} catch (e) { }
+		    }
+		    else{
+		        var css;
+		        css         = document.createElement('link');
+		        css.rel     = 'stylesheet';
+		        css.type    = 'text/css';
+		        css.media   = "all";
+		        css.href    = url;
+		        document.getElementsByTagName("head")[0].appendChild(css);
+		    }
+		}
+		var browserlang = document.documentElement.lang || String.locale || 'en-US';
+		loadStyleSheet('../css/'+browserlang+'.css');
+		</script>
+		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/print.css" media="print">
 	</head>
 	
 	<body>
@@ -70,8 +89,14 @@
 
 				<section>
 					<h2 class="l_examples">Examples</h2>
-					<p class="l_examples_image"><img src="images/examples.png" style="margin-top:5px;height:350px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_examples">Many options for formatting tables (seven total shown)</div></div>
+					<div class="l_examples_image">
+						<img src="images/table1.png" style="height:320px;" class="fragment"/>
+						<img src="images/table2.png" style="height:320px;" class="fragment"/>
+						<img src="images/table3.png" style="height:320px;" class="fragment"/><br/>
+						<img src="images/table4.png" style="height:320px;" class="fragment"/>
+						<img src="images/table5.png" style="height:320px;" class="fragment"/>
+					</div>
+					<div class="slidenote"><div class="l_slidenote_examples">Many options for formatting tables (five total shown)</div></div>
 				</section>
 				
 				<section>
@@ -113,7 +138,7 @@ table.setData(tbl_data);
 		
 				<section>
 					<h2 class="l_table_obj">TableViewRow Object</h2>
-<pre><code contenteditable class="l_tablerow_code">
+<pre><code contenteditable class="l_table_row_code">
 var row = Ti.UI.createTableViewRow({
    properties
 });
@@ -133,13 +158,13 @@ table.appendRow(row);
 					<h2 class="l_row_ind">Row Indicators</h2>
 					<p class="l_row_ind_image"><img src="images/row-ind.png" style="margin-top:5px;height:250px;"/></p>
 					<div style="position:relative; top: -260px;" class="l_rowindicators">hasChild<br/><br/>hasDetail<br/><br/>hasCheck</div>
-					<div class="slidenote"><div class="l_slidenote_row_ind">hasChild &mdash; indicates sub-table or additional rows<br>hasDetail &mdash; indicates a detail view or alert will appear when row is tapped (not supported on Android)<br>hasCheck &mdash; on/off or yes/no indicator</div></div>
+					<div class="slidenote"><div class="l_slidenote_row_ind">Per Apple's HIG, these icons imply the following meaning:<ul><li>hasChild &mdash; indicates sub-table or additional rows</li><li>hasDetail &mdash; indicates a detail view or alert will appear when row is tapped (not supported on Android)</li><li>hasCheck &mdash; on/off or yes/no indicator</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_basic_table">Basic Table and Row Properties</h2>
 					<p class="l_basic_table_image"><img src="images/basic-table.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_basic_table">Formatting can be done with standard TableViewRow properties<br>First row has different background image than middle rows<br>Not labeled, but the row's foreground (text) color also set<br>The &ldquo;other information…&rdquo; text is added as a label rather than a standard row property</div></div>
+					<div class="slidenote"><div class="l_slidenote_basic_table">Formatting can be done with standard TableViewRow properties<br>First row has different background image than middle rows<br>Not labeled, but the row's foreground (text) color also set<br>The &ldquo;other information&rdquo; text is added as a label rather than a standard row property</div></div>
 				</section>
 		
 					
@@ -212,7 +237,7 @@ var tv = Ti.UI.createTableView({
 
 				<section>
 					<h2 class="l_table_groupedsections">Grouped Sections - iOS</h2>
-<pre style="width:60%;float:left;margin-left:0;"><code contenteditable class="l_groupedsection_code">
+<pre style="width:70%;float:left;margin-left:0;"><code contenteditable class="l_groupedsection_code">
 var tableView = Titanium.UI.createTableView({
     style:Titanium.UI.iPhone.TableViewStyle.GROUPED
 });
@@ -326,15 +351,10 @@ table.addEventListener('click', function(e){
 			    		<li class="l_cust_background">custom rows with backgrounds and child elements</li>
 			    		<li class="l_table_listeners">table event listeners that react differently depending on which child element receives the event</li>
 			    	</ul><br><br>
-					<p align="left" class="l_demoURL">Demo and wiki URL</p><br>
+					<p class="l_labURL" style="font-size:0.7em;margin-top:20px;"><a href='https://wiki.appcelerator.org/display/td/320+-+API+Deep+Dive+-+TableView'>wiki.appcelerator.org/display/td/320+-+API+Deep+Dive+-+TableView</a></p>
 					<div class="slidenote"><div class="l_slidenote_lab_goals">In this lab assignment, you will create a custom table that doesn't fill the entire viewport. The table will contain customized rows with background images that differ based on the row's location within the table. Each row will contain two images and two labels. When you tap a row, an event listener will determine if either of the images was the object that received the tap. If so, that image will be swapped with an alternate graphic.</div></div>
 				</section>
 				
-					<section>
-					<h1 class="l_lab">Lab</h1>
-					<div class="slidenote"><div class="l_slidenote_lab">For TiBountyHunter walkthrough, focus on TableView skinning, found in FugitiveTableView.js &mdash; show how we use custom background images for the row, and mix/match built-in properties like leftImage/rightImage and custom layout with adding a label</div></div>
-				</section>
-
 			</div>
 
 			<!-- MAKE NO CHANGES BELOW THIS LINE -->
@@ -395,6 +415,22 @@ table.addEventListener('click', function(e){
 			var presenterNotesWindow = null;
 			function openPresenterNotes() {
 				presenterNotesWindow = window.open('presenternotes.html', presenterNotesWindow, "location=0,menubar=no,toolbar=no,height=480,width=640");
+			}
+			var s = (function load(){
+				var s = {};
+				if(window.outerHeight){
+					s = { w: window.outerWidth, h: window.outerHeight};
+				}
+				else {
+					s = { w: document.body.clientWidth, h: document.body.clientHeight};
+				}
+				return s;
+			})();
+			if(s.w < 1000 || s.h < 800) {
+				var slides = document.querySelectorAll( '#reveal .slides' );
+				for( var i = 0, len = slides.length; i < len; i++ ) {
+					slides[i].classList.add( 'smallscreen' );
+			    }
 			}
 		</script>
 	</body>
