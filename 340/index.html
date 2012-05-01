@@ -97,23 +97,47 @@
 				
 				<section>
 					<h2 class="l_basic">Basic Animation</h2>
-					<p align="left" class="l_for_simple">For simple property animations, we use obj.animate()</p><br>
-					<p class="l_basic_image"><img src="images/basic.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_basic">Background color animations on Android with SDK 1.8+</div>
+					<p align="left" class="l_for_simple">For simple property animations, we use obj.animate()</p>
+<pre><code contenteditable class="l_basic_code">
+var circle = Ti.UI.createView();
+circle.animate({
+   top: 200,
+   right: 30,
+   duration: 500
+}, function() {
+   // called when anim is complete
+   circle.animate({
+      top: 0,
+      left: 0,
+      duration: 500
+   });
+});
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_basic">Animate the basic properties of a view, such as positions, colors, background colors, opacity, z-index<br/><br/>Animation is from the <i>current value</i> to the new value you specify over the duration in milliseconds<br/><br/>Callback is run when the first animation is complete (such as to move it back to its original position)</div>
 				</div></section>
 				
 				<section>
-					<h2 class="l_basic_obj">Basic Animation With Object</h2>
-					<p align="left" class="l_hash">Hash of properties are properties of a Ti.UI.Animation object</p><br>
+					<h2 class="l_basicobj">Basic Animation With Object</h2>
 					<p align="left" class="l_reuse">To reuse animations, create an object which can be passed to animate():</p><br>
-					<p class="l_basic_obj_image"><img src="images/basic-obj.png" style="margin-top:5px;height:250px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_basic_obj">Background color animations on Android with SDK 1.8+</div>
+<pre><code contenteditable class="l_basicobj_code">
+var circle = Ti.UI.createView();
+var a = Ti.UI.createAnimation({
+   backgroundColor: '#ff0000',
+   autoreverse: true,
+   repeat: 3
+});
+a.duration = 1000;
+circle.animate(a);
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_basicobj"><ul><li>Animation object lets you apply the same animation to multiple elements.</li><li>Set properties at creation, or after the fact</li><li>autoreverse and repeat properties can be used without the animation object also (w/inline definition as on previous slide)</li></ul></div>
 				</div></section>
 
 				<section>
 					<h2 class="l_matrix">Matrix Animations</h2>
 					<p class="l_matrix_image"><img src="images/matrix.png" style="margin-top:5px;height:380px;float:right;"/></p>
-					<p align="left" class="l_what_is">What is a matrix?</p><br>
+					<p align="left" class="l_what_is">What is a matrix?</p>
 					<p class="l_matrix_url" style="font-size:0.7em;margin-top:20px;"><a href='http://en.wikipedia.org/wiki/Matrix_(mathematics)'>http://en.wikipedia.org/wiki/Matrix_(mathematics)</a> if you care</p>
 					<p align="left" class="l_for_animations">For animations, it's a set of properties describing a transformation of an object in a way a computer can process and execute</p><br>
 					<p align="left" class="l_provides_more">Provides more options for animation</p><br>
@@ -133,7 +157,26 @@
 				
 				<section>
 					<h2 class="l_2d_matrix_example">2D Matrix Animation Example</h2>
-					<p class="l_2d_matrix_example_image"><img src="images/2d-example.png" style="margin-top:5px;height:250px;"/></p>
+<pre><code contenteditable class="l_2d_matrix_code">
+// our view to animate
+var cloud = Ti.UI.createImageView({image: 'cloud.png' });
+
+// a 2D matrix object
+var twoD = Ti.UI.create2DMatrix();
+twoD = twoD.rotate(20);
+twoD = twoD.scale(1.5);
+
+// which is used in an animation object
+var a = Ti.UI.createAnimation();
+a.transform = twoD;
+a.duration = 3000;
+a.autoreverse = true;
+a.repeat = 3;
+
+// set it all in motion
+cloud.animate(a);
+
+</code></pre>
 					<div class="slidenote"><div class="l_slidenote_2d_matrix_example"><ul><li>We don't have to worry about the matrix math</li><li>We create a matrix object and use one of its methods, such as rotate or scale</li></ul></div>
 				</div></section>
 				
@@ -150,22 +193,43 @@
 				
 				<section>
 					<h2 class="l_3d_matrix_example">3D Matrix Animation Example</h2>
-					<p class="l_3d_matrix_example_image"><img src="images/3d-example.png" style="margin-top:5px;height:250px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_3d_matrix_example"><ul><li>Titanium.UI.iOS.3DMatrix as of 1.8 (was Ti.UI.3DMatrix earlier)</li><li>Set up 3D transformations in much the same way as 2D</li><li>Repeat and autoreverse properties for 2D and 3D transforms</li><li>Line 51 represents an access to an actual matrix value (e.g. row 3, column 4)</li></ul></div>
+<pre><code contenteditable class="l_3d_matrix_code">
+// our view to animate
+var cloud = Ti.UI.createImageView({image: 'cloud.png' });
+
+// a 3D matrix object -- note namespace!
+var threeD = Ti.UI.iOS.create3DMatrix();
+threeD = threeD.rotate(180, 1, 1, 0);
+threeD = threeD.scale(2.0, 2.0, 2.0);
+// modify value at a specific matrix location
+threeD.m34 = 1.0/-1500;
+
+// use the matrix in an animation object
+var a = Ti.UI.createAnimation();
+a.transform = threeD;
+a.duration = 3000;
+a.autoreverse = true;
+a.repeat = 3;
+
+// set it all in motion
+cloud.animate(a);
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_3d_matrix_example"><ul><li>Titanium.UI.iOS.3DMatrix as of 1.8 (was Ti.UI.3DMatrix earlier)</li><li>Set up 3D transformations in much the same way as 2D</li><li>Extra values in methods represent coordinates in 3-dimensional space (x, y, z)</li><li><code>threeD.m34</code> represents an access to an actual matrix location and value (e.g. row 3, column 4)</li></ul></div>
 				</div></section>
 				
 				<section>
 					<h2 class="l_opacity">Using Opacity</h2>
 					<p align="left" class="l_opacity_imp">Opacity is an important property in animation</p><br>
-					<p align="left" class="l_values">Values:</p><br>
-					<ul style="width:100%; margin-left:30px;">
+					<p align="left" class="l_values">Values:</p>
+					<ul style="width:100%; margin-left:80px;">
 			    		<li class="l_val0">0 is invisible</li>
 			    		<li class="l_val1">1 is totally opaque</li>
 			    	</ul><br>
 					<p align="left" class="l_dimming">Dimming objects indicates they are unavailable</p><br>
 					<p align="left" class="l_fading">Fading in/out views makes UI state changes less jarring</p><br>
 					<p align="left" class="l_demo_animating">Demo: animating the opacity property</p>
-					<div class="slidenote"><div class="l_slidenote_opacity">Animatable property<br>Has typical use scenarios – indicating a disabled or unavailable state<br><b>Demo</b><br>Use the finished code from Lab 340. Demonstrate working app, then examine app.js</div></div>
+					<div class="slidenote"><div class="l_slidenote_opacity">Animatable property<br>Has typical use scenarios &mdash; indicating a disabled or unavailable state<br><b>Demo</b><br>Use the finished code from Lab 340. Demonstrate working app, then examine app.js</div></div>
 				</section>	
 				
 				<section>
@@ -196,7 +260,7 @@
 					<h1 class="l_lab_goals">Lab Goals</h1>
 					<p align="left" class="l_implement">Implement basic animations</p><br>
 					<p align="left" class="l_compare">Compare animation capabilities across platforms</p><br>
-					<p align="left" class="l_demo_wiki">Demo and wiki URL</p><br>
+					<p class="l_labURL" style="font-size:0.7em;margin-top:20px;"><a href='https://wiki.appcelerator.org/display/td/340+-+Animation+API+Deep+Dive'>wiki.appcelerator.org/display/td/340+-+Animation+API+Deep+Dive</a></p>
 					<div class="slidenote"><div class="l_slidenote_lab_goals">In this lab, you will animate three elements in a partially-completed app. You'll add code to fade an element out of view, then back into view; add code to slide an element off screen, then back; and you'll add code to transition between two views using iOS-specific functionality.</div></div>
 				</section>
 				

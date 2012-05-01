@@ -94,8 +94,8 @@ String.toLocaleString({
 		"%l_title_bar": "Title bar is only present under specific conditions &mdash; depends on how you open the window",
 		"%l_window_activity": "Windows are generally associated with an Android activity (though not always)",
 		"%l_not_quite": "Not quite as nimble as iOS windows in terms of animation",
-		"%l_windows_url": "<a href='http://wiki.appcelerator.org/display/guides/Module+Developer+Guide+for+Android#ModuleDeveloperGuideforAndroid-HeavyweightandLightweightWindows'>http://wiki.appcelerator.org/display/guides/Module+Developer+Guide+for+Android#ModuleDeveloperGuideforAndroid-HeavyweightandLightweightWindows</a>",
-		"%l_slidenote_windows": "A 'heavyweight' window is Ti terminology for an Activity<br>You can have a lightweight window that isn't exactly equivalent to an Activity<br>To force a Ti window to be a heavyweight window (an activity), set navBarHidden=true or set fullscreen=true or false and see the module development guide in the wiki for a couple of extra ways",
+		"%l_windows_url": "<a href='http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/Android_Platform_Overview'>docs.appcelerator.com/titanium/2.0/index.html#!/guide/Android_Platform_Overview</a>",
+		"%l_slidenote_windows": "A 'heavyweight' window is Ti terminology for an Activity<br/><br>You can have a lightweight window that isn't exactly equivalent to an Activity, more like a full-screen view<br><br/>To force a Ti window to be a heavyweight window (an activity), set navBarHidden=true or set fullscreen=true or false and see the URL here for a couple of extra ways",
 		"%l_hardware": "Hardware Menu",
 		"%l_menu_options": "Menu of options displayed when hardware button is pressed",
 		"%l_asociated_activity": "Associated with an activity (a Titanium Window)",
@@ -122,7 +122,7 @@ String.toLocaleString({
 		"%l_wizard": "Example: Wizard interface, where you want 'back' to go back to a previous state in the UI",
 		"%l_careful": "Careful about this!  Users expect back to go back to another activity (most of the time)",
 		"%l_demo_back": "Demo: back button event",
-		"%l_slidenote_hijack": "<b>Demo</b>AndroidBackDemo project on the TCMD github repository<br>https://github.com/appcelerator-training/tcmd_certification/blob/master/workspace/AndroidBackDemo.zip<br>View hijacks the back button &amp; closes<br>Then restores it so you can close the window<br>In the event listener, you can monitor the other hardware buttons in the form:<br>android:camera<br>android:home",
+		"%l_slidenote_hijack": "<ul><li><b>Demo</b>AndroidBackDemo project on the TCMD github repository<br>https://github.com/appcelerator-training/tcmd_certification/blob/master/workspace/AndroidBackDemo.zip</li><li>View hijacks the back button &amp; closes<br>Then restores it so you can close the window</li><li>In the event listener, you can monitor the other hardware buttons in the form:<br>android:camera<br>android:home</li></ul>",
 		
 		"%l_non_visual_api": "Non-Visual APIs",
 		"%l_slidenote_non_visual_api": "",
@@ -157,11 +157,8 @@ String.toLocaleString({
 		
 		"%l_lab_goals": "Lab Goals",
 		"%l_examine": "Examine the ways you can share data between apps on Android",
-		"%l_demo_wiki": "Demo and wiki address",
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/350+-+Android+API+Deep+Dive'>wiki.appcelerator.org/display/td/350+-+Android+API+Deep+Dive</a>",
 		"%l_slidenote_lab_goals": "In this lab, you will enable an app to share text with other apps on the user's device. The app provides a simple text box. You'll plug in the code to share the text that users enter via an intent.",
 		
-		"%l_lab": "Lab",
-		"%l_slidenote_lab": "There is no TiBountyHunter tie in for this lab specifically"
-
 	}
 });

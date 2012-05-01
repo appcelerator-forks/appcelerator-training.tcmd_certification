@@ -93,11 +93,28 @@
 					<div class="slidenote"><div class="l_slidenote_scroll_vs">ScrollView &mdash; scrollable area of content, doesn't have to fill viewport, scroll in either direction<br>ScrollableView &mdash; screen-size content area with 'page' indicator<br>sort of like a filmstrip of views shown within a container<br>views snap into place: you can't end up halfway between views after a swipe</div>
 				</div></section>
 
+
 				<section>
 					<h2 class="l_basic_scroll">Basic ScrollView</h2>
-					<p class="l_basic_scroll_image"><img src="images/basic-scroll.png" style="margin-top:5px;height:380px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_basic_scroll">Height/width = what's visible to the user<br>Content height/width are dimensions of the actual content</div></div>
+					<p class="l_basic_scroll_image" style="float:right;width:350px;"><img src='images/basic-scroll.png' style='margin-top:5px;width:320px;'/></p>
+					<pre style="float:left;width:550px;"><code contenteditable class="l_basic_scrollview_code">
+var sv = Ti.UI.createScrollView({
+   /* properties */
+});
+
+</code></pre>
+					<ul style="float:left;width:550px;margin-top:40px;">
+						<li class="l_basicSV" style="list-style:none;margin-left: -30px;text-decoration:underline;">Key Properties:</li>
+						<li class="l_basicSV1">height / width</li>
+						<li class="l_basicSV2">contentHeight / contentWidth</li>
+						<li class="l_basicSV3">showHorizontalScrollIndicator / showVerticalScrollIndicator</li>
+						<li class="l_basicSV4">scrollType (vertical or horizontal, Android only)</li>
+					</ul>
+
+					<div class="slidenote"><div class="l_slidenote_basic_scroll">Height/width = what's visible to the user &mdash; this is like the size of a porthole through which you're viewing the content<br/><br>Content height/width are dimensions of the actual content</div></div>
 				</section>
+
+
 				
 				<section>
 					<h2 class="l_deeper_dive">Deeper Dive into ScrollViews</h2>
@@ -111,11 +128,6 @@
 			    		<li class="l_minZoomScale">minZoomScale</li>
 			    		<li class="l_maxZoomScale">maxZoomScale</li>
 			    	</ul><br><br>
-					<p align="left" class="l_bounce">Bounce</p>
-					<ul style="width:100%; margin-left:30px;">
-			    		<li class="l_horizontalBounce">horizontalBounce</li>
-			    		<li class="l_verticalBounce">verticalBounce</li>
-			    	</ul>
 					<div class="slidenote"><div class="l_slidenote_deeper_dive">Set content height to auto and it will scroll just enough to show the content.<br>Set it to a specific size and that's all you'll get. Content could get cut off or scroll could continue well past available content<br>Users can zoom in/out, which you can control</div></div>
 					</section>
 				
@@ -123,20 +135,64 @@
 					<h2 class="l_scrollview_diff">ScrollView - Platform Differences</h2>
 					<p align="left" class="l_android_scrollview">Android - scroll horizontal <i>or</i> vertical, not both</p><br>
 					<p align="left" class="l_ios_scrollview">iOS - canCancelEvents to block subview events</p><br>
-					<div class="slidenote"><div class="l_slidenote_scrollview_diff"></div></div>
+					<p align="left" class="l_bounce">iOS - Set 'bounce' at limits of scroll contents:</p>
+					<ul style="width:100%; margin-left:30px;">
+			    		<li class="l_horizontalBounce">horizontalBounce</li>
+			    		<li class="l_verticalBounce">verticalBounce</li>
+			    	</ul>
+					<div class="slidenote"><div class="l_slidenote_scrollview_diff"><code>canCancelEvents</code> = boolean = whether the scollview would block touch-related events from passing into the view that's being scrolled. For example, to block such events passing to an embedded view containing links.<br/><br/>Bounce properties are booleans that turn off or on the bounce effect.</div></div>
 				</section>
 
 				<section>
 					<h2 class="l_scrollview_events">ScrollView events</h2>
-					<p class="l_scrollview_events_image"><img src="images/scrollview-events.png" style="margin-top:5px;height:450px;"/></p>
+					<pre><code contenteditable class="l_scrollview_events_code">
+sv.addEventListener('scale', function(e) {
+   alert('You zoomed to ' + e.scale * 100 + '%');
+});
+
+</code></pre>
+					<ul style="float:left;width:500px;margin-top:40px;">
+						<li class="l_basicSVEvt" style="list-style:none;margin-left: -30px;text-decoration:underline;">Key Events:</li>
+						<li class="l_basicSVEvt1">click / dblclick</li>
+						<li class="l_basicSVEvt2">scroll</li>
+						<li class="l_basicSVEvt3">scale</li>
+						<li class="l_basicSVEvt4">touchstart, touchend, touchmove, touchcancel</li>
+						<li class="l_basicSVEvt5">swipe</li>
+					</ul>
+
+					<ul style="float:right;width:500px;margin-top:40px;">
+						<li class="l_basicSVEProp" style="list-style:none;margin-left: -30px;text-decoration:underline;">Event object properties:</li>
+						<li class="l_basicSVEProp1">x / y and globalPoint</li>
+						<li class="l_basicSVEProp2">source</li>
+						<li class="l_basicSVEProp3">type</li>
+						<li class="l_basicSVEProp4">decelerating (scroll)</li>
+						<li class="l_basicSVEProp5">dragging (scroll)</li>
+						<li class="l_basicSVEProp6">scale (scale)</li>
+						<li class="l_basicSVEProp7">direction (swipe)</li>
+					</ul>
 					<div class="slidenote"><div class="l_slidenote_scrollview_events">Primary difference from other views would be the scale event<br>Additional event object properties</div></div>
 				</section>
 
 				<section>
-					<h2 class="l_basic_scrollview">Basic ScrollableView</h2>
-					<p class="l_basic_scrollview_image"><img src="images/basic-scrollview.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_basic_scrollview">views is an array of standard views that are shown within the ScrollableView<br>pagingControl &mdash; white dots on iOS, arrows on Android<br>by default set to false (don't show) in 1.8+<br>On Android, use pagingControlTimeout to control time when arrows disappear (=0 to always show)<br>currentPage is an integer specifying which view to show when the scrollableview is rendered</div></div>
+					<h2 class="l_basic_scrollable">Basic ScrollableView</h2>
+					<p class="l_basic_scrollable_image" style="float:right;width:350px;"><img src='images/basic-scrollable.png' style='margin-top:5px;width:320px;'/></p>
+					<pre style="float:left;width:550px;"><code contenteditable class="l_basic_scrollview_code">
+var sav = Ti.UI.createScrollableView({
+   /* properties */
+});
+
+</code></pre>
+					<ul style="float:left;width:550px;margin-top:40px;">
+						<li class="l_basicSAV" style="list-style:none;margin-left: -30px;text-decoration:underline;">Key Properties:</li>
+						<li class="l_basicSAV1">height / width</li>
+						<li class="l_basicSAV2">view</li>
+						<li class="l_basicSAV3">showPagingControl</li>
+						<li class="l_basicSAV4">currentPage</li>
+					</ul>
+
+					<div class="slidenote"><div class="l_slidenote_basic_scrollable">views is an array of standard views that are shown within the ScrollableView<br>pagingControl &mdash; white dots on iOS, arrows on Android<br>by default set to false (don't show) in 1.8+<br>On Android, use pagingControlTimeout to control time when arrows disappear (=0 to always show)<br>currentPage is an integer specifying which view to show when the scrollableview is rendered</div></div>
 				</section>
+
 				
 				<section>
 					<h2 class="l_deeper_dive_scrollableviews">Deeper Dive into ScrollableViews</h2>
@@ -153,19 +209,40 @@
 					<ul style="width:100%; margin-left:30px;">
 			    		<li class="l_param_obj">@param = object reference to view</li>
 			    	</ul>
-					<div class="slidenote"><div class="l_slidenote_deeper_dive_scrollableviews"></div></div>
+					<div class="slidenote"><div class="l_slidenote_deeper_dive_scrollableviews">On iOS, you can change the background of the paging area but not the color of the dots.<br/><br/>On Android, the paging control is the set of arrows; setting the height also sets the width (square dimensions)</div></div>
 					</section>
 				
 				<section>
 					<h2 class="l_scrollableview_diff">ScrollableView - Platform Difference</h2>
 					<p align="left" class="l_ios_scrollableview">iOS - cacheSize (integer) is number of views to prerender</p><br>
-					<div class="slidenote"><div class="l_slidenote_scrollableview_diff">This is about the only significant difference between platforms</div></div>
+					<div class="slidenote"><div class="l_slidenote_scrollableview_diff">This is about the only significant difference between platforms<br/><br/>This is the number of views that will be pre-rendered to graphics memory prior to being scrolled into view. Number is adjusted per: <code>(currentPage +/- (cacheSize - 1)/2), ROUNDED DOWN for even values (i.e. cacheSize=4 renders 3 views into the cache.)</code> </div></div>
 				</section>
 				
 				<section>
-					<h2 class="l_scrollableview_events">ScrollableView events</h2>
-					<p class="l_scrollableview_events_image"><img src="images/scrollableview-events.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_scrollableview_events"></div></div>
+					<h2 class="l_scrollable_events">ScrollableView events</h2>
+					<pre><code contenteditable class="l_scrollable_events_code">
+sav.addEventListener('scroll', function(e) {
+   alert('You\'re on page ' + e.currentPage);
+});
+
+</code></pre>
+					<ul style="float:left;width:500px;margin-top:40px;">
+						<li class="l_basicSAVEvt" style="list-style:none;margin-left: -30px;text-decoration:underline;">Key Events:</li>
+						<li class="l_basicSAVEvt1">click / dblclick</li>
+						<li class="l_basicSAVEvt2">scroll</li>
+						<li class="l_basicSAVEvt3">touchstart, touchend, touchmove, touchcancel</li>
+						<li class="l_basicSAVEvt4">swipe</li>
+					</ul>
+
+					<ul style="float:right;width:500px;margin-top:40px;">
+						<li class="l_basicSAVEProp" style="list-style:none;margin-left: -30px;text-decoration:underline;">Event object properties:</li>
+						<li class="l_basicSAVEProp1">x / y and globalPoint</li>
+						<li class="l_basicSAVEProp2">source</li>
+						<li class="l_basicSAVEProp3">type</li>
+						<li class="l_basicSAVEProp4">currentPage (scroll)</li>
+						<li class="l_basicSAVEProp5">direction (scroll)</li>
+					</ul>
+					<div class="slidenote"><div class="l_slidenote_scrollable_events"></div></div>
 				</section>
 				
 				<section>
@@ -177,7 +254,7 @@
 			    		<li class="l_dont_put">Don't put WebViews into other scrollable containers</li>
 						<li class="l_res">Resource expense</li>
 			    	</ul><br><br>
-					<div class="slidenote"><div class="l_slidenote_webviews">Set scalePageToFit to false so content isn't scaled, then scrolling should be automatically supported<br>You can manage Titanium style touch related events, or handle them with Javascript within your HTML content, but not both<br>You'll encounter problems if you put web views into other scrollable containers, such as tables, scroll views, etc. Touch related events might not be handled in the way you expect.<br>Also, remember that web views are among the most resource expensive UI components. Use them with that forethought.</div></div>
+					<div class="slidenote"><div class="l_slidenote_webviews"><ul><li>Set scalePageToFit to false so content isn't scaled, then scrolling should be automatically supported</li><li>You can manage Titanium style touch related events, or handle them with Javascript within your HTML content, but not both</li><li>You'll encounter problems if you put web views into other scrollable containers, such as tables, scroll views, etc. Touch related events might not be handled in the way you expect.</li><li>Also, remember that web views are among the most resource expensive UI components. Use them with that forethought.</li></ul></div></div>
 				</section>							
 				
 				<section>

@@ -26,13 +26,14 @@ String.toLocaleString({
 		
 		"%l_basic": "Basic Animation",
 		"%l_for_simple": "For simple property animations, we use obj.animate()",
-		"%l_basic_image": "<img src='images/basic.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_basic": "Background color animations on Android with SDK 1.8+",
+		"%l_basic_code": "\nvar circle = Ti.UI.createView();\ncircle.animate({\n   top: 200,\n   right: 30,\n   duration: 500\n}, function() {\n   // called when anim is complete\n   circle.animate({\n      top: 0,\n      left: 0,\n      duration: 500\n   });\n});\n ",
+		"%l_slidenote_basic": "Animate the basic properties of a view, such as positions, colors, background colors, opacity, z-index<br/><br/>Animation is from the <i>current value</i> to the new value you specify over the duration in milliseconds<br/><br/>Callback is run when the first animation is complete (such as to move it back to its original position)",
 		
-		"%l_basic_obj": "Basic Animation With Object",
-		"%l_hash": "Hash of properties are properties of a Ti.UI.Animation object",
+		"%l_basicobj": "Basic Animation With Object",
 		"%l_reuse": "To reuse animations, create an object which can be passed to animate():",
-		"%l_basic_obj_image": "<img src='images/basic-obj.png' style='margin-top:5px;height:250px;'/>",
+		"%l_basicobj_code": "\nvar circle = Ti.UI.createView();\nvar a = Ti.UI.createAnimation({\n   backgroundColor: '#ff0000',\n   autoreverse: true,\n   repeat: 3\n});\na.duration = 1000;\ncircle.animate(a);\n ",
+		"%l_slidenote_basicobj": "<ul><li>Animation object lets you apply the same animation to multiple elements.</li><li>Set properties at creation, or after the fact</li><li>autoreverse and repeat properties can be used without the animation object also (w/inline definition as on previous slide)</li></ul>",
+
 		
 		"%l_matrix": "Matrix Animations",
 		"%l_matrix_image": "<img src='images/matrix.png' style='margin-top:5px;height:380px;float:right;'/>",
@@ -52,7 +53,8 @@ String.toLocaleString({
 		"%l_slidenote_2d_matrix": "<ul><li>You can combine these transformations</li><li>These work on iOS and (mostly) on Android</li></ul>",
 		
 		"%l_2d_matrix_example": "2D Matrix Animation Example",
-		"%l_2d_matrix_example_image": "<img src='images/2d-example.png' style='margin-top:5px;height:440px;'/>",
+		"%l_2d_matrix_code": "\n// our view to animate\nvar cloud = Ti.UI.createImageView({image: 'cloud.png' });\n\n// a 2D matrix object\nvar twoD = Ti.UI.create2DMatrix();\ntwoD = twoD.rotate(20);\ntwoD = twoD.scale(1.5);\n\n// which is used in an animation object\nvar a = Ti.UI.createAnimation();\na.transform = twoD;\na.duration = 3000;\na.autoreverse = true;\na.repeat = 3;\n\n// set it all in motion\ncloud.animate(a);\n ",
+
 		"%l_slidenote_2d_matrix_example": "<ul><li>We don't have to worry about the matrix math</li><li>We create a matrix object and use one of its methods, such as rotate or scale</li></ul>",
 		
 		"%l_3d_matrix": "3D Matrix Animations (iOS)",
@@ -61,8 +63,8 @@ String.toLocaleString({
 		"%l_slidenote_3d_matrix": "<ul><li>Same sorts of transformations, but in 3D space</li><li>Not supported on Android, API docs inaccurate on this</li></ul>",
 		
 		"%l_3d_matrix_example": "3D Matrix Animation Example",
-		"%l_3d_matrix_example_image": "<img src='images/3d-example.png' style='margin-top:5px;height:440px;'/>",
-		"%l_slidenote_3d_matrix_example": "<ul><li>Titanium.UI.iOS.3DMatrix as of 1.8 (was Ti.UI.3DMatrix earlier)</li><li>Set up 3D transformations in much the same way as 2D</li><li>Repeat and autoreverse properties for 2D and 3D transforms</li><li>Line 51 represents an access to an actual matrix value (e.g. row 3, column 4)</li></ul>",
+		"%l_3d_matrix_code": "\n// our view to animate\nvar cloud = Ti.UI.createImageView({image: 'cloud.png' });\n\n// a 3D matrix object -- note namespace!\nvar threeD = Ti.UI.iOS.create3DMatrix();\nthreeD = threeD.rotate(180, 1, 1, 0);\nthreeD = threeD.scale(2.0, 2.0, 2.0);\n// modify value at a specific matrix location\nthreeD.m34 = 1.0/-1500;\n\n// use the matrix in an animation object\nvar a = Ti.UI.createAnimation();\na.transform = threeD;\na.duration = 3000;\na.autoreverse = true;\na.repeat = 3;\n\n// set it all in motion\ncloud.animate(a);\n ",
+		"%l_slidenote_3d_matrix_example": "<ul><li>Titanium.UI.iOS.3DMatrix as of 1.8 (was Ti.UI.3DMatrix earlier)</li><li>Set up 3D transformations in much the same way as 2D</li><li>Extra values in methods represent coordinates in 3-dimensional space (x, y, z)</li><li><code>threeD.m34</code> represents an access to an actual matrix location and value (e.g. row 3, column 4)</li></ul>",
 		
 		"%l_opacity": "Using Opacity",
 		"%l_opacity_imp": "Opacity is an important property in animation",
@@ -73,7 +75,7 @@ String.toLocaleString({
 		"%l_dimming": "Dimming objects indicates they are unavailable",
 		"%l_fading": "Fading in/out views makes UI state changes less jarring",
 		"%l_demo_animating": "Demo: animating the opacity property",
-		"%l_slidenote_opacity": "Animatable property<br>Has typical use scenarios – indicating a disabled or unavailable state<br><b>Demo</b><br>Use the finished code from Lab 340. Demonstrate working app, then examine app.js",
+		"%l_slidenote_opacity": "Animatable property<br>Has typical use scenarios &mdash; indicating a disabled or unavailable state<br><b>Demo</b><br>Use the finished code from Lab 340. Demonstrate working app, then examine app.js",
 		
 		"%l_transitions": "Transitions",
 		"%l_ios_allows": "iOS allows for animated transitions between views and windows",
@@ -96,11 +98,9 @@ String.toLocaleString({
 		"%l_lab_goals": "Lab Goals",
 		"%l_implement": "Implement basic animations",
 		"%l_compare": "Compare animation capabilities across platforms",
-		"%l_demo_wiki": "Demo and wiki URL",
-		"%l_slidenote_lab_goals": "n this lab, you will animate three elements in a partially-completed app. You'll add code to fade an element out of view, then back into view; add code to slide an element off screen, then back; and you'll add code to transition between two views using iOS-specific functionality.",
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/340+-+Animation+API+Deep+Dive'>wiki.appcelerator.org/display/td/340+-+Animation+API+Deep+Dive</a>",
+		"%l_slidenote_lab_goals": "In this lab, you will animate three elements in a partially-completed app. You'll add code to fade an element out of view, then back into view; add code to slide an element off screen, then back; and you'll add code to transition between two views using iOS-specific functionality.",
 		
-		"%l_lab": "Lab",
-		"%l_slidenote_lab": "There is no TiBountyHunter component which directly uses animation at this point, unless it is added in in the future."
 
 	}
 });
