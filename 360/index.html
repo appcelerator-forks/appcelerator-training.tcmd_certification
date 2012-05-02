@@ -270,123 +270,319 @@ var textview = Ti.UI.createTextArea({
 				
 				<section>
 					<h2 class="l_ui_buttonbar">UI: Button Bar</h2>
-					<p class="l_ui_buttonbar_image"><img src="images/ui-buttonbar.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ui_buttonbar">TabbedBars are also known as segmented controls.  A segmented control is a linear set of segments, each of which functions as a button that can display a different view.<br>The length of a segmented control is determined by the number of its segments; the height of a segmented control is fixed. The width of each segment is proportional, based on the total number of segments. When users tap a segment, the segment displays a selected state.<br>Use a segmented control to offer closely related, but mutually exclusive choices.</div></div>
+					<p class="l_buttonbartext">Related controls that don't maintain state</p>
+					<p class="l_ui_buttonbar_image"><img src="images/buttonbar.png" style="margin-top:5px;width:300px;"/></p>
+<pre><code contenteditable class="l_buttonbar_code">
+var bb = Ti.UI.createButtonBar({
+   labels: ['One', 'Two', 'Three', 'Four', 'Five'],
+   backgroundColor: 'maroon',
+   /* style is optional */
+   style: Ti.UI.iPhone.SystemButtonStyle.BAR
+});
+win.add(bb);
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_ui_buttonbar"><ul><li>Not like a radio button set &mdash; buttons don't maintain state and pressing one doesn't affect the others</li><li>Don't create separate buttons; supply an array of labels</li><li>Event listener on whole bar, where <code>index</code> property tells you which button was actually clicked</li><li>SystemButtonStyle is used to set more compact layout and is not required to make a button bar</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_tabbar">UI: Tabbed Bar</h2>
-					<p class="l_ui_tabbar_image"><img src="images/ui-tabbar.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ui_tabbar">TabbedBars and button bars are also known as segmented controls.  A segmented control is a linear set of segments, each of which functions as a button that can display a different view. If you set a segmented control to have a momentary style, a segment doesn't show itself as selected (blue background) when the user touches it. The disclosure button is always momentary and doesn't affect the actual selection.<br>The length of a segmented control is determined by the number of its segments; the height of a segmented control is fixed. The width of each segment is proportional, based on the total number of segments. When users tap a segment, the segment displays a selected state.<br>Use a segmented control to offer closely related, but mutually exclusive choices.<br>Make sure that each segment is easy to tap. To maintain a comfortable hit region of 44 x 44 points for each segment, you need to limit the number of segments. On iPhone, a segmented control should have five or fewer segments.<br>As much as possible, maintain consistency in the size of each segment's contents. Because all segments in a segmented control have equal width, it does not look good if the content fills some segments, but not others.<br>Avoid mixing text and images in a single segmented control. A segmented control can contain text or images. An individual segment can contain either text or an image, but not both. In general, it's best to avoid putting text in some segments and images in other segments of a single segmented control..</div></div>
+					<p class="l_tabbedbar_text">Like radio buttons, maintain state</p>
+
+<pre><code contenteditable class="l_tabbedbar_code">
+var tb = Ti.UI.iOS.createTabbedBar({
+   labels: ['IMAP', 'POP', 'Exchange']
+});
+win.add(tb);
+
+</code></pre>
+
+					<p class="l_ui_tabbar_image"><img src="images/tabbedbars.png" style="margin-top:5px;width:300px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_ui_tabbar"><ul><li>Also known as 'segmented controls'</li><li>Maintains state &mdash; like radio buttons</li><li>Used for closely related, but mutually exclusive choices.</li><li>All segments in a segmented control have equal width</li><li>Segments can contain text or images, but not both</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_switch">UI: Switch</h2>
-					<p class="l_ui_switch_image"><img src="images/ui-switch.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ui_switch"></div></div>
+					<ul style="width:50%;float:left;">
+						<li class="l_switch1">Presents two mutually exclusive choices</li>
+						<li class="l_switch2">On iOS, can't change labels</li>
+						<li class="l_switch3">Android &amp; Mobile Web offer more flexible options</li>
+					</ul>
+					<div style="width:50%;float:right;">
+<pre><code contenteditable class="l_switch_code">
+var switch = Ti.UI.createSwitch({
+   value: true
+});
+win.add(switch);
+
+</code></pre>
+					<p class="l_ui_switch_image"><img src="images/switches.png" style="margin-top:5px;width:200px;"/></p>
+					</div>
+					<div class="slidenote"><div class="l_slidenote_ui_switch"><ul><li>Not iOS specific</li><li>Can't change 'On' and 'Off' labels on iOS</li><li>On Android &amp; Mobile Web you can use a checkbox style and change the labels</li><li>Add <code>change</code> event listener to switch and check <code>value</code> property to determine state</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_slider">UI: Slider</h2>
-					<p class="l_ui_slider_image"><img src="images/ui-slider.png" style="margin-top:5px;height:450px;"/></p>
+					<p class="l_ui_slider_image"><img src="images/ui-slider.png" style="margin-top:5px;width:300px;"/></p>
+<pre><code contenteditable class="l_slider_code">
+var slider = Ti.UI.createSlider({
+   min: 0, max: 10,
+   value: 3,
+   thumbImage: 'images/skull.png'
+});
+win.add(slider);
+
+</code></pre>
 					<div class="slidenote"><div class="l_slidenote_ui_slider">A slider consists of a track and a thumb (a circular control that the user can slide) and optional images that convey the meaning of the right and left values. When people drag the thumb along the slider, the value or process is updated continuously and is displayed in the track.</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_ipad">UI: iPad-Specific APIs</h2>
-					<p class="l_ui_ipad_image"><img src="images/ui-ipad-api.png" style="margin-top:5px;height:150px;"/></p>
+					<p class="l_ipadAPIs1" style="margin-top:50px;">Ti.UI.iPad.Popover</p>
+					<p class="l_ipadAPIs2">Ti.UI.iPad.SplitWindow</p>
 					<div class="slidenote"><div class="l_slidenote_ui_ipad">There are two custom views related to iPad development.  We'll explore these two in detail</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_key_api_ti">Key APIs - Titanium.UI.iPad.Popover</h2>
-					<p class="l_key_api_ti_image"><img src="images/key-api-ti.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_key_api_ti">A popover is a self-contained view that hovers above the contents of a screen. It always displays an arrow that indicates the point from which it emerged. A popover can contain a wide variety of objects and views, such as:<br>Table, image, map, text, web, or custom views<br>Navigation bars, toolbars, or tab bars<br>Controls or objects that act upon objects in the current application view<br>In iPad apps, an action sheet always appears inside a popover.</div></div>
-				</section>
-				
-				<section>
-					<h2 class="l_key_api_ti">Key APIs - Titanium.UI.iPad.Popover</h2>
-					<p class="l_key_api_ti_2_image"><img src="images/key-api-ti-2.png" style="margin-top:5px;height:150px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_key_api_ti_2">The view:button property designates which UI element the pop over is anchored to. In otherwords, which one the bubble's triangle points to.</div></div>
+					<div style="width:65%;float:left;">
+					<ul>
+						<li class="l_popover1">Transient view revealed by tap on control</li>
+						<li class="l_popover2">Hovers over app content</li>
+					</ul>
+<pre><code contenteditable class="l_popover_code">
+var popover = Ti.UI.iPad.createPopover({
+   height: 100,
+   width: 100
+});
+// contents of popover
+var innerView = Ti.UI.createView();
+popover.add(innerView);
+
+// view property controls where the
+// arrow points
+popover.show({view: button});
+</code></pre>
+					</div>
+					<p class="l_key_api_ti_image" style="width:35%;float:right;"><img src="images/popover.png" style="margin-top:5px;width:300px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_key_api_ti"><ul><li>Like a dialog box</li><li>Always has an arrow pointing to the control that opened it</li><li>Contain a Ti.UI.View</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ti_splitwindow">Key APIs - Titanium.UI.iPad.SplitWindow</h2>
-					<p class="l_ti_splitwindow_image"><img src="images/ti-splitwindow.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ti_splitwindow">Both panes can contain a wide variety of objects and views, such as:<br>Table, image, map, text, web, or custom views.<br>Navigation bars, toolbars, or tab bars..</div></div>
+					<ul style="width:40%;float:left;">
+						<li class="l_splitwindow1">Full-screen, two-pane view</li>
+						<li class="l_splitwindow2">Left pane fixed at 320 points</li>
+						<li class="l_splitwindow3">User cannot resize panes</li>
+					</ul>
+					<p style="width:60%;float:right;" class="l_ti_splitwindow_image"><img src="images/splitwindow.png" style="margin-top:5px;height:450px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_ti_splitwindow">Left pane called 'master' and right pane 'detail'<br/><br/>Both panes can contain a wide variety of objects and views, such as:<br><br>Table, image, map, text, web, or custom views.<br>Navigation bars, toolbars, or tab bars..</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ti_splitwindow">Key APIs - Titanium.UI.iPad.SplitWindow</h2>
-					<p class="l_ti_splitwindow_2_image"><img src="images/ti-splitwindow-2.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ti_splitwindow_2">You can use a split view to display persistent information in the left pane and related details or subordinate information in the right pane. In this design pattern, when people select an item in the left pane, the right pane should display the information related to that item. (You're responsible for making this happen in code.)<br>In general, when an app uses a split view in landscape, it displays the contents of the left pane in a popover when it rotates to portrait. However, you are not required to follow this pattern. If it makes sense in your app, you can design your UI to display side-by-side views in all orientations.<br>Avoid creating a right pane that is narrower than the left pane. Although the width of the right pane is up to you, it does not look good to use a width of less than 320 points (which is the width of the left pane).<br>Avoid displaying a navigation bar in both panes at the same time. Doing this would make it very difficult for users to discern the relationship between the two panes.<br>In general, indicate the current selection in the left pane in a persistent way. This behavior helps people understand the relationship between the item in the left pane and the contents of the right pane. This is important because the content of the right pane can change, but it should always remain related to the item selected in the left pane.</div></div>
+<pre><code contenteditable class="l_splitwindow_code">
+// These will be the contents of the splitwindow
+var masterPane = Ti.UI.createView();
+var detailPane = Ti.UI.createView();
+
+// create the splitwindow
+var splitwin = Ti.UI.iPad.createSplitWindow({
+   detailView: detailPane,
+   masterView: masterPane
+});
+
+// you don't add the splitwin to a win object
+// it is the top-level 'window' object
+splitwin.open();
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_ti_splitwindow_2"><ul><li>Contains two views: master and detail</li><li>These define a hierarchy: info selected in left (master) pane typically controls what is shown in the right (detail) pane</li><li>You have to code that relationship and associated actions</li><li>In general, indicate the current selection in the left pane in a persistent way.</li></ul></div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_tabbadge">UI: Tab Badge</h2>
-					<p class="l_ui_tabbadge_image"><img src="images/ui-tabbadge.png" style="margin-top:5px;height:450px;"/></p>
+					<p class="l_ui_tabbadge_image"><img src="images/tabbadge.png" style="margin-top:5px;width:400px;"/></p>
+					<p class="l_tabbadge1">Communicates status to the user, their attention is needed in part of your app</p>
+<pre><code contenteditable class="l_tabbadge_code">
+var tab = Ti.UI.currentTab;
+tab.badge = 10; // set the badge
+tab.badge = null; // to remove it
+
+</code></pre>
 					<div class="slidenote"><div class="l_slidenote_ui_tabbadge">tab.badge has to be set to a number<br>Set to NULL to remove</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_appbadge">UI: App Badge</h2>
-					<p class="l_ui_appbadge_image"><img src="images/ui-appbadge.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ui_appbadge">Can be set while the app is running<br>Or, use a background service to set when the app's not using</div></div>
+					<p class="l_ui_appbadge_image" style="width:50%;float:right"><img src="images/appbadge.png" style="margin-top:5px;height:450px;"/></p>
+<pre><code contenteditable class="l_appbadge_code" style="width:45%;float:left;">
+Ti.UI.iPhone.appBadge = 14;
+Ti.UI.iPhone.appBadge = null;
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_ui_appbadge">Can be set while the app is running<br>Or, use a background service to set when the app's not running</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_cover">UI: CoverFlow View</h2>
-					<p class="l_ui_cover_image"><img src="images/ui-cover.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ui_cover">If an image is tapped, you can grab an index so you can branch code accordingly</div></div>
+					<p class="l_ui_cover_image" style="width:35%;float:right"><img src="images/coverflow.png" style="margin-top:5px;height:300px;"/></p>
+<pre><code contenteditable class="l_coverflow_code" style="width:62%;float:left;">
+var cover = Ti.UI.iOS.createCoverFlowView({
+   images: ['a.png', 'b.png', 'c.png'],
+   backgroundColor: '#000'
+});
+win.add(cover);
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_ui_cover">Cover art or gallery style, animated 3D UI component to display a series of images.<br/><br/>If an image is tapped, you can grab an index so you can branch code accordingly</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_dashboard">UI: Dashboard View</h2>
-					<p class="l_ui_dashboard_image"><img src="images/ui-dashboard.png" style="margin-top:5px;height:450px;"/></p>
+					<ul style="width:65%;float:left;">
+						<li class="l_dash1">Springboard-like view</li>
+						<li class="l_dash2">Use as app home screen</li>
+						<li class="l_dash3">User can rearrange or remove icons (if you enable it)</li>
+						<li class="l_dash4">Scrolling container</li>
+					</ul>
+
+					<p class="l_ui_dashboard_image" style="width:35%;float:right;"><img src="images/dashboard.png" style="margin-top:5px;height:350px;"/></p>
 					<div class="slidenote"><div class="l_slidenote_ui_dashboard">This isn't setting or accessing the actual Springboard<br>Just presenting a similar view</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_dashboard">UI: Dashboard View</h2>
-					<p class="l_ui_dashboard_2_image"><img src="images/ui-dashboard-2.png" style="margin-top:5px;height:450px;"/></p>
+<pre><code contenteditable class="l_dashboard_code">
+// create the button items to go in the dashboard
+var item = Ti.UI.createDashboardItem({
+   image: 'images/item1.png',
+   label: 'Home'
+});
+
+// create the dashboard
+var dashboard = Ti.UI.createDashboardView({
+   data: [item],
+   wobble: true /* wobble while in edit mode */
+});
+win.add(dashboard);
+
+var isEditable = false;
+item.addEventListener('longpress', function() {
+  (isEditable) ? dashboard.stopEditing() : dashboard.startEditing();
+});
+dashboard.addEventListener('edit', function() {
+   // in edit mode, handle accordingly
+});
+
+</code></pre>
 					<div class="slidenote"><div class="l_slidenote_ui_dashboard_2"></div></div>
 				</section>
 				
 				
 				<section>
 					<h2 class="l_ui_adview">UI: AdView</h2>
-					<p class="l_ui_adview_image"><img src="images/ui-adview.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ui_adview"></div></div>
+					<ul style="width:60%;float:left;">
+						<li class="l_adview1">Include ads in your app</li>
+						<li class="l_adview2">Banner or full screen</li>
+						<li class="l_adview3">Must join Apple's iAd program</li>
+						<li class="l_adview4">Get test ads only during development</li>
+					</ul>
+					<p class="l_ui_adview_image"><img src="images/adview.png" style="margin-top:5px;height:350px;"/></p>
+					<div class="slidenote"><div class="l_slidenote_ui_adview">For more information on the iAd Network, see http://developer.apple.com/iad/<br>While you are developing your application, iAd Network sends test advertisements to your application. To assist you in validating your implementation, the iAd Network occasionally returns errors to test your error handling code. You can also test your error handling support manually by turning your device's wireless capability off.<br>iAd Network automatically displays the correct ad depending on the how your application binary was downloaded onto your test device</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_ui_adview">UI: AdView</h2>
-					<p class="l_ui_adview_2_image"><img src="images/ui-adview-2.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ui_adview_2">For more information on the iAd Network, see http://developer.apple.com/iad/<br>While you are developing your application, iAd Network sends test advertisements to your application. To assist you in validating your implementation, the iAd Network occasionally returns errors to test your error handling code. You can also test your error handling support manually by turning your device's wireless capability off.<br>iAd Network automatically displays the correct ad depending on the how your application binary was downloaded onto your test device</div></div>
+<pre><code contenteditable class="l_adview_code">
+var iad = Ti.UI.iOS.createAdView({
+   width: 'auto',
+   height: 'auto',
+   bottom: -100
+});
+iad.addEventListener('load', function(){
+   iad.animate({
+      bottom: 0,
+      duration: 500
+   });
+});
+iad.addEventListener('action', function(){
+   mygame.pause(); // do something when ad is clicked
+});
+win.add(iad);
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_ui_adview_3">Best to not show ad if nothing is loaded. Set to be off-screen and then move into view when an ad is loaded. Could also show at the top or elsewhere, doesn't have to be on the bottom. <br/><br/>You can tell when a user clicks on an ad, but can't tell what the ad is. Basically this is to pause action that shouldn't run while the ad is showing.</div></div>
 				</section>
 				
 				<section>
-					<h2 class="l_ui_adview">UI: AdView</h2>
-					<p class="l_ui_adview_3_image"><img src="images/ui-adview-3.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_ui_adview_3">Set bottom:0 to dock the ad to the bottom of your window</div></div>
-				</section>
-				
-				<section>
-					<h2 class="l_key_api_pl">Key APIs</h2>
-					<p class="l_key_api_pl_image"><img src="images/key-api-pl.png" style="margin-top:5px;height:450px;"/></p>
+					<h2 class="l_key_api_pl">Platform Functionality APIs</h2>
+					<ul>
+						<li class="l_funcapi1">Ti.App.iOS</li>
+						<li class="l_funcapi2">Ti.Contacts</li>
+						<li class="l_funcapi3">Ti.Media</li>
+						<li class="l_funcaip4">Ti.Network</li>
+					</ul>
 					<div class="slidenote"><div class="l_slidenote_key_api_pl">Platform specific business logic methods are available for iOS</div></div>
 				</section>
 				
 				<section>
-					<h2 class="l_key_api_app">Key APIs - Titanium.App</h2>
-					<p class="l_key_api_app_image"><img src="images/key-api-app.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_key_api_app">This JS will run when the app is paused.<br>A local notification is local to an application on an iPhone, iPad, or iPod touch. Push notifications—also known as remote notifications—arrive from outside a device.</div></div>
+					<h2 class="l_background">Background Services</h2>
+					<ul style="width:35%;float:left;">
+						<li class="l_background1">Extend runtime for limited duration</li>
+						<li class="l_background2">Long-running geolocation or music playback</li>
+					</ul>
+<pre style="float:right;width:65%;"><code contenteditable class="l_background_code">
+var svc = Ti.App.iOS.registerBackgroundService({
+   url: 'bg.js'
+});
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_background">This JS will run when the app is paused (home button clicked).<br><br/>Services typically run for 10 mins or until iOS shuts them down.<br/><br/>Useful to finish a download, cache data, etc.</div></div>
+				</section>
+
+				<section>
+					<h2 class="l_localnotification">Local Notifications</h2>
+					<ul style="width:35%;float:left;">
+						<li class="l_localnotification1">Runs on device, not push</li>
+						<li class="l_localnotification2">Scheduled action</li>
+						<li class="l_localnotification3">Background service alert the user</li>
+					</ul>
+<pre style="float:right;width:65%;"><code contenteditable class="l_notification_code">
+// schedule the notification
+Titanium.App.iOS.scheduleLocalNotification({
+   alertBody:"View Alarm",
+   alertAction:"You set an alarm",
+   userInfo:{data: 'Data to pass'},
+   date:new Date(new Date().getTime() + 3000)
+});
+// listen for the notification
+Ti.App.iOS.addEventListener('notification', 
+   function(e) {
+      Ti.API.info('Local notification received: '
+         + e.data);
+}); 
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_localnotification">Local notifications let you schedule user interaction. A background service could alert the user when it's done. You might set an alarm at a specific datetime or interval.</div></div>
 				</section>
 				
 				<section>
 					<h2 class="l_key_api_con">Key APIs - Contacts, Media, Network</h2>
-					<p class="l_key_api_con_image"><img src="images/key-api-con.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_key_api_con">Use the newer Titanium.Network.Socket.TCP for sockets rather than the older TCPSocket<br>Network.Socket is cross-platform</div></div>
+					<ul style="width:60%;">
+						<lh class="l_cmn1" style="font-weight:bold;margin-left:-30px;text-decoration:underline;">Contacts</lh>
+						<li class="l_cmn2">Ti.Contacts.Group</li>
+						<li class="l_cmn3">Ti.Contacts.Person</li>
+						<lh class="l_cmn4" style="font-weight:bold;margin-left:-30px;text-decoration:underline;">Media</lh>
+						<li class="l_cmn5">Ti.Media.AudioRecorder</li>
+						<li class="l_cmn6">Ti.Media.Item</li>
+						<li class="l_cmn7">Ti.Media.MusicPlayer</li>
+						<lh class="l_cmn8" style="font-weight:bold;margin-left:-30px;text-decoration:underline;">Network</lh>
+						<li class="l_cmn9">Ti.Network.BonjourBrowser</li>
+						<li class="l_cmn10">Ti.Network.BonjourService</li>
+					</ul>
+
+					<div class="slidenote"><div class="l_slidenote_key_api_con">Your app can participate in the Apple Bonjour (self-configuring, discoverable) networking environment for printing and other services.</div></div>
 				</section>
 				
 				<section>
@@ -428,7 +624,7 @@ var textview = Ti.UI.createTextArea({
 
 				<section>
 					<h2 class="l_deep_ios">Deep Dive: iOS-Specific Properties</h2>
-					<p class="l_deep_ios_56_image"><img src="images/deep-ios-56.png" style="margin-top:5px;height:450px;"/></p>
+					<p class="l_deep_ios_56_image"><img src="images/ios_systembutton.png" style="margin-top:5px;height:450px;"/></p>
 					<div class="slidenote"><div class="l_slidenote_deep_ios_56"></div></div>
 				</section>
 				
@@ -472,30 +668,21 @@ var textview = Ti.UI.createTextArea({
 				<section>
 					<h2 class="l_impl_app">Implementing Application Preferences</h2>
 					<p class="l_impl_app_image"><img src="images/impl-app.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_impl_app">'The Settings Bundle'</div></div>
+					<div class="slidenote"><div class="l_slidenote_impl_app">'The Settings Bundle'<br/><br/>Apple's guidelines say all app preferences and settings should be done through the Settings app. In practice, most apps provide at least some options and settings within the app itself. A common mix is to see 'power user' settings in the Settings app and user settings within the app.</div></div>
 				</section>
-				
+								
 				<section>
-					<h2 class="l_impl_app">Implementing Application Preferences</h2>
-					<p class="l_impl_app_2_image"><img src="images/impl-app-2.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_impl_app_2">In iOS, the Foundation framework provides the low-level mechanism for storing the actual preference data.<br>http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Preferences/Preferences.html<br>Tutorial
-					http://iphoneincubator.com/blog/tutorial/how-to-create-an-iphone-preferences-file</div>	</div>
+					<h2 class="l_settings">Creating the Settings Bundle</h2>
+					<ol style="width:100%;">
+						<li class="l_settings1">Copy KitchenSink/platform/iphone to your project</li>
+						<li class="l_settings2">In Finder, right-click Settings.bundle and choose <strong>Show Package Contents</strong></li>
+						<li class="l_settings3">Open Root.plist</li>
+						<li class="l_settings4">Edit as necessary, then save</li>
+						<li class="l_settings5">Do clean-build of your project</li>
+					</ol>
+					<div class="slidenote"><div class="l_slidenote_settings">This is easiest way; you could also create the XML file directly<br/><br/>Settings bundle needs to be in project/platform (which doesn't exist by default)<br><br/>(Used to go in project/modules prior to 1.8)<br><br>See tutorial at http://iphoneincubator.com/blog/tutorial/how-to-create-an-iphone-preferences-file</div></div>
 				</section>
 				
-				<section>
-					<h2 class="l_settings">Settings bundle</h2>
-					<p class="l_settings_image"><img src="images/settings.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_settings">Settings bundle used to go in project/modules<br>Now needs to be in project/platform<br> In iOS, the Foundation framework provides the low-level mechanism for storing the actual preference data. <br>http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Preferences/Preferences.html<br>Tutorial
-					http://iphoneincubator.com/blog/tutorial/how-to-create-an-iphone-preferences-file</div></div>
-				</section>
-				
-				<section>
-					<h2 class="l_note">Note: Pixel vs Points</h2>
-					<p class="l_note_image"><img src="images/note.png" style="margin-top:5px;height:450px;"/></p>
-					<div class="slidenote"><div class="l_slidenote_note">iPad 3 is double the pixels of iPad 2</div></div>
-				</section>
-				
-
 				<section>
 					<h1 class="l_qa">Q&amp;A</h1>
 					<div class="slidenote"><div class="l_slidenote_qa"></div></div>
@@ -504,7 +691,7 @@ var textview = Ti.UI.createTextArea({
 				<section>
 					<h1 class="l_lab_goals">Lab Goals</h1>
 					<p align="left" class="l_add_settings">Add settings to an iOS application</p><br>
-					<p align="left" class="l_demo_wiki">Demo and wiki location</p><br>
+					<p class="l_labURL" style="font-size:0.7em;margin-top:20px;"><a href='https://wiki.appcelerator.org/display/td/360+-+iOS+API+Deep+Dive'>wiki.appcelerator.org/display/td/360+-+iOS+API+Deep+Dive</a></p>
 					<div class="slidenote"><div class="l_slidenote_lab_goals">In this lab, you will create a Settings bundle so that application settings can be changed via the Settings app in the simulator or on a phone. You will then use that setting within the app to control the app's user interface</div></div>
 				</section>
 				

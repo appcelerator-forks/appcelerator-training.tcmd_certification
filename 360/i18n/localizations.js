@@ -85,79 +85,124 @@ String.toLocaleString({
 		"%l_slidenote_ui_toolbar_3": "Works with text fields and text areas",
 		
 		"%l_ui_buttonbar": "UI: Button Bar",
-		"%l_ui_buttonbar_image": "<img src='images/ui-buttonbar.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ui_buttonbar": "TabbedBars are also known as segmented controls.  A segmented control is a linear set of segments, each of which functions as a button that can display a different view.<br>The length of a segmented control is determined by the number of its segments; the height of a segmented control is fixed. The width of each segment is proportional, based on the total number of segments. When users tap a segment, the segment displays a selected state.<br>Use a segmented control to offer closely related, but mutually exclusive choices.",
+		"%l_buttonbartext": "Related controls that don't maintain state",
+		"%l_ui_buttonbar_image": "<img src='images/buttonbar.png' style='margin-top:5px;width:400px;'/>",
+		"%l_buttonbar_code": "\nvar bb = Ti.UI.createButtonBar({\n   labels: ['One', 'Two', 'Three', 'Four', 'Five'],\n   backgroundColor: 'maroon',\n   /* style is optional */\n   style: Ti.UI.iPhone.SystemButtonStyle.BAR\n});\nwin.add(bb);\n ",
+		"%l_slidenote_ui_buttonbar": "<ul><li>Not like a radio button set &mdash; buttons don't maintain state and pressing one doesn't affect the others</li><li>Don't create separate buttons; supply an array of labels</li><li>Event listener on whole bar, where <code>index</code> property tells you which button was actually clicked</li><li>SystemButtonStyle is used to set more compact layout and is not required to make a button bar</li></ul>",
 		
 		"%l_ui_tabbar": "UI: Tabbed Bar",
-		"%l_ui_tabbar_image": "<img src='images/ui-tabbar.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ui_tabbar": "TabbedBars and button bars are also known as segmented controls.  A segmented control is a linear set of segments, each of which functions as a button that can display a different view. If you set a segmented control to have a momentary style, a segment doesn't show itself as selected (blue background) when the user touches it. The disclosure button is always momentary and doesn't affect the actual selection.<br>The length of a segmented control is determined by the number of its segments; the height of a segmented control is fixed. The width of each segment is proportional, based on the total number of segments. When users tap a segment, the segment displays a selected state.<br>Use a segmented control to offer closely related, but mutually exclusive choices.<br>Make sure that each segment is easy to tap. To maintain a comfortable hit region of 44 x 44 points for each segment, you need to limit the number of segments. On iPhone, a segmented control should have five or fewer segments.<br>As much as possible, maintain consistency in the size of each segment's contents. Because all segments in a segmented control have equal width, it does not look good if the content fills some segments, but not others.<br>Avoid mixing text and images in a single segmented control. A segmented control can contain text or images. An individual segment can contain either text or an image, but not both. In general, it's best to avoid putting text in some segments and images in other segments of a single segmented control..",
+		"%l_tabbedbar_text": "Like radio buttons, maintain state",
+		"%l_tabbedbar_code": "\nvar tb = Ti.UI.iOS.createTabbedBar({\n   labels: ['IMAP', 'POP', 'Exchange']\n});\nwin.add(tb);\n ",
+
+		"%l_ui_tabbar_image": "<img src='images/tabbedbars.png' style='margin-top:5px;width:300px;'/>",
+		"%l_slidenote_ui_tabbar": "<ul><li>Also known as 'segmented controls'</li><li>Maintains state &mdash; like radio buttons</li><li>Used for closely related, but mutually exclusive choices.</li><li>All segments in a segmented control have equal width</li><li>Segments can contain text or images, but not both</li></ul>",
 		
 		"%l_ui_switch": "UI: Switch",
-		"%l_ui_switch_image": "<img src='images/ui-switch.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ui_switch": "",
+		"%l_switch1": "Presents two mutually exclusive choices", 
+		"%l_switch2": "On iOS, can't change labels", 
+		"%l_switch3": "Android &amp; Mobile Web offer more flexible options", 
+		"%l_ui_switch_image": "<img src='images/switches.png' style='margin-top:5px;width:200px;'/>",
+		"%l_switch_code": "\nvar switch = Ti.UI.createSwitch({\n   value: true\n});\nwin.add(switch);\n ",
+
+		"%l_slidenote_ui_switch": "<ul><li>Not iOS specific</li><li>Can't change 'On' and 'Off' labels on iOS</li><li>On Android &amp; Mobile Web you can use a checkbox style and change the labels</li><li>Add <code>change</code> event listener to switch and check <code>value</code> property to determine state</li></ul>",
 		
 		"%l_ui_slider": "UI: Slider",
-		"%l_ui_slider_image": "<img src='images/ui-slider.png' style='margin-top:5px;height:450px;'/>",
+		"%l_ui_slider_image": "<img src='images/ui-slider.png' style='margin-top:5px;width:400px;'/>",
+		"%l_slider_code": "\nvar slider = Ti.UI.createSlider({\n   min: 0,\n   max: 10,\n   value: 3,\n   thumbImage: 'images/skull.png'\n});\nwin.add(slider);\n ",
 		"%l_slidenote_ui_slider": "A slider consists of a track and a thumb (a circular control that the user can slide) and optional images that convey the meaning of the right and left values. When people drag the thumb along the slider, the value or process is updated continuously and is displayed in the track.",
 		
 		"%l_ui_ipad": "UI: iPad-Specific APIs",
-		"%l_ui_ipad_image": "<img src='images/ui-ipad-api.png' style='margin-top:5px;height:150px;'/>",
+		"%l_ipadAPIs1": "Ti.UI.iPad.Popover",
+		"%l_ipadAPIs2": "Ti.UI.iPad.SplitWindow",
 		"%l_slidenote_ui_ipad": "There are two custom views related to iPad development.  We'll explore these two in detail",
 		
 		"%l_key_api_ti": "Key APIs - Titanium.UI.iPad.Popover",
-		"%l_key_api_ti_image": "<img src='images/key-api-ti.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_key_api_ti": "A popover is a self-contained view that hovers above the contents of a screen. It always displays an arrow that indicates the point from which it emerged. A popover can contain a wide variety of objects and views, such as:<br>Table, image, map, text, web, or custom views<br>Navigation bars, toolbars, or tab bars<br>Controls or objects that act upon objects in the current application view<br>In iPad apps, an action sheet always appears inside a popover.",
-		
-		"%l_key_api_ti_2_image": "<img src='images/key-api-ti-2.png' style='margin-top:5px;height:150px;'/>",
-		"%l_slidenote_key_api_ti_2": "The view:button property designates which UI element the pop over is anchored to. In otherwords, which one the bubble's triangle points to.",
+		"%l_popover1": "Transient view revealed by tap on a control",
+		"%l_popover2": "Hovers over app content",
+		"%l_key_api_ti_image": "<img src='images/popover.png' style='margin-top:5px;width:300px;'/>",
+		"%l_slidenote_key_api_ti": "<ul><li>Like a dialog box</li><li>Always has an arrow pointing to the control that opened it</li><li>Contains a Ti.UI.View</li></ul>",
 		
 		"%l_ti_splitwindow": "Key APIs - Titanium.UI.iPad.SplitWindow",
-		"%l_ti_splitwindow_image": "<img src='images/ti-splitwindow.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ti_splitwindow": "Both panes can contain a wide variety of objects and views, such as:<br>Table, image, map, text, web, or custom views.<br>Navigation bars, toolbars, or tab bars..",
+		"%l_splitwindow1": "Full-screen, two-pane view",
+		"%l_splitwindow2": "Left pane fixed at 320 points",
+		"%l_splitwindow3": "User cannot resize panes",
+		"%l_ti_splitwindow_image": "<img src='images/splitwindow.png' style='margin-top:5px;height:450px;'/>",
+		"%l_slidenote_ti_splitwindow": "Left pane called 'master' and right pane 'detail'<br/><br/>Both panes can contain a wide variety of objects and views, such as:<br><br>Table, image, map, text, web, or custom views.<br>Navigation bars, toolbars, or tab bars...",
 		
-		"%l_ti_splitwindow_2_image": "<img src='images/ti-splitwindow-2.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ti_splitwindow_2": "You can use a split view to display persistent information in the left pane and related details or subordinate information in the right pane. In this design pattern, when people select an item in the left pane, the right pane should display the information related to that item. (You're responsible for making this happen in code.)<br>In general, when an app uses a split view in landscape, it displays the contents of the left pane in a popover when it rotates to portrait. However, you are not required to follow this pattern. If it makes sense in your app, you can design your UI to display side-by-side views in all orientations.<br>Avoid creating a right pane that is narrower than the left pane. Although the width of the right pane is up to you, it does not look good to use a width of less than 320 points (which is the width of the left pane).<br>Avoid displaying a navigation bar in both panes at the same time. Doing this would make it very difficult for users to discern the relationship between the two panes.<br>In general, indicate the current selection in the left pane in a persistent way. This behavior helps people understand the relationship between the item in the left pane and the contents of the right pane. This is important because the content of the right pane can change, but it should always remain related to the item selected in the left pane.",
+
+		"%l_splitwindow_code": "\n// These will be the contents of the splitwindow\nvar masterPane = Ti.UI.createView();\nvar detailPane = Ti.UI.createView();\n\n// create the splitwindow\nvar splitwin = Ti.UI.iPad.createSplitWindow({\n   masterView: masterPane,\n   detailView: detailPane\n});\n\n// you don't add the splitwin to a win object\n// it is the top-level 'window' object\nsplitwin.open();\n ",
+
+		"%l_slidenote_ti_splitwindow_2": "<ul><li>Contains two views: master and detail</li><li>These define a hierarchy: info selected in left (master) pane typically controls what is shown in the right (detail) pane</li><li>You have to code that relationship and associated actions</li><li>In general, indicate the current selection in the left pane in a persistent way.</li></ul>",
 		
 		"%l_ui_tabbadge": "UI: Tab Badge",
-		"%l_ui_tabbadge_image": "<img src='images/ui-tabbadge.png' style='margin-top:5px;height:450px;'/>",
+		"%l_tabbadge1": "Communicates status to the user, their attention is needed in part of your app",
+		"%l_ui_tabbadge_image": "<img src='images/tabbadge.png' style='margin-top:5px;width:400px;'/>",
+		"%l_tabbadge_code": "\nvar tab = Ti.UI.currentTab;\ntab.badge = 10; // set the badge\ntab.badge = null; // to remove it\n ",
 		"%l_slidenote_ui_tabbadge": "tab.badge has to be set to a number<br>Set to NULL to remove",
 		
 		"%l_ui_appbadge": "UI: App Badge",
-		"%l_ui_appbadge_image": "<img src='images/ui-appbadge.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ui_appbadge": "Can be set while the app is running<br>Or, use a background service to set when the app's not using",
+		"%l_ui_appbadge_image": "<img src='images/appbadge.png' style='margin-top:5px;height:450px;'/>",
+		"%l_appbadge_code": "\nTi.UI.iPhone.appBadge = 14;\nTi.UI.iPhone.appBadge = null;\n ",
+		"%l_slidenote_ui_appbadge": "Can be set while the app is running<br>Or, use a background service to set when the app's not running",
 		
 		"%l_ui_cover": "UI: CoverFlow View",
-		"%l_ui_cover_image": "<img src='images/ui-cover.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ui_cover": "If an image is tapped, you can grab an index so you can branch code accordingly",
+		"%l_coverflow_code": "\nvar cover = Ti.UI.iOS.createCoverFlowView({\n   images: ['a.png', 'b.png', 'c.png'],\n   backgroundColor: '#000'\n});\nwin.add(cover);\n ",
+		"%l_ui_cover_image": "<img src='images/coverflow.png' style='margin-top:5px;height:300px;'/>",
+		"%l_slidenote_ui_cover": "Cover art or gallery style, animated 3D UI component to display a series of images.<br/><br/>If an image is tapped, you can grab an index so you can branch code accordingly",
 		
 		"%l_ui_dashboard": "UI: Dashboard View",
-		"%l_ui_dashboard_image": "<img src='images/ui-dashboard.png' style='margin-top:5px;height:450px;'/>",
+		"%l_dash1": "Springboard-like view", 
+		"%l_dash2": "Use as app home screen", 
+		"%l_dash3": "User can rearrange or remove icons (if you enable it)", 
+		"%l_dash4": "Scrolling container", 
+		"%l_ui_dashboard_image": "<img src='images/dashboard.png' style='margin-top:5px;height:350px;'/>",
 		"%l_slidenote_ui_dashboard": "This isn't setting or accessing the actual Springboard<br>Just presenting a similar view",
 		
-		"%l_ui_dashboard_2_image": "<img src='images/ui-dashboard-2.png' style='margin-top:5px;height:450px;'/>",
+		"%l_dashboard_code": "\n// create the button items to go in the dashboard\nvar item = Ti.UI.createDashboardItem({\n   image: 'images/item1.png',\n   label: 'Home'\n});\n\n// create the dashboard\nvar dashboard = Ti.UI.createDashboardView({\n   data: [item],\n   wobble: true /* wobble while in edit mode */\n});\nwin.add(dashboard);\n\nvar isEditable = false;\nitem.addEventListener('longpress', function() {\n  (isEditable) ? dashboard.stopEditing() : dashboard.startEditing();\n});\ndashboard.addEventListener('edit', function() {\n   // in edit mode, handle accordingly\n});\n ",
 		"%l_slidenote_ui_dashboard_2": "",
 		
 		"%l_ui_adview": "UI: AdView",
-		"%l_ui_adview_image": "<img src='images/ui-adview.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ui_adview": "",
+		"%l_ui_adview_image": "<img src='images/adview2.png' style='margin-top:5px;height:350px;'/>",
+		"%l_slidenote_ui_adview": "For more information on the iAd Network, see http://developer.apple.com/iad/<br>While you are developing your application, iAd Network sends test advertisements to your application. To assist you in validating your implementation, the iAd Network occasionally returns errors to test your error handling code. You can also test your error handling support manually by turning your device's wireless capability off.<br>iAd Network automatically displays the correct ad depending on the how your application binary was downloaded onto your test device",
 		
-		"%l_ui_adview_2_image": "<img src='images/ui-adview-2.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ui_adview_2": "For more information on the iAd Network, see http://developer.apple.com/iad/<br>While you are developing your application, iAd Network sends test advertisements to your application. To assist you in validating your implementation, the iAd Network occasionally returns errors to test your error handling code. You can also test your error handling support manually by turning your device's wireless capability off.<br>iAd Network automatically displays the correct ad depending on the how your application binary was downloaded onto your test device",
+
+		"%l_adview_code": "\nvar iad = Ti.UI.iOS.createAdView({\n   width: 'auto',\n   height: 'auto',\n   bottom: -100\n});\niad.addEventListener('load', function(){\n   iad.animate({\n      bottom: 0,\n      duration: 500\n   });\n\n});\niad.addEventListener('action', function(){\n   mygame.pause(); // do something when ad is clicked\n\n});\nwin.add(iad);\n ",
+		"%l_slidenote_ui_adview_3": "Best to not show ad if nothing is loaded. Set to be off-screen and then move into view when an ad is loaded. Could also show at the top or elsewhere, doesn't have to be on the bottom. <br/><br/>You can tell when a user clicks on an ad, but can't tell what the ad is. Basically this is to pause action that shouldn't run while the ad is showing.",
 		
-		"%l_ui_adview_3_image": "<img src='images/ui-adview-3.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_ui_adview_3": "Set bottom:0 to dock the ad to the bottom of your window",
-		
-		"%l_key_api_pl": "Key APIs",
-		"%l_key_api_pl_image": "<img src='images/key-api-pl.png' style='margin-top:5px;height:450px;'/>",
+		"%l_key_api_pl": "Platform Functionality APIs",
+		"%l_funcapi1": "Ti.App.iOS",
+		"%l_funcapi2": "Ti.Contacts",
+		"%l_funcapi3": "Ti.Media",
+		"%l_funcapi4": "Ti.Network",
 		"%l_slidenote_key_api_pl": "Platform specific business logic methods are available for iOS",
 		
-		"%l_key_api_app": "Key APIs - Titanium.App",
-		"%l_key_api_app_image": "<img src='images/key-api-app.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_key_api_app": "This JS will run when the app is paused.<br>A local notification is local to an application on an iPhone, iPad, or iPod touch. Push notifications—also known as remote notifications—arrive from outside a device.",
+		"%l_background": "Background Services",
+		"%l_background1": "Extend runtime for limited duration",
+		"%l_background1": "Long-running geolocation or music playback",
+		"%l_background_code": "\nvar svc = Ti.App.iOS.registerBackgroundService({\n   url: 'bg.js'\n});\n ",
+		"%l_slidenote_key_api_app": "This JS will run when the app is paused (home button clicked).<br><br/>Services typically run for 10 mins or until iOS shuts them down.<br/><br/>Useful to finish a download, cache data, etc.",
+
+
+		"%l_localnotification": "Local Notifications",
+		"%l_localnotification1": "Runs on device, not push",
+		"%l_localnotification2": "Scheduled action",
+		"%l_localnotification3": "Background service alert the user",
+
+		"%l_notification_code": "\n// schedule the notification\nTitanium.App.iOS.scheduleLocalNotification({\n   alertBody:'View Alarm',\n   alertAction:'You set an alarm',\n   userInfo:{data: 'Data to pass'},\n   date:new Date(new Date().getTime() + 3000)\n});\n// listen for the notification\nTi.App.iOS.addEventListener('notification', \n   function(e) {\n      Ti.API.info('Local notification received: '\n         + e.data);\n});\n ", 
+		"%l_slidenote_localnotification": "Local notifications let you schedule user interaction. A background service could alert the user when it's done. You might set an alarm at a specific datetime or interval.",
 		
 		"%l_key_api_con": "Key APIs - Contacts, Media, Network",
-		"%l_key_api_con_image": "<img src='images/key-api-con.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_key_api_con": "Use the newer Titanium.Network.Socket.TCP for sockets rather than the older TCPSocket<br>Network.Socket is cross-platform",
+		"%l_cmn1": "Contacts",
+		"%l_cmn2": "Ti.Contacts.Group",
+		"%l_cmn3": "Ti.Contacts.Person",
+		"%l_cmn4": "Media",
+		"%l_cmn5": "Ti.Media.AudioRecorder",
+		"%l_cmn6": "Ti.Media.Item",
+		"%l_cmn7": "Ti.Media.MusicPlayer",
+		"%l_cmn8": "Network",
+		"%l_cmn9": "Ti.Network.BonjourBrowser",
+		"%l_cmn10": "Ti.Network.BonjourService",
+		"%l_slidenote_key_api_con": "Your app can participate in the Apple Bonjour (self-configuring, discoverable) networking environment for printing and other services.",
 		
 		"%l_deep_ios": "Deep Dive: iOS-Specific Properties",
 		"%l_deep_ios_image": "<img src='images/deep-ios.png' style='margin-top:5px;height:450px;'/>",
@@ -181,7 +226,7 @@ String.toLocaleString({
 		"%l_deep_ios_7_image": "<img src='images/deep-ios-7.png' style='margin-top:5px;height:450px;'/>",
 		"%l_slidenote_deep_ios_7": "",
 		
-		"%l_deep_ios_56_image": "<img src='images/deep-ios-56.png' style='margin-top:5px;height:450px;'/>",
+		"%l_deep_ios_56_image": "<img src='images/ios_systembutton.png' style='margin-top:5px;height:450px;'/>",
 		"%l_slidenote_deep_ios_56": "",
 		
 		"%l_deep_ios_8_image": "<img src='images/deep-ios-8.png' style='margin-top:5px;height:450px;'/>",
@@ -204,29 +249,24 @@ String.toLocaleString({
 		
 		"%l_impl_app": "Implementing Application Preferences",
 		"%l_impl_app_image": "<img src='images/impl-app.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_impl_app": "'The Settings Bundle'",
+		"%l_slidenote_impl_app": "'The Settings Bundle'<br/><br/>Apple's guidelines say all app preferences and settings should be done through the Settings app. In practice, most apps provide at least some options and settings within the app itself. A common mix is to see 'power user' settings in the Settings app and user settings within the app.",
 		
-		"%l_impl_app_2_image": "<img src='images/impl-app-2.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_impl_app_2": "In iOS, the Foundation framework provides the low-level mechanism for storing the actual preference data.<br>http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Preferences/Preferences.html<br>Tutorial http://iphoneincubator.com/blog/tutorial/how-to-create-an-iphone-preferences-file",
-		
-		"%l_settings": "Settings bundle",
-		"%l_settings_image": "<img src='images/settings.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_settings": "Settings bundle used to go in project/modules<br>Now needs to be in project/platform<br> In iOS, the Foundation framework provides the low-level mechanism for storing the actual preference data. <br>http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Preferences/Preferences.html<br>Tutorial					http://iphoneincubator.com/blog/tutorial/how-to-create-an-iphone-preferences-file",
-		
-		"%l_note": "Note: Pixel vs Points",
-		"%l_note_image": "<img src='images/note.png' style='margin-top:5px;height:450px;'/>",
-		"%l_slidenote_note": "iPad 2 is double the pixels of iPad 1",
-		
+
+		"%l_settings": "Creating the Settings Bundle", 
+		"%l_settings1": "Copy KitchenSink/platform/iphone to your project",
+		"%l_settings2": "In Finder, right-click Settings.bundle and choose <strong>Show Package Contents</strong>",
+		"%l_settings3": "Open Root.plist",
+		"%l_settings4": "Edit as necessary, then save",
+		"%l_settings5": "Do clean-build of your project",
+		"%l_slidenote_settings": "This is easiest way; you could also create the XML file directly<br/><br/>Settings bundle needs to be in project/platform (which doesn't exist by default)<br><br/>(Used to go in project/modules prior to 1.8)<br><br>See tutorial at http://iphoneincubator.com/blog/tutorial/how-to-create-an-iphone-preferences-file",
+				
 		"%l_qa": "Q&amp;A",
 		"%l_slidenote_qa": "",
 		
 		"%l_lab_goals": "Lab Goals",
 		"%l_add_settings": "Add settings to an iOS application",
-		"%l_demo_wiki": "Demo and wiki location",
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/360+-+iOS+API+Deep+Dive'>wiki.appcelerator.org/display/td/360+-+iOS+API+Deep+Dive</a>",
 		"%l_slidenote_lab_goals": "In this lab, you will create a Settings bundle so that application settings can be changed via the Settings app in the simulator or on a phone. You will then use that setting within the app to control the app's user interface",
 		
-		"%l_lab": "Lab",
-		"%l_slidenote_lab": "There is no specific TiBountyHunter tie-in for this lab"
-
 	}
 });
