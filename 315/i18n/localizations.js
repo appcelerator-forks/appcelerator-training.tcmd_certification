@@ -59,19 +59,17 @@ String.toLocaleString({
 		"%l_qa": "Q&amp;A",
 		"%l_slidenote_qa": "",
 		"%l_lab": "Lab Goals",
+
 		"%l_create_custom": "Create custom UI components",
 		"%l_cust_tab": "custom tab controller",
 		"%l_tab_ind": "tab indicator with sliding animation",
 		"%l_cust_hdr": "custom header",
-		"%l_demo_wiki_url": "Demo and wiki URL",
-		"%l_ios_only": "<i>* This lab is iOS only</i>",
-		"%l_slidenote_lab_goals": "In this lab, you will create a custom tab bar component. It will display two tabs and feature a sliding tab indicator with a custom background image.<br>Techniques used in this lab won't work on Android",
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/315+-+Custom+UI+Components'>wiki.appcelerator.org/display/td/315+-+Custom+UI+Components</a>",
+		"%l_slidenote_lab_goals": "In this lab, you will create a custom star-rating component. It will display from 1 to N stars and permit the user to click a star to select a rating.",
 
 		"%l_lab": "Lab",
 		"%l_slidenote_lab": "",
 
-		"%l_solutionwalkthrough": "Solution Walkthrough",
-		"%l_slidenote_solutionwalkthrough": "Explain <code>createCustomTab()</code> &mdash; extends a standard tab group<br/><code>makeTab()</code> &mdash; extends standard tabs with graphics and labels<br/>Calls to <code>makeTab()</code> on ~line 85 to instantiate the tabs<br/>Show tab bar background image to illustrate how the sliding effect is created<br/>Set <code>window.bottom=200</code> to reveal the 'magic' of this trick",
 
 
 	}
