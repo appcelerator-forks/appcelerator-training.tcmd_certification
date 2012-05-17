@@ -68,7 +68,7 @@ String.toLocaleString({
 		
 		"%l_basic_scrollable": "Basic ScrollableView",
 		"%l_basic_scrollable_image": "<img src='images/basic-scrollable.png' style='margin-top:5px;width:320px;'/>",
-		"%l_basic_scrollview_code": "\nvar sav = Ti.UI.createScrollableView({\n   /* properties */\n});\n ",
+		"%l_basic_scrollableview_code": "\nvar sav = Ti.UI.createScrollableView({\n   /* properties */\n});\n ",
 		"%l_basicSAV": "Key Properties",
 		"%l_basicSAV1": "height / width",
 		"%l_basicSAV2": "view",
