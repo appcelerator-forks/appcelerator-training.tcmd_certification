@@ -19,7 +19,7 @@ String.toLocaleString({
 		"%l_lesson9": "Animation",
 		"%l_lesson10": "Android API Deep Dive"
 		"%l_lesson11": "iOS Deep Dive",
-		"%l_lesson12": "Extending Titanium",
-		"%l_lesson13": "Titanium Plus Integration",
+		"%l_lesson12": "Using Modules in your Apps",
+		"%l_lesson13": "Extending Titanium",
 	}
 });
