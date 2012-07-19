@@ -78,7 +78,7 @@ String.toLocaleString({
     "ES": {
 		"%l_filetitle": "Interfaz de usuario avanzada para el desarrollo",
 		"%l_subtitle": "Interfaz de usuario avanzada para el desarrollo",
-		"%l_lessontitle": "Advanced UI Development",
+		"%l_lessontitle": "Desarrollo de interfáz -UI",
 		"%l_slidenote_titleslide": "<b>Module time: 60 mins</b><br/>(30 mins teaching, 30 mins for lab)",
 
 		"%l_agenda_title": "Agenda",
@@ -87,11 +87,11 @@ String.toLocaleString({
 		"%l_agenda3": "Sacar el máximo partido de sus componentes",
 		"%l_slidenote_agenda": "In the last lesson, we talked UX -- app flow, ease of use, etc.<br/>In this lesson, we're talking UI -- how your app looks. We'll also look at how you can incorporate your brand into your design.",
 
-		"%l_std_exc": "Normas para excepcionales",
+		"%l_std_exc": "Normas y excepciones",
 		"%l_l_exceptional_image": "<img src='images/nbc.png'>",
 		"%l_slidenote_std_exc": "",
 
-		"%l_brand_docs": "Documentos de la marca",
+		"%l_brand_docs": "Documente la marca",
 		"%l_understand_customer": "Entendiendo a su consumidor",
 		"%l_develop_single": "Desarrollar una sola página de marca",
 		"%l_know_the": "Conozca la emoción, estilo y ubicación",
@@ -104,10 +104,10 @@ String.toLocaleString({
 		"%l_slidenote_inc_brand": "How can you incorporate your brand?<ul><li>Obviously logos, icons, images</li><li>Colors should flow through UI</li><li>Custom components</li></ul>Brand incorporation needs to start at some of the most fundamental levels. The app icon and default screens are the easiest ones to attack. Once you understand the brand, focus the UI on the core message to the consumer. Your app icon is the very first piece of art that people will judge your app on. Design it wisely and make sure that it flows with your app appropriately.<br>As mentioned in the last module, make sure that your brand colors flow in the appropriate areas through your application. If you determine all headers are to be white, make sure that you are consistent. This is deciding brand rules for your application design. Designers often don't think of apps as interactive pieces all the time so if you see variances in the artwork make sure to ask 'why'. It is very important for the designer to describe every pixel on the screen.<br>UI components are also very easy to modify if you have the assets available. Make you that you use consistent colors and designs throughout your application that accurately represent what they are.",
 
 		"%l_custom_fonts": "Fuentes personalizadas",
-		"%l_one_of": "Uno de los puntos más rápidas y sencillas",
+		"%l_one_of": "Uno de los puntos más rápidos y sencillos",
 		"%l_dont_over": "No se debe abusar",
-		"%l_use_where": "Utilize el 'where' apropiadamente",
-		"%l_adhere_to": "Cumpla con la marca",
+		"%l_use_where": "Utilize donde sea apropiadamente",
+		"%l_adhere_to": "Mantega la  marca",
 		"%l_slidenote_custom_fonts": "Custom fonts are easy way to incorporate brand.<br/>Don't make your app look like a ransom note<br/>Fonts can replace images -- symbol &amp; dingbat style fonts<br/>Great free fonts at fontsquirrel.com and Google fonts",
 
 		"%l_cust_nav": "Navegación personalizada",
@@ -120,10 +120,10 @@ String.toLocaleString({
 
 		"%l_custom_comps": "Creando componentes personalizados",
 		"%l_build_blocks": "Bloques de Construcción: Ventanas, vistas, ImageViews",
-		"%l_pros": "Pros: multiplataforma, fuerte de marca",
+		"%l_pros": "Pros: multiplataforma, muestra fuerta de la marca",
 		"%l_cons": "Contras: Más trabajo, más mantenimiento",
 		"%l_nav_comps": "Componentes de navegación (las pestañas de navegadores) son un trabajo extra",
-		"%l_try_to": "Trate de generalizar la medida de lo posible y DISEÑAR LA API",
+		"%l_try_to": "Trate de generalizar lo más posible y DISEÑE LA API",
 		"%l_demo": "Demo",
 		"%l_slidenote_custom_comps": "Views &amp; imageViews are the primary means to create custom UI components <br>Use background images, for example<br>With custom navigation components, you lose A LOT of built-in behavior &mdash; sliding behavior, back button behavior, currentTab/currentWindow, etc.<br><b>Demo: see Mod315Demo project in GitHub repo</b>",
 

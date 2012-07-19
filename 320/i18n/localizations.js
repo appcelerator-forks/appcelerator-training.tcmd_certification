@@ -234,7 +234,7 @@ String.toLocaleString({
 		
 		"%l_ios_only_features": "Caracteristicas únicas del iOS",
 		"%l_iosonly1": "Modo Edit/Delete (edición/borrado)<pre><code contenteditable>var tableView = Titanium.UI.createTableView({\n   editable:true\n});\ntableview.addEventListener('delete',function(e) {\n   ...\n});</code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/editmode.png'/>",
-		"%l_iosonly2": "Mono Move(mover)<pre><code contenteditable>editBtn.addEventListener('click', function() {\n   tableview.moving = true;\n});\ntableview.addEventListener('move',function(e) {\n   ...\n});</code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/movemode.png'/>",
+		"%l_iosonly2": "Modo Move(mover)<pre><code contenteditable>editBtn.addEventListener('click', function() {\n   tableview.moving = true;\n});\ntableview.addEventListener('move',function(e) {\n   ...\n});</code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/movemode.png'/>",
 		"%l_iosonly3": "Filters(filtros)<pre><code contenteditable>var index = [\n   {title:'A',index:0},\n   ...\n   {title:'P',index:(data.length -1)}\n];\ntableview.index = index;</code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/filters.png'/>",
 		"%l_slidenote_ios_only_features": "iOS only properties (table.editable = true) will be ignored on Android<br>You listen for the delete/move events and take action based on that<br/>They're called filters, but you implement them with the <code>index</code> property.",
 	
