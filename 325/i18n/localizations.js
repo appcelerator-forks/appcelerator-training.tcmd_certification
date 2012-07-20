@@ -177,7 +177,7 @@ String.toLocaleString({
 		"%l_face": "FACE_UP (orientación hacia arriba) / FACE_DOWN (orientación hacia abajo)",
 		"%l_slidenote_fixed_orientation": "You can set orientation on a per window basis within your app<br><br/>The older Ti.UI.orientation property technique is deprecated and should not be used.",
 		
-		"%l_or_events": "Eventos de Orientación Events",
+		"%l_or_events": "Eventos de Orientación",
 		"%l_ti_gestureorientation": "Ti.Gesture.orientationchange",
 		"%l_event_props": "Propiedades y metodos de los eventos",
 		"%l_orientation_code": "\nTi.Gesture.addEventListener('orientationchange', function(e) {\n   // current device orientation\n   // Ti.Gesture.orientation\n   \n   // or, get orientation from event object\n   // e.orientation\n   \n   // also, there are two helpers:\n   // e.source.isPortrait()\n   // e.source.isLandscape()\n});\n ",

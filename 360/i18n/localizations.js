@@ -277,7 +277,7 @@ String.toLocaleString({
 
 		"%l_agenda_title": "Agenda",
 		"%l_agenda1": "Caracteristicas de la plataforma iOS",
-		"%l_agenda2": "API gespecifico de iOS información general",
+		"%l_agenda2": "API especifico de iOS información general",
 		"%l_agenda3": "Claves APIs",
 		"%l_agenda4": "iOS Propiedades: vista a fondo",
 		"%l_agenda5": "Ejemplos en Acción",
@@ -334,7 +334,7 @@ String.toLocaleString({
 		
 		"%l_ui_toolbar": "Barra de herramientas : interfaz de usuario",
 		"%l_toolbar1": "Botones que llevan a cabo acciones relacionadas con el contexto actual",
-		"%l_toolbar2": "Debe crear un boton de objetos primero, luego debe guardarlo en un array",
+		"%l_toolbar2": "Debe crear objetos 'boton' primero, luego debe guardarlo en un array",
 		"%l_toolbar3": "Pase la matriz con la barra de herramientas de objeto",
 		"%l_toolbar4": "Objetivo 44 x 44 puntos de un area de golpe para los botones",
 		"%l__ui_toolbar_image": "<img src='images/ui-toolbar.png' style='margin-top:5px;height:240px;'/>",
@@ -365,7 +365,7 @@ String.toLocaleString({
 		"%l_ui_switch": "Interruptor:Interfaz de usuario",
 		"%l_switch1": "Presenta dos opciones mutuamente excluyentes", 
 		"%l_switch2": "En iOS, no puede cambiar las etiquetas", 
-		"%l_switch3": "Android y Web Móvil ofrecer opciones más flexibles", 
+		"%l_switch3": "Android y Web Móvil ofrece opciones más flexibles", 
 		"%l_ui_switch_image": "<img src='images/switches.png' style='margin-top:5px;width:200px;'/>",
 		"%l_switch_code": "\nvar switch = Ti.UI.createSwitch({\n   value: true\n});\nwin.add(switch);\n ",
 
@@ -382,8 +382,8 @@ String.toLocaleString({
 		"%l_slidenote_ui_ipad": "There are two custom views related to iPad development.  We'll explore these two in detail",
 		
 		"%l_key_api_ti": "Claves de APIs - Titanium.UI.iPad.Popover",
-		"%l_popover1": "Vista transitoria revela mediante un golpecito en un control",
-		"%l_popover2": "Se cierne sobre el contenido de aplicación",
+		"%l_popover1": "Vista transitoria revela mediante un click en un control",
+		"%l_popover2": "Se posiciona sobre el contenido de aplicación",
 		"%l_key_api_ti_image": "<img src='images/popover.png' style='margin-top:5px;width:300px;'/>",
 		"%l_slidenote_key_api_ti": "<ul><li>Like a dialog box</li><li>Always has an arrow pointing to the control that opened it</li><li>Contains a Ti.UI.View</li></ul>",
 		
@@ -443,13 +443,13 @@ String.toLocaleString({
 		
 		"%l_background": "Servicios en segundo plano",
 		"%l_background1": "Extender el tiempo de duración limitada",
-		"%l_background1": "De larga duración de geolocalización o la reproducción de música",
+		"%l_background2": "De larga duración de geolocalización o la reproducción de música",
 		"%l_background_code": "\nvar svc = Ti.App.iOS.registerBackgroundService({\n   url: 'bg.js'\n});\n ",
 		"%l_slidenote_key_api_app": "This JS will run when the app is paused (home button clicked).<br><br/>Services typically run for 10 mins or until iOS shuts them down.<br/><br/>Useful to finish a download, cache data, etc.",
 
 
 		"%l_localnotification": "Notificaciones Locales",
-		"%l_localnotification1": "Se ejecuta en el dispositivo, no se presiona",
+		"%l_localnotification1": "Se ejecuta en el dispositivo (no push)",
 		"%l_localnotification2": "Acción programada",
 		"%l_localnotification3": "Servicio en segundo plano alerta al usuario",
 

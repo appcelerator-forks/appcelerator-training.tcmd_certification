@@ -85,7 +85,7 @@ String.toLocaleString({
 		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/330+-+User+Input+Collection'>wiki.appcelerator.org/display/td/330+-+User+Input+Collection</a>",
 		"%l_slidenote_lab_goals": "In this lab, we'll use a web view to create a user-friendly input form.<br>Demo: form is built with HTML<br><ul><li>Fields auto-scroll to remain visible</li><li>Next/previous buttons</li></ul>"
 	},
-	"ES": {
+	"es-es": {
 		"%l_filetitle": "Colección de entrada del usuario",
 		"%l_subtitle": "Titanium Mobile avanzado para desarrollo",
 		"%l_lessontitle": "Colección de entrada del usuario",
@@ -147,7 +147,7 @@ String.toLocaleString({
 		
 		"%l_using_webviews": "Uso de las vistas Web y los formularios HTML",
 		"%l_html_forms": "HTML es construido por las formas",
-		"%l_support_tabbing": "Gran apoyo automático para el desplazamiento y la "tabulación" entre los campos",
+		"%l_support_tabbing": "Gran apoyo automático para el desplazamiento y la 'tabulación' entre los campos",
 		"%l_html5_forms": "Formularios en HTML 5:",
 		"%l_input_type": "Tipos de teclado establecidos con < input type=type >",
 		"%l_html_input": "<a href='www.w3.org/TR/html5/the-input-element.html#attr-input-type'>www.w3.org/TR/html5/the-input-element.html#attr-input-type</a>",

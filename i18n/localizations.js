@@ -22,7 +22,7 @@ String.toLocaleString({
 		"%l_lesson12": "Using Modules in your Apps",
 		"%l_lesson13": "Extending Titanium",
 	},
-	"ES": {
+	"es-es": {
 		"%l_welcome": "Bienvenidos a",
 		"%l_coursename": "Curso avanzado de desarrollo de aplicaciones en móviles con Titanium",
 		"%l_agenda_title": "AGENDA",
@@ -38,6 +38,6 @@ String.toLocaleString({
 		"%l_lesson10": "Android API Deep Dive"
 		"%l_lesson11": "iOS Deep Dive",
 		"%l_lesson12": "Usando módulsos en sus aplicaciones",
-		"%l_lesson13": "Extendiendo Titanium",
+		"%l_lesson13": "Extendiendo Titanium"
 	}
 });

@@ -166,7 +166,7 @@ String.toLocaleString({
 		"%l_use_that": "Use that module in a Titanium project",
 		"%l_slidenote_lab_goals": ">We will follow along with the module dev guides and try a custom module ourselves.  This is a 'kick the tires' type exercise"
 	},
-	"ES": {
+	"es-es": {
 		"%l_filetitle": "Extención de Titanium",
 		"%l_subtitle": "Titanium Mobile avanzado para desarrollo",
 		"%l_lessontitle": "Extención de Titanium",
@@ -180,7 +180,7 @@ String.toLocaleString({
 		"%l_agenda5": "Recursos",
 		"%l_slidenote_agenda": "This lesson is a starting point for developers, not an extensive tutorial. Students with native programming knowledge will get the most from it.<br><br/>Basic Architecture &mdash; introduces internal Titanium implementation, including the Kroll microkernel<br><br/>Object Model &mdash; introduces the key objects and vocabulary for building modules<br><br/>Building modules &mdash; covers how to use titanium SDK to build/package modules<br><br/>Distributing and installing &mdash; covers custom module distribution and use<br><br/>Resources &mdash; docs and help resources available",
 
-		"%l_disclaimer": "Renuncia!",
+		"%l_disclaimer": "Aclaración!",
 		"%l_slidenote_disclaimer": "The intent of this presentation is to brief you on the basics of how Titanium works and to point you in the right direction for further exploration. It is not a comprehensive treatment of the subject. Your instructor might not be an expert module developer.",
 		
 		"%l_we_know": "Todos sabemos lo básico...",
@@ -200,13 +200,14 @@ String.toLocaleString({
 		"%l_js_context": "Un contexto de JavaScript se crea (o Rhino/V8 JSCore)",
 		"%l_js_app": "JS aplicación se evalúa a partir de app.js",
 		"%l_js_comm": "Contexto JS comunica con C / de código Java",
-		"%l_bridge": "El "puente" entre ellos es lo que llamamos Kroll",
+		"%l_bridge": "El 'puente' entre ellos es lo que llamamos Kroll",
 		"%l_slidenote_when_app": "",
 		
 		"%l_the_kroll": "El Microkernel Kroll",
 		"%l_what_kroll": "Que es un  Kroll?",
 		"%l_met_process": "Proceso metalúrgico por el cual Titanium (el elemento) se crea",
-		"%l_name_given": "El nombre dado a la 'cruz-lenguaje', multi-plataforma y un marco vinculante invocación'",		
+		"%l_name_given": "The name given to the 'cross-language, cross-platform binding and invocation framework'",				
+		"%l_name_given": "El nombre dado al 'vinculo de multi-lenguaje, multi-plataforma de invocación'",		
 		"%l_microkernel": "Es un microkernel",
 		"%l_what_kernel": "¿Qué es un kernel?",
 		"%l_in_os": "En un sistema operativo, es el puente entre el software y hardware",
