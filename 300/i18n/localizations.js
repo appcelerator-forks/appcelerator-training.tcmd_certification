@@ -107,5 +107,99 @@ String.toLocaleString({
 		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/300+-+Performance+Optimization'>wiki.appcelerator.org/display/td/300+-+Performance+Optimization</a>",
 		"%l_slidenote_lab_goals": "In this lab, you will examine an app that contains a memory leak. You'll apply a fix for that memory leak and test the results. You'll use the Instruments tool on the iOS platform for this lab. While Android testing is possible, the tools are less helpful and clear in the information they present.",
 
-	}
+	},
+	"ES": {
+		"%l_lessontitle": "Optimización y desempeño",
+		"%l_subtitle": "Desarrollo avanzado con Titanium",
+		"%l_slidenote_titleslide": "<b>Module time: 60 minutes</b><br/>(30 mins teaching, 30 mins lab)<br/><br/>This lesson can inspire discussion and questions and might take longer than the listed time. Because of the importance of this lesson, be prepared to answer questions and discuss the materials to the satisfaction of your students.",
+
+		"%l_agenda_title": "Agenda",
+		"%l_agenda1": "Desempeño consejos y trucos",
+		"%l_agenda2": "Organización del código en proyectos grandes",
+		"%l_agenda3": "Que hacer y que no",
+		"%l_agenda4": "Laboratorio",
+		"%l_slidenote_agenda": "",
+
+		"%l_perf_opt": "Optimización del desempeño en Titanium",
+		"%l_small_med": "Para aplicaciones pequeñas/medianas, no es una preocupación general",
+		"%l_apps_complex": "Como las aplicaciones se vuelven complejas, Titanium no puede protegerte de el manejo de memoria",
+		"%l_computation": "Procesador no es el cuello de botella, memeria lo es",
+		"%l_managing_memory": "Manejo de memeoria usualmente significa el manejo de los componentes de UI",
+		"%l_slidenote_perf_opt": "Need to worry about running out of resources<br>The biggest concern is running out of memory<br>Mostly that means getting rid of things you no longer need<br/>Your apps can have as little as 12 MB of memory in which to run. See the docs for full info on memory allotments for the various platforms.",
+
+		"%l_js_garbage": "Recolección de basura en Javascript",
+		"%l_auto": "Automaticamente (No es necesario liberar memoria)",
+		"%l_obj_collect": "Los objetos son recogidos cuando ya no hay referencias a ellos",
+		"%l_mark": "'Se marca y se recoge'",
+		"%l_force": "Se puede forzar la recoleccion al remover todas las referencias",
+		"%l_slidenote_js_garbage": "To understand memory management in Titanium, you need to understand it in JavaScript<br/>Garbage collection is automatic, you don't have to manually track and release memory<br>Objects are GC'd when no references remain<br>Mark &amp; Sweep:<ul><li>JS stops and scans</li><li>Marks all objects except those in use</li><li>Objects marked are instructed to shut down &amp; destroy</li><li>App execution resumes</li></ul><br>Force an object to be GC'd by removing all references to it<br>Can be tough as references can be 'hidden' in event listeners, closures, etc.",
+
+		"%l_when_does": "A qué momento Titanium hace una limpieza?",
+		"%l_window_closed": "Cuando una ventana esta cerrada (La UI es removida)",
+		"%l_var_null": "Cuando a una variable que contiene un objecto proxy, se la asigna como Null",
+		"%l_note": "Nota: Mostrando/Ocultando vistas va a mejorar la Velocidad de Trazado, pero la memoria aun esta en uso",
+		"%l_vimeo_url": "http://vimeo.com/29804284<br/>(Codestrong - Charla sobre fuga de memoria)",
+		"%l_slidenote_when_does": "Titanium needs to signal the native code when to release objects. It does so when:<br><ul><li>A window is closed; the object it contains are generally removed and memory freed</li><li>You manually set a reference to null (proxy objects are the JS objects that represent the native equivalent)</li></ul><br>Use DDMS and Instruments to monitor memory usage, see when &amp; where you're running out of memory<br>Then you can take manual actions to clean up<br><br>Optional: Demo AppLeak project and fixing memory leaks now",
+
+		"%l_displ_slow": "Ventanas desplegandose lentamente?",
+		"%l_app_slow": "La aplicación empieza/arranca muy lento?",
+		"%l_js_slow": "La evaluación en Javascript ES lenta",
+		"%l_defer_js": "difiera cargar JS!",
+		"%l_slidenote_displ_slow": "Slow window open time is a common problem especially on Android<br/><br/>App start-up time can be slow, especially on Android<br/><br/>Rhino is slower than JavaScript Core/V8, but should be needed for only old (pre 2.2) devices, so go with V8 in most cases<br><br/>CommonJS helps -- dependencies can be loaded when needed and are evaluated only once.",
+
+		"%l_js_tips": "Consejos al cargar JavaScript",
+		"%l_only_include": "Difiera la carga de una script hasta que realmente lo <em>necesite<em>",
+		"%l_ti_include": "require() es mejor, Ti.include() es normal, pero &ldquo;eval() es malvado&rdquo;",
+		"%l_dont_parse": "No analice JSON enviado con su aplicación - póngalo en linea en JavaScript",
+		"%l_slidenote_js_tips": "Defer loading when possible<br>require()'d modules are not re-evaluated, though objects might need to be re-instantiated<br/>Don't use eval() unless you must<br/>parsing JSON is much slower than working with inline JS variables<br/>The DB is generally faster than parsine JSON<br>Older 'hack' of adding objects, functions, and values to Ti.App is no longer recommended. Generally this is disallowed and it can lead to many potentials for problems and crashes.",
+
+		"%l_multi_contexts": "Multiple contextos pueden ser buenos",
+		"%l_large_apps": "En aplicaciones grandes en donde diferir la evalucación de un script es critico, multiple contextos es un buen camino",
+		"%l_tabs": "Aplicaciones con pestañas son multicontexto: uno por pestaña",
+		"%l_level_critical": "Con multiple contextos, los eventos a nivel de aplicación son críticos",
+		"%l_downside": "El lado malo: las dependencias pueden ser evaluadas muchas veces",
+		"%l_slidenote_multi_contexts": "With multi-context, the code &amp; isn't evaluated and objects aren't instantiated until the user opens that window. The OS can also manage instantiated, but out-of-context resources such as a tab that was opened but isn't active",
+
+		"%l_tableview_per": "Desempeño de los TableViews",
+		"%l_classnameexplanation": "className permite a Titanium engañar un poco<pre><code contenteditable>\nvar row = Ti.UI.createTableViewRow({\n   className: 'anystring'\n});\n </code></pre>",
+		"%l_set_all": "Crear las filas al mismo tiempo, no invocar 'append' 300 veces",
+		"%l_only_load": "Solamente descarga/carga datos lo que sea necesario",
+		"%l_if_your": "Si tu tabla tiene 1.000 filas personalizadas, quiza tengas que pensar en otro diseño de UX",
+		"%l_slidenote_tableview_per": "<ul><li>Adding className enables Ti &amp; underlying OS to reuse table row objects and optimize memory</li><li>A setData() call for a lot of rows is faster than repeated appendRow() calls</li><li>Perhaps you can use alternate UI paradigm to create smaller tables</li><li><b>Dawson's Lazy Loaded Tables http://j.mp/rbL32h</b></li></ul>",
+
+		"%l_db_per": "Desepeño de Base de datos",
+		"%l_sql_fast": "Las consultas en SQL son rápidas - usa esto en véz de ordenar arreglos en memoria, etc.",
+		"%l_sql_transations": "Envuelve multiple 'inserts' en una transacción",
+		"%l_ram": "Evita cargar 'Blobs' en memoria &mdash; RAM es un cuello de botella",
+		"%l_conn_mgmt": "Abrir/cerrar conecciones con cada uso",
+		"%l_sqlitefaq": "Mas información sobre optimización de SQLite - http://j.mp/HFxVZ8",
+		"%l_slidenote_db_per": "<ul><li>Filter data in SQL rather than via JS (sorting, searching, etc.)</li><li>Transactions bundle many DB operations into a single operation = much faster</li><li>Don't use 'select * from table' if you store blobs in your tables</li><li>Open/closing connections is generally more memory friendly than any performance benefits you'd get from keeping a connection open</li><li>Mostrar network link conditioner</li></ul>",
+
+		"%l_net_per": "Desempeño de la red",
+		"%l_wifi": "No asuma que hay conección wifi - prueba en la red celular",
+		"%l_decrease": "Reduce el tamaño de los envios",
+		"%l_existing": "Los APIs de los servicios web no son generalmente diseñados/optimizados para aplicaciones en móviles - Crea APIs para servicios en móviles de manera que:",
+		"%l_as_few": "pocos pedidos de informacion sean hechos",
+		"%l_as_small": "La información sea devuelta en partes pequeñas como sea posible<br/>(JSON ayuda en esto)",
+		"%l_slidenote_net_per": "<ul><li>Test in a real-world networking environment (in various data coverage areas)</li><li>Use DDMS &amp; other tools to simulate poorer network conditions</li><li>Decrease payload size (use JSON rather than SOAP for example)</li><li>If you have a lot of data to transfer, a few larger network requests is better than multiple smaller data transfers</li><li>Saves on battery if nothing else (min. time of radio on per network request can suck juice if you have lots of network requests)</li></ul>",
+
+		"%l_battery": "Optimización de la batería",
+		"%l_battery1": "Es crítico en Android, e importante en iOS tambien",
+		"%l_battery2": "Red y geolocalización son las preocupaciones críticas",
+		"%l_battery_image": "<img src='images/android_radio_states.png' style='width:700px;'>",
+		"%l_battery_moreinfo": "More información en:",
+		"%l_l_batterymore1": "Android &mdash; http://j.mp/IDMk5H",
+		"%l_l_batterymore2": "iOS &mdash; http://j.mp/IDMaeG",
+		"%l_slidenote_battery": "Diagram from Google is for AT&amp;T cell radio, but similar case would exist for wifi and for iOS too.<br/>There's a delay transitioning between radio states. Example: per Google, if you query the network every 18 seconds you'll keep the radio continuously in the active state &mdash; continual battery drain <ul><li>Transfer in bursts</li><li>Don't poll the network without considering radio delays</li><li>Prefetch and cache</li><li>Disable location listeners as soon as you can</li></ul>",
+
+		"%l_qa": "Preguntas?",
+		"%l_slidenote_qa": "",
+
+		"%l_lab": "Objetivos del Laboratorio",
+		"%l_analyze": "Analizar una fuga de memoria",
+		"%l_correct": "Corregir la fuga de memoria y probar la aplición",
+		"%l_labURL": "<a href='https://wiki.appcelerator.org/pages/viewpage.action?pageId=32212690'>https://wiki.appcelerator.org/pages/viewpage.action?pageId=32212690</a>",
+		"%l_slidenote_lab_goals": "In this lab, you will examine an app that contains a memory leak. You'll apply a fix for that memory leak and test the results. You'll use the Instruments tool on the iOS platform for this lab. While Android testing is possible, the tools are less helpful and clear in the information they present.",
+
+	}	
 });
