@@ -178,8 +178,9 @@ li { padding-bottom: 5px; }
 #labwrapper a:not(.image) {
 	text-decoration:underline;
 }
-#labwrapper ul {
+#labwrapper ul, #labwrapper ol {
 	margin-left:30px;
+	list-style-position:inside;
 }
 #labwrapper h1 {
 	font-size: 2.75em;

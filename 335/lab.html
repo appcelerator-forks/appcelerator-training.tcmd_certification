@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title class="l_labname">Lab - Custom UI Components</title>
-		<meta name="description" content="Advanced Titanium Mobile Development, Advanced UI Development">
+		<title class="l_labname">Lab - ScrollView API Deep Dive</title>
+		<meta name="description" content="Advanced Titanium Mobile Development, ScrollView API Deep Dive">
     	<meta name="author" content="Appcelerator, Inc." />
 		
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -71,65 +71,63 @@
 <section>
 
 <!-- YOUR LAB CONTENT GOES HERE -->
-<h1 class="l_labname">Lab: </h1>
-<p class="l_mission"><img src='labimages/finished_iphone.png' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><strong>Mission: </strong>In this lab assignment, you will create a custom star-rating widget as a reusable CommonJS module.</p>
-
-<p class="l_specification"><strong>Specification: </strong>Download the starting point code linked to in Step 1 below. The archive includes the necessary graphics. To successfully complete this lab, you must ... :</p>
-
-<ul style="width:70%">
-	<li class="l_spec1"></li>
-	<li class="l_spec2"></li>
-	<li class="l_spec3"></li>
-</ul>
-
+<h1 class="l_labname">Lab: ScrollView API Deep Dive</h1>
+<p class="l_mission"><img src='https://wiki.appcelerator.org/download/attachments/14090415/20110623-p6a1spsixn1r5mrmfe1eswgwj5.jpg?version=1&modificationDate=1311617039000' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><strong>Mission: </strong>In this lab, you will create a scroll view containing a list of baseball players. That list will extend left/right beyond the width of the viewport. When the user taps a player's name, three images of that player will be displayed in a scrollable view located below the scroll view.</p>
 
 <table>
 	<tr>
-		<td colspan="2" class="labinstructions l_labstep1">1. Download the starting point files from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab###.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab###.zip</a>.</td>
+		<td colspan="2" class="labinstructions l_labstep1">1. Download the starting point files from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab335.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab335.zip</a>. Extract the archive, then import it into Studio as an existing Titanium project.</td>
 	</tr>
 	<tr>
 		<td class="tdfiller"><!-- leave empty--></td>
 		<td class="labexplanations l_labstepexplanation1"></td>
 	</tr>
 	<tr>
-		<td colspan="2" class="labinstructions l_labstep2">2. Extract the archive, then import it into Studio as an existing Titanium project.</td>
+		<td colspan="2" class="labinstructions l_labstep2">2. Open app.js and examine its contents. This file is completed for you. It instantiates then includes the two major UI modules into the app's window and opens that window.</td>
 	</tr>
 	<tr>
 		<td class="tdfiller"><!-- leave empty--></td>
 		<td class="labexplanations l_labstepexplanation2"></td>
 	</tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep3">3. </td>
+	<td colspan="2" class="labinstructions l_labstep3">3. Open CustomScrollableView.js and following the code comments, write a module to create a custom ScrollableView object. It will contain three images as its views. It will also listen for an app-level 'playerChanged' event, which when fired will call a function you'll write to swap out those images with three new images passed in as an array. That event listener should also scroll the ScrollableView back to the first image in the set.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation3"></td>
 </tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep4">4. </td>
+	<td colspan="2" class="labinstructions l_labstep4">4. Open CustomScrollView.js and following the code comments, write a module to create a custom ScrollView object. It will contain a view, which will contain a series of labels (which you'll create with another module). Instantiate a series of custom labels with the player details as noted in the comments. Add those labels to the container. Add an event listener to your scroll view so that when it's clicked, if a label is clicked on, you'll fire the 'playerChanged' event and pass an array of images.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation4"></td>
 </tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep5">5. When you're done, build the project for either the iOS Simulator or Android emulator. Correct any code mistakes, if necessary. Text your work by selecting various ratings levels.</td>
+	<td colspan="2" class="labinstructions l_labstep5">5. Open CustomLabel.js and following the code comments, write a module to create a custom Label object. This module will define a consistent set of properties, including the player's name and image file basename. Follow the constructor pattern with your code.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation5"></td>
 </tr>
+<tr>
+	<td colspan="2" class="labinstructions l_labstep6">6. Build and run your app in the simulator/emulator. Correct any errors and build again. Compare your finished work to the screenshot below. You should be able to click a player's name and have his pictures show in the scrollable view.</td>
+</tr>
+<tr>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation6"></td>
+</tr>
 </table>
 
 <h2 class="l_summary">Summary</h2>
-<p class="l_summarypara">In this lab, you </p>
+<p class="l_summarypara">In this lab, you created a ScrollView that controls the contents of a ScrollableView.</p>
 
 <h2 class="l_resources">Resources</h2>
 
 <ul>
-	<li class="l_resources1"></li>
-	<li class="l_resources2"></li>
-</ul>
+	<li class="l_resources1">Finished code is available at <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab335-finished.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab335-finished.zip</a></li>
+	<li class="l_resources2">Guides: Scrolling Views</li>
+	<li class="l_resources3">APIdocs: ScrollView and ScrollableView</li></ul>
 
 
 <!-- MAKE NO CHANGES BELOW THIS LINE -->
