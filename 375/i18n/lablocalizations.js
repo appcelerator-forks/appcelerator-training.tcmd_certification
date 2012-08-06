@@ -5,33 +5,15 @@
 */
 String.toLocaleString({
 	"en-US": {
-		"%l_labname": "Lab - FOO",
-		"%l_mission": "mission statement",
-		"%l_specification": "<strong>Specification: </strong>Download the starting point code linked to in Step 1 below. The archive includes the necessary graphics. To successfully complete this lab, you must... :",
-		"%l_spec1": "",
-		"%l_spec2": "",
-		"%l_spec3": "",
+		"%l_labname": "Lab - Extending Titanium",
+		"%l_mission": "Titanium is built in a modular fashion. Even some of what you might think of as core functionality is actually implemented with modules. We further extend Titanium with the Titanium Plus modules. You can use that same architecture to create your own modules to extend the Titanium SDK.",
+		"%l_specification": "<strong>Specification: </strong>Our wiki includes guides on writing your own modules. In this lab, you will work through the steps of either the iOS or Android module development guide. Those guides walk you through a 'Hello World' module project.",
 		
-		"%l_labstep1": "1. Download the starting point files from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab###.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab###.zip</a>.",
+		"%l_labstep1": "1. Choose a platform (iOS or Android) then work through the steps in the module development guide. The guide will walk you through the process for setting up the titanium.py script to generate a module project, and package that module for distribution. Installing your module is just as easy as installing a Titanium Plus module. The goal for this lab is to follow our existing documentation to create a "Hello World" module for your desired platform.",
 		"%l_labstepexplanation1": "",
 
-		"%l_labstep2": "2. ",
-		"%l_labstepexplanation2": "",
-
-		"%l_labstep3": "3. ",
-		"%l_labstepexplanation3": "",
-
-		"%l_labstep4": "4. ",
-		"%l_labstepexplanation4": "",
-
-		"%l_labstep5": "5. When you're done, build the project for either the iOS Simulator or Android emulator. Correct any code mistakes, if necessary. Text your work by selecting various ratings levels.",
-		"%l_labstepexplanation5": "",
-
-		"%l_summary": "Summary",
-		"%l_summarypara": "In this lab, you ...",
-
 		"%l_resources": "Resources",
-		"%l_resources1": "",
-		"%l_resources2": "",
+		"%l_resources1": "Android Module Developer Guide – <a href='http://wiki.appcelerator.org/display/guides/Android+Module+Development+Guide'>http://wiki.appcelerator.org/display/guides/Android+Module+Development+Guide</a>",
+		"%l_resources2": "iOS Module Developer Guide – <a href='http://wiki.appcelerator.org/display/guides/iOS+Module+Development+Guide'>http://wiki.appcelerator.org/display/guides/iOS+Module+Development+Guide</a>",
 
 	}});
