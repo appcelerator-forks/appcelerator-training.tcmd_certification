@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title class="l_labname">Lab - Custom UI Components</title>
-		<meta name="description" content="Advanced Titanium Mobile Development, Advanced UI Development">
+		<title class="l_labname">Lab - Android API Deep Dive</title>
+		<meta name="description" content="Advanced Titanium Mobile Development, Android API Deep Dive">
     	<meta name="author" content="Appcelerator, Inc." />
 		
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -71,49 +71,62 @@
 <section>
 
 <!-- YOUR LAB CONTENT GOES HERE -->
-<h1 class="l_labname">Lab: </h1>
-<p class="l_mission"><img src='labimages/finished_iphone.png' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><strong>Mission: </strong>In this lab assignment, you will create a custom star-rating widget as a reusable CommonJS module.</p>
+<h1 class="l_labname">Lab: Android API Deep Dive</h1>
+<p class="l_mission"><img src='https://wiki.appcelerator.org/download/attachments/14090405/share_menu.png?version=1&modificationDate=1311684993000' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><img src='https://wiki.appcelerator.org/download/attachments/14090405/share_text.png?version=1&modificationDate=1311684981000' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><strong>Mission: </strong>Titanium has broad support for many Android-specific OS features. Chief among them is the ability to launch activities with intents. Such interactions enable your apps to communicate with other apps, in essence 'borrow' functionality from those apps, without specific knowledge of the actual app in use. For example, your app might share text to other apps on the user's device. The user will choose whether to use that text in their email, messaging, or twitter app. The official Android documentation is the definitive source for information on activities and intents.</p>
 
-<p class="l_specification"><strong>Specification: </strong>Download the starting point code linked to in Step 1 below. The archive includes the necessary graphics. To successfully complete this lab, you must ... :</p>
+<p class="l_specification"><strong>Specification: </strong>In this lab, you will enable an app to share text with other apps on the user's device. The app provides a simple text box. You'll plug in the code to share the text that users enter via an intent.</p>
 
-<ul style="width:70%">
-	<li class="l_spec1"></li>
-	<li class="l_spec2"></li>
-	<li class="l_spec3"></li>
-</ul>
+<p classs="l_backgroundinfo"><strong>Background Information: </strong>Titanium exposes the ability to launch an activity through JavaScript. An activity is usually a view in an application capable of handling some task. Activities are launched with Intents, which are basically objects containing data necessary for an activity to perform a task. In this example code, we are launching an activity with an intent we have created.This will bring up a dialogue of applications with activities that are registered to handle that intent. In this case, e-mail, Twitter, and any other sharing apps installed will likely be presented as options.</p>
 
+<pre><code class="l_backgroundcode">
+// the type parameter defines the mime type of the data to be shared
+    var intent = Ti.Android.createIntent({
+        action: Ti.Android.ACTION_SEND,
+        type: 'text/plain'
+    });
+    // See the Android developer docs for info on required and options extra data fields with intents
+    intent.putExtra(Ti.Android.EXTRA_SUBJECT, 'My subject!');
+    intent.putExtra(Ti.Android.EXTRA_TEXT, 'My text!');
+    try {
+        // Start the activity and pass the intent object
+        Ti.Android.currentActivity.startActivity(intent);
+    } catch (ex) {
+        // Handle Exception if no suitable apps installed
+        Ti.UI.createNotification({ message : 'No sharing apps installed!' }).show();
+    }
+</code></pre>
 
 <table>
 	<tr>
-		<td colspan="2" class="labinstructions l_labstep1">1. Download the starting point files from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab###.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab###.zip</a>.</td>
+		<td colspan="2" class="labinstructions l_labstep1">1. Download the starting point files from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/350.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/350.zip</a>. Extract the archive, then import it into Studio as an existing Titanium project.</td>
 	</tr>
 	<tr>
 		<td class="tdfiller"><!-- leave empty--></td>
 		<td class="labexplanations l_labstepexplanation1"></td>
 	</tr>
 	<tr>
-		<td colspan="2" class="labinstructions l_labstep2">2. Extract the archive, then import it into Studio as an existing Titanium project.</td>
+		<td colspan="2" class="labinstructions l_labstep2">2. In app.js, modify the Window object to include the Android-specific property that will scroll the UI if the soft keyboard covers the textarea field.</td>
 	</tr>
 	<tr>
 		<td class="tdfiller"><!-- leave empty--></td>
 		<td class="labexplanations l_labstepexplanation2"></td>
 	</tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep3">3. </td>
+	<td colspan="2" class="labinstructions l_labstep3">3. Where indicated by the comments, add the Android-specific statement to hide the soft keyboard when the button is clicked. (Don't use blur().)</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation3"></td>
 </tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep4">4. </td>
+	<td colspan="2" class="labinstructions l_labstep4">4. Create the intent, along with its two extra fields to pass the text entered in the message box. Then, using a try/catch block, start the activity and pass the intent.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation4"></td>
 </tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep5">5. When you're done, build the project for either the iOS Simulator or Android emulator. Correct any code mistakes, if necessary. Text your work by selecting various ratings levels.</td>
+	<td colspan="2" class="labinstructions l_labstep5">5. For best results, connect your Android device. Then, build and deploy the app to your phone. If you don't have an Android device, build and run your app in the emulator.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
@@ -127,8 +140,8 @@
 <h2 class="l_resources">Resources</h2>
 
 <ul>
-	<li class="l_resources1"></li>
-	<li class="l_resources2"></li>
+	<li class="l_resources1">Finished code: <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/350_finished.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/350_finished.zip</a></li>
+	<li class="l_resources2">See the <a href='http://developer.android.com/reference/android/content/Intent.html'>Android developer docs</a> for information on Intents and their options</li>
 </ul>
 
 
