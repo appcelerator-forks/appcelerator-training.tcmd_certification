@@ -130,6 +130,60 @@
 					<p align="left" class="l_dont_parse">Don't parse JSON packaged with your app - put it inline in JavaScript</p>
 					<div class="slidenote"><div class="l_slidenote_js_tips">Defer loading when possible<br>require()'d modules are not re-evaluated, though objects might need to be re-instantiated<br/>Don't use eval() unless you must<br/>parsing JSON is much slower than working with inline JS variables<br/>The DB is generally faster than parsine JSON<br>Older 'hack' of adding objects, functions, and values to Ti.App is no longer recommended. Generally this is disallowed and it can lead to many potentials for problems and crashes.</div></div>
 				</section>
+
+				<section>
+					<h2 style="" class="l_jsoptimizations1">JavaScript Optimizations</h2>
+					<p align="center" class="l_jsoptim1">Avoid trips across the bridge!</p>
+<pre style="width:100%;"><code contenteditable class="l_optimcode1">
+var table = Ti.UI.createTableView();
+var data = [];
+for(var i = 0; i < 10000; i++){
+  // generic object references can be faster
+  data.push({
+      title:'Row #'+i,
+      selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE
+    });
+/* than calls to Ti proxy methods ...
+  data.push(
+    Ti.UI.createTableViewRow({
+      title:'Row #'+i,
+      selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE
+    });
+  );
+*/
+}
+table.setData(data);
+
+// References: https://gist.github.com/2989311 
+// and https://gist.github.com/3056032
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_jsoptimizations1">Every Ti proxy reference incurs a trip across the bridge, which slows execution. In some cases, you can push execution to the native layer by using generic objects in place of creating explicit objects via proxy methods.</div></div>
+				</section>
+
+				<section>
+					<h2 style="" class="l_jsoptimizations2">JavaScript Optimizations</h2>
+					<p align="center" class="l_jsoptim2">And this is even faster!</p>
+<pre><code contenteditable class="l_optimcode2">
+var table = Ti.UI.createTableView();
+var data = [];
+// create local references to Ti properties/methods
+var SEL_STYLE_BLUE = Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE;
+for(var i = 0; i < 10000; i++){
+  data.push({
+      title:'Row #'+i,
+      selectionStyle: SEL_STYLE_BLUE
+    });
+}
+table.setData(data);
+
+// References: https://gist.github.com/2989311 
+// and https://gist.github.com/3056032
+
+</code></pre>
+					<div class="slidenote"><div class="l_slidenote_jsoptimizations2">But every proxy reference counts, so create local references to properties and even methods. See the gists for full details.</div></div>
+				</section>
+
 				
 				<section>
 					<h2 class="l_multi_contexts">Multiple contexts can be good</h2>

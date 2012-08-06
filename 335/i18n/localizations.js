@@ -38,15 +38,15 @@ String.toLocaleString({
 		"%l_zoomScale": "zoomScale",
 		"%l_minZoomScale": "minZoomScale",
 		"%l_maxZoomScale": "maxZoomScale",
-		"%l_slidenote_deeper_dive": "Set content height to auto and it will scroll just enough to show the content. Auto is still valid even with Ti.UI.FILL in Ti2.0.<br/><br>If you set content height/width to a specific size and that's all you'll get. Content could get cut off or scroll could continue well past available content<br/><br>Users can zoom in/out, which you can control",
+		"%l_ios_scrollviewV2": "canCancelEvents to block subview events",
+		"%l_slidenote_deeper_diveV2": "Set content height to auto and it will scroll just enough to show the content.<br>Set it to a specific size and that's all you'll get. Content could get cut off or scroll could continue well past available content<br>Users can zoom in/out, which you can control<br/><br/><code>canCancelEvents</code> = boolean = whether the ScrollView would block touch-related events from passing into the view that's being scrolled. For example, to block a scroll event being fired on a child ScrollView, thus stopping the parent from scrolling.",
 		
 		"%l_scrollview_diff": "ScrollView - Platform Differences",
 		"%l_android_scrollview": "Android - scroll horizontal <i>or</i> vertical, not both",
-		"%l_ios_scrollview": "iOS - canCancelEvents to block subview events",
 		"%l_bounce": "iOS - Set 'bounce' at limits of scroll contents:",
 		"%l_horizontalBounce": "horizontalBounce",
 		"%l_verticalBounce": "verticalBounce",
-		"%l_slidenote_scrollview_diff": "<code>canCancelEvents</code> = boolean = whether the scollview would block touch-related events from passing into the view that's being scrolled. For example, to block such events passing to an embedded view containing links.<br/><br/>Bounce properties are booleans that turn off or on the bounce effect.",
+		"%l_slidenote_scrollview_diffV2": "Bounce properties are booleans that turn off or on the bounce effect.",
 		
 		"%l_scrollview_events": "ScrollView events",
 		"%l_scrollview_code": "\nsv.addEventListener('scale', function(e) {\n   alert('You zoomed to ' + e.scale * 100 + '%');\n});\n ",
@@ -88,7 +88,8 @@ String.toLocaleString({
 		
 		"%l_scrollableview_diff": "ScrollableView - Platform Difference",
 		"%l_ios_scrollableview": "iOS - cacheSize (integer) is number of views to prerender",
-		"%l_slidenote_scrollableview_diff": "This is about the only significant difference between platforms<br/><br/>This is the number of views that will be pre-rendered to graphics memory prior to being scrolled into view. Number is adjusted per: <code>(currentPage +/- (cacheSize - 1)/2), ROUNDED DOWN for even values (i.e. cacheSize=4 renders 3 views into the cache.)</code>",
+		"%l_ios_svpaging": "iOS - pagingControl alpha and overlay",
+		"%l_slidenote_scrollableview_diffV2": "<code>cacheSize</code> is the number of views that will be pre-rendered to graphics memory prior to being scrolled into view. Number is adjusted per: <code>(currentPage +/- (cacheSize - 1)/2), ROUNDED DOWN for even values (i.e. cacheSize=4 renders 3 views into the cache.)</code> <br/><br/>On iOS, you can set the pagingControl (bar &amp; dots) to be on top and even overlay the content (rather than outside content). And, you can set its alpha so that it blends with the overlaid content.",
 		
 		"%l_scrollableview_events": "ScrollableView events",
 		"%l_scrollableview_events_image": "<img src='images/scrollableview-events.png' style='margin-top:5px;height:640px;'/>",

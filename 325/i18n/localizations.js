@@ -97,20 +97,17 @@ String.toLocaleString({
 		
 		"%l_pinch": "Pinch",
 		"%l_pinch_image": "<img src='images/pinch.png' style='margin-top:5px;height:300px;float:right;'/>",
-		"%l_ios_pinch": "iOS only (for now)",
+		"%l_ios_pinchV2": "iOS and Android",
 		"%l_zoom": "Zoom only (no rotation)",
 		"%l_pinch_code_image": "<img src='images/pinch-code.png' style='margin-top:5px;height:200px;'/>",
-		"%l_slidenote_pinch": "Pinch support added in 1.8.0.1, Pull request for Android accepted, probably available in Ti 2.1<br>Only zoom supported now, rotation might be added",
+		"%l_slidenote_pinchV2": "iOS pinch support added in 1.8.0.1, Android support in 2.1<br><br>Only pinch to zoom supported now, rotation might be added",
 		
 		
 		"%l_long_press": "Long press",
-		"%l_natively": "Natively supported in 1.8+",
+		"%l_nativelyV2": "Natively supported starting in 1.8+",
 		"%l_sim_by": "For older SDKs, simulate by tracking touchstart and touchend",
-		"%l_fak_android": "<a href='https://gist.github.com/1019105'>https://gist.github.com/1019105</a>",
-		"%l_longpressdeleterow": "<a href='https://gist.github.com/1018107'>https://gist.github.com/1018107</a>",
-		"%l_fak_long_delete": "Long press to delete table row",
 		"%l_keep_mind": "Keep in mind native UI conventions for long presses",
-		"%l_slidenote_long_press": "ative support for long press added in 1.8.0.1<br>Simulate in older SDKs by tracking touchstart and touchend<br>A couple of gists show how you could use this<br>Keep in mind native conventions: e.g. on iOS, magnifies view in some contexts<br>Long press will be natively supported soon, maybe 1.8",
+		"%l_slidenote_long_pressV2": "Native support for long press added in 1.8.0.1<br>Simulate in older SDKs by tracking touchstart and touchend<br><br>Keep in mind native conventions: e.g. on iOS, longpress selects word to look up definition",
 	
 		"%l_acc": "Gyroscope (via Accelerometer)",
 		"%l_ios_android": "iOS and Android natively support gyroscope",

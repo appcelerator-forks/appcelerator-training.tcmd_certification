@@ -128,19 +128,19 @@ var sv = Ti.UI.createScrollView({
 			    		<li class="l_minZoomScale">minZoomScale</li>
 			    		<li class="l_maxZoomScale">maxZoomScale</li>
 			    	</ul><br><br>
-					<div class="slidenote"><div class="l_slidenote_deeper_dive">Set content height to auto and it will scroll just enough to show the content.<br>Set it to a specific size and that's all you'll get. Content could get cut off or scroll could continue well past available content<br>Users can zoom in/out, which you can control</div></div>
+					<p align="left" class="l_ios_scrollviewV2">canCancelEvents to block subview events</p><br>
+					<div class="slidenote"><div class="l_slidenote_deeper_diveV2">Set content height to auto and it will scroll just enough to show the content.<br>Set it to a specific size and that's all you'll get. Content could get cut off or scroll could continue well past available content<br>Users can zoom in/out, which you can control<br/><br/><code>canCancelEvents</code> = boolean = whether the ScrollView would block touch-related events from passing into the view that's being scrolled. For example, to block a scroll event being fired on a child ScrollView, thus stopping the parent from scrolling.</div></div>
 					</section>
 				
 				<section>
 					<h2 class="l_scrollview_diff">ScrollView - Platform Differences</h2>
 					<p align="left" class="l_android_scrollview">Android - scroll horizontal <i>or</i> vertical, not both</p><br>
-					<p align="left" class="l_ios_scrollview">iOS - canCancelEvents to block subview events</p><br>
 					<p align="left" class="l_bounce">iOS - Set 'bounce' at limits of scroll contents:</p>
 					<ul style="width:100%; margin-left:30px;">
 			    		<li class="l_horizontalBounce">horizontalBounce</li>
 			    		<li class="l_verticalBounce">verticalBounce</li>
 			    	</ul>
-					<div class="slidenote"><div class="l_slidenote_scrollview_diff"><code>canCancelEvents</code> = boolean = whether the scollview would block touch-related events from passing into the view that's being scrolled. For example, to block such events passing to an embedded view containing links.<br/><br/>Bounce properties are booleans that turn off or on the bounce effect.</div></div>
+					<div class="slidenote"><div class="l_slidenote_scrollview_diffV2">Bounce properties are booleans that turn off or on the bounce effect.</div></div>
 				</section>
 
 				<section>
@@ -215,7 +215,8 @@ var sav = Ti.UI.createScrollableView({
 				<section>
 					<h2 class="l_scrollableview_diff">ScrollableView - Platform Difference</h2>
 					<p align="left" class="l_ios_scrollableview">iOS - cacheSize (integer) is number of views to prerender</p><br>
-					<div class="slidenote"><div class="l_slidenote_scrollableview_diff">This is about the only significant difference between platforms<br/><br/>This is the number of views that will be pre-rendered to graphics memory prior to being scrolled into view. Number is adjusted per: <code>(currentPage +/- (cacheSize - 1)/2), ROUNDED DOWN for even values (i.e. cacheSize=4 renders 3 views into the cache.)</code> </div></div>
+					<p align="left" class="l_ios_svpaging">iOS - pagingControl alpha and overlay</p><br>
+					<div class="slidenote"><div class="l_slidenote_scrollableview_diffV2"><code>cacheSize</code> is the number of views that will be pre-rendered to graphics memory prior to being scrolled into view. Number is adjusted per: <code>(currentPage +/- (cacheSize - 1)/2), ROUNDED DOWN for even values (i.e. cacheSize=4 renders 3 views into the cache.)</code> <br/><br/>On iOS, you can set the pagingControl (bar &amp; dots) to be on top and even overlay the content (rather than outside content). And, you can set its alpha so that it blends with the overlaid content.</div></div>
 				</section>
 				
 				<section>

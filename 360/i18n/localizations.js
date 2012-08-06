@@ -42,7 +42,7 @@ String.toLocaleString({
 		"%l_keyapi4": "Ti.UI.iOS.CoverFlowView",
 		"%l_keyapi5": "Ti.UI.DashboardView (not in iOS namespace)",
 		"%l_keyapi6": "Ti.UI.iOS.AdView",
-		"%l_slidenote_key_api": "NavigationGroup actually works on iPad and our API should probably be moved out of the iPhone namespace to the iOS namespace<br><br/>As of SK1.8, Toolbar, TabbedBar, and CoverFlowView were moved to iOS namespace<br><br/>DashboardView not there yet, but will probably be moved soon.",
+		"%l_slidenote_key_apiV2": "NavigationGroup is also supported on MobileWeb, but there's a Ti.UI.MobileWeb.NavigationGroup object for that.<br><br/>As of SK1.8, Toolbar, TabbedBar, and CoverFlowView were moved to iOS namespace<br><br/>DashboardView not there yet, but will probably be moved soon.",
 	
 		"%l_ios_nav": "UI: Navigation Group",
 		"%l_ios_nav_image": "<img src='images/ios-nav.png' style='margin-top:5px;height:350px;'/>",

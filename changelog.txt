@@ -1,0 +1,15 @@
+Changelog
+
+[###] refers to the lesson number of the associated change
+
+Update to support Titanium 2.1 / 2.1.1
+===================================================
+[300]	- Added two new slides to demonstrate how the use of local references to proxy properties/methods can speed execution
+[325]	- Pinch gesture now supported on Android. Slide and slidenote updated to reflect this.
+		- Updated Longpress slide to remove outdated code (how to fake longpress using touchstart/end from prior to native support)
+[335]	- ScrollViews on Android now support canCancelEvents. Slide and slide notes updated to reflect that change
+		- ScrollableViews on iOS: you can now set the alpha and overlay of the pagingControl to overlay the content
+[360]	- Updated Key User Interface APIs slide (notes actually) to acknowledge that NavigationGroup is also supported on MobileWeb
+
+[LABS]	- Working on providing all lab exercises as HTML slides to enable easier translations. Not yet finished. But the actual labs students work with are currently, and will remain on the wiki (https://wiki.appcelerator.org/display/td/Home).
+

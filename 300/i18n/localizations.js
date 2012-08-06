@@ -49,6 +49,16 @@ String.toLocaleString({
 		"%l_dont_parse": "Don't parse JSON packaged with your app - put it inline in JavaScript",
 		"%l_slidenote_js_tips": "Defer loading when possible<br>require()'d modules are not re-evaluated, though objects might need to be re-instantiated<br/>Don't use eval() unless you must<br/>parsing JSON is much slower than working with inline JS variables<br/>The DB is generally faster than parsine JSON<br>Older 'hack' of adding objects, functions, and values to Ti.App is no longer recommended. Generally this is disallowed and it can lead to many potentials for problems and crashes.",
 
+		"%l_jsoptimizations1": "JavaScript Optimizations",
+		"%l_jsoptim1": "Avoid trips across the bridge!",
+		"%l_optimcode1": "\nvar table = Ti.UI.createTableView();\nvar data = [];\nfor(var i = 0; i < 10000; i++){\n  // generic object references can be faster\n  data.push({\n      title:'Row #'+i,\n      selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE\n    });\n/* than calls to Ti proxy methods ...\n  data.push(\n    Ti.UI.createTableViewRow({\n      title:'Row #'+i,\n      selectionStyle: Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE\n    });\n  );\n*/\n}\ntable.setData(data);\n\n// References: https://gist.github.com/2989311 \n// and https://gist.github.com/3056032\n ",
+		"%l_slidenote_jsoptimizations1": "Every Ti proxy reference incurs a trip across the bridge, which slows execution. In some cases, you can push execution to the native layer by using generic objects in place of creating explicit objects via proxy methods.",
+
+		"%l_jsoptimizations2": "JavaScript Optimizations",
+		"%l_jsoptim2": "This is even faster!",
+		"%l_optimcode2": "\nvar table = Ti.UI.createTableView();\nvar data = [];\n// create local references to Ti properties/methods\nvar SEL_STYLE_BLUE = Ti.UI.iPhone.TableViewCellSelectionStyle.BLUE;\nfor(var i = 0; i < 10000; i++){\n  data.push({\n      title:'Row #'+i,\n      selectionStyle: SEL_STYLE_BLUE\n    });\n}\ntable.setData(data);\n\n// References: https://gist.github.com/2989311 \n// and https://gist.github.com/3056032\n ",
+		"%l_slidenote_jsoptimizations2": "But every proxy reference counts, so create local references to properties and even methods. See the gists for full details.",
+
 		"%l_multi_contexts": "Multiple contexts can be good",
 		"%l_large_apps": "In very large apps for which deferring script evaluation is critical, multiple contexts are a good choice",
 		"%l_tab": "Tabbed apps are multicontext: one per tab",
