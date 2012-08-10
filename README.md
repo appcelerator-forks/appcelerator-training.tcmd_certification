@@ -20,7 +20,7 @@ These slides use [Crystal Clear](http://commons.wikimedia.org/wiki/Crystal_Clear
 
 ```
 some_folder  
-   - presentation-engine (folder)  
+   - presentation-engine (folder, must be named as shown here!)  
    - tcmd_certification (folder)  
       - index.html  <-- TOC for the whole course  
          - 000 (folder)  
@@ -40,6 +40,17 @@ some_folder
 Press right or left arrow keys to move forward/back in a presentation. Some slides include "vertically nested" sub-slides. Such nested slides will show a down-pointing arrow. Press the down-arrow key to move through those sub-slides.
 
 Press the Spacebar to see a partial overview of the slides in a presentation.
+
+### Downloading a specific version of the slides
+
+We recently started tagging releases of these slides with the corresponding Titanium version. That way, you can download slides for a given version.
+
+**Step 1:** On the main repo page, click Tags.
+
+**Step 2:** Click the download version; you'll get a zip of the repo at that state
+
+**Step 3:** Unzip the archive you downloaded and rename it to **tcmd_certification**
+
 
 # Corrections and Contributions
 
