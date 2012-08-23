@@ -11,9 +11,9 @@ String.toLocaleString({
 		"%l_slidenote_titleslide": "<b>Module time: 60 mins</b><br/>(30 mins teaching, 30 mins for lab)",
 
 		"%l_agenda_title": "Agenda",
-		"%l_agenda1": "Building on a good app",
-		"%l_agenda2": "Developing custom navigation",
-		"%l_agenda3": "Getting the most out of your components",
+		"%l_agenda1": "Standard to Exceptional",
+		"%l_agenda2": "Branding your app",
+		"%l_agenda3": "Custom components",
 		"%l_slidenote_agenda": "In the last lesson, we talked UX -- app flow, ease of use, etc.<br/>In this lesson, we're talking UI -- how your app looks. We'll also look at how you can incorporate your brand into your design.",
 
 		"%l_std_exc": "Standard to Exceptional",

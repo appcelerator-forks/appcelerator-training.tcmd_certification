@@ -11,7 +11,7 @@ String.toLocaleString({
 
 		"%l_agenda_title": "Agenda",
 		"%l_agenda1": "Performance tips and tricks",
-		"%l_agenda2": "Code organization in large projects",
+		"%l_agenda2V2": "Memory management",
 		"%l_agenda3": "Dos and Don'ts",
 		"%l_agenda4": "Lab",
 		"%l_slidenote_agenda": "",
