@@ -34,9 +34,10 @@ String.toLocaleString({
 		
 		"%l_soft_kbd": "Soft Keyboard and Layout Issues",
 		"%l_hiding": "Hiding the keyboard - blur()",
+		"%l_keyboardshowing": "New in 3.0: Ti.App.keyboardframechanged (event)",
 		"%l_suppress": "Suppressing the return key",
 		"%l_preventing": "Preventing the keyboard from covering an input:<ul style='margin-left:50px;width:80%;'><li class='fragment'>Put input fields into a scroll view</li><li class='fragment'>Android only:<pre><code contenteditable>\nTi.UI.createWindow({\n   softInputMode: (Ti.UI.Platform==='android') ?\n      Ti.UI.Android.SOFT_INPUT_ADJUST_PAN : null\n});\n </code></pre></li></ul>",
-		"%l_slidenote_soft_kbd": "<ul><li>Hide keyboard with input.blur() or show with input.focus()</li><li>There's a native Android-only way to hide the keyboard programmatically, see the Kitchen Sink</li><li>No way to tell if the keyboard is showing &mdash; native OS limitation</li><li>Suppressing return &mdash; to get new lines in textarea<br>Add <code>suppressReturn:false</code> to field</li><li>Prevent keyboard covering input:<ul><li>Put input fields into a scroll view</li><li>Android only: use the SOFT_INPUT_ADJUST_PAN constant</li></ul></li></ul>",
+		"%l_slidenote_soft_kbdv2": "<ul><li>Hide keyboard with input.blur() or show with input.focus()</li><li>There's a native Android-only way to hide the keyboard programmatically, see the Kitchen Sink</li><li>New in Ti 3.0, the keyboardframechanged event is fired when the keyboard is displayed</li><li>Suppressing return &mdash; to get new lines in textarea<br>Add <code>suppressReturn:false</code> to field</li><li>Prevent keyboard covering input:<ul><li>Put input fields into a scroll view</li><li>Android only: use the SOFT_INPUT_ADJUST_PAN constant</li></ul></li></ul>",
 		
 		"%l_kbd_cust": "Keyboard Customization",
 		"%l_kbd_type": "Keyboard Type &mdash; <code>field.keyboardType</code>",

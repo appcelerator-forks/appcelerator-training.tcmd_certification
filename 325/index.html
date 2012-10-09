@@ -97,18 +97,20 @@
 				<section>
 					<h2 class="l_lock_orientation">App-level Orientation Support - iOS</h2>
 					<p align="left" class="in_tiapp">In tiapp.xml:</p><br>
-<pre><code contenteditable class="l_lockios_code">
-&lt;iphone>
-    &lt;orientations device="iphone">
-        &lt;orientation>Ti.UI.PORTRAIT&lt;/orientation>
-    &lt;/orientations>
-    &lt;orientations device="ipad">
-        &lt;orientation>Ti.UI.PORTRAIT&lt;/orientation>
-        &lt;orientation>Ti.UI.UPSIDE_PORTRAIT&lt;/orientation>
-        &lt;orientation>Ti.UI.LANDSCAPE_LEFT&lt;/orientation>
-        &lt;orientation>Ti.UI.LANDSCAPE_RIGHT&lt;/orientation>
-    &lt;/orientations>
-&lt;/iphone>
+<pre><code contenteditable class="l_lockios_codev2">
+&lt;ios>
+&lt;plist>
+&lt;dict>
+  &lt;key>UISupportedInterfaceOrientations&lt;/key>
+  &lt;array>
+    &lt;string>UIInterfaceOrientationPortrait&lt;/string>
+    &lt;string>UIInterfaceOrientationPortraitUpsideDown&lt;/string>
+    &lt;string>UIInterfaceOrientationLandscapeLeft&lt;/string>
+    &lt;string>UIInterfaceOrientationLandscapeRight&lt;/string>
+  &lt;/array>
+&lt;/dict>
+&lt;/plist>
+&lt;/ios>
 
 </code></pre>
 					<div class="slidenote"><div class="l_slidenote_lock_orientation">For iOS, set supported orientations in tiapp.xml<br><br/>To lock orientation, just remove the non-supported orientations.<br/><br/>Those listed here are also the orientations in which the splash screens could be displayed.</div></div>

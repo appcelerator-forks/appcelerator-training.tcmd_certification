@@ -90,12 +90,14 @@ String.toLocaleString({
 		"%l_slidenote_android_config": "<ul><li>Activities, services, &amp; content providers not defined in the manifest are not visible to the OS and therefore cannot be started</li><li>Titanium adds these elements, but you could also define or configure them yourself</li><li>Also use the manifest to define hardware needs (orientation, screen size &amp; density, platform version)</li></ul><b>Demo</b><ul><li>Show kitchen sink tiapp.xml &mdash; activity &amp; services configurations</li><li>Via finder, open KS/build/android/AndroidManifest.xml</li><li><intent-filter> describes the capabilities of your activities so the OS knows what type of intents they could respond to</li><li>Explain how you could create a custom manifest (covered in Orientation module)</li></ul>",
 		"%l_android_ui_api": "Android UI APIs",
 		"%l_slidenote_android_ui_api": "",
+
 		"%l_windows": "Windows",
 		"%l_title_bar": "Title bar is only present under specific conditions &mdash; depends on how you open the window",
 		"%l_window_activity": "Windows are generally associated with an Android activity (though not always)",
 		"%l_not_quite": "Not quite as nimble as iOS windows in terms of animation",
 		"%l_windows_url": "<a href='http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/Android_Platform_Overview'>docs.appcelerator.com/titanium/2.0/index.html#!/guide/Android_Platform_Overview</a>",
 		"%l_slidenote_windows": "A 'heavyweight' window is Ti terminology for an Activity<br/><br>You can have a lightweight window that isn't exactly equivalent to an Activity, more like a full-screen view<br><br/>To force a Ti window to be a heavyweight window (an activity), set navBarHidden=true or set fullscreen=true or false and see the URL here for a couple of extra ways",
+
 		"%l_hardware": "Hardware Menu",
 		"%l_menu_options": "Menu of options displayed when hardware button is pressed",
 		"%l_asociated_activity": "Associated with an activity (a Titanium Window)",
@@ -103,13 +105,15 @@ String.toLocaleString({
 		"%l_text_icons": "Can configure text and icons",
 		"%l_demo_menu": "Demo: Menu creation options",
 		"%l_slidenote_hardware": "Demo: KitchenSink &mdash; android_menu1, 2, and 3",
+
 		"%l_android_labels": "Android Labels",
 		"%l_much_ios": "Much more capable than iOS Labels",
 		"%l_styling_props": "Styling properties on creation same cross platform",
-		"%l_android_inline": "ndroid can display inline HTML (basic formatting tags)",
+		"%l_android_inline": "Android can display inline HTML (basic formatting tags)",
 		"%l_android_links": "Android can display links inline (web, tel, maps)",
 		"%l_demo_label": "Demo: Label gymnastics",
-		"%l_slidenote_android_labels": "Demo - KitchenSink: label_linkify.js<br>iOS supports similar auto-linking on text areas",
+		"%l_slidenote_android_labelsv2": "Demo - KitchenSink: label_linkify.js<br>iOS supports similar auto-linking on text areas<br/>Ti 3.0: Android now supports autolinking on textareas",
+
 		"%l_toast": "Toast Notifications",
 		"%l_toast_image": "<img src='images/toast.png' style='margin-top:5px;height:380px;float:right;'/>",
 		"%l_simple_txt": "Simple text display over all activities",
@@ -117,12 +121,13 @@ String.toLocaleString({
 		"%l_render_ios": "Rendering will be different based on OS version and skin",
 		"%l_demo_notif": "Demo: Notification",
 		"%l_slidenote_toast": "Demo: KitchenSink Platform>Notifications<br>And see notification.js<br>The offsetX and offSetY coordinates are relative to the default location for the notification<br>and corresponds to the center point of the notification bubble",
+
 		"%l_hijack": "Hijacking the Back Button",
 		"%l_override_back": "Sometimes you want to override back button for your activity to provide better behavior",
 		"%l_wizard": "Example: Wizard interface, where you want 'back' to go back to a previous state in the UI",
 		"%l_careful": "Careful about this!  Users expect back to go back to another activity (most of the time)",
 		"%l_demo_back": "Demo: back button event",
-		"%l_slidenote_hijack": "<ul><li><b>Demo</b>AndroidBackDemo project on the TCMD github repository<br>https://github.com/appcelerator-training/tcmd_certification/blob/master/workspace/AndroidBackDemo.zip</li><li>View hijacks the back button &amp; closes<br>Then restores it so you can close the window</li><li>In the event listener, you can monitor the other hardware buttons in the form:<br>android:camera<br>android:home</li></ul>",
+		"%l_slidenote_hijackv2": "<ul><li><b>Demo</b>AndroidBackDemo project on the TCMD github repository<br>https://github.com/appcelerator-training/tcmd_certification/blob/master/workspace/AndroidBackDemo.zip</li><li>View hijacks the back button &amp; closes<br>Then restores it so you can close the window</li><li>In the event listener, you can monitor the other hardware buttons in the form:<br/>androidcamera<br>androidhome (colon removed in Ti 3.0, e.g. was android:camera)</li></ul>",
 		
 		"%l_non_visual_api": "Non-Visual APIs",
 		"%l_slidenote_non_visual_api": "",

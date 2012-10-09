@@ -294,7 +294,7 @@ tableview.index = index;
 
 </code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/filters.png'/></li>
 					</ul>
-					<div class="slidenote"><div class="l_slidenote_ios_only_features">iOS only properties (table.editable = true) will be ignored on Android<br>You listen for the delete/move events and take action based on that<br/>They're called filters, but you implement them with the <code>index</code> property.</div></div>
+					<div class="slidenote"><div class="l_slidenote_ios_only_features">iOS only properties (table.editable = true) will be ignored on Android<br><br/>You can use swipe to delete (swiping reveals the delete button) or "normal" in which the minus-sign button shown here is displayed.<br><br/>You listen for the delete/move events and take action based on that<br/><br>They're called filters, but you implement them with the <code>index</code> property.</div></div>
 				</section>
 				
 				<section>
@@ -308,7 +308,7 @@ table.addEventListener('click', function(e){
 					<ul>
 						<lh style="list-style:none;" class="l_keyevents">Key Events</lh>
 						<li class="l_tableevents1">click/double-click</li>
-						<li class="l_tableevents2">scroll/scrollEnd</li>
+						<li class="l_tableevents2">scroll/scrollend</li>
 						<li class="l_tableevents3">touchstart, touchmove, touchend, touchcancel</li>
 						<li class="l_tableevents4">swipe</li>
 						<li class="l_tableevents5">move / delete (iOS)</li>
@@ -328,7 +328,8 @@ table.addEventListener('click', function(e){
 					</div>
 					<div class="slidenote"><div class="l_slidenote_table_events">Generally, you'll handle table events on the table rather than the rows or children<br>Determine which row clicked by using the e.row property instead<br>Titanium 1.8 adds support for native long-press event,gist workaround useful for older SDKs</div></div>
 				</section>
-				
+
+<!--			
 				<section>
 					<h2 class="l_event_extras">Event Extras</h2>
 					<p align="left" class="l_scroll_events">Scroll Events - contentOffset (iOS only)</p><br>
@@ -337,7 +338,7 @@ table.addEventListener('click', function(e){
 					https://gist.github.com/810391</p><br>
 					<div class="slidenote"><div class="l_slidenote_event_extras">Use these events to create dynamic scrolling, also called continuous or infinite scrolling<br>See these gists as well as the Q&amp;A forums for more info on creating cross-platform infinite scrolling solutions</div></div>
 					</section>
-					
+-->					
 				<section>
 					<h1 class="l_qa">Q&amp;A</h1>
 					<div class="slidenote"><div class="l_slidenote_qa"></div></div>

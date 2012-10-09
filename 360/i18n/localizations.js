@@ -180,7 +180,8 @@ String.toLocaleString({
 		"%l_background1": "Extend runtime for limited duration",
 		"%l_background1": "Long-running geolocation or music playback",
 		"%l_background_code": "\nvar svc = Ti.App.iOS.registerBackgroundService({\n   url: 'bg.js'\n});\n ",
-		"%l_slidenote_key_api_app": "This JS will run when the app is paused (home button clicked).<br><br/>Services typically run for 10 mins or until iOS shuts them down.<br/><br/>Useful to finish a download, cache data, etc.",
+		"%l_background_tiappxml": "\n&lt;ios>\n&lt;plist>\n&lt;dict>\n  &lt;key>UIBackgroundModes&lt;/key>\n  &lt;array>\n    &lt;string>audio&lt;/string>\n    &lt;string>location&lt;/string>\n    &lt;string>voip&lt;/string>\n    &lt;string>newsstand-content&lt;/string>\n    &lt;string>external-accessory&lt;/string>\n    &lt;string>bluetooth-central&lt;/string>\n  &lt;/array>\n&lt;/dict>\n&lt;/plist>\n&lt;/ios>\n ",
+		"%l_slidenote_key_api_appv2": "This JS will run when the app is paused (home button clicked).<br><br/>Services typically run for 10 mins or until iOS shuts them down.<br/><br/>Useful to finish a download, cache data, etc.<br/><br/>For a BackgroundService to run for more than a limited period of time, the application must declare one or more of these background modes.",
 
 
 		"%l_localnotification": "Local Notifications",

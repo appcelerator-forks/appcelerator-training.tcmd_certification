@@ -25,7 +25,8 @@ String.toLocaleString({
 
 		"%l_lock_orientation": "App-level Orientation Support - iOS",
 		"%in_tiapp": "In tiapp.xml:",
-		"%l_lock_orientation_image": "<img src='images/lock-orientation.png' style='margin-top:5px;height:350px;'/>",
+		"%l_lockios_codev2": "\n&lt;ios>\n&lt;plist>\n&lt;dict>\n  &lt;key>UISupportedInterfaceOrientations&lt;/key>\n  &lt;array>\n    &lt;string>UIInterfaceOrientationPortrait&lt;/string>\n    &lt;string>UIInterfaceOrientationPortraitUpsideDown&lt;/string>\n    &lt;string>UIInterfaceOrientationLandscapeLeft&lt;/string>\n    &lt;string>UIInterfaceOrientationLandscapeRight&lt;/string>\n  &lt;/array>\n&lt;/dict>\n&lt;/plist>\n&lt;/ios>\n ",
+
 		"%l_slidenote_lock_orientation": "For iOS, set supported orientations in tiapp.xml<br><br/>To lock orientation, just remove the non-supported orientations.<br/><br/>Those listed here are also the orientations in which the splash screens could be displayed.",
 		
 		

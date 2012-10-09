@@ -538,7 +538,26 @@ var svc = Ti.App.iOS.registerBackgroundService({
 });
 
 </code></pre>
-					<div class="slidenote"><div class="l_slidenote_background">This JS will run when the app is paused (home button clicked).<br><br/>Services typically run for 10 mins or until iOS shuts them down.<br/><br/>Useful to finish a download, cache data, etc.</div></div>
+<pre style="float:right;width:65%;"><code contenteditable class="l_background_tiappxml">
+&lt;ios>
+&lt;plist>
+&lt;dict>
+  &lt;key>UIBackgroundModes&lt;/key>
+  &lt;array>
+    &lt;string>audio&lt;/string>
+    &lt;string>location&lt;/string>
+    &lt;string>voip&lt;/string>
+    &lt;string>newsstand-content&lt;/string>
+    &lt;string>external-accessory&lt;/string>
+    &lt;string>bluetooth-central&lt;/string>
+  &lt;/array>
+&lt;/dict>
+&lt;/plist>
+&lt;/ios>
+ 
+</code></pre>
+
+					<div class="slidenote"><div class="l_slidenote_backgroundv2">This JS will run when the app is paused (home button clicked).<br><br/>Services typically run for 10 mins or until iOS shuts them down.<br/><br/>Useful to finish a download, cache data, etc.<br/><br/>For a BackgroundService to run for more than a limited period of time, the application must declare one or more of these background modes.</div></div>
 				</section>
 
 				<section>
