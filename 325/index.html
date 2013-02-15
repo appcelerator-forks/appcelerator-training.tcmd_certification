@@ -85,14 +85,35 @@
 						<div class="l_slidenote_agenda">In this module, we'll discuss how to deal with device orientation as well as how to integrate gestures other than taps into your app.</div></div>
 				</section>
 
+				<!-- - - - - - - - - - - - - - - - - NEW TOPIC - - - - - - - - - - - - - - - - -->
 				<section>
-					<h2 class="l_orientation">Device orientation</h2>
+					<h1 class="topicH1 l_topic"><img src="../images/topic.png"/>Topic</h1>
+					<h5 style="clear:both;" class="l_orientationtopic">Orientation</h5>
+					<div class="slidenote"><div class="l_slidenote_orientationtopic"></div></div>
+				</section>
+
+				<section>
+					<h2 style="" class="l_orientsupport">Orientation Support</h2>
 					<p class="l_orientation_image"><img src="images/orientation.png" style="margin-top:5px;height:350px;float:right;"/></p>
-					<p align="left" class="l_appsupport">App-level orientation support</p><br>
-					<p align="left" class="l_fix_orientation">Fixing orientation per window</p><br>
-					<p align="left" class="l_handle_orientation">Handling orientation events</p><br>
-					<div class="slidenote"><div class="l_slidenote_orientation">Multiple levels of orientation support:<br><ul><li>Set app-level options to control splash screen and whole-app orienation support</li><li>Setting a fixed orientation for specific screens within your app (e.g. one screen in portrait and another in landscape, but those are locked)</li><li>Actively updating your app's UI based on the current orientation by handling orientation events</li></ul><br>Per Apple's HIG on iPhone, either:<ul><li>Lock orientation, or</li><li>Support portrait, landscape left & right, but not upside down (to prevent upside down phone during incoming call)</li></ul><br>On iPad, you should support all orientations</div></div>
-					</section>
+					<ul style="width:60%;float:left;">
+						<li class="l_orientsupport1">Fixing orientation for the whole app</li>
+						<li class="l_orientsupport2">Setting supported orientation for each window</li>
+						<li class="l_orientsupport3">Reacting to orientation changes dynamically</li>
+					</ul>
+					<div class="slidenote"><div class="l_slidenote_orientsupport"></div></div>
+				</section>
+
+				<section>
+					<h2 style="" class="l_applevel">App-level Orientation</h2>
+					<ul style="width:80%;">
+						<li class="l_applevel1">App-level settings either fix orientation for the entire app</li>
+						<li class="l_applevel2">Or specify the possible orientations that the app supports</li>
+						<li class="l_applevel3">Controls splash screen orientation (on tablets)</li>
+						<li>Techniques differ for iOS &amp; Android</li>
+					</ul>
+					<div class="slidenote"><div class="l_slidenote_applevel"></div></div>
+				</section>
+
 					
 				<section>
 					<h2 class="l_lock_orientation">App-level Orientation Support - iOS</h2>
@@ -104,6 +125,10 @@
   &lt;key>UISupportedInterfaceOrientations&lt;/key>
   &lt;array>
     &lt;string>UIInterfaceOrientationPortrait&lt;/string>
+  &lt;/array>
+  &lt;key>UISupportedInterfaceOrientations~ipad&lt;/key>
+  &lt;array>
+    &lt;string>UIInterfaceOrientationPortrait&lt;/string>
     &lt;string>UIInterfaceOrientationPortraitUpsideDown&lt;/string>
     &lt;string>UIInterfaceOrientationLandscapeLeft&lt;/string>
     &lt;string>UIInterfaceOrientationLandscapeRight&lt;/string>
@@ -111,9 +136,8 @@
 &lt;/dict>
 &lt;/plist>
 &lt;/ios>
-
 </code></pre>
-					<div class="slidenote"><div class="l_slidenote_lock_orientation">For iOS, set supported orientations in tiapp.xml<br><br/>To lock orientation, just remove the non-supported orientations.<br/><br/>Those listed here are also the orientations in which the splash screens could be displayed.</div></div>
+					<div class="slidenote"><div class="l_slidenote_lock_orientation2">You specify all the orientations your app <em>could take</em> in tiapp.xml<br><br/>These new values replace the &lt;orientations> tag from pre-Ti2.1.<br/><br/>Use the ~iphone or ~ipad suffix to target specific platforms or leave off to apply to all.<br/><br/>These settings also control the splash screen orientations..</div></div>
 				</section>
 				
 				<section>
@@ -152,23 +176,39 @@
 				</section>
 				
 				<section>
-					<h2 class="l_fixed_orientation">Fixing Orientation per Window</h2>
+					<h2 class="">Setting Orientation per Window</h2>
 					<p align="left" class="l_window_modes">Window Orientation Modes</p>
 					<p align="left" class="l_supported_val">Supported values include:</p>
 					<ul style="width:100%; margin-left:30px;">
 			    		<li class="l_portrait">PORTRAIT / UPSIDE_PORTRAIT</li>
 						<li class="l_landscape">LANDSCAPE_LEFT / LANDSCAPE_RIGHT</li>
-						<li class="l_face">FACE_UP / FACE_DOWN</li>
 			    	</ul>
-<pre><code contenteditable class="l_fixedorient_code">
+<pre><code contenteditable class="">
+// traditional API code
 var win = Ti.UI.createWindow({
-   /* iOS - define here */
    orientationModes: [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT]
 });
-/* Android, define here */
-win.orientationModes = [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT];
+
+/* With Alloy, can define in the TSS file */
+"#window": {
+	orientationModes: [Ti.UI.PORTRAIT, Ti.UI.LANDSCAPE_LEFT]
+}
 </code></pre>
 					<div class="slidenote"><div class="l_slidenote_fixed_orientation">You can set orientation on a per window basis within your app<br>The older Ti.UI.orientation property technique is deprecated and should not be used.</div></div>
+				</section>
+
+				<section>
+					<h2 style="" class="l_winorient">Change a Window's Orientation</h2>
+					<pre style=""><code contenteditable>
+$.orient.addEventListener('click', function() {
+  if(Titanium.UI.orientation == Ti.UI.PORTRAIT) {
+    Titanium.UI.orientation = Ti.UI.LANDSCAPE_LEFT;
+  } else {
+    Titanium.UI.orientation = Ti.UI.PORTRAIT;
+  }
+})
+$.index.open();					</code></pre>
+					<div class="slidenote"><div class="l_slidenote_winorient"></div></div>
 				</section>
 				
 				<section>
@@ -201,11 +241,14 @@ Ti.Gesture.addEventListener('orientationchange', function(e) {
 					<p align="left" class="l_dont_forget">Don't forget the soft keyboard</p>
 					<div class="slidenote"><div class="l_slidenote_handling_or"><ul><li>Unless your UI dictates otherwise, best-practice is to actively react to orientation changes</li><li>Self-contained, self-updating is same as we use in TiBountyHunter with the tableview where it 'knows' how to update itself &mdash; Components listen for a global orientation event and update themselves</li><li>You might move, rotate, swap elements as orientation changes</li><li>Take advantage &mdash; move components to logical location, change size & shape, show different content (as in the Jamie Oliver recipe application that shows longer how-to info in landscape and short text & ingredients in portrait)</li><li>Soft keyboard &mdash; might cover a lot more of your UI</li></ul></div></div>
 					</section>
-					
+
+				<!-- - - - - - - - - - - - - - - - - NEW TOPIC - - - - - - - - - - - - - - - - -->
 				<section>
-					<h1 class="l_gestures">Gestures</h1>
+					<h1 class="topicH1 l_topic"><img src="../images/topic.png"/>Topic</h1>
+					<h5 style="clear:both;" class="l_gestures">Gestures</h5>
 					<div class="slidenote"><div class="l_slidenote_gestures"></div></div>
 				</section>
+
 
 				<section>
 					<h2 class="l_gestures">Gestures</h2>
@@ -267,9 +310,11 @@ Ti.Gesture.addEventListener('orientationchange', function(e) {
 	
 				<section>
 					<h2 class="l_long_press">Long press</h2>
-					<p align="left" class="l_nativelyV2">Natively supported starting in 1.8+</p><br>
-					<p align="left" class="l_sim_by">For older SDKs, simulate by tracking touchstart and touchend</p><br/>
-					<p align="left" class="l_keep_mind">Keep in mind native UI conventions for long presses</p><br>
+					<ul style="width:80%;">
+						<li class="l_longpress1">Supported by most UI elements</li>
+						<li class="l_longpress2">Keep in mind native UI conventions for long presses</li>
+						<li class="l_longpress3">Native support since 1.8, simulate with touchstart/touchend for older SDKs</li>
+					</ul>
 					<div class="slidenote"><div class="l_slidenote_long_pressV2">Native support for long press added in 1.8.0.1<br>Simulate in older SDKs by tracking touchstart and touchend<br><br>Keep in mind native conventions: e.g. on iOS, longpress selects word to look up definition</div></div>
 					</section>
 
@@ -279,7 +324,6 @@ Ti.Gesture.addEventListener('orientationchange', function(e) {
 					<p align="left" class="l_ti_apis">Titanium APIs don't support it currently</p><br>
 					<p align="left" class="l_not_all">Not all devices include necessary gyro hardware</p><br>
 					<p align="left" class="l_approx">Approximation: Use the accelerometer to track pitch, roll, and yaw changes</p><br>
-					<p align="left" class="l_ki_demo">Kitchen Sink demo</p>
 					<div class="slidenote"><div class="l_slidenote_acc">Android and iOS support gyroscope APIs to track rotational changes<br>But not currently supported in Titanium APIs<br>Use linear acceleration from accelerometer as workaround<br>Detect 3-axis change values and will probably need some good math to get accurate correspondence to pitch, roll, yaw<br><b>Demo must be run on a device</b><br>Phone tab > Accelerometer<br>Resources/examples/accelerometer.js</div></div>
 					</section>
 					

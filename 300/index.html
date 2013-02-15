@@ -110,23 +110,23 @@
 					<h2 class="l_when_does">When Does Titanium Clean Up?</h2>
 					<p align="left" class="l_window_closed">When a window is closed (UI is cleaned up)</p><br>
 					<p align="left" class="l_var_null">When a variable holding a proxy object is set to null</p><br>
+					<p align="left" class="l_children">Nulling a container (window or view) can clean up its children &mdash; if no external references remain</p><br>
 					<p align="left" class="l_note">Note: Showing/hiding views will improve DRAW SPEED, but memory will still be in use</p>
 					<p align="center" class="l_vimeo_url">http://vimeo.com/29804284 (Codestrong - Memory leaks talk)</p>
 					<div class="slidenote"><div class="l_slidenote_when_does">Titanium needs to signal the native code when to release objects. It does so when:<br><ul><li>A window is closed; the object it contains are generally removed and memory freed</li><li>You manually set a reference to null (proxy objects are the JS objects that represent the native equivalent)</li></ul><br>Use DDMS and Instruments to monitor memory usage, see when &amp; where you're running out of memory<br>Then you can take manual actions to clean up<br><br>Optional: Demo AppLeak project and fixing memory leaks now</div></div>
 				</section>
 				
+				<!-- - - - - - - - - - - - - - - - - NEW TOPIC - - - - - - - - - - - - - - - - -->
 				<section>
-					<h2 class="l_displ_slow">Window displaying Slowly?</h2>
-					<h2 class="l_app_slow">Application startup too slow?</h2>
-					<h2 class="l_js_slow fragment">JS evaluation is slow</h2>
-					<h2 class="l_defer_js fragment">Defer JS loading!</h2>
-					<div class="slidenote"><div class="l_slidenote_displ_slow">Slow window open time is a common problem especially on Android<br/><br/>App start-up time can be slow, especially on Android<br/><br/>Rhino is slower than JavaScript Core/V8, but should be needed for only old (pre 2.2) devices, so go with V8 in most cases<br><br/>CommonJS helps -- dependencies can be loaded when needed and are evaluated only once.</div></div>
+					<h1 class="topicH1 l_topic"><img src="../images/topic.png" class="noborder"/>Topic</h1>
+					<h5 style="clear:both;" class="l_perftips">Performance Tips</h5>
+					<div class="slidenote"><div class="l_slidenote_perftips"></div></div>
 				</section>
-				
+
 				<section>
 					<h2 class="l_js_tips">JavaScript loading tips</h2>
 					<p align="left" class="l_only_include">Defer loading a script until it is <em>actually needed</em></p><br>
-					<p align="left" class="l_ti_include">require() is best, Ti.include() is okay, but &ldquo;eval() is evil&rdquo;</p><br>
+					<p align="left" class="l_ti_includeX">require() is best, Ti.include() is okay, but &ldquo;eval() is evil&rdquo;<br/>require() is evaluated once and cached</p><br>
 					<p align="left" class="l_dont_parse">Don't parse JSON packaged with your app - put it inline in JavaScript</p>
 					<div class="slidenote"><div class="l_slidenote_js_tips">Defer loading when possible<br>require()'d modules are not re-evaluated, though objects might need to be re-instantiated<br/>Don't use eval() unless you must<br/>parsing JSON is much slower than working with inline JS variables<br/>The DB is generally faster than parsine JSON<br>Older 'hack' of adding objects, functions, and values to Ti.App is no longer recommended. Generally this is disallowed and it can lead to many potentials for problems and crashes.</div></div>
 				</section>
@@ -184,16 +184,6 @@ table.setData(data);
 					<div class="slidenote"><div class="l_slidenote_jsoptimizations2">But every proxy reference counts, so create local references to properties and even methods. See the gists for full details.</div></div>
 				</section>
 
-				
-				<section>
-					<h2 class="l_multi_contexts">Multiple contexts can be good</h2>
-					<p align="left" class="l_large_apps">In very large apps for which deferring script evaluation is critical, multiple contexts are a good choice</p><br>
-					<p align="left" class="l_tabs">Tabbed apps are multicontext: one per tab</p><br>
-					<p align="left" class="l_level_critical">With multi contexts, app level events are critical</p><br>
-					<p align="left" class="l_downside">Downside - dependencies may be evaluated multiple times</p><br>
-					<div class="slidenote"><div class="l_slidenote_multi_contexts">With multi-context, the code &amp; isn't evaluated and objects aren't instantiated until the user opens that window. The OS can also manage instantiated, but out-of-context resources such as a tab that was opened but isn't active</div></div>
-				</section>
-				
 				
 				<section>
 					<h2 class="l_tableview_per">Table View Performance</h2>

@@ -98,49 +98,58 @@
 
 <table>
 	<tr>
-		<td colspan="2" class="labinstructions l_labstep1">1. Download the starting point files from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/350.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/350.zip</a>. Extract the archive, then import it into Studio as an existing Titanium project.</td>
+		<td colspan="2" class="labinstructions l_labstep1">1. Create a new Titanium Alloy project, giving it a name and app ID of your choice.</td>
 	</tr>
 	<tr>
 		<td class="tdfiller"><!-- leave empty--></td>
 		<td class="labexplanations l_labstepexplanation1"></td>
 	</tr>
 	<tr>
-		<td colspan="2" class="labinstructions l_labstep2">2. In app.js, modify the Window object to include the Android-specific property that will scroll the UI if the soft keyboard covers the textarea field.</td>
+		<td colspan="2" class="labinstructions l_labstep2">2. In the index view, add a label with the text "Enter some text and share". Add a text area and a button. Give each a unique ID.</td>
 	</tr>
 	<tr>
 		<td class="tdfiller"><!-- leave empty--></td>
 		<td class="labexplanations l_labstepexplanation2"></td>
 	</tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep3">3. Where indicated by the comments, add the Android-specific statement to hide the soft keyboard when the button is clicked. (Don't use blur().)</td>
+	<td colspan="2" class="labinstructions l_labstep3">3. In the index style file, set the background image for the window to be a medium gray. Then set the Android window property necessary to scroll the window out of the way when the soft keyboard might cover an input field. Also, set the app to exit when this window closes. Set the heading label to be 20dp white, bold text 5dp from the top of the window. Set your text area to have suitable hint text, be 90% of the width and 120dp tall, 35dp from the top of the window. Finally, set your button to be 175dp from the top, 140 wide by 40 dp tall with a title of 'Share It!'.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation3"></td>
 </tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep4">4. Create the intent, along with its two extra fields to pass the text entered in the message box. Then, using a try/catch block, start the activity and pass the intent.</td>
+	<td colspan="2" class="labinstructions l_labstep4">4. In the index controller, define the click event listener for the share it button. Use the Android-specific method for hiding the soft keyboard. Then, create the intent, along with its two extra fields to pass the text entered in the message box. Then, using a try/catch block, start the activity and pass the intent. If there's an error, use a toast notification to inform the user that there are no sharing apps installed.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation4"></td>
 </tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <tr>
-	<td colspan="2" class="labinstructions l_labstep5">5. For best results, connect your Android device. Then, build and deploy the app to your phone. If you don't have an Android device, build and run your app in the emulator.</td>
+	<td colspan="2" class="labinstructions l_labstep5">5. In the tiapp.xml, modify the &lt;android tag and add the tags necessary to set the tool level to 10 or higher. Then, add the tags to prefer that the app be installed to the external storage location. </td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation5"></td>
 </tr>
+
+<tr>
+	<td colspan="2" class="labinstructions l_labstep6">6. For best results, connect your Android device. Then, build and deploy the app to your phone. If you don't have an Android device, build and run your app in the emulator. Test the functionality of your app and the intent passing mechanism.</td>
+</tr>
+<tr>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation6"></td>
+</tr>
 </table>
 
 <h2 class="l_summary">Summary</h2>
-<p class="l_summarypara">In this lab, you </p>
+<p class="l_summarypara">In this lab, you used Android-specific techniques within a Titanium app.</p>
 
 <h2 class="l_resources">Resources</h2>
 
 <ul>
-	<li class="l_resources1">Finished code: <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/350_finished.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/350_finished.zip</a></li>
+	<li class="l_resources1">Finished code: <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/atmd_labs/Finished/350_android.zip'>S3: 350_android (finished)</a></li>
 	<li class="l_resources2">See the <a href='http://developer.android.com/reference/android/content/Intent.html'>Android developer docs</a> for information on Intents and their options</li>
 </ul>
 

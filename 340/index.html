@@ -98,15 +98,15 @@
 				<section>
 					<h2 class="l_basic">Basic Animation</h2>
 					<p align="left" class="l_for_simple">For simple property animations, we use obj.animate()</p>
-<pre><code contenteditable class="l_basic_code">
-var circle = Ti.UI.createView();
-circle.animate({
+<pre><code contenteditable class="">
+// $.circle is a Titanium View
+$.circle.animate({
    top: 200,
    right: 30,
    duration: 500
 }, function() {
-   // called when anim is complete
-   circle.animate({
+   // optional callback, invoked when anim is complete
+   $.circle.animate({
       top: 0,
       left: 0,
       duration: 500
@@ -120,15 +120,15 @@ circle.animate({
 				<section>
 					<h2 class="l_basicobj">Basic Animation With Object</h2>
 					<p align="left" class="l_reuse">To reuse animations, create an object which can be passed to animate():</p><br>
-<pre><code contenteditable class="l_basicobj_code">
-var circle = Ti.UI.createView();
+<pre><code contenteditable class="">
+// $.circle is a Titanium View
 var a = Ti.UI.createAnimation({
    backgroundColor: '#ff0000',
    autoreverse: true,
    repeat: 3
 });
 a.duration = 1000;
-circle.animate(a);
+$.circle.animate(a);
 
 </code></pre>
 					<div class="slidenote"><div class="l_slidenote_basicobj"><ul><li>Animation object lets you apply the same animation to multiple elements.</li><li>Set properties at creation, or after the fact</li><li>autoreverse and repeat properties can be used without the animation object also (w/inline definition as on previous slide)</li></ul></div>
@@ -157,9 +157,8 @@ circle.animate(a);
 				
 				<section>
 					<h2 class="l_2d_matrix_example">2D Matrix Animation Example</h2>
-<pre><code contenteditable class="l_2d_matrix_code">
-// our view to animate
-var cloud = Ti.UI.createImageView({image: 'cloud.png' });
+<pre><code contenteditable class="">
+// $.cloud is an ImageView to animate
 
 // a 2D matrix object
 var twoD = Ti.UI.create2DMatrix();
@@ -174,7 +173,7 @@ a.autoreverse = true;
 a.repeat = 3;
 
 // set it all in motion
-cloud.animate(a);
+$.cloud.animate(a);
 
 </code></pre>
 					<div class="slidenote"><div class="l_slidenote_2d_matrix_example"><ul><li>We don't have to worry about the matrix math</li><li>We create a matrix object and use one of its methods, such as rotate or scale</li></ul></div>
@@ -193,9 +192,8 @@ cloud.animate(a);
 				
 				<section>
 					<h2 class="l_3d_matrix_example">3D Matrix Animation Example</h2>
-<pre><code contenteditable class="l_3d_matrix_code">
-// our view to animate
-var cloud = Ti.UI.createImageView({image: 'cloud.png' });
+<pre><code contenteditable class="">
+// $.cloud is an ImageView to animate
 
 // a 3D matrix object -- note namespace!
 var threeD = Ti.UI.iOS.create3DMatrix();
@@ -212,7 +210,7 @@ a.autoreverse = true;
 a.repeat = 3;
 
 // set it all in motion
-cloud.animate(a);
+$.cloud.animate(a);
 
 </code></pre>
 					<div class="slidenote"><div class="l_slidenote_3d_matrix_example"><ul><li>Titanium.UI.iOS.3DMatrix as of 1.8 (was Ti.UI.3DMatrix earlier)</li><li>Set up 3D transformations in much the same way as 2D</li><li>Extra values in methods represent coordinates in 3-dimensional space (x, y, z)</li><li><code>threeD.m34</code> represents an access to an actual matrix location and value (e.g. row 3, column 4)</li></ul></div>
@@ -250,6 +248,38 @@ cloud.animate(a);
 					<p align="left" class="l_drag">Drag and Drop</p>
 					<div class="slidenote"><div class="l_slidenote_common_anim"><ul><li>Demo A: KitchenSink – Base UI tab, Animations > Basic</li><ul><li>file is: basic_animation.js</li></ul><li><Demo B: show the touchmove event listener</li><li>drop part would be the callback function: you'd determine the x/y and bounds of the dragged object, if it were in the right spot per your app's UI, then you'd take the appropriate actions</li><li>Drag &amp; drop is not an automated / built-in function. You have to manually build that functionality</li></ul></div></div>
 				</section>	
+
+				<section>
+					<h2 style="" class="l_alloyanim">Alloy Animation Built-ins</h2>
+					<ul style="width:80%;">
+						<li class="l_alloyanim1">Pre-built animation effects</li>
+						<li class="l_alloyanim2"><code>require()</code> in the animation library, then call on your View(s)</li>
+						<li class="l_alloyanim3">crossFade(), fadeAndRemove(), fadeIn(), and more</li>
+					</ul>
+					<p class="l_alloyanimpara" style="font-size: 0.8em;margin-top:50px;">See https://github.com/appcelerator/alloy/blob/master/Alloy/builtins/animation.js</p>
+					<div class="slidenote"><div class="l_slidenote_alloyanim"></div></div>
+				</section>
+
+				<section>
+					<h2 style="" class="l_alloyanimexample">Example</h2>
+					<pre style=""><code contenteditable>
+// in the view controller
+
+// require in the animation built-in
+var animation = require('alloy/animation');
+
+$.loginButton.addEventListener('click', function() {
+  var loginFailed = validate(); // contrived example
+  if(loginFailed) {
+    animation.shake($.loginButton, 30); // &larr; here's the animation
+  } else {
+    // do whatever
+  }
+});
+
+					</code></pre>
+					<div class="slidenote"><div class="l_slidenote_alloyanimexample"></div></div>
+				</section>
 				
 				<section>
 					<h1 class="l_qa">Q&amp;A</h1>

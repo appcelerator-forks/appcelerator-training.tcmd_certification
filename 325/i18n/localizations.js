@@ -25,9 +25,9 @@ String.toLocaleString({
 
 		"%l_lock_orientation": "App-level Orientation Support - iOS",
 		"%in_tiapp": "In tiapp.xml:",
-		"%l_lockios_codev2": "\n&lt;ios>\n&lt;plist>\n&lt;dict>\n  &lt;key>UISupportedInterfaceOrientations&lt;/key>\n  &lt;array>\n    &lt;string>UIInterfaceOrientationPortrait&lt;/string>\n    &lt;string>UIInterfaceOrientationPortraitUpsideDown&lt;/string>\n    &lt;string>UIInterfaceOrientationLandscapeLeft&lt;/string>\n    &lt;string>UIInterfaceOrientationLandscapeRight&lt;/string>\n  &lt;/array>\n&lt;/dict>\n&lt;/plist>\n&lt;/ios>\n ",
+		"%l_lockios_codev2": "\n&lt;ios>\n&lt;plist>\n&lt;dict>\n  &lt;key>UISupportedInterfaceOrientations&lt;/key>\n  &lt;array>\n    &lt;string>UIInterfaceOrientationPortrait&lt;/string>\n  &lt;/array>\n  &lt;key>UISupportedInterfaceOrientations~ipad&lt;/key>\n  &lt;array>\n    &lt;string>UIInterfaceOrientationPortrait&lt;/string>\n    &lt;string>UIInterfaceOrientationPortraitUpsideDown&lt;/string>\n    &lt;string>UIInterfaceOrientationLandscapeLeft&lt;/string>\n    &lt;string>UIInterfaceOrientationLandscapeRight&lt;/string>\n  &lt;/array>\n&lt;/dict>\n&lt;/plist>\n&lt;/ios>\n ",
 
-		"%l_slidenote_lock_orientation": "For iOS, set supported orientations in tiapp.xml<br><br/>To lock orientation, just remove the non-supported orientations.<br/><br/>Those listed here are also the orientations in which the splash screens could be displayed.",
+		"%l_slidenote_lock_orientation2": "You specify all the orientations your app <em>could take</em> in tiapp.xml<br><br/>These new values replace the &lt;orientations> tag from pre-Ti2.1.<br/><br/>Use the ~iphone or ~ipad suffix to target specific platforms or leave off to apply to all.<br/><br/>These settings also control the splash screen orientations.",
 		
 		
 		"%l_lock_orientation_android": "App-level Orientation Support - Android",

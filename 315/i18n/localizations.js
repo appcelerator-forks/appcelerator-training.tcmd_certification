@@ -66,8 +66,6 @@ String.toLocaleString({
 		"%l_cust3": "Returns the selected rating value",
 		"%l_cust4": "Has method to set current value",
 		
-		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/315+-+Custom+UI+Components'>wiki.appcelerator.org/display/td/315+-+Custom+UI+Components</a>",
-		"%l_slidenote_lab_goals": "In this lab, you will create a custom star-rating component. It will display from 1 to N stars and permit the user to click a star to select a rating. It will have a method to set the current value.",
 
 		"%l_lab": "Lab",
 		"%l_slidenote_lab": "",
@@ -137,9 +135,6 @@ String.toLocaleString({
 		"%l_cust3": "Devuelve el valor nominal seleccionado",
 		"%l_cust4": "Tiene un método para establecer el valor actual",
 		
-		"%l_labURL": "<a href='https://wiki.appcelerator.org/display/td/315+-+Custom+UI+Components'>wiki.appcelerator.org/display/td/315+-+Custom+UI+Components</a>",
-		"%l_slidenote_lab_goals": "In this lab, you will create a custom star-rating component. It will display from 1 to N stars and permit the user to click a star to select a rating. It will have a method to set the current value.",
-
 		"%l_lab": "Lab",
 		"%l_slidenote_lab": "",
 	}	

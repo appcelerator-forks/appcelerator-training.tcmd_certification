@@ -72,32 +72,51 @@
 
 <!-- YOUR LAB CONTENT GOES HERE -->
 <h1 class="l_labname">Lab: Animation API Deep Dive</h1>
-<p class="l_mission"><img src='https://wiki.appcelerator.org/download/attachments/14090422/Screenshot_40.png?version=1&modificationDate=1311643794000' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><img src='https://wiki.appcelerator.org/download/attachments/14090422/Screenshot_39.png?version=1&modificationDate=1311643807000' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><strong>Mission: </strong>Animations can provide critical feedback to a user in your application. Used wisely, your app's UI will benefit greatly from the gentle application of animations. This lab will walk you through a simple series of animation examples for common use cases.</p>
+<p class="l_mission"><img src='http://assets.appcelerator.com.s3.amazonaws.com/app_u/atmd_labs/Starting/anim1.png' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><img src='http://assets.appcelerator.com.s3.amazonaws.com/app_u/atmd_labs/Starting/anim2.png' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><strong>Mission: </strong>Animations can provide critical feedback to a user in your application. Used wisely, your app's UI will benefit greatly from the gentle application of animations. This lab will create a simple series of animation examples for common use cases.</p>
 
-<p class="l_specification"><strong>Specification: </strong>In this lab, you will animate three elements in a partially-completed app. You'll add code to fade an element out of view, then back into view; add code to slide an element off screen, then back; and you'll add code to transition between two views using iOS-specific functionality.</p>
+<p class="l_specification"><strong>Specification: </strong>In this lab, you will animate three elements in a partially-completed app. You'll add code to fade an element out of view, then back into view; add code to slide an element off screen, then back; and you'll implement the Alloy animation built-in and use its function to shake an element when clicked..</p>
 
 <table>
 	<tr>
-		<td colspan="2" class="labinstructions l_labstep1">1. Download the starting point files from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/340.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/340.zip</a>. Extract the archive, then import it into Studio as an existing Titanium project.</td>
+		<td colspan="2" class="labinstructions l_labstep1">1. Start a new Titanium Alloy project, giving it a name and app ID of your choice.</td>
 	</tr>
 	<tr>
 		<td class="tdfiller"><!-- leave empty--></td>
 		<td class="labexplanations l_labstepexplanation1"></td>
 	</tr>
-	<tr>
-		<td colspan="2" class="labinstructions l_labstep2">2. In app.js, examine the colored boxes and helper functions provided. We have laid out the UI for you. Where indicated, add the three event listeners as follows:<br/><ul><li>Each of the event listeners should respond to the click event.</li><li>For box1, the event listener should take two (2) seconds to fade the box out of view by setting its opacity to 0. It should then fade the box back into view, resetting its opacity to the default.</li><li>For box2, the event listener should take two seconds to move the box off the bottom of the screen (make sure to account for common screen sizes on various devices). The box should slide back to its original position in another two seconds.</li><li>For container, which contains box3 and box4 use transitions to swap those two elements in and out of view. Use the flip from right transition for one, and flip from left for the other. This effect will work on only iOS. (Using 3D Matrix animations, you could potentially code a cross-platform version of that transition — check out the matrix animation examples in the Kitchen Sink for a starting point.)</li></ul></td>
-	</tr>
-	<tr>
-		<td class="tdfiller"><!-- leave empty--></td>
-		<td class="labexplanations l_labstepexplanation2"></td>
-	</tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <tr>
-	<td colspan="2" class="labinstructions l_labstep3">3. When you're done, build the project for either the iOS Simulator or Android emulator. Correct any code mistakes, if necessary. Test your work by clicking on each of the boxes in turn. Note that the transition effects won't work on Android.</td>
+	<td colspan="2" class="labinstructions l_labstep2">2. In the index view, add four labels (we'll use labels for our boxes). The first one gets the "Click the boxes for fun!" message. The other three will be "fade out/in", "fly out/in", and "shake". Make sure each has a unique ID; the three labels to be used as boxes should have a class of "box".</td>
+</tr>
+<tr>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation2"></td>
+</tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tr>
+	<td colspan="2" class="labinstructions l_labstep3">3. In the index style file, set the "Click the boxes" label to have black, bold, 20dp text that is 10dp from the top. Define a box class with a height/width of 50/100, a font color of white, with bold, center-aligned text. Finally, for the three boxes, set them to be top 50, 120, and 190, with red, green, and blue background colors.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation3"></td>
 </tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tr>
+	<td colspan="2" class="labinstructions l_labstep4">4. In the index controller, define the click handlers. For box 1, on click, animate to zero opacity over two seconds then back to full opacity. For box two, animate to a new top value that is 20dp taller than the screen over two seconds and then back. For the third box, require in the animation built-in; apply the shake animation to the box with a delay of 30 milliseconds.</td>
+</tr>
+<tr>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation4"></td>
+</tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tr>
+	<td colspan="2" class="labinstructions l_labstep5">5. Build your app for the simulator/emulator and test your work by click on each of the boxes.</td>
+</tr>
+<tr>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation5"></td>
+</tr>
+
 </table>
 
 <h2 class="l_summary">Summary</h2>
@@ -106,7 +125,7 @@
 <h2 class="l_resources">Resources</h2>
 
 <ul>
-	<li class="l_resources1">You can download the finished code from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/340_finished.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/340_finished.zip</a>.</li>
+	<li class="l_resources1">You can download the finished code from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/atmd_labs/Finished/340_animation.zip'>S3: 340_animation (finished)</a>.</li>
 </ul>
 
 

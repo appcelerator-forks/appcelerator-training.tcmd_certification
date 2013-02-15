@@ -153,12 +153,6 @@
 				</section>
 				
 				<section>
-					<h2 class="l_ios_nav">UI: Navigation Group</h2>
-					<p class="l_ios_nav_image_2"><img src='images/nav-group.png' style='margin-top:5px;height:550px;background-color:#fff;'/></p>
-					<div class="slidenote"><div class="l_slidenote_ios_nav_2">A navigation bar enables navigation through an information hierarchy and, optionally, management of screen contents.</div></div>
-				</section>
-				
-				<section>
 					<h2 class="l_ios_nav_eg">UI: Navigation Group - Example</h2>
 <pre style="float:left;width:640px;"><code contenteditable class="l_navgroup_code1">
 // need a window for inside our nav group
@@ -201,20 +195,17 @@ nav.open(win2);
 				
 				<section>
 					<h2 class="l_ios_nav_bar">UI: Navigation Bar - Example</h2>
-<pre><code contenteditable class="l_navbar_code">
+<pre><code contenteditable class="">
 // create buttons to go in the nav bar
 var back = Ti.UI.createButton({ title: 'Back' });
-var next = Ti.UI.createButton({ title: 'Next' });
 
 // implement the buttons
 win.setLeftNavButton(back);
-win.setRightNavButton(next);
 
-// add a logo to the nav bar
-var logo = Ti.UI.createImageView({ image: 'logo.png' });
-win.setTitleImage(logo);
+// add an image to the nav bar
+win.titleImage('/images/skull.png');
 </code></pre>
-					<p class="l_os_nav_bar_image"><img src="images/nav-bar.png" style="margin-top:5px;height:91px;"/></p>
+					<p class=""><img src="images/navbar_image.png" style="margin-top:5px;width:300px;"/></p>
 					<div class="slidenote"><div class="l_slidenote_ios_nav_bar">There are other components that you can set, such as <br>setTItleControl()<br>setTitleImage()<br>setTitle()</div></div>
 				</section>
 				
@@ -289,9 +280,16 @@ win.add(bb);
 					<h2 class="l_ui_tabbar">UI: Tabbed Bar</h2>
 					<p class="l_tabbedbar_text">Like radio buttons, maintain state</p>
 
-<pre><code contenteditable class="l_tabbedbar_code">
+<pre><code contenteditable class="">
 var tb = Ti.UI.iOS.createTabbedBar({
    labels: ['IMAP', 'POP', 'Exchange']
+});
+tb.addEventListener('click', function(e){
+  switch(e.index) {
+    case 0:
+      // do stuff
+    break;
+  }
 });
 win.add(tb);
 
@@ -307,16 +305,21 @@ win.add(tb);
 						<li class="l_switch1">Presents two mutually exclusive choices</li>
 						<li class="l_switch2">On iOS, can't change labels</li>
 						<li class="l_switch3">Android &amp; Mobile Web offer more flexible options</li>
+						<li style="list-style-type:none;"><img src="images/switches.png" style="width:200px;margin-left:25px;"/></li>
 					</ul>
 					<div style="width:50%;float:right;">
-<pre><code contenteditable class="l_switch_code">
+<pre><code contenteditable class="">
 var switch = Ti.UI.createSwitch({
    value: true
+});
+switch.addEventListener('change', function(e){
+   if(e.value === true) {
+      // switch is on ...
+   }
 });
 win.add(switch);
 
 </code></pre>
-					<p class="l_ui_switch_image"><img src="images/switches.png" style="margin-top:5px;width:200px;"/></p>
 					</div>
 					<div class="slidenote"><div class="l_slidenote_ui_switch"><ul><li>Not iOS specific</li><li>Can't change 'On' and 'Off' labels on iOS</li><li>On Android &amp; Mobile Web you can use a checkbox style and change the labels</li><li>Add <code>change</code> event listener to switch and check <code>value</code> property to determine state</li></ul></div></div>
 				</section>

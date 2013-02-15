@@ -9,7 +9,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/reset.css">
 		<link rel="stylesheet" href="../../presentation-engine/reveal.js/css/main.css">
-		<link rel="stylesheet" href="../../presentation-engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../css/magula.css">
 		<link rel="stylesheet" href="../css/presentation.css">
 		<script type="text/javascript" src="../../presentation-engine/js/l10n.js"></script>
 		<script type="text/javascript" src="i18n/localizations.js"></script>
@@ -352,10 +352,10 @@ Ti.Geolocation.addEventListener('heading', function(e) {
 				<section>
 					<h2 class="l_build_module">Building your Module</h2>
 					<ul style="width:80%;">
-						<li class="l_building1">Creating a Module Project: <ul style='margin-left:30px;font-size:smaller;'><li>Studio: File, New, Titanium Module</li><li>Command line: use <code>titanium.py</code> in SDK folder</li></ul></li>
+						<li class="">Creating a Module Project:<br/><ul style='margin-left:30px;font-size:smaller;'><li>Studio: File, New, Titanium Module</li><li>Command line: use <code>titanium.py</code> in SDK folder</li></ul></li>
 						<li class="l_building2">Android modules developed in Eclipse</li>
 						<li class="l_building3">iOS modules developed in Xcode</li>
-						<li class="l_building4">Packaging a Module: <ul style='margin-left:30px;font-size:smaller;'><li>Studio: Packaging icon, choose Package</li><li>Command line: Use <code>titanium.py</code></li></ul><br/><span style="font-size:smaller;">Either builds a .zip file</span></li>
+						<li class="">Packaging a Module:<br/><ul style='margin-left:30px;font-size:smaller;'><li>Studio: Packaging icon, choose Package</li><li>Command line: Use <code>titanium.py</code></li></ul><br/><span style="font-size:smaller;">Either builds a .zip file</span></li>
 					</ul>
 					<div class="slidenote"><div class="l_slidenote_build_module">When it comes time to write your own module, Studio provides wizards for creating and later packaging your module. You can also use the titanium.py script, which is included in the SDK folder, to perform those tasks. You'll do the actual module programming in Eclipse or Xcode.</div>
 				</div>
@@ -376,7 +376,7 @@ Ti.Geolocation.addEventListener('heading', function(e) {
 				<section>
 					<h1 style="" class="l_using">Using your Module</h1>
 					<ul style="width:80%;">
-						<li class="l_using1">Explode zip to: <ul style='margin-left:30px;font-size:smaller;'><li>PROJECT/modules/<em>platform</em></li><li>SDK_HOME/modules/<em>platform</em></li></ul></li>
+						<li class="">Explode zip to:<br/><ul style='margin-left:30px;font-size:smaller;'><li>PROJECT/modules/<em>platform</em></li><li>SDK_HOME/modules/<em>platform</em></li></ul></li>
 						<li class="l_using2">Include in tiapp.xml</li>
 						<li class="l_using3">Require in JavaScript</li>
 						<li class="l_using4">Implement the module's API</li>
@@ -407,6 +407,7 @@ Ti.Geolocation.addEventListener('heading', function(e) {
 					<p align="left" class="l_follow_steps">Follow the steps in the iOS (or Android) module development wiki guide</p><br>
 					<p align="left" class="l_create_sample">Create the sample module that guide describes</p><br>
 					<p align="left" class="l_use_that">Use that module in a Titanium project</p><br>
+					<p class="l_labURL" style="font-size:0.7em;margin-top:20px;"><a href='https://wiki.appcelerator.org/display/td/375+-+Extending+Titanium'>wiki.appcelerator.org/display/td/375+-+Extending+Titanium</a></p>
 					<div class="slidenote"><div class="l_slidenote_lab_goals">We will follow along with the module dev guides and try a custom module ourselves.  This is a 'kick the tires' type exercise</div></div>
 				</section>
 				

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title class="l_labname">Lab - Custom UI Components</title>
+		<title class="l_labname">Lab - Using Alloy Widgets</title>
 		<meta name="description" content="Advanced Titanium Mobile Development, Advanced UI Development">
     	<meta name="author" content="Appcelerator, Inc." />
 		
@@ -71,71 +71,142 @@
 <section>
 
 <!-- YOUR LAB CONTENT GOES HERE -->
-<h1 class="l_labname">Lab: Custom UI Components</h1>
-<p class="l_mission"><img src='labimages/finished_iphone.png' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><strong>Mission: </strong>In this lab assignment, you will create a custom star-rating widget as a reusable CommonJS module.</p>
+<h1 class="l_labname">Lab: Using Alloy Widgets</h1>
+<p class="l_mission"><img src='http://assets.appcelerator.com.s3.amazonaws.com/app_u/atmd_labs/Starting/315_ui.png' style='height:300px;float:right;margin-top:-40px;margin-bottom: 10px;'><strong>Mission: </strong>In this lab assignment, you will implement an Alloy widget in an app.</p>
 
-<p class="l_specification"><strong>Specification: </strong>Download the starting point code linked to in Step 1 below. The archive includes the necessary graphics. To successfully complete this lab, you must develop a module that meets the following description:</p>
+<p class="l_specification"><strong>Specification: </strong>To successfully complete this lab, you must develop an app that meets the following description:</p>
 
 <ul style="width:70%">
-	<li class="l_spec1">Displays from 1 to n number of star images with three states: off, on, and half-on.</li>
-	<li class="l_spec2">The module is written using the instantiable-object pattern. It will accept two arguments, a max value and an initial value.</li>
-	<li class="l_spec3">Provides an extensible object without modifying any Titanium proxy objects.</li>
+	<li class="l_spec1">Implements the ButtonGrid Alloy widget.</li>
+	<li class="l_spec2">Displays five buttons in a grid with custom background colors, icons, and titles as described below.</li>
+	<li class="l_spec3">Includes a click event listener on one of the buttons that displays a simple alert message.</li>
 </ul>
 
 
 <table>
 	<tr>
-		<td colspan="2" class="labinstructions l_labstep1">1. Download the starting point files from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab315.zip'>http://assets.appcelerator.com.s3.amazonaws.com/app_u/code/Lab315.zip</a>.</td>
+		<td colspan="2" class="labinstructions l_labstep1">1. Download the graphic assets needed for this lab from <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/atmd_labs/Starting/315_ui.zip'>S3: 315_ui (starting)</a>.</td>
 	</tr>
 	<tr>
 		<td class="tdfiller"><!-- leave empty--></td>
 		<td class="labexplanations l_labstepexplanation1"></td>
 	</tr>
-	<tr>
-		<td colspan="2" class="labinstructions l_labstep2">2. Extract the archive, then import it into Studio as an existing Titanium project.</td>
-	</tr>
-	<tr>
-		<td class="tdfiller"><!-- leave empty--></td>
-		<td class="labexplanations l_labstepexplanation2"></td>
-	</tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <tr>
-	<td colspan="2" class="labinstructions l_labstep3">3. Examine the contents of app.js and rating.js, including the comments in rating.js. </td>
+	<td colspan="2" class="labinstructions l_labstep2">2. Create a new Titanium Alloy project, giving it a name and app ID of your choice. Extract, then copy the images you downloaded into your app/assets/images folder.</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
-	<td class="labexplanations l_labstepexplanation3">The app.js file is finished and implements the star-rating component that you'll write in rating.js.</td>
+	<td class="labexplanations l_labstepexplanation2"></td>
+</tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tr>
+	<td colspan="2" class="labinstructions l_labstep3">3. Update the config.json file to require in the com.appcelerator.buttongrid component. As of this writing, version 1.0 is the current version. (See Resources below for a link to this widget's documentation.)</td>
 </tr>
 <tr>
-	<td colspan="2" class="labinstructions l_labstep4">4. Follow the comments in rating.js to complete the missing code.</td>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation3"></td>
+</tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tr>
+	<td colspan="2" class="labinstructions l_labstep4">4. Update the index view to add the tag necessary to display the button grid widget in a window. </td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation4"></td>
 </tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <tr>
-	<td colspan="2" class="labinstructions l_labstep5">5. When you're done, build the project for either the iOS Simulator or Android emulator. Correct any code mistakes, if necessary. Text your work by selecting various ratings levels.</td>
+	<td colspan="2" class="labinstructions l_labstep5">5. Update the index controller to implement four buttons as follows: 
+<table border="0" cellspacing="5" cellpadding="5">
+	<tr><th>Button title</th><th>id</th><th>backgroundColor</th></tr>
+	<tr>
+		<td>Notes</td>
+		<td>write</td>
+		<td>'gray'</td>
+	</tr>
+	<tr>
+		<td>Ideas</td>
+		<td>lightbulb</td>
+		<td>(default)</td>
+	</tr>
+	<tr>
+		<td>Chat</td>
+		<td>bubble</td>
+		<td>(default)</td>
+	</tr>
+	<tr>
+		<td>People</td>
+		<td>person</td>
+		<td>(default)</td>
+	</tr>
+	<tr>
+		<td>Pictures</td>
+		<td>pictures</td>
+		<td>(default)</td>
+	</tr>
+</table>
+
+	</td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation5"></td>
 </tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <tr>
-	<td colspan="2" class="labinstructions l_labstep6">6. Consider the features that might be missing with the finished component in order to use it within a real-world project. Consider also the techniques you might use to add these features to the component.</td>
+	<td colspan="2" class="labinstructions l_labstep6">6. Add a click event listener to the Pictures button. Display an alert dialog box when the button is clicked. </td>
 </tr>
 <tr>
 	<td class="tdfiller"><!-- leave empty--></td>
 	<td class="labexplanations l_labstepexplanation6"></td>
 </tr>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tr>
+	<td colspan="2" class="labinstructions l_labstep7">7. Also in the init() method for the button grid, define these properties:
+<ul>
+	<li>Button width: 100 (handset) or 200 (tablets)</li>
+	<li>Button height: 100 (handset) or 200 (tablets)</li>
+	<li>backgroundColor: #660000</li>
+	<li>backgroundSelectedColor: #A30000</li>
+	<li>duration: 800 milliseconds</li>
+</ul>
+		</td>
+</tr>
+<tr>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation7"></td>
+</tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tr>
+	<td colspan="2" class="labinstructions l_labstep8">8. Build your app for the simulator/emulator. Click the Pictures button (the alert should be displayed).</td>
+</tr>
+<tr>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation8"></td>
+</tr>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<tr>
+	<td colspan="2" class="labinstructions l_labstep9">9. Finally, download the widget demo (<a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/atmd_labs/Starting/315_ui_demo.zip'>S3: 315_ui_demo</a>) and explore the code that was used to create this widget. Specifically, explore each of the files in the app/widgets directory. Then also look at the index view and controller to see how this widget is implemented in the app.</td>
+</tr>
+<tr>
+	<td class="tdfiller"><!-- leave empty--></td>
+	<td class="labexplanations l_labstepexplanation9"></td>
+</tr>
+
+
 </table>
 
 <h2 class="l_summary">Summary</h2>
-<p class="l_summarypara">In this lab, you created a cross-platform custom UI component as a reusable CommonJS component. You wrapped the Ti objects within a standard JavaScript object in order to provide methods and properties without modifying the proxy objects. </p>
+<p class="l_summarypara">In this lab, you implemented an Alloy widget and set various startup parameters. </p>
 
 <h2 class="l_resources">Resources</h2>
 
 <ul>
-	<li class="l_resources1">Forging Titanium Episode 3: Creating Custom Components <a href='http://vimeo.com/28122504'>http://vimeo.com/28122504</a></li>
-	<li class="l_resources2">CommonJS modules in Titanium: <a href='http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/CommonJS_Modules_in_Titanium'>docs.appcelerator.com/titanium/2.0/index.html#!/guide/CommonJS_Modules_in_Titanium</a></li>
+	<li class="l_resources1"><a href='https://github.com/appcelerator/alloy/tree/master/widgets/com.appcelerator.buttongrid/docs'>Button Grid widget docs</a></li>
+	<li class="l_resources2">Docs: <a href='http://docs.appcelerator.com/titanium/latest/#!/api/Alloy.widgets'>Widgets</a></li>
+	<li class="l_resources3">Finished code: <a href='http://assets.appcelerator.com.s3.amazonaws.com/app_u/atmd_labs/Finished/315_ui.zip'>S3: 315_ui (finished)</a></li>
 </ul>
 
 

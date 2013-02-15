@@ -196,7 +196,7 @@ var table = Ti.UI.createTableView({
 var table = Ti.UI.createTableView({
    data: tbl_data,
    headerView: simpleAPIView,
-   footer: someOtherTiView
+   footerView: someOtherTiView
 });
 </code></pre>
 					<p class="l_header_footerview_image"><img src='images/headerview.png'style='margin-top:5px;height:242;float:right;'/></p>
@@ -205,11 +205,11 @@ var table = Ti.UI.createTableView({
 
 				<section>
 					<h2 class="l_rowheader">Row Headers and Footers</h2>
-<pre><code contenteditable class="l_rowheader_code">
-var table = Ti.UI.createTableView({
-   data: tbl_data,
-   headerView: simpleAPIView,
-   footer: someOtherTiView
+<pre><code contenteditable class="">
+var table = Ti.UI.createTableViewRow({
+   title: 'Alan'
+   header: 'A',
+   footer: 'Not in the graphic'
 });
 </code></pre>
 					<p class="l_header_rowheader_image"><img src="images/rowheader.png" style="margin-top:5px;height:245;float:right;"/></p>
@@ -273,7 +273,6 @@ var tableView = Titanium.UI.createTableView({
 tableview.addEventListener('delete',function(e) {
   ...
 });
-
 </code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/editmode.png'/></li>
 						<li class="l_iosonly2 fragment">Move mode<pre><code contenteditable>
 editBtn.addEventListener('click', function() {
@@ -282,7 +281,6 @@ editBtn.addEventListener('click', function() {
 tableview.addEventListener('move',function(e) {
 	...
 });
-
 </code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/movemode.png'/></li>
 						<li class="l_iosonly3 fragment">Filters<pre><code contenteditable>
 var index = [
@@ -291,7 +289,6 @@ var index = [
 	{title:'P',index:(data.length -1)}
 ];
 tableview.index = index;
-
 </code></pre><img style='position:absolute;top:100px;right:10px;float:right;height:400px;' src='images/filters.png'/></li>
 					</ul>
 					<div class="slidenote"><div class="l_slidenote_ios_only_features">iOS only properties (table.editable = true) will be ignored on Android<br><br/>You can use swipe to delete (swiping reveals the delete button) or "normal" in which the minus-sign button shown here is displayed.<br><br/>You listen for the delete/move events and take action based on that<br/><br>They're called filters, but you implement them with the <code>index</code> property.</div></div>
